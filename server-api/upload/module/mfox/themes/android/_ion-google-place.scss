@@ -1,0 +1,24 @@
+.ion-google-place-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+    background-color: #fff;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    pointer-events: auto;
+
+    .item-input-wrapper {
+        display: flex;
+    }
+}
+
+
+input.ion-google-place[readonly]{
+    background-color: transparent;
+    cursor: text;
+}

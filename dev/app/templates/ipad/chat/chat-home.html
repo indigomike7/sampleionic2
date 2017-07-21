@@ -1,0 +1,42 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Chat' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-click="onChatSetting()"></button>
+  </ion-header-bar>
+  <chat-search-dir></chat-search-dir>
+  <div class="content-column row">
+    <div class="col has-footer">
+      <ion-content class="has-header">
+        <chat-list-dir></chat-list-dir>
+      </ion-content>
+    </div>
+    <div class="col has-footer" ng-if="chatObj">
+      <ion-content class="has-footer" delegate-handle="chat-message-list">
+        <chat-message-list-dir></chat-message-list-dir>
+      </ion-content>
+      <div class="bar bar-subfooter chat-attachment-preview" ng-if="attachment_id.link != ''">
+        <div class="item item-avatar " href-dir url="{{attachment_id.link}}">
+          <img ng-if="attachment_id.default_image != ''" ng-src="{{attachment_id.default_image}}">
+          <h2 class="item-icon-right">
+            <i class="icon ion-ios-close-outline" ng-click="removeAttachLink()"></i>
+            {{attachment_id.title}}
+          </h2>
+          <p ng-html-compile="attachment_id.description"></p>
+        </div>
+      </div>
+      <form keyboard-attach class="bar bar-footer item-input-inset ynchat-form-message" ng-submit="onSendMessage()">
+        <i class="icon ion-happy-outline" ng-click="showSmilePopover($event)"></i>
+        <i class="icon ion-link" ng-click="showUrlPopover($event)"></i>
+        <div class="item-input-wrapper">
+          <!--<textarea class="input-message" rows="1" placeholder="{{'Your Message' | translate}}" ng-model="messageData.sMessage" ng-trim="false"></textarea>-->
+          <input type="text" placeholder="{{'Your Message' | translate}}" ng-model="messageData.sMessage" />
+        </div>
+        <input type="submit" class="button button-send" ng-class="{disabled: (!(messageData.sMessage.trim() || attachment_id.link)) || bNoConnection}" value="" />
+      </form>
+    </div>
+  </div>
+</ion-view>

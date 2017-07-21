@@ -1,0 +1,8 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems">{{notFoundText}}</div>
+  <div class="item item-forum item-icon-left" ng-repeat="item in items" href-dir url="{{item.getUrl()}}">
+    <i class="icon ion-ios-chatboxes-outline"></i>
+    <h2 ng-bind-html="item.getTitle()"></h2>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

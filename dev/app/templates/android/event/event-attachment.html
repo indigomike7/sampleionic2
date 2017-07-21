@@ -1,0 +1,16 @@
+<div class="item-event" href-dir url="#/app/event/{{obj.aAttachments[0].iId}}">
+  <div class="item row">
+    <div class="col text-center">
+      <span class="item-date">{{Moment(obj.aAttachments[0].iStartTime * 1e3).zone(-obj.sUserTimezone).format('D')}}</span>
+      <span>{{Moment(obj.aAttachments[0].iStartTime * 1e3).zone(-obj.sUserTimezone).format('MMM')}}</span>
+    </div>
+    <div class="col col-80">
+      <b ng-bind-html="obj.aAttachments[0].sTitle"></b>
+      <p><span ng-if="obj.aAttachments[0].sLocation" ng-bind-html="obj.aAttachments[0].sLocation"></span></p>
+      <p>{{Moment(obj.aAttachments[0].iStartTime * 1e3).zone(-obj.sUserTimezone).format('h:mm A')}}</p>
+    </div>
+  </div>
+  <div class="item item-image">
+    <div class="item-image-div" ng-background="{{obj.aAttachments[0].sPhoto_Url}}"></div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.user-login-page {
+  background: url("./../img/login-screen.jpg") repeat;
+  background-size: cover;
+
+  .login-logo {
+    background: url("./../img/logo.png") no-repeat center;
+    width: 230px;
+    height: 87px;
+    background-size: 208px;
+    margin: 80px auto 60px auto;
+  }
+}
+
+.menu.menu-right {
+  opacity: 0;
+}

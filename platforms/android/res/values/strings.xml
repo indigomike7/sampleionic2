@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="attach">Attach</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="left_and_right">Left and Right</string>
+    <string name="app_name">TALK</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="news_feed">Feed Feeds</string>
+    <string name="logout">Log Out</string>
+    <string name="sidebar_newsfeed">News Feed</string>
+    <string name="sidebar_logout">Logout</string>
+    <string name="sidebar_video">Videos</string>
+    <string name="sidebar_poll">Polls</string>
+    <string name="sidebar_page">Pages</string>
+    <string name="sidebar_quiz">Quizzes</string>
+    <string name="sidebar_photo">Photos</string>
+    <string name="sidebar_music">Music</string>
+    <string name="sidebar_event">Events</string>
+    <string name="sidebar_friend">Friends</string>
+    <string name="sidebar_group">Groups</string>
+    <string name="sidebar_marketplace">Marketplace</string>
+    <string name="sidebar_mail">Mail</string>
+    <string name="sidebar_membership">Memberships</string>
+    <string name="sidebar_forum">Forums</string>
+    <string name="sidebar_member">Members</string>
+    <string name="sidebar_search">Search</string>
+    <string name="avatar_default">Profile Name</string>
+</resources>

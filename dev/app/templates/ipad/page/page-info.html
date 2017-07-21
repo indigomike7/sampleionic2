@@ -1,0 +1,74 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title" translate>Information</h1>
+        <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <ion-content delegate-handle="content" class="content-dark has-header has-footer">
+        <div ng-if="dataReady" class="list item-page-info">
+            <div class="item item-page-info">
+                <div class="page-info-cover" img-cache ng-background="{{item.sCoverImage}}" ng-class="{'no-cover': !item.bHasCover}">
+                    <span class="button-page-like-cover icon" ng-class="{
+                        'ion-thumbsup': item.iPageType == '0', 
+                        'ion-log-in': item.iPageType == '1',
+                        'processing': isProcessingLike
+                    }" ng-if="item.bCanLike" ng-click="likePage()"></span>
+                    <span class="button-page-like-cover icon is-liked" ng-class="{
+                        'ion-thumbsup': item.iPageType == '0', 
+                        'ion-log-out': item.iPageType == '1',
+                        'processing': isProcessingLike
+                    }" ng-if="item.bCanUnlike" ng-click="unlikePage()"></span>
+                </div>
+
+                <div class="page-info-avatar">
+                    <span class="page-info-avatar-image" ng-background="{{item.sAvatarImage}}"></span>
+                </div>
+
+                <div class="page-info-detail" ng-class="{'no-cover': !item.sCoverImage}">
+                    <h2 ng-bind-html="item.getTitle()"></h2>
+                    <p class="item-stats">
+                        <span>{{item.sCategoryName || 'No Category' }}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="item item-text-wrap" shorten-html-compile="item.getDescriptionParsed() | prepareHtml" limit="600" show-more-btn="true" show-less-btn="true" ng-if="item.getDescriptionParsed()"></div>
+            <div ng-if="item.bCanView">
+                <!-- total member/liked -->
+                <div class="page-detail-member" ng-if="item.iTotalMembers">
+                    <div class="item-separator"></div>
+                    <div class="item item-stable item-icon-left item-icon-right" ng-click="showMembers('liked')">
+                        <i class="icon" ng-class="{'ion-thumbsup': item.iPageType == '0', 'ion-ios-people': item.iPageType == '1'}"></i>
+                        <h2 class="item-note">{{item.iTotalMembers}}</h2>
+                        <h2 ng-if="item.iPageType == '0'">{{'LIKED' | translate}}</h2>
+                        <h2 ng-if="item.iPageType == '1'">{{'MEMBERS' | translate}}</h2>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </div>
+                    <div class="item list-member">
+                        <a ng-repeat="obj in item.aMembers | limitTo:6" href="#/app/user/{{obj.user_id}}">
+                            <img img-cache ng-src="{{obj.user_image}}" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- total admin -->
+                <div class="page-detail-member" ng-if="item.iTotalAdmins && item.bCanShowAdmin">
+                    <div class="item-separator"></div>
+                    <div class="item item-stable item-icon-left item-icon-right" ng-click="showMembers('admin')">
+                        <i class="icon ion-person"></i>
+                        <h2 class="item-note">{{item.iTotalAdmins}}</h2>
+                        <h2>{{'ADMIN' | translate}}</h2>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </div>
+                    <div class="item list-member">
+                        <a ng-repeat="obj in item.aAdmins | limitTo:6" href="#/app/user/{{obj.user_id}}">
+                            <img img-cache ng-src="{{obj.user_image}}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="dataReady && !item.canView()">
+                <p class="padding" translate>This page is private</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

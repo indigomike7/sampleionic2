@@ -1,0 +1,21 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left button-clear" back-dir translate>Cancel</button>
+        <h1 class="title" translate>Add Photo</h1>
+        <button class="button button-clear" ng-click="onSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header has-footer">
+        <div class="list padding" ng-if="dataReady">
+            <div class="grid-photo-edit" ng-repeat="photo in photos">
+                <img ng-src="{{photo.sPath}}" />
+                <a class="icon ion-close" ng-click="onRemovePhoto($index)"></a>
+            </div>
+            <div class="grid-photo-edit" ng-if="!formData.photoPath">
+                <div ng-click="onAddPhoto()" class="grid-photo-add"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

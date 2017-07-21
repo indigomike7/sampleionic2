@@ -1,0 +1,31 @@
+<div class="list">
+    <div class="padding text-center" ng-if="noItems" translate>
+        No quizzes found.
+    </div>
+    <div class="item item-quiz" ng-class="{'active': item.getId() == activeObj.getId()}" ng-repeat="item in items" ng-controller="QuizItemCtrl" ng-click="onItemClick(item)">
+        <div class="item-thumbnail-left">
+            <div class="item-thumbnail" img-cache ng-background="{{item.sImageUrl}}"></div>
+            <h2 class="item-title" ng-bind-html="item.getTitle()"></h2>
+            <p>
+            <span class="item-author-by">
+                <span translate>by</span>
+                <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+            </span>
+            </p>
+            <p>
+            <span class="item-stats">
+                <span>{{item.iQuestionCount}}</span>
+                <i class="ion-help-circled padding-right"></i>
+                <span>{{item.iTakerCount}}</span>
+                <i class="ion-checkmark-circled"></i>
+                <span class="icon-separator"></span>
+                <span class="item-stats livetime" data-livetime="">{{item.fromNow()}}</span>
+            </span>
+                <span class="icon-separator" ng-if="item.bIsClosed"></span>
+                <span ng-if="item.bIsClosed" class="ion-ios-locked"></span>
+            </p>
+        </div>
+        <p class="item-description" ng-bind-html="item.getDescriptionParsed()"></p>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

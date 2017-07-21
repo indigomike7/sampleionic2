@@ -1,0 +1,30 @@
+<div class="list" ng-if="subForums.length">
+  <div class="item-forum-wrapper" ng-repeat="subForum in subForums">
+    <div class="item item-forum item-icon-left" ng-class="{'item-category item-icon-right': subForum.isCategory()}" href-dir url="{{subForum.getUrl()}}">
+      <i class="icon" ng-class="{'ion-ios-chatboxes-outline': !subForum.isCategory(), 'ion-ios-box': subForum.isCategory()}"></i>
+      <h2 ng-bind-html="subForum.getTitle()"></h2>
+      <span ng-if="subForum.isCategory()">({{subForum.getTotalSubForum()}})</span>
+      <p class="item-stats" ng-if="!subForum.isCategory()">
+        <span ng-if="subForum.getTotalThread() == 1">1 {{'thread'|translate}}</span>
+        <span ng-if="subForum.getTotalThread() != 1">{{subForum.getTotalThread()}} {{'threads'|translate}}</span>
+        <span class="icon-separator"></span>
+        <span ng-if="subForum.getTotalPost() == 1">1 {{'post'|translate}}</span>
+        <span ng-if="subForum.getTotalPost() != 1">{{subForum.getTotalPost()}} {{'posts'|translate}}</span>
+      </p>
+      <i class="icon" ng-class="{'ion-arrow-up-b': !subForum.hideSubs, 'ion-arrow-down-b': subForum.hideSubs}" ng-show="subForum.isCategory()" ng-click="subForum.hideSubs = !subForum.hideSubs"></i>
+    </div>
+    <div ng-if="subForum.isCategory() && !subForum.hideSubs">
+      <div class="item item-icon-left sub-item item-sub-forum" ng-repeat="subSubForum in subForum.getSubForums()" href-dir url="{{subSubForum.getUrl()}}">
+        <i class="icon ion-ios-chatboxes-outline"></i>
+        <h2 ng-bind-html="subSubForum.getTitle()"></h2>
+        <p class="item-stats">
+          <span ng-if="subSubForum.getTotalThread() == 1">1 {{'thread'|translate}}</span>
+          <span ng-if="subSubForum.getTotalThread() != 1">{{subSubForum.getTotalThread()}} {{'threads'|translate}}</span>
+          <span class="icon-separator"></span>
+          <span ng-if="subSubForum.getTotalPost() == 1">1 {{'post'|translate}}</span>
+          <span ng-if="subSubForum.getTotalPost() != 1">{{subSubForum.getTotalPost()}} {{'posts'|translate}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

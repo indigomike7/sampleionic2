@@ -1,0 +1,60 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button ng-if="fromNav" class="button button-clear icon ion-navicon" toggle-left-dir></button>
+        <button ng-if="!fromNav" class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title"></h1>
+        <button ng-if="dataReady" class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <div class="bar bar-subheader bar-composer-top overflow-hidden" ng-if="item.canComment() && dataReady && item.canView()">
+        <div class="tabs tabs-light tabs-icon-left">
+            <a class="tab-item" href="#/app/feed/add/default/user/{{iUserId}}"> <i class="icon ion-compose"></i> </a>
+            <a class="tab-item" href="#/app/feed/add/camera/user/{{iUserId}}"> <i class="icon ion-camera"></i> </a>
+            <a class="tab-item" href="#/app/feed/add/location/user/{{iUserId}}"> <i class="icon ion-location"></i> </a>
+        </div>
+    </div>
+    <ion-content class="content-dark has-header" ng-class="{'has-subheader': item.canComment()}">
+        <div class="list user-profile">
+            <div class="item user-profile-item text-center">
+                <div class="user-profile-cover" img-cache ng-background="{{item.sCoverPhotoUrl}}" ng-class="{'no-cover': !item.sCoverPhotoUrl}" ng-class="item.sCoverPhotoUrl" ng-if="dataReady">
+                    <span class="button-change-profile-cover icon ion-ios-plus-empty" ng-click="onAddFriendRequest()"
+                    ng-if="dataReady && !item.isOwner() && !item.isFriend && !item.isSentRequest && !item.isSentRequestBy"></span>
+                </div>
+                
+                <div class="user-profile-avatar">
+                    <span class="user-profile-info-avatar" ng-background="{{item.profileimage}}"></span>
+                </div>
+
+                <div class="user-profile-info" ng-if="dataReady">
+                    <h2 ng-bind-html="item.getTitle()"></h2>                
+                    <div class="user-profile-list" ng-click="onVisitFriends()" ng-if="item.bCanViewFriend">
+                        <h4>
+                            <b>{{item.iTotalFriends}}</b>
+                            <span ng-show="item.iTotalFriends | isPlural" translate>FRIENDS</span>
+                            <span ng-hide="item.iTotalFriends | isPlural" translate>FRIEND</span>
+                        </h4>
+                        <div class="list-profile-member">
+                            <div class="img" ng-repeat="obj in item.aFriends | limitTo:3" img-cache ng-background="{{obj.UserProfileImg_Url}}"></div>
+                        </div>
+                    </div>
+                
+                    <div class="user-profile-list" ng-click="onVisitPhotos()" ng-if="item.bCanViewPhoto">
+                        <h4>
+                            <b>{{item.iTotalPhotos}}</b>
+                            <span ng-show="item.iTotalPhotos | isPlural" translate>PHOTOS</span>
+                            <span ng-hide="item.iTotalPhotos | isPlural" translate>PHOTO</span>
+                        </h4>
+                        <div class="list-profile-photo">
+                            <div class="img" ng-repeat="obj in item.aPhotos | limitTo:3" img-cache ng-background="{{obj.sPhotoUrl}}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="dataReady && !item.canView()">
+                <p class="padding" translate>Profile is private.</p>
+            </div>
+            <div ng-if="dataReady && item.canView()">
+                <activity-list-dir></activity-list-dir>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

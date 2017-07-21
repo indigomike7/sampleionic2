@@ -1,0 +1,15 @@
+<div class="item-add-tagged" ng-if="tagFriendsList.length > 0 || location">
+    <p>
+        -
+    <span ng-if="tagFriendsList.length > 0">
+        <span translate>with</span> <span class="positive">{{tagFriendsList[0].sTitle}}</span>
+        <span ng-if="tagFriendsList.length > 1">
+            <span translate> and </span>
+            <span class="positive">1 {{'other'|translate}}</span>
+        </span>
+    </span>
+    <span ng-if="location">
+        <span translate>at</span> <span class="positive">{{location}}</span>
+    </span>
+    </p>
+</div>

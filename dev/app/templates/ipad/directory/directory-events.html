@@ -1,0 +1,15 @@
+<ion-header-bar class="bar-positive">
+  <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+  <h1 class="title">
+    {{'Events' | translate}}
+  </h1>
+  <a ng-if="item.bCanCreateEvent" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/events/add/{{item.getType()}}/{{item.getId()}}"></a>
+</ion-header-bar>
+<ion-content class="has-header has-footer business-page-content">
+  <div class="item item-divider">
+    <i class="icon ion-ios-calendar gray"></i>
+    <span class="text-uppercase">{{'Events' | translate}}</span>
+    <span class="float-right count">{{item.iTotalEvents}}</span>
+  </div>
+  <event-list-dir></event-list-dir>
+</ion-content>

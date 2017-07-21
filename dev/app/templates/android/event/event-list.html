@@ -1,0 +1,29 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No events found.</div>
+  <div class="card item-event" ng-repeat="item in items" ng-controller="EventItemCtrl">
+    <div class="item row">
+      <div class="col text-center">
+        <span class="item-date">{{item.getStartTimeFormatted('D')}}</span>
+        <span ng-class="{'padding-bottom':!item.getLocation()}">{{item.getStartTimeFormatted('MMM')}}</span>
+      </div>
+      <div class="col col-80">
+        <div class="item-icon-right">
+          <h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.getTitle()"></h2>
+          <i class="icon ion-ios-arrow-down event-big-arrow" ng-click="onItemSetting()"></i>
+          <p><span ng-if="item.getLocation()" ng-bind-html="item.getLocation()"></span></p>
+          <p class="item-author-by">
+            <span translate>by</span>
+            <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+          </p>
+          <p>
+            <span>{{item.getStartTimeFormatted('h:mm A')}}</span>            
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="item item-image">
+      <div class="item-image-div" img-cache ng-background="{{item.getImageSrc()}}" href-dir url="{{item.getUrl()}}"></div>
+    </div>    
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

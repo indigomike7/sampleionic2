@@ -1,0 +1,42 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title"></h1>
+        <button ng-if="item.canView()" class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <ion-content class="has-header" ng-class="{'has-footer': dataReady && item.canComment()}">
+        <private-msg-dir ng-if="dataReady && !item.bCanView"></private-msg-dir>
+        <div class="list item-video-detail" ng-if="dataReady && item.bCanView == true">
+            <div id="video_in_process" class="in-process" ng-if="item.bInProcess" translate>
+                The video you are looking for has not been processed yet
+            </div>
+            <div class="video-container">
+                    <div id="mp4_uploaded_player" class="mp4-uploaded-player" ng-class="{'landscape': isLandscape}" ng-if="item.sVideoUrl">
+                        <video controls id="video_player_control" width="100%" height="100%" style="width:100%;height:100%;">
+                            <source ng-src="{{item.sVideoUrl}}" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="video_embed_iframe" class="video-embed-iframe" ng-class="{'landscape': isLandscape}" ng-if="item.sEmbed">
+                </div>
+            </div>
+            <div class="item item-content">
+                <h2 ng-bind-html="item.sTitle"></h2>
+                <p class="item-author-by">
+                    <img ng-src="{{item.sUserImage}}" />
+                    <span>{{'by' | translate}}</span>
+                    <a class="item-title" href="#/app/user/{{item.iUserId}}" ng-bind-html="item.sFullname"></a>
+                    <span class="icon-separator"></span>
+                    <span>{{item.fromNow()}}</span>
+                </p>
+                <div class="item-text-wrap" shorten-html-compile="Helper.stripTags(item.sDescription)" limit="300" show-more-btn="true" show-less-btn="true" ng-if="item.sDescription"></div>
+                <div class="padding-top">
+                    <core-action-list-dir></core-action-list-dir>
+                </div>
+            </div>
+            <like-stat-dir obj="item"></like-stat-dir>
+            <comment-dir obj="item"></comment-dir>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+    <comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>
+</ion-view>

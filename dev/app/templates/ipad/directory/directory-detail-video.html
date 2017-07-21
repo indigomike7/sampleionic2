@@ -1,0 +1,15 @@
+<ion-header-bar class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">
+        {{'Videos' | translate}}
+    </h1>
+    <a ng-if="item.bCanCreateVideo" class="button button-clear icon ion-ios-plus-empty" ng-click="onAddVideoClick()"></a>
+</ion-header-bar>
+<ion-content class="has-header has-footer business-page-content">
+    <div class="item item-divider">
+        <i class="icon ion-ios-film gray"></i>
+        <span class="text-uppercase">{{'Videos' | translate}}</span>
+        <span class="float-right count">{{item.iTotalVideos}}</span>
+    </div>
+    <video-list-dir></video-list-dir>
+</ion-content>

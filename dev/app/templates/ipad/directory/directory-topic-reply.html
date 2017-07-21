@@ -1,0 +1,41 @@
+<ion-view>
+	<ion-header-bar class="bar-positive">
+		<button class="button button-clear" back-dir translate>Cancel</button>
+		<h1 class="title">{{'Reply' | translate}}</h1>
+		<button class="button button-clear" ng-click="onSave()">
+	    	<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+	    	<span ng-hide="isProcessing" translate>Save</span>
+	    </button>
+	</ion-header-bar>
+    <ion-content class="has-header">
+		<div class="list" ng-if="dataReady">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">{{'Content' | translate}}</span>
+				<textarea placeholder="{{'Content' | translate}}" ng-model="formData.sBody"></textarea>
+			</label>
+			<div class="item item-text-wrap item-stable" ng-if="quotedPost">
+				<span><a ng-href="{{quotedPost.getPosterUrl()}}">{{quotedPost.getPosterTitle()}}</a> {{'said' | translate}}:</span>
+				<div ng-html-compile="quotedPost.getBodyParsed()"></div>
+			</div>
+			<div class="item item-input item-stacked-label" ng-if="false">
+				<span class="input-label">{{'Attach a Photo' | translate}}</span>
+				<div class="padding">
+					<div class="grid-photo-edit" ng-if="formData.photoPath">
+			            <img ng-src="{{formData.photoPath}}" />
+			            <a class="icon ion-close" ng-click="onRemovePhoto()"></a>
+			        </div>
+			        <div class="grid-photo-edit" ng-if="!formData.photoPath">
+			            <div ng-click="onAddPhoto()" class="grid-photo-add"></div>
+			        </div>
+			    </div>
+			</div>
+			<div class="item item-checkbox item-text-wrap">
+				<label class="checkbox">
+					<input type="checkbox" ng-model="formData.iWatch">
+				</label>
+				<span>{{'Send me notifications when other members reply to this topic.' | translate}}</span>
+			</div>
+		</div>
+		<ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

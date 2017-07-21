@@ -1,0 +1,30 @@
+<form class="list bar-subheader bar-header-search has-other-button" ng-submit="onSearch()">
+  <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+  <div ng-show="showAdvSearch" class="item-input-search">
+    <div class="bar item-input-inset">
+      <input type="search" class="item-input-search-box" ng-model="searchPages.sSearch" placeholder="{{'Search pages'|translate}}">
+    </div>
+  </div>
+  <div ng-show="showAdvSearch" class="advanced-search" ng-if="dataReady && searchPages.sView != 'my'">
+    <div class="item item-input item-select">
+      <div class="input-label" translate>
+        Category
+      </div>
+      <select ng-model="searchPages.iCategoryId" ng-options="opt.type_id as opt.name|translate for opt in pageCategories">
+        <option value="">{{'All Categories' | translate}}</option>
+      </select>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label" translate>
+        List By
+      </div>
+      <select ng-model="searchPages.sOrder">
+        <option value="latest" translate>Latest</option>
+        <option value="most_liked" translate>Most Liked</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" type="submit">{{'Search' | translate}}</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,39 @@
+<div class="list">
+    <div class="padding text-center" ng-if="noItems" translate>No items found.</div>
+    <div class="item-video card" ng-repeat="item in items" href-dir url="{{item.getUrl()}}">
+        <div ng-if="item.sModelType == 'ultimatevideo_playlist'" ng-controller="UltimateVideoItemPlaylistCtrl">
+            <div class="item item-image">
+                <span img-cache ng-background="{{item.sImage}}">
+                </span>
+                <div class="playlist-over">
+                    <div class="playlist-over-content">
+                        <span>{{item.iTotalVideo}}</span>
+                        <p ng-if="item.iTotalVideo == 1">{{'video' | translate}}</p>
+                        <p ng-if="item.iTotalVideo != 1">{{'videos' | translate}}</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item item-content">
+                <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+                <h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.sTitle"></h2>
+                <p class="item-author-by"><span translate>by</span> <a class="item-title" href="#/app/{{item.user.type}}/{{item.user.id}}" ng-bind-html="item.sFullname"></a></p>
+            </div>
+        </div>
+        <div ng-if="item.sModelType == 'ultimatevideo_video'" ng-controller="UltimateVideoItemVideoCtrl">
+            <div class="item item-image">
+                <span img-cache ng-background="{{item.sVideoImage}}">
+                <span class="item-video-play ion-ios-play"></span>
+                </span>
+            </div>
+            <div class="item item-content">
+                <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+                <h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.sTitle"></h2>
+                <p class="item-author-by"><span translate>by</span> <a class="item-title"
+                                                                       href="#/app/{{item.user.type}}/{{item.user.id}}"
+                                                                       ng-bind-html="item.sFullname"></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

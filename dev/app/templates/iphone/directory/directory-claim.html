@@ -1,0 +1,11 @@
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title" ng-hide="showAdvSearch">{{'Businesses'|translate}}</h1>
+    <a class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/directory/add" ng-if="canAddItem"></a>
+  </ion-header-bar>
+  <directory-search></directory-search>
+  <ion-content class="has-header has-footer">
+    <directory-claim-list></directory-claim-list>
+  </ion-content>
+</ion-view>

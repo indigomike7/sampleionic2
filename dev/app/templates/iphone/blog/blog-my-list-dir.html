@@ -1,0 +1,21 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No blogs found.</div>
+  <div class="item item-blog item-icon-right" ng-repeat="item in items" ng-controller="BlogItemCtrl" href-dir url="{{item.getUrl()}}">
+    <h2 ng-bind-html="item.getTitle()"></h2>
+    <p class="item-stats">
+      <span>{{item.fromNow()}}</span>
+      <span ng-if="item.getUserSettingApproveBlogs()">
+        <span class="icon-separator"></span>
+        <span ng-if="item.isApproved()">{{'Approved' | translate}}</span>
+        <span ng-if="!item.isApproved()">{{'Pending' | translate}}</span>
+      </span>
+      <span ng-if="!item.isPublish()">
+        <span class="icon-separator"></span>
+        <span>{{'Draft' | translate}}</span>
+      </span>
+    </p>
+    <p class="item-description" ng-bind-html="item.getCleanText()"></p>
+    <i class="icon ion-ios-arrow-down" ng-click="onItemSetting()" ng-show="item.canEdit() || item.canDelete()"></i>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

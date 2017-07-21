@@ -1,0 +1,20 @@
+<div class="tabs tabs-icon-left compose-attachment-bar">
+	<a class="tab-item" ng-class="{disabled: isProcessingAttach}" ng-click="onTagFriends()" ng-if="isAdvFeed">
+		<i class="icon ion-person-add"></i>
+	</a>
+	<a class="tab-item" ng-class="{disabled: isProcessingAttach || attachmentItem.sType}" ng-if="!attachmentContext.editFeed" ng-click="onAddPhoto('CAMERA')">
+		<i class="icon ion-camera"></i>
+	</a>
+	<a class="tab-item" ng-class="{disabled: isProcessingAttach || attachmentItem.sType}" ng-if="!attachmentContext.editFeed" ng-click="onAddPhoto('PHOTOLIBRARY')">
+		<i class="icon ion-images"></i>
+	</a>
+	<a class="tab-item" ng-class="{disabled: isProcessingAttach || attachmentItem.sType}" ng-if="!attachmentContext.editFeed" ng-click="onAddVideo()">
+		<i class="icon ion-ios-videocam"></i>
+	</a>
+	<a class="tab-item" ng-class="{disabled: isProcessingAttach || (attachmentItem.sType && !isAdvFeed)}" ng-click="onAddLocation()" ng-if="attachmentContext.enableLocation">
+		<i class="icon ion-location"></i>
+	</a>
+	<a class="tab-item" ng-class="{disabled: isProcessingAttach || attachmentItem.sType}" ng-if="!attachmentContext.editFeed" ng-click="onAddLink()">
+		<i class="icon ion-link"></i>
+	</a>
+</div>

@@ -1,0 +1,15 @@
+<ion-header-bar class="bar-positive">
+  <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+  <h1 class="title">
+    {{'Members' | translate}}
+  </h1>
+  <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+</ion-header-bar>
+<ion-content class="has-header has-footer business-page-content">
+  <div class="item item-divider">
+    <i class="icon ion-person-stalker gray"></i>
+    <span class="text-uppercase">{{'Members' | translate}}</span>
+    <span class="float-right count">{{item.iTotalMember}}</span>
+  </div>
+  <directory-member-list></directory-member-list>
+</ion-content>

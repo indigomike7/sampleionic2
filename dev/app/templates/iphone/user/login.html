@@ -1,0 +1,48 @@
+<ion-view class="user-login-page">
+    <ion-content>
+        <div class="login-logo"></div>
+        <form method="post" ng-submit="doLogin()">
+            <div class="list padding">
+                <label class="item item-input">
+                    <i class="icon ion-ios-email"></i>
+                    <input type="text" ng-if="userLoginType == 'email'" placeholder="{{'Email' | translate}}" ng-model="loginData.sLogin" autocomplete="off" autocorrect="off" autocapitalize="off">
+                    <input type="text" ng-if="userLoginType == 'user_name'" placeholder="{{'User Name' | translate}}" ng-model="loginData.sLogin" autocomplete="off" autocorrect="off" autocapitalize="off">
+                    <input type="text" ng-if="userLoginType == 'both'" placeholder="{{'Login ID' | translate}}" ng-model="loginData.sLogin" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios-locked"></i>
+                    <input type="password" placeholder="{{'Password' | translate}}" ng-model="loginData.sPassword">
+                </label>
+            </div>
+            <div class="item item-transparent">
+                <button type="submit" class="button button-block button-positive-login button-login" ng-if="!isProcessing">
+                    {{'Sign in' | translate}}
+                </button>
+                <button type="submit" class="button button-block button-positive-login button-login" ng-if="isProcessing">
+                    {{'Signing in...' | translate}}
+                </button>
+            </div>
+            <div class="item row item-transparent">
+                <a class="col col-50 button-light button-clear" ng-href="#/app/forgot-password">
+                    <span><font color="#818a8c">{{'Forgot Password?' | translate}}</font></span>
+                </a>
+                <a class="col col-50 button-light button-clear" ng-href="#/app/signup">
+                    <font color="#818a8c">{{'Sign Up Now' | translate}}</font>
+                </a>
+            </div>
+        </form>
+    </ion-content>
+    <ion-footer-bar align-title="center">
+        <span>{{'or using' | translate }}</span>
+        <div class="item row">
+            <div class="col col-50 button-facebook-login" ng-click="doLoginByFacebook()">
+                <i class="icon ion-social-facebook"></i>
+                {{'Facebook' | translate }}
+            </div>
+            <div class="col col-50 button-twitter-login" ng-click="doLoginByTwitter()">
+                <i class="icon ion-social-twitter"></i>
+                {{'Twitter' | translate}}
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

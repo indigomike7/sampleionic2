@@ -1,0 +1,73 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title">{{'Settings' | translate}}</h1>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list" ng-if="dataReady">
+      <div class="item item-divider">
+        {{'Account Settings' | translate}}
+      </div>
+      <a class="item item-icon-right" ng-href="#/app/settings/fullname" ng-if="form.perms.can_change_own_full_name">
+        <span class="item-note" ng-bind-html="form.full_name"></span>
+        <span>{{'Full Name' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/username" ng-if="form.perms.can_change_own_user_name">
+        <span class="item-note" ng-bind-html="form.user_name"></span>
+        <span>{{'User Name' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/email/{{encodeURI(form.email)}}" ng-if="form.perms.can_change_email">
+        <span class="item-note" ng-bind-html="form.email"></span>
+        <span>{{'Email Address' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/password">
+        <span>{{'Password' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/language">
+        <span class="item-note" ng-bind-html="form.language_title"></span>
+        <span>{{'Primary Language' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/timezone">
+        <span class="item-note" ng-bind-html="form.time_zone_title"></span>
+        <span>{{'Time Zone' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/defaultcurrency" ng-if="form.perms.can_edit_currency">
+        <span class="item-note" ng-bind-html="form.default_currency_title"></span>
+        <span>{{'Preferred Currency' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <div class="item item-divider">
+        {{'Privacy Settings' | translate}}
+      </div>
+      <a class="item item-icon-right" ng-href="#/app/settings/profile" ng-if="form.perms.can_control_profile_privacy">
+        <span>{{'Profile' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/items">
+        <span>{{'Items' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/notifications" ng-if="form.perms.can_control_notification_privacy">
+        <span>{{'Notifications' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/blockedusers">
+        <span>{{'Blocked Users' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" ng-href="#/app/settings/invisiblemode/{{form.invisible}}" ng-if="form.perms.can_be_invisible">
+        <span class="item-note" ng-if="form.invisible">{{'On' | translate}}</span>
+        <span class="item-note" ng-if="!form.invisible">{{'Off' | translate}}</span>
+        <span>{{'Invisible Mode' | translate}}</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+    </div>
+    <ion-infinite-scroll ng-if="isLoading"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<div ng-if="searchCriteria.hasSearch">
+    <p class="padding text-center" ng-if="noItems">
+        {{'No results found.' | translate}}
+    </p>
+    <div class="list">
+        <a ng-repeat="item in items" ng-controller="SearchResultItemCtrl" class="item item-avatar" ng-href="#/app/{{item.type}}/{{item.id}}">
+            <img img-cache ng-src="{{item.img}}" />
+            <h2>{{item.title}}</h2>
+            <p>{{item.description}}</p>
+        </a>
+      <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="item item-input item-select item-filter-advFeed" ng-if="isAdvFeed">
+    <div class="input-label">{{currentFilterLabel || 'All Updates' | translate}}<span class="icon ion-ios-more filter-icon-more"> </span>
+    </div>
+    <select ng-model="searchFeeds.actionFilter" ng-options="opt.filter_type as opt.resource_title|translate for opt in filterForm.filterOptions" ng-change="onFilterChanged($index)">
+    </select>
+</div>

@@ -1,0 +1,14 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Quizzes' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a ng-if="canCreate" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/quizzes/add"></a>
+  </ion-header-bar>
+  <quiz-search-dir></quiz-search-dir>
+  <ion-content class="has-header has-footer">
+    <quiz-list-dir></quiz-list-dir>
+  </ion-content>
+</ion-view>

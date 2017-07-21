@@ -1,0 +1,17 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title has-notification">
+      {{'Search' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+  </ion-header-bar>
+  <forum-search-dir></forum-search-dir>
+  <ion-content class="has-header has-footer">
+    <div class="item item-stable">
+      <span>{{'Search posts for' | translate}}:</span>
+      <span class="positive">{{listData.sKeyword}}</span>
+    </div>
+    <forum-post-search-list-dir></forum-post-search-list-dir>
+  </ion-content>
+</ion-view>

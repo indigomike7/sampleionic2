@@ -1,0 +1,25 @@
+<ion-modal-view ng-controller="LocationListCtrl">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideLocationListModal()"></button>
+		<h1 class="title" translate>Check-in</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="item-location">
+			<img ng-if="coords" ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{coords.latitude}},{{coords.longitude}}&amp;zoom=15&amp;size={{getInnerWidth()}}x137&amp;maptype=roadmap&amp;markers=color:red%7C{{coords.latitude}},{{coords.longitude}}&amp;sensor=false" />
+		</div>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input type="text" placeholder="{{'Search your location' | translate}}" ng-model="listData.keyword" ng-change="onSearch()">
+			</label>
+			<p>&nbsp;</p>
+			<div class="padding text-center" ng-if="noItems" translate>No locations found.</div>
+			<div class="item item-avatar" ng-repeat="item in items" ng-click="addLocationSuccess(item)">
+				<img ng-src="{{item.getIconSrc()}}">
+				<h2 ng-bind-html="item.getTitle()"></h2>
+				<p>{{item.getDescription()}}</p>
+			</div>
+			<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+</ion-modal-view>

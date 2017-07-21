@@ -1,0 +1,46 @@
+<div class="bar bar-header bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+</div>
+<ion-content class="content-dark has-header has-footer">
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    <div class="list" ng-if="dataReady && item.canView() && item.canViewBasicInfo()">
+        <!-- user basic profile -->
+        <div class="item user-profile-about" ng-if="1">
+            <div class="user-profile-info-avatar" img-cache ng-background="{{item.profileimage}}"></div>
+            <h2 ng-bind-html="item.getTitle()"></h2>
+            <span class="icon ion-female" ng-if="item.sGender == 'Female'"></span>
+            <span class="icon ion-male" ng-if="item.sGender == 'Male'"></span>
+            <p ng-if="item.sDayOfBirth">{{item.sDayOfBirth}}</p>
+        </div>
+        <div class="item item-divider" translate>
+            About Me
+        </div>
+        <div class="item item-body" ng-if="item.about_me" ng-bind-html="item.about_me">
+        </div>
+        <div class="item item-divider" translate>
+            Contact Information
+        </div>
+        <div class="item item-icon-left" ng-if="item.sLocation">
+            <i class="icon gray ion-home"></i><span ng-bind-html="item.sLocation"></span>
+        </div>
+        <div class="item item-icon-left" ng-if="item.profile.website">
+            <i class="icon ion-earth"></i><span ng-bind-html="item.profile.website"></span>
+        </div>
+        <div class="item item-icon-left" ng-if="item.profile.facebook">
+            <i class="icon ion-social-facebook"></i><span ng-bind-html="item.profile.facebook"></span>
+        </div>
+        <div class="item item-icon-left" ng-if="item.profile.twitter">
+            <i class="icon ion-social-twitter"></i><span ng-bind-html="item.profile.twitter"></span>
+        </div>
+        <div class="item item-icon-left" ng-if="item.profile.aim">
+            <i class="icon ion-person"></i><span ng-bind-html="item.profile.aim"></span>
+        </div>
+    </div>
+    <div ng-if="dataReady && (!item.canView() || !item.canViewBasicInfo())">
+        <p class="padding" translate>Profile is private.</p>
+    </div>
+</ion-content>
+</ion-view>
+

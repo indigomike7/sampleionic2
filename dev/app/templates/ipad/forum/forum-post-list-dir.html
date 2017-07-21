@@ -1,0 +1,15 @@
+<div class="list">
+  <div class="activity-item item-post" ng-repeat="item in items" ng-controller="ForumPostItemCtrl">
+    <div class="item item-avatar">
+      <img ng-src="{{item.getPosterImageSrc()}}" href-dir url="{{item.getPosterUrl()}}">
+      <h2 href-dir url="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></h2>
+      <p class="item-time">{{item.getCreationDate()}}</p>
+      <i class="activity-del-button ion-ios-arrow-down" ng-click="onItemSetting()"></i>
+    </div>
+    <div class="item item-body">
+      <div class="item-post-detail" ng-html-compile="item.getBodyParsed()"></div>
+      <img class="full-image padding-top" ng-if="item.getAttachedPhotoUrl()" ng-src="{{item.getAttachedPhotoUrl()}}">
+    </div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

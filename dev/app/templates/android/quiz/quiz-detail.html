@@ -1,0 +1,74 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title"></h1>
+        <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <ion-content class="has-header" ng-class="{'has-footer': dataReady && item.canComment()}">
+        <div class="padding" ng-if="dataReady && !item.canView()">
+            <p>You don't have permission to view this quiz!</p>
+        </div>
+
+        <div class="item-quiz-detail" ng-if="dataReady && item.canView()">
+            <div class="item item-image" ng-if="item.hasCustomImage()">
+                <span img-cache ng-background="{{item.getImageSrc()}}"></span>
+            </div>
+
+            <div class="item item-content">
+                <h2 ng-bind-html="item.getTitle()"></h2>
+                <p>
+                    <span class="item-author-by">{{'by' | translate}} <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a></span>
+                    <span class="icon-separator"></span>
+                    <span class="item-stats livetime" data-livetime="">{{item.fromNow()}}</span>
+                </p>
+            </div>
+            <div class="item quiz-start-button">
+                <button class="button button-positive" ng-class="{'disabled' : !item.getTotalQuestion() || !item.canTake()}" href-dir url="#/app/quiz/{{item.getId()}}/start">
+                    <b><span translate>Start Quiz</span></b>
+                    <span>(
+                        <span ng-show="item.getTotalQuestion() | isPlural" translate>{{item.getTotalQuestion()}} Questions</span>
+                        <span ng-hide="item.getTotalQuestion() | isPlural" translate>{{item.getTotalQuestion()}} Question</span>
+                    )</span>
+                </button>
+            </div>
+            <div class="item item-text-wrap" ng-html-compile="item.getDescriptionParsed()" ng-if="item.hasDescription()"></div>
+            <ul class="list list-vote" ng-class="{'processing': isProcessing}">
+                <li class="item item-checkbox item-body" ng-repeat="option in item.getOptions()">
+                    <label class="checkbox">
+                        <input ng-disabled="!item.canVote()" type="radio" name="option" ng-checked="option.iAnswerId == item.iAnswerId" ng-click="onCheckOption(option)" />
+                    </label>
+                    <span ng-bind-html="option.sAnswer"></span>
+                </li>
+            </ul>
+
+            <div class="item-detail-users" ng-if="item.getTotalTaker()">
+                <div class="item-separator"></div>
+                <div class="item item-stable item-icon-left item-icon-right" ng-click="showResults()">
+                    <i class="icon ion-checkmark-circled"></i>
+                    <h2 class="item-note">{{item.getTotalTaker()}}</h2>
+                    <h2>{{'User Results' | translate}}</h2>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+                <div class="item list-member">
+                    <a ng-repeat="obj in item.takers" ng-click="showUserResult(obj.iUserId)">
+                        <img img-cache ng-src="{{obj.sImageUrl}}" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="item-separator"></div>
+            <div class="list" ng-if="dataReady">
+                <div class="item">
+                    <core-action-list-dir></core-action-list-dir>
+                </div>
+                <like-stat-dir obj="item"></like-stat-dir>
+                <comment-dir obj="item"></comment-dir>
+            </div>
+        </div>
+        <div class="padding text-center">
+            <ion-spinner ng-show="isLoading"></ion-spinner>
+        </div>
+    </ion-content>
+    <comment-form-footer-dir obj="item" ng-if="dataReady&& item.bCanView && item.bCanComment"></comment-form-footer-dir>
+</ion-view>
+

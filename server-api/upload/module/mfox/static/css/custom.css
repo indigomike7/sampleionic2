@@ -1,0 +1,100 @@
+/*============================ BODY ===========================*/
+body, #userlistviewitem_id, #homelistviewitem_id {/*BODY BG*/
+	background: {homelistviewitem_id_background};
+	color: {homelistviewitem_id_color};
+}
+
+/*============================ LINK ===========================*/
+
+a, a:visited {/*LINK COLOR*/
+	color: {a_color};
+}
+
+/*============================ BUTTON ===========================*/
+
+.purple_btn, .joinEvent_btn a {/*BUTTON BG*/
+	background: {purple_btn_background};
+	color: {purple_btn_color};
+}
+
+/*============================ HEADER BAR ===========================*/
+
+.header .header_bar {/*HEADER BG*/
+	background: {header_background};
+}
+
+/*============================ LEFT NAVI ===========================*/
+
+.fm_guide_container {/*LEFT NAVI BG*/
+	background: {fm_guide_container_background};
+}
+#leftnavi_menu_id .menu_main, .menu_main ul li a, .menu_main ul li a:hover, .menu_main ul li i, .user_info span {/*TEXT COLOR*/
+	color: {leftnavi_menu_id_menu_color};
+}
+
+/*============================ LOGIN PAGE ===========================*/
+
+.landingpage, .fm_login {/*BACKGROUND*/
+	background: {landingpage_background};
+}
+.button-green {/*BUTTON LOGIN BG*/
+	background: {button_green_background};
+}
+.login_form input[type="submit"] {/*TEXT COLOR*/
+	color: {login_form_input_color};
+}
+
+/*============================ POPUP ===========================*/
+
+.popupcontent {
+	background: {popupcontent_background};
+}
+
+/*============================ MENU FOOTER ===========================*/
+
+.menu_footer {/*MENU FOOTER BG*/
+	background: {menu_footer_background};
+}
+.menu_footer a {/*MENU FOOTER COLOR*/
+	color: {menu_footer_a_color};
+}
+.menu_footer .activebutton {/*MENU ACTIVE BG*/
+	background: {menu_footer_activebutton_background};
+}
+.menu_footer .activebutton a, .menu_footer .activebutton {/*MENU ACTIVE COLOR*/
+	color: {menu_footer_activebutton_a_color};
+}
+
+/*============================ MENU ACTION FEED ===========================*/
+
+.comment_actions {/*ACTION BG*/
+	background: {comment_actions_background};
+}
+
+.comment_actions div a {/*TEXT COLOR*/
+	color: {comment_actions_div_a_color};
+}
+.comment_actions div a.likeactive {/*LIKE ACTIVE*/
+	color: {comment_actions_div_a_likeactive_color};
+}
+
+/*============================ FEED ===========================*/
+
+.feed_entry {/*ITEM FEED BACKGROUND*/
+	background: {feed_entry_color};
+}
+.user_post_content {/*FEED'S TEXT*/
+	color: {user_post_content_color};
+}
+
+/*============================ SLIDE PHOTO ===========================*/
+
+.slide-photo-content {/*SLIDE BG*/
+	background: {slide_photo_content_background};
+}
+.extra {/*EXTRA TEXT*/
+	color: {extra_color};
+}
+.item_is_active_holder{
+  line-height: normal;
+}

@@ -1,0 +1,24 @@
+<div class="list padding">
+	<div class="padding text-center" ng-if="noItems" translate>
+		No groups found.
+	</div>
+	<div class="card group-item" ng-repeat="item in items" ng-controller="GroupItemCtrl" href-dir url="{{item.getUrl()}}">
+		<!--<i ng-if="searchPages.sView == 'my'" class="icon ion-ios-arrow-down" ng-click="onItemSetting()"></i>-->
+		<div class="item item-group-detail">
+			<div class="group-info-cover" img-cache ng-background="{{item.sCoverImage}}" ng-class="{'no-cover': !item.bHasCover}"></div>
+			<div class="group-info-avatar">
+				<span class="group-info-avatar-image" ng-background="{{item.sAvatarImage}}"></span>
+			</div>
+
+			<div class="group-info-detail">
+				<h2 ng-bind-html="item.getTitle()"></h2>
+				<p class="item-stats">
+					<span ng-bind-html="item.sCategoryName"></span>
+					<span ng-if="item.sCategoryName" class="icon-separator"></span>
+				    {{item.getTotalMembers()}} <i class="ion-ios-people"></i>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

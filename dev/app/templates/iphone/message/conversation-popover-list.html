@@ -1,0 +1,27 @@
+<ion-popover-view>
+	<ion-content class="has-footer" ng-controller="ConversationInboxCtrl">
+		<div class="list" ng-controller="ConversationListCtrl">
+	    	<div class="padding text-center" ng-if="noItems" translate>No messages found.</div>
+			<div class="item item-avatar" 
+			ng-class="{'item-stable': !item.isRead()}"
+			ng-repeat="item in items" 
+			ng-controller="ConversationItemCtrl" 
+			href-dir url="{{item.getUrl()}}">
+				<img ng-src="{{item.getPosterImageSrc()}}" href-dir url="{{item.getPosterUrl()}}" />
+				<span class="item-note">{{item.fromNow()}}</span>
+				<h2 href-dir url="{{item.getPosterUrl()}}" ng-bind-html="item.sTitle"></h2>
+				<p ng-html-compile="item.getBodyParsed()"></p>
+			</div>
+			<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+	<div class="bar bar-footer">
+        <a class="button button-clear button-positive pull-left" href="#/app/messages/add">
+        	<i class="icon ion-ios-plus-empty"></i>
+        	{{'New Message' | translate}}
+        </a>
+        <a class="button button-clear button-positive pull-right" href="#/app/messages">
+        	{{'View All' | translate}}
+        </a>
+    </div>
+</ion-popover-view>

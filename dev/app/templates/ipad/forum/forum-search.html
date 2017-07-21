@@ -1,0 +1,30 @@
+<form class="list bar-subheader bar-header-search" ng-class="{'has-other-button': item.canAddThread()}" ng-submit="goSearch(); showAdvSearch = false;">
+  <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+  <div ng-show="showAdvSearch" class="item-input-search">
+    <div class="bar item-input-inset">
+      <input type="search" class="item-input-search-box" ng-model="searchData.sKeyword" placeholder="{{'Search ...' | translate}}">
+    </div>
+  </div>
+  <div ng-show="showAdvSearch" class="advanced-search">
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Find in forum' | translate}}
+      </div>
+      <select ng-model="searchData.sForumIds" ng-options="opt.iForumId as opt.sName|translate for opt in searchForm.forumOptions">
+        <option value="">{{'All Forums' | translate}}</option>
+      </select>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Display results as' | translate}}
+      </div>
+      <select ng-model="searchData.sSearchType">
+        <option value="thread">{{'Threads' | translate}}</option>
+        <option value="post">{{'Posts' | translate}}</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" type="submit">{{'Search' | translate}}</button>
+    </div>
+  </div>
+</form>

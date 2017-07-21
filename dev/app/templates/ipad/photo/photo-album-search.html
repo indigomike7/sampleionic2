@@ -1,0 +1,22 @@
+<form class="list bar-subheader bar-header-search has-other-button" ng-submit="onSearch()">
+  <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+  <div ng-show="showAdvSearch" class="item-input-search">
+    <div class="bar item-input-inset">
+        <input type="search" class="item-input-search-box" ng-model="searchAlbums.sSearch" placeholder="{{'Search albums' | translate}}">
+    </div>
+  </div>
+  <div ng-show="showAdvSearch" class="advanced-search">
+    <div class="item item-input item-select">
+      <div class="input-label" translate>
+        List By
+      </div>
+      <select ng-model="searchAlbums.sOrder">
+        <option value="latest">{{'Latest' | translate}}</option>
+        <option value="most_disscussed">{{'Most Discussed' | translate}}</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" type="submit">{{'Search' | translate}}</button>
+    </div>
+  </div>
+</form>

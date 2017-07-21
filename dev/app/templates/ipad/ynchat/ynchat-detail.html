@@ -1,0 +1,24 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir></button>
+    <h1 class="title" ng-bind-html="ynchatObj.getTitle()"></h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <div class="bar bar-subheader bar-dark item-text-wrap" ng-if="bNoConnection">
+    <i class="ion-alert-circled"></i>
+    <span>{{'Establishing connection. Please wait...' | translate}}</span>
+  </div>
+  <ion-content class="has-header has-footer" ng-class="{'has-subheader': bNoConnection}" delegate-handle="ynchat-message-list">
+    <ynchat-message-list-dir></ynchat-message-list-dir>
+  </ion-content>
+  <form keyboard-attach class="bar bar-footer item-input-inset ynchat-form-message" ng-submit="onSendMessage()">
+    <input type="file" class="input-file" onchange="angular.element(this).scope().onFileChange(this)" multiple accept="image/*"/>
+    <ion-spinner class="icon icon-camera" ng-show="isProcessingFile"></ion-spinner>
+    <i class="icon icon-camera ion-camera" ng-hide="isProcessingFile" ng-click="onPhotoClick()"></i>
+    <i class="icon icon-smile ion-happy-outline" ng-click="showSmilePopover($event)"></i>
+    <div class="item-input-wrapper">
+      <textarea class="input-message" rows="1" placeholder="{{'Your Message' | translate}}" ng-model="messageData.sMessage" ng-trim="false"></textarea>
+    </div>
+    <input type="submit" class="button button-send" ng-class="{disabled: !messageData.sMessage.trim() || bNoConnection}" value="" />
+  </form>
+</ion-view>

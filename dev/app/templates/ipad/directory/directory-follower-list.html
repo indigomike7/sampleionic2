@@ -1,0 +1,5 @@
+<ion-list>
+  <div class="padding text-center" ng-if="noItems" translate>No followers found.</div>
+  <directory-follower-item ng-repeat="item in items"></directory-follower-item>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</ion-list>

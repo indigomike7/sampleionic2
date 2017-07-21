@@ -1,0 +1,23 @@
+<div class="sticker_content_items_holder clearfix" ng-show="isShowStickers">
+      <span class="pull-left sticker_item" ng-repeat="item in aStickers" ng-click="onSelectSticker({{item.sticker_id}})">
+          <img ng-src="{{item.sticker_path}}" />
+      </span>
+</div>
+
+<ion-footer-bar align-title="left" disable-scroll="true" class="yn-keyboard-attach item-input-inset custom-comment-form" ng-class="{'has-attachment': aAttachmentItems.length > 0}">
+    <div class="custom-comment-container">
+        <form ng-submit="onPostComment()">
+            <i class="icon icon-camera ion-image" ng-hide="isProcessingFile" ng-click="onPhotoClick()"></i>
+            <i class="icon icon-link ion-android-happy" ng-click="onStickerClick()"></i>
+            <label class="item-input-wrapper">
+                <input type="text" autocapitalize="on" autocorrect="on" id="comment_{{obj.getType()}}_{{obj.getId()}}" placeholder="{{'Comment here' | translate}}" ng-model="data.sText">
+            </label>
+            <button type="submit" class="button button-small button-positive" ng-class="{disabled:isProcessingPost}">
+                {{'Post' | translate}}
+            </button>
+        </form>
+    </div>
+    <div class="comment-attachment-container" >
+        <comment-attachment-preview-dir></comment-attachment-preview-dir>
+    </div>
+</ion-footer-bar>

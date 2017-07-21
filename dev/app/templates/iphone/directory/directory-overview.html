@@ -1,0 +1,200 @@
+<ion-header-bar class="bar-positive">
+  <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+  <h1 class="title" translate>Overview</h1>
+  <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+</ion-header-bar>
+<ion-content class="has-header has-footer content-info business-overview-content">
+  <div ng-if="dataReady">
+    <div class="item item-info no-border-bottom" ng-class="{'no-cover': !item.aCoverPhotos.length}">
+      <div class="item-info-covers">
+        <ion-slide-box show-pager="false" delegate-handle="slide-box-cover" does-continue="true">
+          <ion-slide ng-repeat="cover in item.aCoverPhotos">
+            <div class="item-info-cover" ng-background="{{cover.sPhotoUrl}}"></div>
+          </ion-slide>
+        </ion-slide-box>
+        <div class="slide-navigator">
+          <div class="button-navigate button-back" ng-show="item.aCoverPhotos.length > 1" ng-click="previousCover()">
+            <i class="icon ion-ios-arrow-back"></i>
+          </div>
+          <div class="button-navigate button-forward" ng-show="item.aCoverPhotos.length > 1" ng-click="nextCover()">
+            <i class="icon ion-ios-arrow-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="item-info-avatar">
+        <span class="item-info-avatar-image" ng-background="{{item.sFullPhotoUrl}}"></span>
+      </div>
+      <div class="item-info-detail item-text-wrap">
+        <h2 ng-bind-html="item.getTitle()"></h2>
+        <p class="info-subline">
+          <core-stars active="{{item.fRating}}" total="5"></core-stars>
+          &nbsp;
+          <b>{{item.iTotalReview}}</b>
+          <span class="gray text-uppercase" ng-if="item.iTotalReview == 1">{{'Review' | translate}}</span>
+          <span class="gray text-uppercase" ng-if="item.iTotalReview != 1">{{'Reviews' | translate}}</span>
+        </p>
+        <div class="item-action-list">
+          <button class="button button-small button-positive button-rounder" ng-click="join()" ng-if="item.bCanJoin">
+            <span>{{'Working Here' | translate}}</span>
+          </button>
+          <button class="button button-small button-positive button-rounder" ng-click="leave()" ng-if="item.bCanLeave">
+            <span>{{'Leave' | translate}}</span>
+          </button>
+          <button class="button button-small button-positive button-rounder icon-right" ng-class="{'button-outline': !item.isLiked()}" ng-click="onItemLike()" ng-if="item.canLike()">
+            <span>{{item.getTotalLike()}}</span>
+            <i class="icon ion-thumbsup"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="list-extra-info">
+        <div class="item item-icon-left item-text-wrap" ng-if="item.sLocation">
+          <i class="icon ion-ios-location"></i>
+          <p>
+            <span ng-bind-html="item.sLocation"></span>
+          </p>
+        </div>
+        <div class="item item-icon-left item-icon-right item-text-wrap" ng-click="goToDetailPage('members')">
+          <i class="icon ion-person-stalker"></i>
+          <p>
+            <span class="gray">{{'Members' | translate}}:</span>
+            <span>{{item.iTotalMember}}</span>
+          </p>
+          <i class="icon ion-ios-arrow-right"></i>
+        </div>
+        <div class="item item-icon-left item-icon-right item-text-wrap" ng-click="goToDetailPage('followers')">
+          <i class="icon ion-arrow-right-c"></i>
+          <p>
+            <span class="gray">{{'Followers' | translate}}:</span>
+            <span>{{item.iTotalFollow}}</span>
+          </p>
+          <i class="icon ion-ios-arrow-right"></i>
+        </div>
+        <div class="item item-icon-left item-text-wrap">
+          <i class="icon ion-ios-people"></i>
+          <p>
+            <span class="gray">{{'Business Size' | translate}}:</span>
+            <span>{{item.sSize}}</span>
+          </p>
+        </div>
+        <div class="item item-icon-left item-text-wrap" ng-if="item.sCategory">
+          <i class="icon ion-folder"></i>
+          <p>
+            <span ng-bind-html="item.sCategory"></span>
+          </p>
+        </div>
+        <div class="item item-text-wrap" ng-if="item.sShortDesc">
+          <div shorten-html-compile="item.sShortDesc | prepareHtml" limit="200" show-more-btn="true" show-less-btn="true"></div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="item.aOperatingHours.length">
+      <div class="item item-divider text-divider item-icon-right" ng-click="toggleView('hours')">
+        {{'Operating Hours' | translate}}
+        <i class="icon" ng-class="{'ion-ios-arrow-up': !viewCollapse.hours, 'ion-ios-arrow-down': viewCollapse.hours}"></i>
+      </div>
+      <div class="list-extra-info" ng-hide="viewCollapse.hours">
+        <div class="item" ng-repeat="date in item.aOperatingHours">
+          <p>
+            <b ng-bind-html="date.sDay"></b>
+            <span class="float-right" ng-if="date.sFrom == 'CLOSED'">{{date.sFrom}}</span>
+            <span class="float-right" ng-if="date.sFrom != 'CLOSED'">{{date.sFrom}} - {{date.sTo}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div ng-if="item.aFounders">
+      <div class="item item-divider text-divider item-icon-right" ng-click="toggleView('founders')">
+        {{'Founders' | translate}}
+        <i class="icon" ng-class="{'ion-ios-arrow-up': !viewCollapse.founders, 'ion-ios-arrow-down': viewCollapse.founders}"></i>
+      </div>
+      <div class="list-extra-info" ng-hide="viewCollapse.founders">
+        <div class="item item-text-wrap">
+          <span ng-bind-html="item.aFounders"></span>
+        </div>
+      </div>
+    </div>
+    <div ng-if="item.hasContact()">
+      <div class="item item-divider text-divider item-icon-right" ng-click="toggleView('contact')">
+        {{'Contact Information' | translate}}
+        <i class="icon" ng-class="{'ion-ios-arrow-up': !viewCollapse.contact, 'ion-ios-arrow-down': viewCollapse.contact}"></i>
+      </div>
+      <div class="list-extra-info" ng-hide="viewCollapse.contact">
+        <div class="item item-icon-left item-text-wrap" ng-if="item.aWebAddress.length">
+          <i class="icon ion-earth"></i>
+          <p>
+            <span class="gray">{{'Website' | translate}}:</span>
+            <span ng-repeat="addr in item.aWebAddress">
+              <a href-dir external-url="{{addr | prepareUrl}}" ng-bind-html="addr"></a><span ng-if="$index < item.aWebAddress.length - 1">,</span>
+            </span>
+          </p>
+        </div>
+        <div class="item item-icon-left item-text-wrap" ng-if="item.sEmail">
+          <i class="icon ion-email"></i>
+          <p>
+            <span class="gray">{{'Email' | translate}}:</span>
+            <a href="mailto:{{item.sEmail}}" ng-bind-html="item.sEmail"></a>
+          </p>
+        </div>
+        <div class="item item-icon-left item-text-wrap" ng-if="item.aPhone.length">
+          <i class="icon ion-ios-telephone"></i>
+          <p>
+            <span class="gray">{{'Phone' | translate}}:</span>
+            <span ng-repeat="phone in item.aPhone">
+              <span>{{phone}}</span><span ng-if="$index < item.aPhone.length - 1">,</span>
+            </span>
+          </p>
+        </div>
+        <div class="item item-icon-left item-text-wrap" ng-if="item.aFax.length">
+          <i class="icon ion-printer"></i>
+          <p>
+            <span class="gray">{{'Fax' | translate}}:</span>
+            <span ng-repeat="fax in item.aFax">
+              <span>{{fax}}</span><span ng-if="$index < item.aFax.length - 1">,</span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div ng-if="item.aLocations.length">
+      <div class="item item-divider text-divider item-icon-right" ng-click="toggleView('location')">
+        {{'Locations' | translate}}
+        <i class="icon" ng-class="{'ion-ios-arrow-up': !viewCollapse.location, 'ion-ios-arrow-down': viewCollapse.location}"></i>
+      </div>
+      <div class="list-extra-info" ng-hide="viewCollapse.location">
+        <div class="item item-icon-left item-text-wrap" ng-repeat="location in item.aLocations">
+          <i class="icon ion-ios-location"></i>
+          <h2 ng-bind-html="location.sLocationTitle"></h2>
+          <p ng-bind-html="location.sLocation"></p>
+        </div>
+      </div>
+    </div>
+    <div ng-if="item.aAdditional.length">
+      <div class="item item-divider text-divider item-icon-right" ng-click="toggleView('adds')">
+        {{'Additional Information' | translate}}
+        <i class="icon" ng-class="{'ion-ios-arrow-up': !viewCollapse.adds, 'ion-ios-arrow-down': viewCollapse.adds}"></i>
+      </div>
+      <div class="list-extra-info" ng-hide="viewCollapse.adds">
+        <div class="item item-text-wrap" ng-repeat="add in item.aAdditional">
+          <h2 ng-bind-html="add.sTitle"></h2>
+          <div shorten-html-compile="add.sContent | prepareHtml" limit="200" show-more-btn="true" show-less-btn="true"></div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="item.sDescription">
+      <div class="item item-divider text-divider item-icon-right" ng-click="toggleView('description')">
+        {{'Description' | translate}}
+        <i class="icon" ng-class="{'ion-ios-arrow-up': !viewCollapse.description, 'ion-ios-arrow-down': viewCollapse.description}"></i>
+      </div>
+      <div class="list-extra-info" ng-hide="viewCollapse.description">
+        <div class="item item-text-wrap">
+          <div shorten-html-compile="item.sDescription | prepareHtml" limit="200" show-more-btn="true" show-less-btn="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="padding text-center" ng-if="isProcessingFetch">
+    <ion-spinner></ion-spinner>
+  </div>
+</ion-content>

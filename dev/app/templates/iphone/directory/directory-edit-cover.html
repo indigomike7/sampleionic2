@@ -1,0 +1,32 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button icon-left button-clear" back-dir translate>Cancel</button>
+        <h1 class="title" translate>Update Cover Photos</h1>
+        <button class="button button-clear" ng-click="onSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="padding ynlisting-add-photo" ng-if="dataReady">
+            <!--<div class="item item-text-wrap">-->
+            <!--<h2 ng-bind-html="form.sTitle"></h2>-->
+            <!--</div>-->
+            <div class="item item-text-wrap">
+                <span ng-show="iMaxCover | isPlural" translate>You can add maximum {{iMaxCover}} cover photos</span>
+                <span ng-hide="iMaxCover | isPlural" translate>You can add maximum {{iMaxCover}} cover photo</span>
+            </div>
+            <div class="padding-top">
+                <div class="grid-photo-edit" ng-show="iMaxCover > photoItems.length">
+                    <div ng-click="onAddPhoto()" title="Add Photos" class="grid-photo-add">
+                    </div>
+                </div>
+                <div ng-repeat="item in photoItems" class="grid-photo-edit">
+                    <img src="{{item.sPhotoUrl}}" />
+                    <a class="icon ion-close" ng-click="onRemovePhotoItem(item.iPhotoId)"></a>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

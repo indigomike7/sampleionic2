@@ -1,0 +1,163 @@
+.sticker_content_items_holder {
+  position: absolute;
+  bottom: $tabs-height;
+  z-index: $z-index-bar-above;
+  background: $light;
+  margin: $sheet-margin;
+  padding: $button-small-padding;
+  border: $button-light-border 1px solid;
+  border-radius: $border-radius-large;
+  max-height: 290px;
+  overflow-y: auto;
+
+  .sticker_item {
+    width: 25%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.reactions-emoticons {
+  padding: $button-small-padding;
+  border-radius: $border-radius-large;
+  background: $light;
+  border: $button-light-border 1px solid;
+  position: absolute;
+  bottom: $tabs-height - 2px;
+  z-index: $z-index-bar-above;
+  width: 280px;
+  right: 4px;
+
+  .reactions-emoticons-holder {
+    .emoticon-item {
+      display: inline-block;
+      padding: 2px 3px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.emoticon-reactions-list {
+  display: inline;
+  padding-top: 10px;
+  .emoticon-item {
+    display: inline-flex;
+    padding: 1px 2px;
+    margin: 2px 2px;
+    align-items: center;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    span {
+          color: black;
+      margin-left:5px;
+    }
+  }
+}
+
+ion-footer-bar.custom-comment-form {
+  padding-right: $bar-padding-portrait;
+  flex-direction: column;
+  overflow: hidden;
+
+  &.has-attachment {
+    min-height: 200px;
+  }
+
+  .custom-comment-container {
+    width: 100%;
+
+    form {
+      display: flex;
+
+      .icon {
+        font-size: 18px;
+        float: left;
+        padding: 6px 10px;
+      }
+
+      .item-input-wrapper {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+
+        .input-message {
+          height: 20px;
+          line-height: 20px;
+          background: none;
+          margin: 4px 0;
+          padding: 0 4px;
+        }
+      }
+
+      .input-file {
+        width: 0px;
+        height: 0px;
+      }
+
+      .button-send {
+        border: none;
+        width: 28px;
+        height: 28px;
+        min-height: 28px;
+        margin-left: 10px;
+        background-image: url("#{$image-path}/icon-send.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .attachment-container {
+        width: 100%;
+      }
+
+      button {
+        float: right;
+      }
+    }
+  }
+
+  .attachment-container {
+    overflow-y: auto;
+    activity-attachment-add-preview-dir {
+      .item {
+        border: none;
+
+        .item-update-photo{
+          width: 200px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.item-comment-attachment {
+  display: flex;
+  flex-wrap: wrap;
+  .item-update-image {
+    margin: $item-padding;
+    float: left;
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.comment-attachment-container {
+  width: 100%;
+  overflow-y: auto;
+  .item.item-update {
+    width: 47%;
+    height: inherit;
+    float: left;
+    margin: 6px 6px 0 0;
+  }
+}

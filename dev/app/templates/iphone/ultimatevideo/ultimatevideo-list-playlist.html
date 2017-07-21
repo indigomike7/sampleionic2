@@ -1,0 +1,28 @@
+<div class="list">
+    <div class="padding text-center" ng-if="noItems" translate>No playlists found.</div>
+    <div class="item-video card" ng-repeat="item in items" ng-controller="UltimateVideoItemPlaylistCtrl" href-dir url="{{item.getUrl()}}">
+        <div class="item item-image">
+			<span img-cache ng-background="{{item.sImage}}">
+			</span>
+            <div class="playlist-over">
+                <div class="playlist-over-content">
+                    <span>{{item.iTotalVideo}}</span>
+                    <p ng-if="item.iTotalVideo == 1">{{'video' | translate}}</p>
+                    <p ng-if="item.iTotalVideo != 1">{{'videos' | translate}}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="item item-content">
+            <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+            <h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.sTitle"></h2>
+            <p class="item-author-by"><span translate>by</span> <a class="item-title" href="#/app/{{item.user.type}}/{{item.user.id}}" ng-bind-html="item.sFullname"></a></p>
+            <ion-list ng-if="item.aVideoList.length">
+                <ion-item ng-repeat="video in item.aVideoList">
+                    <a ng-href="#/app/ultimatevideo/video/{{video.video_id}}">{{video.title}}</a>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

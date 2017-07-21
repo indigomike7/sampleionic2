@@ -1,0 +1,38 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button button-clear" back-dir translate>Cancel</button>
+        <h1 class="title">{{'Add New Business' | translate}}</h1>
+        <button class="button button-clear" ng-click="save()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Business Name' | translate}}</span>
+                <input type="text" placeholder="{{'Business Name' | translate}}" ng-model="formData.sTitle" />
+            </label>
+            <label class="item item-input item-select">
+                <span class="input-label">*{{'Category' | translate}}</span>
+                <select ng-model="formData.iCategoryId" ng-options="option.id as option.title for option in form.categoryOptions">
+                </select>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Short Description' | translate}}</span>
+                <textarea placeholder="{{'Short Description' | translate}}" ng-model="formData.sShortDesc"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Description' | translate}}</span>
+                <textarea placeholder="{{'Description' | translate}}" ng-model="formData.sDescription"></textarea>
+            </label>
+            <div class="item item-checkbox item-text-wrap">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="formData.bIsSearch" ng-true-value="1" ng-false-value="0" >
+                </label>
+                <span>{{'Include in search results' | translate}}</span>
+            </div>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

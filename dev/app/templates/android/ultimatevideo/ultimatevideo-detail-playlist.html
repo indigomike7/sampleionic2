@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title"></h1>
+        <button ng-if="item.canView()" class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <ion-content class="has-header" ng-class="{'has-footer': dataReady && item.canComment()}">
+        <private-msg-dir ng-if="dataReady && !item.bCanView"></private-msg-dir>
+        <div class="list item-video-detail" ng-if="dataReady && item.bCanView == true">
+            <div class="item item-content">
+                <h2 ng-bind-html="item.sTitle"></h2>
+                <p class="ultimatevideo-item-author-by">
+                    <img ng-src="{{item.sUserImage}}" />
+                    <span>{{'by' | translate}}</span>
+                    <a class="item-title" href="#/app/user/{{item.iUserId}}" ng-bind-html="item.sFullname"></a>
+                </p>
+                <div class="item-text-wrap" shorten-html-compile="Helper.stripTags(item.sDescription)" limit="300" show-more-btn="true" show-less-btn="true" ng-if="item.sDescription"></div>
+                <ultimatevideo-playlist-video-dir></ultimatevideo-playlist-video-dir>
+                <div class="padding-top">
+                    <core-action-list-dir></core-action-list-dir>
+                </div>
+            </div>
+            <like-stat-dir obj="item"></like-stat-dir>
+            <comment-dir obj="item"></comment-dir>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+    <comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>
+</ion-view>

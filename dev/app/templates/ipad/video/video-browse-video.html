@@ -1,0 +1,15 @@
+<ion-view>
+<ion-header-bar align-title="center" class="bar-positive">
+  <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+  <h1 class="title has-notification">
+	{{'Videos' | translate}}
+	<span class="header-notification"><header-stat-dir></header-stat-dir></span>
+  </h1>
+  <a class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/videos/add"></a>
+</ion-header-bar>
+  <video-search-dir></video-search-dir>
+  <ion-content class="has-header has-footer">
+    <video-list-dir></video-list-dir>
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,66 @@
+<ion-view>
+    <button class="button button-icon icon ion-close button-close-photo-detail" ng-click="goBack()">
+        <!-- Close -->
+    </button>
+    <div class="swiper-container content-photo-detail" id="photo-slider" style="position:fixed;left:0;top:0;bottom:0;right:0;background-color:#000;">
+        <div class="swiper-wrapper">
+         <!--First Slide-->
+          <div class="swiper-slide" data-index="0"> 
+            <div class="content-slide">
+                <div class="photo_display" style="height: {{wrapperHeightInPx}};">
+                    <img class="photo-detail-image photo-slide-0" style="width:100%;" />
+                </div>
+            </div>
+          </div>
+          
+          <!--Second Slide-->
+          <div class="swiper-slide" data-index="1">
+            <div class="content-slide">
+                <div class="photo_display" style="height: {{wrapperHeightInPx}};">
+                    <img class="photo-detail-image photo-slide-1" style="width:100%;" />
+                </div>
+            </div>
+          </div>
+          
+          <!--Third Slide-->
+          <div class="swiper-slide" data-index="2"> 
+            <div class="content-slide">
+                <div class="photo_display photo-slide2" style="height: {{wrapperHeightInPx}};">
+                    <img class="photo-detail-image photo-slide-2" style="width:100%;" />
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="photo_detail_info" ng-class="{'show-full': bShowFullDescription}" ng-if="item">
+        <h2 class="photo-headline" ng-show="item.sTitle" ng-bind-html="item.sTitle">
+        </h2>
+        <div class="photo-status show-full" shorten-html-compile="item.sDescription" limit="180" show-more-btn="true" show-less-btn="true" more-btn-text="{{'See More' | translate}}" less-btn-text="{{'See Less' | translate}}"></div>
+
+        <div class="photo-detail-action clearfix">
+            <div class="pull-right">
+                <span class="icon-photo-show-more" ng-click="onItemSetting()" ng-if="!item.isOwner() || item.canEdit() || item.canDelete()">
+                    <i class="ion-ios-more"></i>
+                </span>
+            </div>
+            <div class="overflow-hidden">
+                <button class="button button-small button-rounder button-outline button-positive icon-right" ng-click="onItemShare()" ng-if="item.canShare()">
+                    <i class="ion-android-share"></i>
+                </button>
+                <button ng-if="item.showRate()" class="button button-small button-positive button-rounder icon-right" ng-class="{energized: item.isRated()}" ng-click="onItemRate()">
+                    <span>{{item.getRateNumber()}}</span>
+                    <i class="ion-android-star"></i>
+                </button>                
+                <button class="button button-small button-rounder button-outline button-positive icon-right" ng-click="onItemCommentPopup()" ng-if="item.canComment()">
+                    <span>{{item.getTotalComment()}}</span>
+                    <i class="ion-chatbox"></i>
+                </button>
+                <button class="button button-small button-positive button-rounder icon-right" ng-class="{'button-outline': !item.isLiked()}" ng-click="onItemLike()" ng-if="item.canLike()">
+                    <span>{{item.getTotalLike()}}</span>
+                    <i class="icon ion-thumbsup"></i>
+                </button>
+                <span class="item-date">{{item.fromNow()}}</span>
+            </div>
+        </div>
+    </div>
+</ion-view>

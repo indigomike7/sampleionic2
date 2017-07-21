@@ -1,0 +1,33 @@
+<div class="clearfix">
+	<div class="item item-avatar item-comment" ng-repeat="item in obj.comments" ng-controller="CommentItemCtrl" ng-hide="isProcessingDelete">
+		<img ng-src="{{item.getPosterImageSrc()}}" href-dir url="{{item.getPosterUrl()}}" />
+		<span class="item-note">{{item.fromNow()}}</span>
+		<a class="black" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+		<div class="item-text-wrap" ng-html-compile="item.getContent()"></div>
+
+        <div class="item-attachment item-comment-attachment" ng-if="item.hasAttachment()">
+            <div class="no-border-bottom item-update-image" ng-repeat="attachment in item.aAttachmentItems">
+                <img ng-src="{{attachment.sPhotoUrl}}">
+            </div>
+        </div>
+
+		<p class="item-stats">
+            <span ng-show="!item.getTotalLike()" ng-click="doLike()">{{'Like' | translate}}</span>
+            <span ng-show="item.getTotalLike()" ng-click="doLike()" ng-class="{'positive': item.isLiked()}">
+                <span ng-show="item.getTotalLike() | isPlural" translate>{{item.getTotalLike()}} Likes</span>
+                <span ng-hide="item.getTotalLike() | isPlural" translate>{{item.getTotalLike()}} Like</span>
+            </span>
+            <span ng-if="canDislike" class="icon-separator"></span>
+            <span ng-show="canDislike && !item.getTotalDislike()" ng-click="doDislike()">{{'Dislike' | translate}}</span>
+            <span ng-show="canDislike && item.getTotalDislike()" ng-click="doDislike()" ng-class="{'positive': item.isDisliked()}">
+                <span ng-show="item.getTotalDislike() | isPlural" translate>{{item.getTotalDislike()}} Dislikes</span>
+                <span ng-hide="item.getTotalDislike() | isPlural" translate>{{item.getTotalDislike()}} Dislike</span>
+            </span>
+            <span ng-if="item.isOwner()">
+				<span class="icon-separator"></span>
+				<span ng-click="onItemDelete($index)">{{'Delete' | translate}}</span>
+			</span>
+		</p>
+	</div>
+	<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

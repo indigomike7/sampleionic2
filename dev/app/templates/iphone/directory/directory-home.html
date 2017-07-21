@@ -1,0 +1,18 @@
+<div ui-view="tabContent"></div>
+<div class="tabs tabs-footer tabs-overflow">
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentState.name == 'app.directory'}" ng-href="#/app/directory">
+    {{'All Businesses'|translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentState.name == 'app.directoryMy'}" ng-href="#/app/directory/my">
+    {{'My Businesses'|translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentState.name == 'app.directoryFavourite'}" ng-href="#/app/directory/favourite">
+    {{'My Favourite Businesses'|translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentState.name == 'app.directoryFollow'}" ng-href="#/app/directory/follow">
+    {{'My Following Businesses'|translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentState.name == 'app.directoryClaim'}" ng-href="#/app/directory/claim">
+    {{'Claim A Business'|translate}}
+  </a>
+</div>

@@ -1,0 +1,10 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No friends found.</div>
+  <div ng-repeat="item in items" ng-controller="FriendItemCtrl">
+    <div class="item item-avatar" ng-click="selectFriend(item)">
+      <img src="{{item.getImageSrc()}}">
+      <h2 ng-bind-html="item.getTitle()"></h2>
+    </div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

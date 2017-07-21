@@ -1,0 +1,13 @@
+<ion-popover-view class="ynchat-popover-smile emoticonsticker-container" data-userid="5">
+    <div class="emoticonsticker-header">
+        <span rel="emoticon-list" ng-class="active" ng-click="bShowSticker = 0">{{'Emoticons' | translate}}</span>
+    </div>
+    <div class="emoticonsticker-body">
+        <div class="emoticon-list" ng-class="{'active': !bShowSticker}">
+          <span class="emoticon-item" ng-repeat="item in emojis"
+                ng-click="addEmoticon(item.key)">
+            <i class="{{item.class}}"></i>
+          </span>
+        </div>
+    </div>
+</ion-popover-view>

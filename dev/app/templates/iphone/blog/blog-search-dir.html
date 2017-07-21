@@ -1,0 +1,32 @@
+<form class="list bar-subheader bar-header-search has-other-button" ng-submit="onSearch()">
+  <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+  <div ng-show="showAdvSearch" class="item-input-search">
+    <div class="bar item-input-inset">
+      <input type="search" class="item-input-search-box" ng-model="blogListData.sSearch" placeholder="{{'Search blogs' | translate}}">
+    </div>
+  </div>
+  <div ng-show="showAdvSearch" class="advanced-search">
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Category' | translate}}
+      </div>
+      <select ng-model="blogListData.iCategoryId" ng-options="opt.category_id as opt.name|translate for opt in searchForm.categoryOptions">
+        <option value="">{{'All Categories' | translate}}</option>
+      </select>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Browse By' | translate}}
+      </div>
+      <select ng-model="blogListData.sOrder">
+        <option value="latest">{{'Latest' | translate}}</option>
+        <option value="most_viewed">{{'Most Viewed' | translate}}</option>
+        <option value="most_liked">{{'Most Liked' | translate}}</option>
+        <option value="most_discussed">{{'Most Discussed' | translate}}</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" type="submit">{{'Search' | translate}}</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,29 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title" translate>Privacy</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list" ng-if="dataReady">
+      <div class="item item-divider">
+        {{'Blocked Users' | translate}}
+      </div>
+      <div class="padding">
+        <span ng-if="!items.length">{{'You have not blocked any users.' | translate}}</span>
+        <span ng-if="items.length">{{'Check the boxes to unblock users.' | translate}}</span>
+      </div>
+      <label class="item item-avatar item-icon-right" ng-href="{{item.getUrl()}}" ng-repeat="item in items">
+        <img ng-src="{{item.getImageSrc()}}" />
+        <h2 ng-bind-html="item.getTitle()"></h2>
+        <div class="icon checkbox">
+          <input type="checkbox" ng-model="item.selected" />
+        </div>
+      </label>
+    </div>
+    <ion-infinite-scroll ng-if="isLoading"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

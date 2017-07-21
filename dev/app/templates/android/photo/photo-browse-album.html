@@ -1,0 +1,11 @@
+<ion-view>
+<ion-header-bar align-title="center" class="bar-positive">
+  <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+  <h1 class="title" translate>Albums</h1>
+  <a class="button button-clear icon ion-ios-plus-empty" ng-if="canAddPhoto" ng-href="#/app/albums/add"></a>
+</ion-header-bar>
+<photo-album-search-dir></photo-album-search-dir>
+<ion-content class="has-header content-dark has-footer">
+    <photo-album-list-dir ng-show="canViewAlbums"></photo-album-list-dir>
+    <private-msg-dir ng-if="!canViewAlbums"></private-msg-dir>
+</ion-content>

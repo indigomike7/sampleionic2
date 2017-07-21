@@ -1,0 +1,67 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left button-clear" back-dir translate>Cancel</button>
+        <div class="h1 title" translate>
+            Edit Personal Info
+        </div>
+        <div class="button button-clear" ng-click="onSave()" translate ng-class="{'disabled': !dataReady || isProcessing}">
+            Save
+        </div>
+    </div>
+    <ion-content class="has-header">
+        <div ng-if="dataReady">
+            <div class="card">
+                <div class="item item-divider" translate>
+                    Basic Information
+                </div>
+                <label class="item item-input item-select" ng-class="{'noborder-bottom': form.aChildLocations.length}">
+                    <span class="input-label">{{'Location' | translate}}</span>
+                    <select ng-model="formData.sCountryIso" ng-options="opt.country_iso as opt.name|translate for opt in form.aLocations" ng-change="getChildLocations()">
+                        <option value="">{{'Select' | translate}}</option>
+                    </select>
+                </label>
+
+                <label class="item item-input item-select noborder-top" ng-show="form.aChildLocations.length">
+                    <span class="input-label"> </span>
+                    <select ng-model="formData.iCountryChildId" ng-options="opt.child_id as opt.name|translate for opt in form.aChildLocations">
+                        <option value="">{{'State/Province' | translate}}</option>
+                    </select>
+                </label>
+
+                <label class="item item-input item-stacked-label"> <span class="input-label">{{'City' | translate}}</span>
+                    <input type="text" placeholder="{{'City' | translate}}" ng-model="formData.sCity">
+                </label>
+
+                <label class="item item-input item-stacked-label"> <span class="input-label">{{'Zip / Postal Code' | translate}}</span>
+                    <input type="text" placeholder="{{'Zip / Postal Code' | translate}}" ng-model="formData.sZipCode">
+                </label>
+
+                <label class="item item-input item-stacked-label" ng-if="form.perms['user.can_edit_dob']">
+                    <span class="input-label">{{'Date of Birth' | translate}}</span>
+                    <input type="date" placeholder="yyyy-MM-dd" ng-model="tmpData.sBirthday" />
+                </label>
+
+                <label class="item item-input item-select" ng-if="form.perms['user.can_edit_gender_setting']">
+                    <span class="input-label">{{'Gender' | translate}}</span>
+                    <select ng-model="formData.iGender" ng-options="opt.id as opt.title for opt in form.genderOptions">
+                        <option value="">{{'Select' | translate}}</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="card">
+                <div class="item item-divider" translate>
+                    About Me
+                </div>
+                <label class="item item-input">
+                    <textarea type="text" placeholder="{{'About me' | translate}}" ng-model="formData.sAbout"></textarea>
+                </label>
+            </div>
+        </div>
+        <div class="padding text-center" ng-if="!dataReady">
+            <ion-spinner></ion-spinner>
+        </div>
+    </ion-content>
+</ion-view>
+

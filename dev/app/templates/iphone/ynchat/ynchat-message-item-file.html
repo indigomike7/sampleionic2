@@ -1,0 +1,12 @@
+<img ng-src="{{item.getSenderImageSrc()}}" height="50" ng-if="!item.isViewer()" href-dir url="{{item.getSenderUrl()}}" />
+<div class="item-chat">
+  <div class="item-chat-group">
+    <div class="" ng-class="{'item-stable': !item.isViewer()}">
+      <div ng-repeat="file in item.getFiles()">
+        <img class="item-file-img" ng-if="file.type.substring(0, 5) == 'image'" ng-src="{{file.url}}" photo-thumb-dir img-src="{{file.url}}">
+        <p class="item-span">{{file.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="item-span" ng-if="action == 'getOldConversation'">{{item.getTime()}}</p>

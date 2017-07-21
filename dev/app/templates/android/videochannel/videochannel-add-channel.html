@@ -1,0 +1,13 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left button-clear" back-dir translate>Cancel</button>
+        <h1 class="title" translate>Add A Channel</h1>
+        <a ng-if="formData.channelSource" class="button button-clear" ng-href="{{formData.channelSource}}">{{'Next' | translate}}</a>
+    </div>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <ion-radio ng-model="formData.channelSource" ng-value="'#/app/videochannel/add/channel/url'">{{'Adding channel by URL' | translate}}</ion-radio>
+            <ion-radio ng-model="formData.channelSource" ng-value="'#/app/videochannel/add/channel/keywords'">{{'Adding channel by searching keywords' | translate}}</ion-radio>
+        </div>
+    </ion-content>
+</ion-view>

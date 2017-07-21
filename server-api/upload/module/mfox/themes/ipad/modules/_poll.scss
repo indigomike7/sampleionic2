@@ -1,0 +1,158 @@
+.poll-result-bar {
+  margin-top: ceil($item-padding/3);
+  height: 16px;
+  background-color: $music-track-background-color;
+  @include border-radius(4px);
+
+  .color-bar{
+	@include border-radius(4px);
+	height: 16px;
+	display: block;
+	vertical-align: middle;
+	padding-left: 3px;
+	margin-right: 5px;
+	float: left;
+
+	&.color-bar-0 { background-color: #aaea4f; }
+	&.color-bar-1 { background-color: #ea4f4f; }
+	&.color-bar-2 { background-color: #4faaea; }
+	&.color-bar-3 { background-color: #eaaa4f; }
+	&.color-bar-4 { background-color: #4f5eea; }
+	&.color-bar-5 { background-color: #4feabc; }
+	&.color-bar-6 { background-color: #e54fea; }
+	&.color-bar-7 { background-color: #eae84f; }
+  }
+}
+
+.item-poll {
+  .item-thumbnail-left {
+	min-height: 62px;
+	padding-left: 78px;
+
+	.item-thumbnail {
+	  border-radius: 6px !important;
+	  width: 64px;
+	  height: 64px;
+	  top: 15px;
+	  left: 14px;
+	}
+
+	p {
+	  margin: 0 0 2px 0;
+	}
+  }
+
+  &.active {
+	border-color: $border-color;
+	background-color: $background-color;
+
+	& > .item:first-child,
+	.item-avatar {
+	  background-color: $background-color;
+	}
+  }
+}
+
+.item-poll-detail {
+
+  .item-image span {
+	display: block;
+	height: 270px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+  }
+
+  & > .item:first-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+  }
+
+  & > .item.item-avatar {
+	border-top: 0;
+  }
+
+  & > .item.item-text-wrap {
+	border-top: 0;
+	padding-top: 0;
+	border-bottom: 2px solid $border-color;
+	color: $energized;
+  }
+
+  & > ul.list.list-vote {
+	margin-bottom: 0;
+	font-size: $font-description-size;
+
+	.item.item-checkbox {
+	  border: 0;
+	}
+  }
+
+  & .item.item-divider {
+	text-align: center;
+	color: $description-color;
+	text-transform: uppercase;
+
+	.icon {
+	  color: $description-color;
+	}
+  }
+
+  & .item.item-content {
+
+	h2 {
+	  white-space: normal;
+	  margin: 0 0 6px 0;
+	}
+
+	p {
+	  margin: 0 0 4px 0;
+	}
+
+	.item-stats {
+
+	  border-bottom: 1px $border-color solid;
+	  padding-bottom: 16px;
+	  margin-bottom: -8px;
+	}
+  }
+
+  .item-detail-users {
+	.item { border: 0; }
+	.item:first-child { padding-left: 40px; }
+	.item > .icon:first-child {
+	  font-size: $icon-search-size;
+	  color: $description-light-color;
+	}
+
+	h2 {
+	  margin-bottom: 0;
+	  text-transform: uppercase;
+	  color: $description-color;
+	}
+
+	h2 + .icon {
+	  right: 0;
+	  font-size: $icon-subheader-size;
+	  color: $description-light-color;
+	}
+
+	.list-member img {
+	  width: 40px;
+	  height: 40px;
+	  margin-right: 6px;
+	  @include border-radius(4px);
+	}
+
+	.item-group-photo {
+	  width: 93px;
+	  height: 93px;
+	  display: inline-block;
+	  margin-right: $item-padding;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	}
+  }
+}

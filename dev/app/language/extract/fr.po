@@ -1,0 +1,4061 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+#: app/module/event/plugin/activity.js app/module/page/plugin/activity.js
+#: app/module/photo/plugin/activity.js app/module/user/plugin/activity.js
+msgid "%s &rarr; %s"
+msgstr "@@%s &rarr; %s"
+
+#: app/module/event/plugin/activity.js
+msgid "%s added %s photos in the event %s"
+msgstr "@@%s added %s photos in the event %s"
+
+#: app/module/event/plugin/activity.js
+msgid "%s added 1 photo in the event %s"
+msgstr "@@%s added 1 photo in the event %s"
+
+#: app/module/event/plugin/activity.js
+msgid "%s added a new video in the event %s"
+msgstr "@@%s added a new video in the event %s"
+
+#: app/module/event/plugin/activity.js
+msgid "%s added new topic in the event %s"
+msgstr "@@%s added new topic in the event %s"
+
+#: app/module/video/plugin/activity.js
+msgid "%s added video %s to his/her favourite playlist"
+msgstr "@@%s added video %s to his/her favourite playlist"
+
+#: app/module/blog/plugin/activity.js app/module/poll/plugin/activity.js
+#: app/module/quiz/plugin/activity.js app/module/video/plugin/activity.js
+msgid "%s commented on %s's %s"
+msgstr "@@%s commented on %s's %s"
+
+#: app/module/group/plugin/activity.js
+msgid "%s created a group"
+msgstr "@@%s created a group"
+
+#: app/module/marketplace/plugin/activity.js
+msgid "%s created a listing."
+msgstr "@@%s created a listing."
+
+#: app/module/music/plugin/activity.js
+msgid "%s created a new album"
+msgstr "@@%s created a new album"
+
+#: app/module/event/plugin/activity.js
+msgid "%s created a new event"
+msgstr "@@%s created a new event"
+
+#: app/module/poll/plugin/activity.js
+msgid "%s created a new poll"
+msgstr "@@%s created a new poll"
+
+#: app/module/quiz/plugin/activity.js
+msgid "%s created a new quiz"
+msgstr "@@%s created a new quiz"
+
+#: app/module/page/plugin/activity.js
+msgid "%s created a page"
+msgstr "@@%s created a page"
+
+#: app/module/user/plugin/activity.js
+msgid "%s has added a new profile photo."
+msgstr "@@%s has added a new profile photo."
+
+#: app/module/group/plugin/activity.js
+msgid "%s has been made an officer for the group %s"
+msgstr "@@%s has been made an officer for the group %s"
+
+#: app/module/page/plugin/activity.js
+msgid "%s has been made an officer for the page %s"
+msgstr "@@%s has been made an officer for the page %s"
+
+#: app/module/location/plugin/activity.js
+msgid "%s has checked in - at %s"
+msgstr "@@%s has checked in - at %s"
+
+#: app/module/user/plugin/activity.js
+msgid "%s has just signed up. Say hello!"
+msgstr "@@%s has just signed up. Say hello!"
+
+#: app/module/friend/plugin/activity.js
+msgid "%s is now friend with %s"
+msgstr "@@%s is now friend with %s"
+
+#: app/module/event/plugin/activity.js
+msgid "%s joined the event %s"
+msgstr "@@%s joined the event %s"
+
+#: app/module/group/plugin/activity.js
+msgid "%s joined the group %s"
+msgstr "@@%s joined the group %s"
+
+#: app/module/core/plugin/activity.js
+msgid "%s joined the network %s"
+msgstr "@@%s joined the network %s"
+
+#: app/module/page/plugin/activity.js
+msgid "%s joined the page %s"
+msgstr "@@%s joined the page %s"
+
+#: app/module/group/plugin/activity.js
+msgid "%s posted a %s in the group %s"
+msgstr "@@%s posted a %s in the group %s"
+
+#: app/module/page/plugin/activity.js
+msgid "%s posted a %s in the page %s"
+msgstr "@@%s posted a %s in the page %s"
+
+#: app/module/video/plugin/activity.js
+msgid "%s posted a new video"
+msgstr "@@%s posted a new video"
+
+#: app/module/video/plugin/activity.js
+msgid "%s posted a new video playlist"
+msgstr "@@%s posted a new video playlist"
+
+#: app/module/forum/plugin/activity.js
+msgid "%s posted a thread."
+msgstr "@@%s posted a thread."
+
+#: app/module/group/plugin/activity.js
+msgid "%s replied to a %s in the group %s"
+msgstr "@@%s replied to a %s in the group %s"
+
+#: app/module/page/plugin/activity.js
+msgid "%s replied to a %s in the page %s"
+msgstr "@@%s replied to a %s in the page %s"
+
+#: app/module/event/plugin/activity.js
+msgid "%s replied to a topic in the event %s"
+msgstr "@@%s replied to a topic in the event %s"
+
+#: app/module/core/plugin/activity.js
+msgid "%s shared %s's %s"
+msgstr "@@%s shared %s's %s"
+
+#: app/module/photo/plugin/activity.js
+msgid "%s shared a few photos"
+msgstr "@@%s shared a few photos"
+
+#: app/module/photo/plugin/activity.js
+msgid "%s shared a photo"
+msgstr "@@%s shared a photo"
+
+#: app/module/music/plugin/activity.js
+msgid "%s shared a song"
+msgstr "@@%s shared a song"
+
+#: app/module/video/plugin/activity.js
+msgid "%s shared a video"
+msgstr "@@%s shared a video"
+
+#: app/module/core/plugin/activity.js
+msgid "%s shared..."
+msgstr "@@%s shared..."
+
+#: app/module/blog/plugin/activity.js
+msgid "%s wrote a new blog entry"
+msgstr "@@%s wrote a new blog entry"
+
+#: app/templates/iphone/like/like-stat-dir.html
+msgid "1 other"
+msgid_plural "{{obj.getTotalLike() - 1}} others"
+msgstr[0] "@@1 other"
+msgstr[1] "@@{{obj.getTotalLike() - 1}} others"
+
+#: app/templates/iphone/ynchat/ynchat-history.html
+msgid "3 months"
+msgstr "@@3 months"
+
+#: app/templates/iphone/ynchat/ynchat-history.html
+msgid "30 days"
+msgstr "@@30 days"
+
+#: app/templates/iphone/ynchat/ynchat-history.html
+msgid "7 days"
+msgstr "@@7 days"
+
+#: app/templates/iphone/page/page-info.html
+msgid "ADMIN"
+msgstr "@@ADMIN"
+
+#: app/templates/iphone/user/user-detail.html
+msgid "About"
+msgstr "@@About"
+
+#: app/templates/iphone/user/user-about.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "About Me"
+msgstr "@@About Me"
+
+#: app/templates/iphone/user/user-edit-info.html
+msgid "About me"
+msgstr "@@About me"
+
+#: app/templates/iphone/request/request-popover-list.html
+msgid "Accept"
+msgstr "@@Accept"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Accept Friend Request"
+msgstr "@@Accept Friend Request"
+
+#: app/module/group/controller/group-item.js
+msgid "Accept Invitation"
+msgstr "@@Accept Invitation"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Accept Request"
+msgstr "@@Accept Request"
+
+#: app/templates/iphone/setting/setting-defaultcurrency.html
+#: app/templates/iphone/setting/setting-email.html
+#: app/templates/iphone/setting/setting-fullname.html
+#: app/templates/iphone/setting/setting-invisiblemode.html
+#: app/templates/iphone/setting/setting-language.html
+#: app/templates/iphone/setting/setting-password.html
+#: app/templates/iphone/setting/setting-timezone.html
+#: app/templates/iphone/setting/setting-username.html
+msgid "Account"
+msgstr "@@Account"
+
+#: app/templates/iphone/setting/setting-home.html
+msgid "Account Settings"
+msgstr "@@Account Settings"
+
+#: app/module/user/controller/user-base-detail.js
+msgid "Action completed"
+msgstr "@@Action completed"
+
+#: app/module/friend/controller/friend-item.js
+msgid "Action completed!"
+msgstr "@@Action completed!"
+
+#: app/templates/iphone/event/event-detail.html
+#: app/templates/iphone/group/group-detail.html
+#: app/templates/iphone/page/page-detail.html
+#: app/templates/iphone/user/user-detail.html
+msgid "Activity"
+msgstr "@@Activity"
+
+#: app/templates/iphone/photo/photo-album-add.html
+#: app/module/page/controller/page-album.js
+#: app/module/page/controller/page-photo.js
+msgid "Add Album"
+msgstr "@@Add Album"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Add Friend"
+msgstr "@@Add Friend"
+
+#: app/module/advfeed-attachment/controller/attachment-add.js
+msgid "Add From URL"
+msgstr "@@Add From URL"
+
+#: app/templates/iphone/group/group-add.html
+msgid "Add Group"
+msgstr "@@Add Group"
+
+#: app/templates/iphone/blog/blog-add.html
+msgid "Add New Blog"
+msgstr "@@Add New Blog"
+
+#: app/templates/iphone/marketplace/listing-add.html
+msgid "Add New Listing"
+msgstr "@@Add New Listing"
+
+#: app/templates/iphone/page/page-add.html
+msgid "Add Page"
+msgstr "@@Add Page"
+
+#: app/templates/iphone/group/group-upload-photo.html
+#: app/templates/iphone/page/page-upload-photo.html
+msgid "Add Photo"
+msgstr "@@Add Photo"
+
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Add Photos"
+msgstr "@@Add Photos"
+
+#: app/templates/iphone/poll/poll-add.html
+msgid "Add Poll"
+msgstr "@@Add Poll"
+
+#: app/templates/iphone/quiz/quiz-add.html
+msgid "Add Quiz"
+msgstr "@@Add Quiz"
+
+#: app/templates/iphone/video/video-add.html
+msgid "Add Video"
+msgstr "@@Add Video"
+
+#: app/module/blog/controller/blog-form.js
+msgid "Add some content to your blog"
+msgstr "@@Add some content to your blog"
+
+#: app/templates/iphone/member/member-search.html
+msgid "Age"
+msgstr "@@Age"
+
+#: app/templates/iphone/music/music-song-detail-content.html
+#: app/templates/iphone/music/music-song-detail.html
+msgid "Album"
+msgstr "@@Album"
+
+#: app/templates/iphone/photo/photo-album-add.html
+msgid "Album Name"
+msgstr "@@Album Name"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/photo/photo-browse-album.html
+#: app/templates/iphone/photo/photo-home.html app/global/myapp.js
+msgid "Albums"
+msgstr "@@Albums"
+
+#: app/global/service/modal.js
+msgid "Alert"
+msgstr "@@Alert"
+
+#: app/module/music/controller/music-home-ipad.js
+#: app/module/music/controller/music-home.js
+msgid "All Albums"
+msgstr "@@All Albums"
+
+#: app/templates/iphone/blog/blog-home.html
+msgid "All Blogs"
+msgstr "@@All Blogs"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/group/group-search.html
+#: app/templates/iphone/page/page-search.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+#: app/templates/iphone/video/video-search.html
+#: app/module/event/controller/event-search.js
+#: app/module/marketplace/controller/listing-search.js
+msgid "All Categories"
+msgstr "@@All Categories"
+
+#: app/templates/iphone/event/event-home.html
+msgid "All Events"
+msgstr "@@All Events"
+
+#: app/templates/iphone/forum/forum-search.html
+msgid "All Forums"
+msgstr "@@All Forums"
+
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+msgid "All Genres"
+msgstr "@@All Genres"
+
+#: app/templates/iphone/group/group-home.html
+msgid "All Groups"
+msgstr "@@All Groups"
+
+#: app/templates/iphone/marketplace/listing-home.html
+msgid "All Listings"
+msgstr "@@All Listings"
+
+#: app/templates/iphone/page/page-home.html
+msgid "All Pages"
+msgstr "@@All Pages"
+
+#: app/templates/iphone/poll/poll-home.html
+msgid "All Polls"
+msgstr "@@All Polls"
+
+#: app/templates/iphone/quiz/quiz-home.html
+msgid "All Quizzes"
+msgstr "@@All Quizzes"
+
+#: app/templates/iphone/music/music-home.html
+msgid "All Songs"
+msgstr "@@All Songs"
+
+#: app/templates/iphone/user/forgot-password.html
+msgid "An email with instruction will be sent to your email below to reset password."
+msgstr "@@An email with instruction will be sent to your email below to reset password."
+
+#: app/templates/iphone/forum/forum-detail-announcement-list.html
+msgid "Announcements"
+msgstr "@@Announcements"
+
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+msgid "Answer"
+msgstr "@@Answer"
+
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+msgid "Answers"
+msgstr "@@Answers"
+
+#: app/module/poll/controller/poll-form.js
+msgid "Answers could not be empty!"
+msgstr "@@Answers could not be empty!"
+
+#: app/module/marketplace/controller/listing-search.js
+msgid "Anywhere"
+msgstr "@@Anywhere"
+
+#: app/templates/iphone/blog/blog-my-list-dir.html
+msgid "Approved"
+msgstr "@@Approved"
+
+#: app/module/group/controller/group-detail.js
+msgid "Approved Members"
+msgstr "@@Approved Members"
+
+#: app/module/poll/controller/poll-detail.js
+#: app/module/poll/controller/poll-item.js
+msgid "Are you sure that you want to delete this poll?"
+msgstr "@@Are you sure that you want to delete this poll?"
+
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/quiz/controller/quiz-item.js
+msgid "Are you sure that you want to delete this quiz?"
+msgstr "@@Are you sure that you want to delete this quiz?"
+
+#: app/module/photo/controller/photo-album-detail.js
+#: app/module/photo/controller/photo-album-item.js
+msgid "Are you sure to delete this album?"
+msgstr "@@Are you sure to delete this album?"
+
+#: app/module/blog/controller/blog-detail.js
+#: app/module/blog/controller/blog-item.js
+msgid "Are you sure to delete this blog entry?"
+msgstr "@@Are you sure to delete this blog entry?"
+
+#: app/module/comment/controller/comment-item.js
+msgid "Are you sure to delete this comment?"
+msgstr "@@Are you sure to delete this comment?"
+
+#: app/module/event/controller/event-detail.js
+#: app/module/event/controller/event-item.js
+msgid "Are you sure to delete this event?"
+msgstr "@@Are you sure to delete this event?"
+
+#: app/module/marketplace/controller/listing-item.js
+msgid "Are you sure to delete this listing?"
+msgstr "@@Are you sure to delete this listing?"
+
+#: app/module/message/controller/conversation-detail.js
+msgid "Are you sure to delete this message?"
+msgstr "@@Are you sure to delete this message?"
+
+#: app/module/activity/controller/baseitem.js
+#: app/module/activity/controller/feed-detail.js
+#: app/module/advfeed/controller/baseitem.js
+#: app/module/advfeed/controller/feed-detail.js
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/group/controller/group-post-item.js
+#: app/module/page/controller/page-post-item.js
+msgid "Are you sure to delete this post?"
+msgstr "@@Are you sure to delete this post?"
+
+#: app/module/group/controller/group-topic-detail.js
+#: app/module/page/controller/page-topic-detail.js
+msgid "Are you sure to delete this topic?"
+msgstr "@@Are you sure to delete this topic?"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Are you sure you want to demote this member from officer?"
+msgstr "@@Are you sure you want to demote this member from officer?"
+
+#: app/module/group/controller/group-item.js
+msgid "Are you sure you want to leave this group?"
+msgstr "@@Are you sure you want to leave this group?"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Are you sure you want to promote this member to officer?"
+msgstr "@@Are you sure you want to promote this member to officer?"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Are you sure you want to remove this member from the group?"
+msgstr "@@Are you sure you want to remove this member from the group?"
+
+#: app/module/blog/controller/blog-form.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/forum/controller/forum-thread-detail.js
+#: app/module/forum/controller/forum-thread-form.js
+#: app/module/marketplace/controller/listing-edit.js
+msgid "Are you sure?"
+msgstr "@@Are you sure?"
+
+#: app/module/activity-attachment/controller/attachment-add.js
+#: app/module/advfeed-attachment/controller/attachment-add.js
+#: app/module/attachment/controller/attachment-add.js
+#: app/module/blog/controller/blog-form.js
+#: app/module/forum/controller/forum-post-form.js
+msgid "Attach Link"
+msgstr "@@Attach Link"
+
+#: app/templates/iphone/forum/forum-poll-add.html
+msgid "Attach Poll"
+msgstr "@@Attach Poll"
+
+#: app/module/advfeed-attachment/controller/attachment-add.js
+msgid "Attach Video"
+msgstr "@@Attach Video"
+
+#: app/templates/iphone/group/group-topic-edit-post.html
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+msgid "Attach a Photo"
+msgstr "@@Attach a Photo"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-detail.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/forum/forum-post-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-detail-post-list.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+msgid "Attachments"
+msgstr "@@Attachments"
+
+#: app/templates/iphone/event/event-info.html
+#: app/module/event/controller/event-item.js
+msgid "Attending"
+msgstr "@@Attending"
+
+#: app/module/cometchat/controller/cometchat-home.js
+msgid "Available"
+msgstr "@@Available"
+
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Basic Information"
+msgstr "@@Basic Information"
+
+#: app/templates/iphone/like/like-stat-dir.html
+msgid "Be the first to like this"
+msgstr "@@Be the first to like this"
+
+#: app/templates/iphone/message/conversation-recipients-dir.html
+msgid "Between"
+msgstr "@@Between"
+
+#: app/templates/iphone/user/signup.html
+msgid "Birthday"
+msgstr "@@Birthday"
+
+#: app/module/user/controller/user-signup.js
+msgid "Birthday can not be larger than"
+msgstr "@@Birthday can not be larger than"
+
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Block"
+msgstr "@@Block"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Block successfully"
+msgstr "@@Block successfully"
+
+#: app/templates/iphone/setting/setting-blockedusers.html
+#: app/templates/iphone/setting/setting-home.html
+msgid "Blocked Users"
+msgstr "@@Blocked Users"
+
+#: app/templates/iphone/blog/blog-all.html
+#: app/templates/iphone/blog/blog-my.html
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/page/page-blog.html
+#: app/module/page/controller/page-detail.js app/global/myapp.js
+msgid "Blogs"
+msgstr "@@Blogs"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+msgid "Browse By"
+msgstr "@@Browse By"
+
+#: app/templates/iphone/video/video-browse-video.html
+msgid "Browse Videos"
+msgstr "@@Browse Videos"
+
+#: app/module/cometchat/controller/cometchat-home.js
+msgid "Busy"
+msgstr "@@Busy"
+
+#: app/templates/iphone/subscription/subscription-confirm.html
+msgid "Buy"
+msgstr "@@Buy"
+
+#: app/templates/iphone/marketplace/listing-detail.html
+msgid "Buy Now"
+msgstr "@@Buy Now"
+
+#: app/templates/iphone/marketplace/listing-purchase.html
+msgid "By clicking on the button below, you commit to buy this item from the seller."
+msgstr "@@By clicking on the button below, you commit to buy this item from the seller."
+
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "Can not connect to Store. Please try again."
+msgstr "@@Can not connect to Store. Please try again."
+
+#: app/module/marketplace/controller/listing-edit.js
+msgid "Can not delete photo. Please try again later."
+msgstr "@@Can not delete photo. Please try again later."
+
+#: app/module/photo/controller/photo-album-add.js
+#: app/module/photo/controller/photo-album-detail.js
+#: app/module/poll/controller/poll-edit.js
+#: app/module/quiz/controller/quiz-edit.js
+#: app/module/quiz/controller/quiz-result.js
+#: app/module/quiz/controller/quiz-start.js
+#: app/module/user/controller/user-edit-info.js
+#: app/module/video/controller/video-edit.js
+msgid "Can not get data from server"
+msgstr "@@Can not get data from server"
+
+#: app/module/marketplace/controller/listing-form.js
+msgid "Can not load country childs"
+msgstr "@@Can not load country childs"
+
+#: app/module/activity-attachment/controller/attachment-add.js
+#: app/module/activity/controller/feed-add.js
+#: app/module/activity/controller/feed-detail.js
+#: app/module/advfeed-attachment/controller/attachment-add.js
+#: app/module/advfeed/controller/feed-add.js
+#: app/module/advfeed/controller/feed-detail.js
+#: app/module/advfeed/controller/feed-edit.js
+#: app/module/advfeed/controller/feed-filter.js
+#: app/module/attachment/controller/attachment-add.js
+#: app/module/blog/controller/blog-detail.js
+#: app/module/blog/controller/blog-form.js
+#: app/module/blog/controller/blog-search.js
+#: app/module/chat/controller/chat-home.js
+#: app/module/cometchat/controller/cometchat-home.js
+#: app/module/comment/controller/comment-form.js
+#: app/module/comment/controller/comment-item.js
+#: app/module/comment/controller/comment-list.js
+#: app/module/core/controller/core-header-stat.js
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-detail.js
+#: app/module/event/controller/event-edit.js
+#: app/module/event/controller/event-invite-list.js
+#: app/module/event/controller/event-item.js
+#: app/module/event/controller/event-search.js
+#: app/module/forum/controller/forum-detail.js
+#: app/module/forum/controller/forum-poll-add.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/forum/controller/forum-search.js
+#: app/module/forum/controller/forum-thread-detail.js
+#: app/module/forum/controller/forum-thread-form.js
+#: app/module/group/controller/group-add.js
+#: app/module/group/controller/group-edit.js
+#: app/module/group/controller/group-invite-list.js
+#: app/module/group/controller/group-topic-add.js
+#: app/module/group/controller/group-topic-detail.js
+#: app/module/group/controller/group-topic-edit-post.js
+#: app/module/group/controller/group-topic-quote-post.js
+#: app/module/group/controller/group-topic-reply.js
+#: app/module/location/controller/location-list.js
+#: app/module/marketplace/controller/listing-detail.js
+#: app/module/marketplace/controller/listing-form.js
+#: app/module/marketplace/controller/listing-invite-list.js
+#: app/module/marketplace/controller/listing-item.js
+#: app/module/marketplace/controller/listing-photo-detail.js
+#: app/module/marketplace/controller/listing-purchase.js
+#: app/module/marketplace/controller/listing-search.js
+#: app/module/message/controller/conversation-add.js
+#: app/module/message/controller/conversation-detail.js
+#: app/module/message/controller/conversation-reply.js
+#: app/module/music/controller/music-song-detail.js
+#: app/module/music/controller/music-song-search.js
+#: app/module/page/controller/page-add.js
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-edit.js
+#: app/module/page/controller/page-invite-list.js
+#: app/module/page/controller/page-topic-add.js
+#: app/module/page/controller/page-topic-detail.js
+#: app/module/page/controller/page-topic-edit-post.js
+#: app/module/page/controller/page-topic-quote-post.js
+#: app/module/page/controller/page-topic-reply.js
+#: app/module/photo/controller/photo-album-edit.js
+#: app/module/photo/controller/photo-album-search.js
+#: app/module/photo/controller/photo-search.js
+#: app/module/poll/controller/poll-add.js
+#: app/module/poll/controller/poll-detail.js
+#: app/module/poll/controller/poll-edit.js
+#: app/module/quiz/controller/quiz-add.js
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/quiz/controller/quiz-edit.js
+#: app/module/quiz/controller/quiz-start.js
+#: app/module/request/controller/request-item.js
+#: app/module/setting/controller/setting-blockedusers.js
+#: app/module/setting/controller/setting-defaultcurrency.js
+#: app/module/setting/controller/setting-email.js
+#: app/module/setting/controller/setting-fullname.js
+#: app/module/setting/controller/setting-home.js
+#: app/module/setting/controller/setting-invisiblemode.js
+#: app/module/setting/controller/setting-items.js
+#: app/module/setting/controller/setting-language.js
+#: app/module/setting/controller/setting-notifications.js
+#: app/module/setting/controller/setting-password.js
+#: app/module/setting/controller/setting-profile.js
+#: app/module/setting/controller/setting-timezone.js
+#: app/module/setting/controller/setting-username.js
+#: app/module/subscription/controller/subscription-confirm.js
+#: app/module/subscription/controller/subscription-upgrade.js
+#: app/module/user/controller/user-login.js
+#: app/module/user/controller/user-signup.js
+#: app/module/user/controller/user-term.js
+#: app/module/video/controller/video-detail.js
+#: app/module/ynchat/controller/ynchat-base.js
+#: app/module/ynchat/controller/ynchat-home.js
+#: app/module/ynchat/controller/ynchat-message-list.js
+#: app/global/base/BaseController.js app/global/base/ListController.js
+msgid "Can not load data from server"
+msgstr "@@Can not load data from server"
+
+#: app/module/activity/controller/feed-add.js
+#: app/module/advfeed/controller/feed-add.js
+#: app/module/advfeed/controller/feed-edit.js
+msgid "Can not load emoticons from server"
+msgstr "@@Can not load emoticons from server"
+
+#: app/module/ynchat/controller/ynchat-base.js
+msgid "Can not load file reader"
+msgstr "@@Can not load file reader"
+
+#: app/module/user/service/user-login-facebook.js
+msgid "Can not process login by facebook"
+msgstr "@@Can not process login by facebook"
+
+#: app/module/user/controller/user-edit-info.js
+msgid "Can not process your request"
+msgstr "@@Can not process your request"
+
+#: app/module/activity/controller/feed-add.js
+#: app/module/advfeed/controller/feed-add.js
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+#: app/module/group/controller/group-add.js
+#: app/module/group/controller/group-edit.js
+#: app/module/group/controller/group-topic-add.js
+#: app/module/group/controller/group-topic-edit-post.js
+#: app/module/group/controller/group-topic-quote-post.js
+#: app/module/group/controller/group-topic-reply.js
+#: app/module/group/controller/group-upload-photo.js
+#: app/module/message/controller/conversation-add.js
+#: app/module/message/controller/conversation-reply.js
+#: app/module/page/controller/page-edit-avatar.js
+#: app/module/page/controller/page-edit-cover.js
+#: app/module/page/controller/page-topic-add.js
+#: app/module/page/controller/page-topic-edit-post.js
+#: app/module/page/controller/page-topic-quote-post.js
+#: app/module/page/controller/page-topic-reply.js
+#: app/module/page/controller/page-upload-photo.js
+#: app/module/user/controller/user-edit-avatar.js
+#: app/module/user/controller/user-edit-cover.js
+msgid "Can not upload file. Please try again later"
+msgstr "@@Can not upload file. Please try again later"
+
+#: app/module/video/controller/video-add.js
+msgid "Can not upload video"
+msgstr "@@Can not upload video"
+
+#: app/templates/iphone/activity/feed-add.html
+#: app/templates/iphone/advfeed/feed-add-privacy-modal.html
+#: app/templates/iphone/advfeed/feed-add.html
+#: app/templates/iphone/advfeed/feed-edit.html
+#: app/templates/iphone/advfeed/feed-filter-settings-modal.html
+#: app/templates/iphone/advfeed/tag-friends-modal.html
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/event/event-invite-list.html
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/forum/forum-post-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+#: app/templates/iphone/group/group-invite-list.html
+#: app/templates/iphone/group/group-topic-add.html
+#: app/templates/iphone/group/group-topic-edit-post.html
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+#: app/templates/iphone/group/group-upload-photo.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/marketplace/listing-invite-list.html
+#: app/templates/iphone/message/conversation-add.html
+#: app/templates/iphone/message/conversation-reply.html
+#: app/templates/iphone/page/page-edit-avatar.html
+#: app/templates/iphone/page/page-edit-cover.html
+#: app/templates/iphone/page/page-invite-list.html
+#: app/templates/iphone/page/page-upload-photo.html
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-edit-avatar.html
+#: app/templates/iphone/user/user-edit-cover.html
+#: app/templates/iphone/user/user-edit-info.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+#: app/module/activity-attachment/controller/attachment-add.js
+#: app/module/advfeed-attachment/controller/attachment-add.js
+#: app/module/attachment/controller/attachment-add.js
+#: app/module/blog/controller/blog-form.js
+#: app/module/core/controller/core-menu.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/forum/controller/forum-thread-form.js
+#: app/module/marketplace/controller/listing-edit.js
+#: app/module/marketplace/controller/listing-item.js
+#: app/module/message/controller/conversation-detail.js
+#: app/module/subscription/controller/subscription-confirm.js
+#: app/module/user/controller/user-signup.js
+#: app/module/video/controller/video-add.js
+#: app/module/ynchat/controller/ynchat-base.js
+#: app/global/base/BaseController.js app/global/service/language.js
+#: app/global/myapp.js
+msgid "Cancel"
+msgstr "@@Cancel"
+
+#: app/module/group/controller/group-item.js
+msgid "Cancel Membership Request"
+msgstr "@@Cancel Membership Request"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Cancel Request"
+msgstr "@@Cancel Request"
+
+#: app/module/activity-attachment/controller/attachment-add.js
+#: app/module/advfeed-attachment/controller/attachment-add.js
+#: app/module/attachment/controller/attachment-add.js
+msgid "Cannot contain more than one item. Please remove the current selection before adding another item."
+msgstr "@@Cannot contain more than one item. Please remove the current selection before adding another item."
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+msgid "Categories"
+msgstr "@@Categories"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/group/group-search.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-detail.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/marketplace/listing-search.html
+#: app/templates/iphone/page/page-add.html
+#: app/templates/iphone/page/page-edit.html
+#: app/templates/iphone/page/page-search.html
+#: app/templates/iphone/photo/photo-search.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+#: app/templates/iphone/video/video-search.html
+msgid "Category"
+msgstr "@@Category"
+
+#: app/templates/iphone/chat/chat-home.html
+#: app/templates/iphone/cometchat/cometchat-home.html
+#: app/templates/iphone/ynchat/ynchat-home.html
+msgid "Chat"
+msgstr "@@Chat"
+
+#: app/templates/iphone/setting/setting-blockedusers.html
+msgid "Check the boxes to unblock users."
+msgstr "@@Check the boxes to unblock users."
+
+#: app/templates/iphone/location/location-list-modal.html
+msgid "Check-in"
+msgstr "@@Check-in"
+
+#: app/templates/iphone/page/page-add.html
+#: app/templates/iphone/page/page-edit.html
+msgid "Choose a category"
+msgstr "@@Choose a category"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-detail.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "City"
+msgstr "@@City"
+
+#: app/global/base/BaseController.js
+msgid "Close"
+msgstr "@@Close"
+
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-detail.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+msgid "Closed"
+msgstr "@@Closed"
+
+#: app/templates/iphone/comment/comment-popup.html
+#: app/templates/iphone/photo/photo-album-add.html
+#: app/templates/iphone/photo/photo-album-edit.html
+msgid "Comment"
+msgstr "@@Comment"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+msgid "Comment Privacy"
+msgstr "@@Comment Privacy"
+
+#: app/templates/iphone/comment/comment-form-footer.html
+#: app/templates/iphone/comment/comment-form-subfooter.html
+msgid "Comment here"
+msgstr "@@Comment here"
+
+#: app/module/comment/controller/comment-form.js
+msgid "Comment posted successfully"
+msgstr "@@Comment posted successfully"
+
+#: app/templates/iphone/message/conversation-add.html
+msgid "Compose"
+msgstr "@@Compose"
+
+#: app/module/blog/controller/blog-form.js
+#: app/module/core/controller/core-menu.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/forum/controller/forum-thread-form.js
+#: app/module/marketplace/controller/listing-edit.js
+#: app/module/marketplace/controller/listing-item.js
+#: app/module/message/controller/conversation-detail.js
+#: app/module/subscription/controller/subscription-confirm.js
+#: app/module/user/controller/user-signup.js app/global/base/BaseController.js
+#: app/global/myapp.js
+msgid "Confirm"
+msgstr "@@Confirm"
+
+#: app/templates/iphone/setting/setting-password.html
+#: app/templates/iphone/user/signup.html
+msgid "Confirm Password"
+msgstr "@@Confirm Password"
+
+#: app/templates/iphone/subscription/subscription-confirm.html
+msgid "Confirm Payment"
+msgstr "@@Confirm Payment"
+
+#: app/templates/iphone/marketplace/listing-purchase.html
+msgid "Confirm Purchase"
+msgstr "@@Confirm Purchase"
+
+#: app/module/setting/controller/setting-password.js
+msgid "Confirm your new password."
+msgstr "@@Confirm your new password."
+
+#: app/templates/iphone/request/request-popover-list.html
+msgid "Confirmed"
+msgstr "@@Confirmed"
+
+#: app/templates/iphone/user/user-about.html
+msgid "Contact Information"
+msgstr "@@Contact Information"
+
+#: app/templates/iphone/marketplace/listing-detail.html
+msgid "Contact Seller"
+msgstr "@@Contact Seller"
+
+#: app/templates/iphone/group/group-topic-add.html
+#: app/templates/iphone/group/group-topic-edit-post.html
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+msgid "Content"
+msgstr "@@Content"
+
+#: app/module/group/controller/group-topic-add.js
+#: app/module/group/controller/group-topic-edit-post.js
+#: app/module/group/controller/group-topic-quote-post.js
+#: app/module/group/controller/group-topic-reply.js
+#: app/module/page/controller/page-topic-add.js
+#: app/module/page/controller/page-topic-edit-post.js
+#: app/module/page/controller/page-topic-quote-post.js
+#: app/module/page/controller/page-topic-reply.js
+msgid "Content cannot be empty"
+msgstr "@@Content cannot be empty"
+
+#: app/module/user/service/user-login-facebook.js
+msgid "Could not find plugin facebookConnectPlugin!"
+msgstr "@@Could not find plugin facebookConnectPlugin!"
+
+#: app/module/photo/controller/photo-album-add.js
+msgid "Count not get data from server"
+msgstr "@@Count not get data from server"
+
+#: app/templates/iphone/user/signup.html
+msgid "Create Account"
+msgstr "@@Create Account"
+
+#: app/templates/iphone/event/event-add.html
+msgid "Create Event"
+msgstr "@@Create Event"
+
+#: app/templates/iphone/setting/setting-profile.html
+msgid "Customize how other users interact with your profile."
+msgstr "@@Customize how other users interact with your profile."
+
+#: app/templates/iphone/setting/setting-items.html
+msgid "Customize your default settings for when sharing new items on the site. Note this only changes your default settings for future items and does not change any items you have already shared. To change the privacy settings on those items you can customize the items privacy by editing the item itself."
+msgstr "@@Customize your default settings for when sharing new items on the site. Note this only changes your default settings for future items and does not change any items you have already shared. To change the privacy settings on those items you can customize the items privacy by editing the item itself."
+
+#: app/templates/iphone/setting/setting-profile.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Date of Birth"
+msgstr "@@Date of Birth"
+
+#: app/templates/iphone/comment/comment-list.html
+#: app/module/group/controller/group-item.js
+#: app/module/group/controller/group-topic-detail.js
+#: app/module/message/controller/conversation-detail.js
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+#: app/module/page/controller/page-topic-detail.js
+msgid "Delete"
+msgstr "@@Delete"
+
+#: app/module/photo/controller/photo-album-item.js
+msgid "Delete Album"
+msgstr "@@Delete Album"
+
+#: app/module/blog/controller/blog-detail.js
+#: app/module/blog/controller/blog-item.js
+msgid "Delete Blog"
+msgstr "@@Delete Blog"
+
+#: app/module/event/controller/event-detail.js
+#: app/module/event/controller/event-item.js
+msgid "Delete Event"
+msgstr "@@Delete Event"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Delete Feed"
+msgstr "@@Delete Feed"
+
+#: app/module/marketplace/controller/listing-item.js
+msgid "Delete Listing"
+msgstr "@@Delete Listing"
+
+#: app/module/photo/controller/photo-detail.js
+#: app/module/photo/controller/photo-item.js
+msgid "Delete Photo"
+msgstr "@@Delete Photo"
+
+#: app/module/poll/controller/poll-detail.js
+#: app/module/poll/controller/poll-item.js
+msgid "Delete Poll"
+msgstr "@@Delete Poll"
+
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/quiz/controller/quiz-item.js
+msgid "Delete Quiz"
+msgstr "@@Delete Quiz"
+
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/group/controller/group-post-item.js
+#: app/module/page/controller/page-post-item.js
+msgid "Delete post"
+msgstr "@@Delete post"
+
+#: app/module/activity/controller/feed-detail.js
+msgid "Delete this post"
+msgstr "@@Delete this post"
+
+#: app/module/video/controller/video-detail.js
+#: app/module/video/controller/video-item.js
+msgid "Delete this video"
+msgstr "@@Delete this video"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "Delete thread"
+msgstr "@@Delete thread"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Demote officer"
+msgstr "@@Demote officer"
+
+#: app/templates/iphone/request/request-popover-list.html
+msgid "Denied"
+msgstr "@@Denied"
+
+#: app/templates/iphone/request/request-popover-list.html
+msgid "Deny"
+msgstr "@@Deny"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Deny Friend Request"
+msgstr "@@Deny Friend Request"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Deny Request"
+msgstr "@@Deny Request"
+
+#: app/templates/iphone/core/core-report.html
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/photo/photo-album-add.html
+#: app/templates/iphone/photo/photo-album-edit.html
+#: app/templates/iphone/photo/photo-edit-modal.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+msgid "Description"
+msgstr "@@Description"
+
+#: app/global/base/BaseController.js
+msgid "Description can not be empty"
+msgstr "@@Description can not be empty"
+
+#: app/module/location/controller/location-list.js
+msgid "Device cannot get your current position"
+msgstr "@@Device cannot get your current position"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Disable Comments"
+msgstr "@@Disable Comments"
+
+#: app/module/chat/controller/chat-home.js
+msgid "Disable Vibration"
+msgstr "@@Disable Vibration"
+
+#: app/templates/iphone/group/group-discussion.html
+msgid "Discussion"
+msgstr "@@Discussion"
+
+#: app/module/group/controller/group-detail.js
+msgid "Discussions"
+msgstr "@@Discussions"
+
+#: app/templates/iphone/comment/comment-list.html
+#: app/module/activity/controller/feed-detail.js
+#: app/module/blog/controller/blog-detail.js
+#: app/module/music/controller/music-song-detail.js
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+#: app/module/photo/controller/photo-detail.js
+#: app/module/poll/controller/poll-detail.js
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/video/controller/video-detail.js
+msgid "Dislike"
+msgstr "@@Dislike"
+
+#: app/templates/iphone/forum/forum-search.html
+msgid "Display results as"
+msgstr "@@Display results as"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to accept this friend request?"
+msgstr "@@Do you want to accept this friend request?"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to add this member to your friend list"
+msgstr "@@Do you want to add this member to your friend list"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to block this member?"
+msgstr "@@Do you want to block this member?"
+
+#: app/templates/iphone/subscription/subscription-confirm.html
+msgid "Do you want to buy membership"
+msgstr "@@Do you want to buy membership"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to cancel friend request to this member?"
+msgstr "@@Do you want to cancel friend request to this member?"
+
+#: app/module/group/controller/group-detail.js
+#: app/module/group/controller/group-item.js
+msgid "Do you want to delete this group?"
+msgstr "@@Do you want to delete this group?"
+
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+msgid "Do you want to delete this page?"
+msgstr "@@Do you want to delete this page?"
+
+#: app/module/photo/controller/photo-item.js
+msgid "Do you want to delete this photo?"
+msgstr "@@Do you want to delete this photo?"
+
+#: app/module/video/controller/video-detail.js
+#: app/module/video/controller/video-item.js
+msgid "Do you want to delete this video?"
+msgstr "@@Do you want to delete this video?"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to deny this friend request?"
+msgstr "@@Do you want to deny this friend request?"
+
+#: app/module/core/controller/core-menu.js app/global/myapp.js
+msgid "Do you want to log out of application?"
+msgstr "@@Do you want to log out of application?"
+
+#: app/module/photo/controller/photo-item.js
+msgid "Do you want to make this photo your profile picture?"
+msgstr "@@Do you want to make this photo your profile picture?"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to remove this member from your friend list"
+msgstr "@@Do you want to remove this member from your friend list"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Do you want to un-block this member?"
+msgstr "@@Do you want to un-block this member?"
+
+#: app/templates/iphone/advfeed/feed-add-privacy-modal.html
+#: app/templates/iphone/advfeed/tag-friends-modal.html
+msgid "Done"
+msgstr "@@Done"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/blog/blog-my-list-dir.html
+msgid "Draft"
+msgstr "@@Draft"
+
+#: app/module/group/controller/group-item.js
+msgid "Edit"
+msgstr "@@Edit"
+
+#: app/templates/iphone/photo/photo-album-edit.html
+#: app/module/photo/controller/photo-album-item.js
+msgid "Edit Album"
+msgstr "@@Edit Album"
+
+#: app/templates/iphone/blog/blog-edit.html
+#: app/module/blog/controller/blog-detail.js
+#: app/module/blog/controller/blog-item.js
+msgid "Edit Blog"
+msgstr "@@Edit Blog"
+
+#: app/templates/iphone/page/page-edit-cover.html
+#: app/templates/iphone/user/user-edit-cover.html
+#: app/module/user/controller/user-detail.js
+msgid "Edit Cover Photo"
+msgstr "@@Edit Cover Photo"
+
+#: app/templates/iphone/event/event-edit.html
+#: app/module/event/controller/event-detail.js
+#: app/module/event/controller/event-item.js
+msgid "Edit Event"
+msgstr "@@Edit Event"
+
+#: app/templates/iphone/advfeed/feed-edit.html
+msgid "Edit Feed"
+msgstr "@@Edit Feed"
+
+#: app/templates/iphone/group/group-edit.html
+msgid "Edit Group"
+msgstr "@@Edit Group"
+
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/module/marketplace/controller/listing-item.js
+msgid "Edit Listing"
+msgstr "@@Edit Listing"
+
+#: app/templates/iphone/user/user-edit-avatar.html
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Edit My Photo"
+msgstr "@@Edit My Photo"
+
+#: app/templates/iphone/page/page-edit.html
+msgid "Edit Page"
+msgstr "@@Edit Page"
+
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+msgid "Edit Page Cover"
+msgstr "@@Edit Page Cover"
+
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+msgid "Edit Page Info"
+msgstr "@@Edit Page Info"
+
+#: app/templates/iphone/page/page-edit-avatar.html
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+msgid "Edit Page Photo"
+msgstr "@@Edit Page Photo"
+
+#: app/templates/iphone/user/user-edit-info.html
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Edit Personal Info"
+msgstr "@@Edit Personal Info"
+
+#: app/templates/iphone/photo/photo-edit-modal.html
+#: app/module/photo/controller/photo-detail.js
+#: app/module/photo/controller/photo-item.js
+msgid "Edit Photo"
+msgstr "@@Edit Photo"
+
+#: app/module/marketplace/controller/listing-item.js
+msgid "Edit Photos"
+msgstr "@@Edit Photos"
+
+#: app/templates/iphone/poll/poll-edit.html
+#: app/module/poll/controller/poll-detail.js
+#: app/module/poll/controller/poll-item.js
+msgid "Edit Poll"
+msgstr "@@Edit Poll"
+
+#: app/templates/iphone/group/group-topic-edit-post.html
+msgid "Edit Post"
+msgstr "@@Edit Post"
+
+#: app/templates/iphone/quiz/quiz-edit.html
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/quiz/controller/quiz-item.js
+msgid "Edit Quiz"
+msgstr "@@Edit Quiz"
+
+#: app/templates/iphone/video/video-edit.html
+msgid "Edit Video"
+msgstr "@@Edit Video"
+
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/group/controller/group-post-item.js
+#: app/module/page/controller/page-post-item.js
+msgid "Edit post"
+msgstr "@@Edit post"
+
+#: app/module/page/controller/page-edit-avatar.js
+#: app/module/page/controller/page-edit-cover.js
+#: app/module/user/controller/user-edit-avatar.js
+#: app/module/user/controller/user-edit-cover.js
+msgid "Edit sucessfully"
+msgstr "@@Edit sucessfully"
+
+#: app/module/video/controller/video-detail.js
+#: app/module/video/controller/video-item.js
+msgid "Edit this video"
+msgstr "@@Edit this video"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "Edit thread"
+msgstr "@@Edit thread"
+
+#: app/templates/iphone/forum/forum-post-edit.html
+msgid "Editing Post"
+msgstr "@@Editing Post"
+
+#: app/templates/iphone/forum/forum-thread-edit.html
+msgid "Editing Thread"
+msgstr "@@Editing Thread"
+
+#: app/templates/iphone/user/login.html app/templates/iphone/user/signup.html
+msgid "Email"
+msgstr "@@Email"
+
+#: app/templates/iphone/setting/setting-email.html
+#: app/templates/iphone/setting/setting-home.html
+msgid "Email Address"
+msgstr "@@Email Address"
+
+#: app/module/user/controller/user-login.js
+msgid "Email is empty!"
+msgstr "@@Email is empty!"
+
+#: app/module/user/controller/user-signup.js
+msgid "Email is not valid"
+msgstr "@@Email is not valid"
+
+#: app/templates/iphone/ynchat/ynchat-smile.html
+msgid "Emoticons"
+msgstr "@@Emoticons"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Enable Comments"
+msgstr "@@Enable Comments"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Enable Instant Payment"
+msgstr "@@Enable Instant Payment"
+
+#: app/templates/iphone/setting/setting-invisiblemode.html
+msgid "Enable Invisible Mode"
+msgstr "@@Enable Invisible Mode"
+
+#: app/module/chat/controller/chat-home.js
+msgid "Enable Vibration"
+msgstr "@@Enable Vibration"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "End Date"
+msgstr "@@End Date"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "End Time"
+msgstr "@@End Time"
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "End Time must be greater than Start Time."
+msgstr "@@End Time must be greater than Start Time."
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "Ending Date"
+msgstr "@@Ending Date"
+
+#: app/templates/iphone/ynchat/ynchat-detail.html
+msgid "Establishing connection. Please wait..."
+msgstr "@@Establishing connection. Please wait..."
+
+#: app/module/event/controller/event-search.js
+msgid "Event Invites"
+msgstr "@@Event Invites"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "Event Name"
+msgstr "@@Event Name"
+
+#: app/module/event/controller/event-add.js
+msgid "Event has been created successfully"
+msgstr "@@Event has been created successfully"
+
+#: app/module/event/controller/event-edit.js
+msgid "Event has been updated successfully"
+msgstr "@@Event has been updated successfully"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/event/event-past-event.html
+#: app/templates/iphone/event/event-upcoming-event.html
+#: app/templates/iphone/group/group-event.html
+#: app/templates/iphone/page/page-event.html
+#: app/module/group/controller/group-detail.js
+#: app/module/page/controller/page-detail.js app/global/myapp.js
+msgid "Events"
+msgstr "@@Events"
+
+#: app/templates/iphone/search/search-form.html
+msgid "Everything"
+msgstr "@@Everything"
+
+#: app/templates/iphone/user/user-activity.html
+msgid "FRIEND"
+msgid_plural "FRIENDS"
+msgstr[0] "@@FRIEND"
+msgstr[1] "@@FRIENDS"
+
+#: app/templates/iphone/user/login.html
+msgid "Facebook"
+msgstr "@@Facebook"
+
+#: app/templates/iphone/advfeed/feed-filter-settings-modal.html
+msgid "Feed Settings"
+msgstr "@@Feed Settings"
+
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Female"
+msgstr "@@Female"
+
+#: app/module/blog/controller/blog-form.js
+msgid "Fill in a title for your blog"
+msgstr "@@Fill in a title for your blog"
+
+#: app/templates/iphone/search/search-form.html
+msgid "Filter By"
+msgstr "@@Filter By"
+
+#: app/templates/iphone/forum/forum-search.html
+msgid "Find in forum"
+msgstr "@@Find in forum"
+
+#: app/templates/iphone/user/forgot-password.html
+msgid "Forgot Password"
+msgstr "@@Forgot Password"
+
+#: app/templates/iphone/user/login.html
+msgid "Forgot Password?"
+msgstr "@@Forgot Password?"
+
+#: app/templates/iphone/forum/forum-browse.html
+#: app/templates/iphone/forum/forum-thread-browse.html
+#: app/module/forum/controller/forum-browse.js
+#: app/module/forum/controller/forum-detail.js
+#: app/module/forum/controller/forum-thread-browse.js
+msgid "Forum"
+msgstr "@@Forum"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/forum/forum-home.html app/global/myapp.js
+msgid "Forums"
+msgstr "@@Forums"
+
+#: app/templates/iphone/marketplace/listing-attachment.html
+#: app/templates/iphone/marketplace/listing-detail.html
+#: app/templates/iphone/marketplace/listing-list-dir.html
+#: app/module/user/controller/user-signup.js
+msgid "Free"
+msgstr "@@Free"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/friend/friend-browse.html
+#: app/templates/iphone/user/user-detail.html app/global/myapp.js
+msgid "Friends"
+msgstr "@@Friends"
+
+#: app/templates/iphone/member/member-search.html
+msgid "From"
+msgstr "@@From"
+
+#: app/templates/iphone/setting/setting-fullname.html
+#: app/templates/iphone/setting/setting-home.html
+msgid "Full Name"
+msgstr "@@Full Name"
+
+#: app/templates/iphone/user/signup.html
+msgid "Fullname"
+msgstr "@@Fullname"
+
+#: app/module/user/controller/user-signup.js
+msgid "Fullname can not be empty"
+msgstr "@@Fullname can not be empty"
+
+#: app/templates/iphone/member/member-search.html
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-edit-info.html
+#: app/module/member/controller/member-search.js
+msgid "Gender"
+msgstr "@@Gender"
+
+#: app/templates/iphone/music/music-song-detail-content.html
+#: app/templates/iphone/music/music-song-detail.html
+msgid "Genre"
+msgstr "@@Genre"
+
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+msgid "Genres"
+msgstr "@@Genres"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Get Notifications"
+msgstr "@@Get Notifications"
+
+#: app/module/ynchat/controller/ynchat-home-ipad.js
+#: app/module/ynchat/controller/ynchat-home.js
+msgid "Go Offline"
+msgstr "@@Go Offline"
+
+#: app/module/ynchat/controller/ynchat-home-ipad.js
+#: app/module/ynchat/controller/ynchat-home.js
+msgid "Go Online"
+msgstr "@@Go Online"
+
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+msgid "Group Name"
+msgstr "@@Group Name"
+
+#: app/module/group/controller/group-add.js
+#: app/module/group/controller/group-edit.js
+msgid "Group has been updated successfully"
+msgstr "@@Group has been updated successfully"
+
+#: app/templates/iphone/group/group-browse-group.html
+#: app/templates/iphone/group/group-my-group.html
+msgid "Groups"
+msgstr "@@Groups"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Hide all from"
+msgstr "@@Hide all from"
+
+#: app/templates/iphone/advfeed/feed-filter-settings-modal.html
+msgid "Hide feeds from:"
+msgstr "@@Hide feeds from:"
+
+#: app/templates/iphone/video/video-search.html
+msgid "Highest Rated"
+msgstr "@@Highest Rated"
+
+#: app/module/event/controller/event-search.js
+msgid "I May Attend"
+msgstr "@@I May Attend"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "I don't want to see this"
+msgstr "@@I don't want to see this"
+
+#: app/module/event/controller/event-search.js
+msgid "I'm Attending"
+msgstr "@@I'm Attending"
+
+#: app/module/event/controller/event-search.js
+msgid "I'm Not Attending"
+msgstr "@@I'm Not Attending"
+
+#: app/module/group/controller/group-item.js
+msgid "Ignore Invitation"
+msgstr "@@Ignore Invitation"
+
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "In-App Billing is not available."
+msgstr "@@In-App Billing is not available."
+
+#: app/module/marketplace/controller/listing-purchase.js
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "In-App Purchases does not support this currency. Please purchase in web site."
+msgstr "@@In-App Purchases does not support this currency. Please purchase in web site."
+
+#: app/module/marketplace/controller/listing-purchase.js
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "In-App Purchases is not available."
+msgstr "@@In-App Purchases is not available."
+
+#: app/templates/iphone/message/conversation-inbox.html
+#: app/templates/iphone/message/message-home.html
+msgid "Inbox"
+msgstr "@@Inbox"
+
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Info"
+msgstr "@@Info"
+
+#: app/templates/iphone/event/event-detail.html
+#: app/templates/iphone/group/group-detail.html
+#: app/templates/iphone/page/page-add.html
+#: app/templates/iphone/page/page-detail.html
+#: app/templates/iphone/page/page-edit.html
+msgid "Information"
+msgstr "@@Information"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/forum/forum-post-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+msgid "Insert Image"
+msgstr "@@Insert Image"
+
+#: app/module/video/controller/video-add.js
+msgid "Invalid Video URL"
+msgstr "@@Invalid Video URL"
+
+#: app/module/cometchat/controller/cometchat-home.js
+msgid "Invisible"
+msgstr "@@Invisible"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-invisiblemode.html
+msgid "Invisible Mode"
+msgstr "@@Invisible Mode"
+
+#: app/templates/iphone/setting/setting-invisiblemode.html
+msgid "Invisible mode allows you to browse the site without appearing on any \"Online\" lists."
+msgstr "@@Invisible mode allows you to browse the site without appearing on any \"Online\" lists."
+
+#: app/templates/iphone/event/event-invite-list.html
+#: app/templates/iphone/group/group-invite-list.html
+#: app/templates/iphone/marketplace/listing-invite-list.html
+#: app/templates/iphone/page/page-invite-list.html
+#: app/module/group/controller/group-item.js
+#: app/module/marketplace/controller/listing-item.js
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+msgid "Invite"
+msgstr "@@Invite"
+
+#: app/templates/iphone/event/event-invite-list.html
+#: app/templates/iphone/group/group-invite-list.html
+#: app/templates/iphone/marketplace/listing-invite-list.html
+#: app/templates/iphone/page/page-invite-list.html
+msgid "Invite Friends"
+msgstr "@@Invite Friends"
+
+#: app/module/event/controller/event-detail.js
+msgid "Invite Guests"
+msgstr "@@Invite Guests"
+
+#: app/templates/iphone/group/group-member-list.html
+#: app/templates/iphone/page/page-member-list.html
+msgid "Invited"
+msgstr "@@Invited"
+
+#: app/module/event/controller/event-invite-list.js
+#: app/module/marketplace/controller/listing-invite-list.js
+msgid "Invited member(s) successfully."
+msgstr "@@Invited member(s) successfully."
+
+#: app/module/group/controller/group-invite-list.js
+#: app/module/page/controller/page-invite-list.js
+msgid "Invited successfully."
+msgstr "@@Invited successfully."
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-items.html
+msgid "Items"
+msgstr "@@Items"
+
+#: app/module/group/controller/group-item.js
+msgid "Join"
+msgstr "@@Join"
+
+#: app/templates/iphone/forum/forum-detail.html
+msgid "Jump"
+msgstr "@@Jump"
+
+#: app/templates/iphone/search/search-form.html
+msgid "Keywords"
+msgstr "@@Keywords"
+
+#: app/templates/iphone/page/page-info.html
+msgid "LIKED"
+msgstr "@@LIKED"
+
+#: app/templates/iphone/core/core-menu.html app/global/myapp.js
+msgid "Language"
+msgstr "@@Language"
+
+#: app/templates/iphone/forum/forum-detail-announcement-list.html
+#: app/templates/iphone/forum/forum-detail-thread-list.html
+#: app/templates/iphone/forum/forum-thread-list.html
+#: app/templates/iphone/forum/forum-thread-search-list.html
+msgid "Last post"
+msgstr "@@Last post"
+
+#: app/templates/iphone/group/group-topic-list.html
+msgid "Last post by"
+msgstr "@@Last post by"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/marketplace/listing-search.html
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+#: app/templates/iphone/page/page-search.html
+#: app/templates/iphone/photo/photo-album-search.html
+#: app/templates/iphone/photo/photo-search.html
+#: app/templates/iphone/poll/poll-search.html
+#: app/templates/iphone/quiz/quiz-search.html
+msgid "Latest"
+msgstr "@@Latest"
+
+#: app/templates/iphone/user/signup.html
+msgid "Learn more about our memberships"
+msgstr "@@Learn more about our memberships"
+
+#: app/module/group/controller/group-item.js
+msgid "Leave Group"
+msgstr "@@Leave Group"
+
+#: app/templates/iphone/message/conversation-recipients-dir.html
+#: app/global/directive/shorten-html-compile.js
+msgid "Less"
+msgstr "@@Less"
+
+#: app/templates/iphone/comment/comment-list.html
+msgid "Like"
+msgstr "@@Like"
+
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/group/group-search.html
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+#: app/templates/iphone/page/page-search.html
+#: app/templates/iphone/photo/photo-album-search.html
+#: app/templates/iphone/photo/photo-search.html
+#: app/templates/iphone/poll/poll-search.html
+#: app/templates/iphone/quiz/quiz-search.html
+#: app/templates/iphone/video/video-search.html
+msgid "List By"
+msgstr "@@List By"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Listing Privacy"
+msgstr "@@Listing Privacy"
+
+#: app/templates/iphone/marketplace/listing-detail.html
+msgid "Listing is pending approval."
+msgstr "@@Listing is pending approval."
+
+#: app/templates/iphone/chat/chat-message-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-message-list-dir.html
+msgid "Loading..."
+msgstr "@@Loading..."
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-detail.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/marketplace/listing-search.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Location"
+msgstr "@@Location"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Lock Feed"
+msgstr "@@Lock Feed"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/subscription/subscription-browse.html
+#: app/global/myapp.js
+msgid "Logout"
+msgstr "@@Logout"
+
+#: app/templates/iphone/group/group-info.html
+msgid "MEMBERS"
+msgstr "@@MEMBERS"
+
+#: app/templates/iphone/core/core-menu.html app/global/myapp.js
+msgid "Mail"
+msgstr "@@Mail"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+msgid "Main Photo"
+msgstr "@@Main Photo"
+
+#: app/module/photo/controller/photo-detail.js
+#: app/module/photo/controller/photo-item.js
+msgid "Make Profile Photo"
+msgstr "@@Make Profile Photo"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Make officer"
+msgstr "@@Make officer"
+
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Male"
+msgstr "@@Male"
+
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+msgid "Manage Page"
+msgstr "@@Manage Page"
+
+#: app/templates/iphone/event/event-invite-list.html
+#: app/templates/iphone/group/group-invite-list.html
+#: app/templates/iphone/marketplace/listing-invite-list.html
+#: app/templates/iphone/page/page-invite-list.html
+msgid "Mark All"
+msgstr "@@Mark All"
+
+#: app/templates/iphone/notification/notification-popover-list.html
+msgid "Mark All Read"
+msgstr "@@Mark All Read"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/marketplace/listing-browse.html app/global/myapp.js
+msgid "Marketplace"
+msgstr "@@Marketplace"
+
+#: app/templates/iphone/notification/notification-popover-list.html
+msgid "Marking All Read..."
+msgstr "@@Marking All Read..."
+
+#: app/templates/iphone/event/event-info.html
+msgid "MayBe"
+msgstr "@@MayBe"
+
+#: app/module/event/controller/event-item.js
+msgid "Maybe Attending"
+msgstr "@@Maybe Attending"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/member/member-browse.html
+#: app/module/group/controller/group-detail.js app/global/myapp.js
+msgid "Members"
+msgstr "@@Members"
+
+#: app/templates/iphone/poll/poll-detail.html
+#: app/templates/iphone/poll/poll-results-modal.html
+msgid "Members votes"
+msgstr "@@Members votes"
+
+#: app/templates/iphone/user/signup.html
+msgid "Membership"
+msgstr "@@Membership"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/subscription/subscription-browse.html
+#: app/templates/iphone/subscription/subscription-upgrade.html
+#: app/global/myapp.js
+msgid "Memberships"
+msgstr "@@Memberships"
+
+#: app/templates/iphone/forum/forum-post-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+#: app/templates/iphone/message/conversation-add.html
+msgid "Message"
+msgstr "@@Message"
+
+#: app/templates/iphone/ynchat/ynchat-history.html
+msgid "Message History"
+msgstr "@@Message History"
+
+#: app/module/group/controller/group-item.js
+msgid "Message Members"
+msgstr "@@Message Members"
+
+#: app/templates/iphone/chat/chat-message-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-message-list-dir.html
+msgid "Message was not delivered"
+msgstr "@@Message was not delivered"
+
+#: app/module/setting/controller/setting-password.js
+msgid "Missing new password."
+msgstr "@@Missing new password."
+
+#: app/module/setting/controller/setting-password.js
+msgid "Missing old password."
+msgstr "@@Missing old password."
+
+#: app/templates/iphone/forum/forum-home.html
+#: app/templates/iphone/group/group-detail.html
+#: app/templates/iphone/marketplace/listing-detail.html
+#: app/templates/iphone/message/conversation-recipients-dir.html
+#: app/templates/iphone/music/music-home.html
+#: app/templates/iphone/page/page-detail.html
+#: app/templates/iphone/photo/photo-home.html
+#: app/global/directive/shorten-html-compile.js
+msgid "More"
+msgstr "@@More"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/marketplace/listing-search.html
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+#: app/templates/iphone/photo/photo-album-search.html
+#: app/templates/iphone/photo/photo-search.html
+#: app/templates/iphone/poll/poll-search.html
+#: app/templates/iphone/quiz/quiz-search.html
+msgid "Most Discussed"
+msgstr "@@Most Discussed"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/marketplace/listing-search.html
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+#: app/templates/iphone/page/page-search.html
+#: app/templates/iphone/poll/poll-search.html
+#: app/templates/iphone/quiz/quiz-search.html
+msgid "Most Liked"
+msgstr "@@Most Liked"
+
+#: app/templates/iphone/video/video-search.html
+msgid "Most Recent"
+msgstr "@@Most Recent"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+#: app/templates/iphone/photo/photo-search.html
+#: app/templates/iphone/poll/poll-search.html
+#: app/templates/iphone/quiz/quiz-search.html
+#: app/templates/iphone/video/video-search.html
+msgid "Most Viewed"
+msgstr "@@Most Viewed"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/music/music-browse-playlist.html
+#: app/templates/iphone/music/music-browse-song.html
+#: app/templates/iphone/music/music-my-playlist.html
+#: app/templates/iphone/music/music-my-song.html
+#: app/templates/iphone/page/page-music.html
+#: app/module/music/controller/music-home-ipad.js
+#: app/module/music/controller/music-home.js
+#: app/module/page/controller/page-detail.js app/global/myapp.js
+msgid "Music"
+msgstr "@@Music"
+
+#: app/module/chat/controller/chat-home.js
+#: app/module/cometchat/controller/cometchat-home.js
+#: app/module/ynchat/controller/ynchat-home-ipad.js
+#: app/module/ynchat/controller/ynchat-home.js
+msgid "Mute Notification"
+msgstr "@@Mute Notification"
+
+#: app/templates/iphone/user/user-mutual-friend.html
+msgid "Mutual Friends"
+msgstr "@@Mutual Friends"
+
+#: app/templates/iphone/photo/photo-my-album.html
+#: app/module/music/controller/music-home-ipad.js
+#: app/module/music/controller/music-home.js
+#: app/module/photo/controller/photo-home.js
+msgid "My Albums"
+msgstr "@@My Albums"
+
+#: app/templates/iphone/blog/blog-home.html
+msgid "My Blogs"
+msgstr "@@My Blogs"
+
+#: app/templates/iphone/event/event-home.html
+#: app/templates/iphone/event/event-my-event.html
+msgid "My Events"
+msgstr "@@My Events"
+
+#: app/templates/iphone/group/group-home.html
+msgid "My Groups"
+msgstr "@@My Groups"
+
+#: app/templates/iphone/marketplace/listing-home.html
+msgid "My Listings"
+msgstr "@@My Listings"
+
+#: app/templates/iphone/page/page-home.html
+#: app/templates/iphone/page/page-my-page.html
+msgid "My Pages"
+msgstr "@@My Pages"
+
+#: app/templates/iphone/photo/photo-home.html
+#: app/templates/iphone/photo/photo-my-photo.html
+#: app/module/photo/controller/photo-home.js
+msgid "My Photos"
+msgstr "@@My Photos"
+
+#: app/templates/iphone/poll/poll-home.html
+msgid "My Polls"
+msgstr "@@My Polls"
+
+#: app/templates/iphone/quiz/quiz-home.html
+msgid "My Quizzes"
+msgstr "@@My Quizzes"
+
+#: app/templates/iphone/music/music-home.html
+msgid "My Songs"
+msgstr "@@My Songs"
+
+#: app/module/forum/controller/forum-home.js
+msgid "My Threads"
+msgstr "@@My Threads"
+
+#: app/templates/iphone/video/video-home.html
+#: app/templates/iphone/video/video-my-video.html
+msgid "My Videos"
+msgstr "@@My Videos"
+
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+msgid "Name"
+msgstr "@@Name"
+
+#: app/templates/iphone/message/conversation-popover-list.html
+msgid "New Message"
+msgstr "@@New Message"
+
+#: app/templates/iphone/setting/setting-password.html
+msgid "New Password"
+msgstr "@@New Password"
+
+#: app/templates/iphone/forum/forum-home.html
+msgid "New Posts"
+msgstr "@@New Posts"
+
+#: app/templates/iphone/core/core-menu.html app/global/myapp.js
+msgid "News Feed"
+msgstr "@@News Feed"
+
+#: app/templates/iphone/user/signup.html
+msgid "Next"
+msgstr "@@Next"
+
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+msgid "No"
+msgstr "@@No"
+
+#: app/module/user/controller/user-signup.js
+msgid "No account will be created if you cancel this screen"
+msgstr "@@No account will be created if you cancel this screen"
+
+#: app/templates/iphone/activity/activity-list.html
+#: app/templates/iphone/advfeed/activity-list.html
+msgid "No activities found!"
+msgstr "@@No activities found!"
+
+#: app/templates/iphone/photo/photo-album-list.html
+msgid "No albums found"
+msgstr "@@No albums found"
+
+#: app/templates/iphone/music/music-playlist-list.html
+msgid "No albums found."
+msgstr "@@No albums found."
+
+#: app/templates/iphone/blog/blog-my-list-dir.html
+#: app/module/blog/controller/blog-list.js
+msgid "No blogs found."
+msgstr "@@No blogs found."
+
+#: app/templates/iphone/blog/blog-category-list.html
+msgid "No categories added."
+msgstr "@@No categories added."
+
+#: app/templates/iphone/chat/chat-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-list-dir.html
+#: app/templates/iphone/ynchat/ynchat-list-dir.html
+msgid "No contacts found."
+msgstr "@@No contacts found."
+
+#: app/templates/iphone/event/event-list.html
+msgid "No events found."
+msgstr "@@No events found."
+
+#: app/module/forum/controller/forum-list.js
+msgid "No forums found."
+msgstr "@@No forums found."
+
+#: app/templates/iphone/chat/chat-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-list-dir.html
+#: app/templates/iphone/ynchat/ynchat-list-dir.html
+msgid "No friends available for chatting."
+msgstr "@@No friends available for chatting."
+
+#: app/templates/iphone/friend/friend-list.html
+msgid "No friends found"
+msgstr "@@No friends found"
+
+#: app/templates/iphone/friend/friend-autocomplete-list.html
+msgid "No friends found."
+msgstr "@@No friends found."
+
+#: app/templates/iphone/group/group-list.html
+msgid "No groups found."
+msgstr "@@No groups found."
+
+#: app/templates/iphone/event/event-guest-list.html
+msgid "No guests found."
+msgstr "@@No guests found."
+
+#: app/templates/iphone/marketplace/listing-list-dir.html
+msgid "No listings found."
+msgstr "@@No listings found."
+
+#: app/templates/iphone/location/location-list-modal.html
+msgid "No locations found."
+msgstr "@@No locations found."
+
+#: app/templates/iphone/member/member-list.html
+#: app/templates/iphone/page/page-member-list-modal.html
+msgid "No members found"
+msgstr "@@No members found"
+
+#: app/templates/iphone/group/group-member-list.html
+#: app/templates/iphone/page/page-member-list.html
+msgid "No members found."
+msgstr "@@No members found."
+
+#: app/templates/iphone/message/conversation-list-dir.html
+#: app/templates/iphone/message/conversation-popover-list.html
+msgid "No messages found."
+msgstr "@@No messages found."
+
+#: app/templates/iphone/chat/chat-message-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-message-list-dir.html
+#: app/templates/iphone/ynchat/ynchat-message-list-dir.html
+msgid "No messages."
+msgstr "@@No messages."
+
+#: app/module/activity/controller/activity-list-dir.js
+#: app/module/advfeed/controller/activity-list-dir.js
+msgid "No more activities"
+msgstr "@@No more activities"
+
+#: app/module/music/controller/music-playlist-list.js
+#: app/module/music/controller/music-song-list.js
+#: app/module/photo/controller/photo-album-list.js
+msgid "No more albums"
+msgstr "@@No more albums"
+
+#: app/module/blog/controller/blog-list.js
+msgid "No more blogs"
+msgstr "@@No more blogs"
+
+#: app/module/event/controller/event-list.js
+msgid "No more events"
+msgstr "@@No more events"
+
+#: app/module/forum/controller/forum-list.js
+msgid "No more forums"
+msgstr "@@No more forums"
+
+#: app/module/advfeed/controller/feed-add-privacy-modal.js
+#: app/module/advfeed/controller/tag-friends.js
+#: app/module/friend/controller/friend-list.js
+msgid "No more friends"
+msgstr "@@No more friends"
+
+#: app/module/group/controller/group-list.js
+msgid "No more groups"
+msgstr "@@No more groups"
+
+#: app/global/base/ListController.js
+msgid "No more items"
+msgstr "@@No more items"
+
+#: app/module/marketplace/controller/listing-list.js
+msgid "No more listings"
+msgstr "@@No more listings"
+
+#: app/module/location/controller/location-list.js
+msgid "No more locations"
+msgstr "@@No more locations"
+
+#: app/module/group/controller/group-member-list.js
+#: app/module/member/controller/member-list.js
+msgid "No more members"
+msgstr "@@No more members"
+
+#: app/module/message/controller/conversation-list.js
+msgid "No more messages"
+msgstr "@@No more messages"
+
+#: app/module/notification/controller/notification-list.js
+msgid "No more notifications"
+msgstr "@@No more notifications"
+
+#: app/module/page/controller/page-list.js
+msgid "No more pages"
+msgstr "@@No more pages"
+
+#: app/module/photo/controller/photo-list-simple.js
+#: app/module/photo/controller/photo-list.js
+msgid "No more photos"
+msgstr "@@No more photos"
+
+#: app/module/poll/controller/poll-list.js
+msgid "No more polls."
+msgstr "@@No more polls."
+
+#: app/module/forum/controller/forum-post-search-list.js
+msgid "No more posts"
+msgstr "@@No more posts"
+
+#: app/module/quiz/controller/quiz-list.js
+msgid "No more quizzes."
+msgstr "@@No more quizzes."
+
+#: app/module/search/controller/search-result-list.js
+msgid "No more result"
+msgstr "@@No more result"
+
+#: app/module/advfeed/controller/feed-filter-settings.js
+msgid "No more sources"
+msgstr "@@No more sources"
+
+#: app/module/forum/controller/forum-thread-list.js
+#: app/module/forum/controller/forum-thread-search-list.js
+msgid "No more threads"
+msgstr "@@No more threads"
+
+#: app/module/group/controller/group-post-list.js
+#: app/module/group/controller/group-topic-list.js
+#: app/module/page/controller/page-post-list.js
+#: app/module/page/controller/page-topic-list.js
+msgid "No more topics."
+msgstr "@@No more topics."
+
+#: app/module/video/controller/video-list.js
+msgid "No more videos"
+msgstr "@@No more videos"
+
+#: app/templates/iphone/music/music-song-list.html
+msgid "No music found."
+msgstr "@@No music found."
+
+#: app/templates/iphone/notification/notification-popover-list.html
+msgid "No new notifications."
+msgstr "@@No new notifications."
+
+#: app/module/blog/controller/blog-list.js
+msgid "No one has written any blog entries yet."
+msgstr "@@No one has written any blog entries yet."
+
+#: app/templates/iphone/subscription/subscription-list-dir.html
+msgid "No packages found."
+msgstr "@@No packages found."
+
+#: app/templates/iphone/page/page-list.html
+msgid "No pages found."
+msgstr "@@No pages found."
+
+#: app/templates/iphone/photo/photo-list-simple.html
+#: app/templates/iphone/photo/photo-list.html
+msgid "No photos found."
+msgstr "@@No photos found."
+
+#: app/templates/iphone/poll/poll-list.html
+msgid "No polls found."
+msgstr "@@No polls found."
+
+#: app/templates/iphone/forum/forum-post-search-list.html
+#: app/module/forum/controller/forum-post-search-list.js
+msgid "No posts found."
+msgstr "@@No posts found."
+
+#: app/templates/iphone/quiz/quiz-list.html
+msgid "No quizzes found."
+msgstr "@@No quizzes found."
+
+#: app/templates/iphone/request/request-popover-list.html
+msgid "No requests found."
+msgstr "@@No requests found."
+
+#: app/templates/iphone/forum/forum-poll-voters.html
+#: app/templates/iphone/poll/poll-results-modal.html
+#: app/templates/iphone/quiz/quiz-results-modal.html
+msgid "No results found"
+msgstr "@@No results found"
+
+#: app/templates/iphone/search/search-result-list.html
+msgid "No results found."
+msgstr "@@No results found."
+
+#: app/templates/iphone/forum/forum-detail-thread-list.html
+#: app/templates/iphone/forum/forum-thread-list.html
+#: app/templates/iphone/forum/forum-thread-search-list.html
+#: app/module/forum/controller/forum-thread-list.js
+#: app/module/forum/controller/forum-thread-search-list.js
+msgid "No threads found."
+msgstr "@@No threads found."
+
+#: app/templates/iphone/group/group-topic-list.html
+msgid "No topics found."
+msgstr "@@No topics found."
+
+#: app/module/ynchat/controller/ynchat-base.js
+msgid "No valid photos has been selected. Please try again."
+msgstr "@@No valid photos has been selected. Please try again."
+
+#: app/templates/iphone/video/video-list.html
+msgid "No videos found."
+msgstr "@@No videos found."
+
+#: app/templates/iphone/group/group-list.html
+msgid "None Category"
+msgstr "@@None Category"
+
+#: app/templates/iphone/event/event-info.html
+#: app/module/event/controller/event-item.js
+msgid "Not Attending"
+msgstr "@@Not Attending"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-notifications.html
+msgid "Notifications"
+msgstr "@@Notifications"
+
+#: app/module/activity-attachment/controller/attachment-add.js
+#: app/module/advfeed-attachment/controller/attachment-add.js
+#: app/module/attachment/controller/attachment-add.js
+#: app/module/blog/controller/blog-form.js
+#: app/module/core/controller/core-menu.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/forum/controller/forum-thread-form.js
+#: app/module/marketplace/controller/listing-edit.js
+#: app/module/marketplace/controller/listing-item.js
+#: app/module/message/controller/conversation-detail.js
+#: app/module/subscription/controller/subscription-confirm.js
+#: app/module/user/controller/user-signup.js
+#: app/module/video/controller/video-add.js app/global/base/BaseController.js
+#: app/global/service/modal.js app/global/myapp.js
+msgid "OK"
+msgstr "@@OK"
+
+#: app/templates/iphone/setting/setting-home.html
+msgid "Off"
+msgstr "@@Off"
+
+#: app/templates/iphone/group/group-member-list.html
+#: app/templates/iphone/page/page-member-list.html
+msgid "Officer"
+msgstr "@@Officer"
+
+#: app/module/chat/controller/chat-home.js
+#: app/module/cometchat/controller/cometchat-home.js
+msgid "Offline"
+msgstr "@@Offline"
+
+#: app/templates/iphone/setting/setting-password.html
+msgid "Old Password"
+msgstr "@@Old Password"
+
+#: app/templates/iphone/setting/setting-home.html
+msgid "On"
+msgstr "@@On"
+
+#: app/module/chat/controller/chat-home.js
+msgid "Online"
+msgstr "@@Online"
+
+#: app/templates/iphone/group/group-member-list.html
+#: app/templates/iphone/page/page-member-list.html
+msgid "Owner"
+msgstr "@@Owner"
+
+#: app/templates/iphone/group/group-info.html
+msgid "Owner:"
+msgstr "@@Owner:"
+
+#: app/templates/iphone/user/user-activity.html
+msgid "PHOTO"
+msgid_plural "PHOTOS"
+msgstr[0] "@@PHOTO"
+msgstr[1] "@@PHOTOS"
+
+#: app/templates/iphone/core/core-pagination.html
+msgid "Page"
+msgstr "@@Page"
+
+#: app/templates/iphone/page/page-add.html
+#: app/templates/iphone/page/page-edit.html
+msgid "Page Name"
+msgstr "@@Page Name"
+
+#: app/module/page/controller/page-add.js
+#: app/module/page/controller/page-edit.js
+msgid "Page has been updated successfully"
+msgstr "@@Page has been updated successfully"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/page/page-browse-page.html app/global/myapp.js
+msgid "Pages"
+msgstr "@@Pages"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/user/login.html app/templates/iphone/user/signup.html
+msgid "Password"
+msgstr "@@Password"
+
+#: app/module/user/controller/user-signup.js
+msgid "Password can not be empty"
+msgstr "@@Password can not be empty"
+
+#: app/module/user/controller/user-signup.js
+msgid "Password does not match"
+msgstr "@@Password does not match"
+
+#: app/module/user/controller/user-login.js
+msgid "Password is empty!"
+msgstr "@@Password is empty!"
+
+#: app/module/user/controller/user-signup.js
+msgid "Password must be longer than 6"
+msgstr "@@Password must be longer than 6"
+
+#: app/module/user/controller/user-signup.js
+msgid "Password should not contain space"
+msgstr "@@Password should not contain space"
+
+#: app/module/advfeed-attachment/controller/attachment-add.js
+msgid "Paste YouTube/Vimeo URL"
+msgstr "@@Paste YouTube/Vimeo URL"
+
+#: app/module/video/controller/video-add.js
+msgid "Paste your video URL"
+msgstr "@@Paste your video URL"
+
+#: app/templates/iphone/blog/blog-my-list-dir.html
+msgid "Pending"
+msgstr "@@Pending"
+
+#: app/templates/iphone/dislike/disliked-list.html
+msgid "People who disliked this"
+msgstr "@@People who disliked this"
+
+#: app/templates/iphone/like/liked-list.html
+msgid "People who liked this"
+msgstr "@@People who liked this"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+msgid "Personal"
+msgstr "@@Personal"
+
+#: app/module/photo/controller/photo-detail.js
+msgid "Photo is deleted"
+msgstr "@@Photo is deleted"
+
+#: app/module/photo/controller/photo-detail.js
+msgid "Photo not found"
+msgstr "@@Photo not found"
+
+#: app/templates/iphone/group/group-info.html
+#: app/templates/iphone/group/group-photo.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/photo/photo-browse-photo.html
+#: app/templates/iphone/photo/photo-home.html
+#: app/templates/iphone/user/user-detail.html
+#: app/module/group/controller/group-detail.js
+#: app/module/page/controller/page-detail.js
+msgid "Photos"
+msgstr "@@Photos"
+
+#: app/module/quiz/controller/quiz-start.js
+msgid "Please answer all questions."
+msgstr "@@Please answer all questions."
+
+#: app/module/message/controller/conversation-add.js
+msgid "Please choose a recipient"
+msgstr "@@Please choose a recipient"
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please enter Event Name no more than 64 characters."
+msgstr "@@Please enter Event Name no more than 64 characters."
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please enter Event Name."
+msgstr "@@Please enter Event Name."
+
+#: app/module/group/controller/group-topic-add.js
+#: app/module/page/controller/page-topic-add.js
+msgid "Please enter Title no more than 64 characters"
+msgstr "@@Please enter Title no more than 64 characters"
+
+#: app/module/user/controller/user-forgot-password.js
+msgid "Please enter a valid email"
+msgstr "@@Please enter a valid email"
+
+#: app/module/user/controller/user-login.js
+msgid "Please enter a valid email address!"
+msgstr "@@Please enter a valid email address!"
+
+#: app/module/group/controller/group-add.js
+#: app/module/group/controller/group-edit.js
+msgid "Please enter group name."
+msgstr "@@Please enter group name."
+
+#: app/module/page/controller/page-add.js
+#: app/module/page/controller/page-edit.js
+msgid "Please enter page name."
+msgstr "@@Please enter page name."
+
+#: app/module/message/controller/conversation-add.js
+#: app/module/message/controller/conversation-reply.js
+msgid "Please enter the message"
+msgstr "@@Please enter the message"
+
+#: app/module/message/controller/conversation-add.js
+msgid "Please enter the subject"
+msgstr "@@Please enter the subject"
+
+#: app/module/comment/controller/comment-form.js
+msgid "Please enter your comment"
+msgstr "@@Please enter your comment"
+
+#: app/module/user/controller/user-forgot-password.js
+msgid "Please enter your email"
+msgstr "@@Please enter your email"
+
+#: app/module/activity/controller/feed-add.js
+#: app/module/advfeed/controller/feed-add.js
+#: app/module/advfeed/controller/feed-edit.js
+msgid "Please enter your message"
+msgstr "@@Please enter your message"
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please provide a location for this event."
+msgstr "@@Please provide a location for this event."
+
+#: app/module/forum/controller/forum-search.js
+msgid "Please provide keyword"
+msgstr "@@Please provide keyword"
+
+#: app/module/photo/controller/photo-item.js
+msgid "Please provide title for this photo"
+msgstr "@@Please provide title for this photo"
+
+#: app/module/user/controller/user-signup.js
+msgid "Please select avatar."
+msgstr "@@Please select avatar."
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please select end date."
+msgstr "@@Please select end date."
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please select end time."
+msgstr "@@Please select end time."
+
+#: app/module/event/controller/event-invite-list.js
+#: app/module/group/controller/group-invite-list.js
+#: app/module/marketplace/controller/listing-invite-list.js
+#: app/module/page/controller/page-invite-list.js
+msgid "Please select friend to invite."
+msgstr "@@Please select friend to invite."
+
+#: app/module/group/controller/group-upload-photo.js
+#: app/module/page/controller/page-upload-photo.js
+msgid "Please select photos to upload"
+msgstr "@@Please select photos to upload"
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please select start date."
+msgstr "@@Please select start date."
+
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+msgid "Please select start time."
+msgstr "@@Please select start time."
+
+#: app/module/video/controller/video-add.js
+msgid "Please select video"
+msgstr "@@Please select video"
+
+#: app/global/base/BaseController.js
+msgid "Please write something to share"
+msgstr "@@Please write something to share"
+
+#: app/templates/iphone/forum/forum-thread-detail-poll-detail.html
+msgid "Poll"
+msgstr "@@Poll"
+
+#: app/templates/iphone/forum/forum-poll-voters.html
+#: app/templates/iphone/poll/poll-results-modal.html
+msgid "Poll Results"
+msgstr "@@Poll Results"
+
+#: app/module/poll/controller/poll-form.js
+msgid "Poll title is required."
+msgstr "@@Poll title is required."
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/poll/poll-browse-poll.html
+#: app/templates/iphone/poll/poll-my-poll.html app/global/myapp.js
+msgid "Polls"
+msgstr "@@Polls"
+
+#: app/templates/iphone/group/group-search.html
+msgid "Popuplar"
+msgstr "@@Popuplar"
+
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+msgid "Posible Answers"
+msgstr "@@Posible Answers"
+
+#: app/templates/iphone/activity/feed-add.html
+#: app/templates/iphone/advfeed/feed-add.html
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/comment/comment-form-footer.html
+#: app/templates/iphone/comment/comment-form-subfooter.html
+#: app/templates/iphone/forum/forum-post-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+msgid "Post"
+msgstr "@@Post"
+
+#: app/templates/iphone/forum/forum-thread-add.html
+msgid "Post New Thread"
+msgstr "@@Post New Thread"
+
+#: app/templates/iphone/group/group-topic-add.html
+msgid "Post Topic"
+msgstr "@@Post Topic"
+
+#: app/templates/iphone/forum/forum-post-search-list.html
+msgid "Posted in"
+msgstr "@@Posted in"
+
+#: app/templates/iphone/forum/forum-search.html
+#: app/templates/iphone/forum/forum-thread-detail-post-list.html
+msgid "Posts"
+msgstr "@@Posts"
+
+#: app/templates/iphone/setting/setting-defaultcurrency.html
+#: app/templates/iphone/setting/setting-home.html
+msgid "Preferred Currency"
+msgstr "@@Preferred Currency"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-detail.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Price"
+msgstr "@@Price"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-language.html
+msgid "Primary Language"
+msgstr "@@Primary Language"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/photo/photo-album-add.html
+#: app/templates/iphone/photo/photo-album-edit.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+#: app/templates/iphone/setting/setting-blockedusers.html
+#: app/templates/iphone/setting/setting-items.html
+#: app/templates/iphone/setting/setting-notifications.html
+#: app/templates/iphone/setting/setting-profile.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+msgid "Privacy"
+msgstr "@@Privacy"
+
+#: app/templates/iphone/setting/setting-home.html
+msgid "Privacy Settings"
+msgstr "@@Privacy Settings"
+
+#: app/templates/iphone/core/core-private-page.html
+msgid "Private Page"
+msgstr "@@Private Page"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-profile.html
+msgid "Profile"
+msgstr "@@Profile"
+
+#: app/templates/iphone/user/user-activity.html
+msgid "Profile is private."
+msgstr "@@Profile is private."
+
+#: app/module/marketplace/controller/listing-form.js
+msgid "Provide a category this listing will belong to."
+msgstr "@@Provide a category this listing will belong to."
+
+#: app/module/marketplace/controller/listing-form.js
+msgid "Provide a location for this listing."
+msgstr "@@Provide a location for this listing."
+
+#: app/module/marketplace/controller/listing-form.js
+msgid "Provide a name for this listing."
+msgstr "@@Provide a name for this listing."
+
+#: app/module/forum/controller/forum-poll-add.js
+msgid "Provide a question for your poll."
+msgstr "@@Provide a question for your poll."
+
+#: app/module/forum/controller/forum-thread-add.js
+#: app/module/forum/controller/forum-thread-edit.js
+msgid "Provide a title for your thread"
+msgstr "@@Provide a title for your thread"
+
+#: app/module/setting/controller/setting-username.js
+msgid "Provide a user name."
+msgstr "@@Provide a user name."
+
+#: app/module/setting/controller/setting-email.js
+msgid "Provide a valid email address."
+msgstr "@@Provide a valid email address."
+
+#: app/module/marketplace/controller/listing-form.js
+msgid "Provide a valid price."
+msgstr "@@Provide a valid price."
+
+#: app/module/forum/controller/forum-post-edit.js
+#: app/module/forum/controller/forum-thread-add.js
+#: app/module/forum/controller/forum-thread-edit.js
+#: app/module/forum/controller/forum-thread-reply.js
+msgid "Provide some text"
+msgstr "@@Provide some text"
+
+#: app/module/setting/controller/setting-fullname.js
+msgid "Provide your full name."
+msgstr "@@Provide your full name."
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+msgid "Public"
+msgstr "@@Public"
+
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+msgid "Public Votes"
+msgstr "@@Public Votes"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+msgid "Publish"
+msgstr "@@Publish"
+
+#: app/templates/iphone/chat/chat-message-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-message-list-dir.html
+msgid "Pull down to load more"
+msgstr "@@Pull down to load more"
+
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+#: app/templates/iphone/quiz/quiz-start.html
+msgid "Question"
+msgstr "@@Question"
+
+#: app/templates/iphone/quiz/quiz-detail.html
+msgid "Question )"
+msgid_plural "Questions )"
+msgstr[0] "@@Question )"
+msgstr[1] "@@Questions )"
+
+#: app/module/quiz/controller/quiz-form.js
+msgid "Questions and Answers could not be empty!"
+msgstr "@@Questions and Answers could not be empty!"
+
+#: app/templates/iphone/quiz/quiz-result.html
+#: app/templates/iphone/quiz/quiz-user-result-modal.html
+msgid "Quiz Results for"
+msgstr "@@Quiz Results for"
+
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+msgid "Quiz Title"
+msgstr "@@Quiz Title"
+
+#: app/module/quiz/controller/quiz-form.js
+msgid "Quiz description is required."
+msgstr "@@Quiz description is required."
+
+#: app/module/quiz/controller/quiz-form.js
+msgid "Quiz title is required."
+msgstr "@@Quiz title is required."
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/quiz/quiz-browse-quiz.html
+#: app/templates/iphone/quiz/quiz-my-quiz.html app/global/myapp.js
+msgid "Quizzes"
+msgstr "@@Quizzes"
+
+#: app/module/group/controller/group-post-item.js
+#: app/module/page/controller/page-post-item.js
+msgid "Quote post"
+msgstr "@@Quote post"
+
+#: app/global/base/BaseController.js
+msgid "Rate"
+msgstr "@@Rate"
+
+#: app/templates/iphone/user/signup.html
+msgid "Read and agree with"
+msgstr "@@Read and agree with"
+
+#: app/templates/iphone/group/group-search.html
+msgid "Recent"
+msgstr "@@Recent"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Remove"
+msgstr "@@Remove"
+
+#: app/module/activity/controller/feed-detail.js
+#: app/module/blog/controller/blog-detail.js
+#: app/module/music/controller/music-song-detail.js
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+#: app/module/photo/controller/photo-detail.js
+#: app/module/poll/controller/poll-detail.js
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/video/controller/video-detail.js
+msgid "Remove Dislike"
+msgstr "@@Remove Dislike"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Remove Friend"
+msgstr "@@Remove Friend"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Remove From Saved Feeds"
+msgstr "@@Remove From Saved Feeds"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Remove Invitation"
+msgstr "@@Remove Invitation"
+
+#: app/templates/iphone/forum/forum-thread-detail.html
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+#: app/module/group/controller/group-topic-detail.js
+#: app/module/message/controller/conversation-detail.js
+#: app/module/page/controller/page-topic-detail.js
+msgid "Reply"
+msgstr "@@Reply"
+
+#: app/module/blog/controller/blog-detail.js
+#: app/module/blog/controller/blog-item.js
+#: app/module/group/controller/group-item.js
+#: app/module/marketplace/controller/listing-item.js
+#: app/module/photo/controller/photo-album-item.js
+#: app/module/poll/controller/poll-detail.js
+#: app/module/poll/controller/poll-item.js
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/quiz/controller/quiz-item.js
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js app/global/base/BaseController.js
+msgid "Report"
+msgstr "@@Report"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Report Feed"
+msgstr "@@Report Feed"
+
+#: app/module/music/controller/music-playlist-item.js
+msgid "Report this album"
+msgstr "@@Report this album"
+
+#: app/module/photo/controller/photo-detail.js
+#: app/module/photo/controller/photo-item.js
+msgid "Report this photo"
+msgstr "@@Report this photo"
+
+#: app/module/activity/controller/feed-detail.js
+#: app/module/forum/controller/forum-post-item.js
+#: app/module/group/controller/group-post-item.js
+#: app/module/page/controller/page-post-item.js
+msgid "Report this post"
+msgstr "@@Report this post"
+
+#: app/module/music/controller/music-song-detail.js
+#: app/module/music/controller/music-song-item.js
+msgid "Report this song"
+msgstr "@@Report this song"
+
+#: app/module/video/controller/video-detail.js
+#: app/module/video/controller/video-item.js
+msgid "Report this video"
+msgstr "@@Report this video"
+
+#: app/global/base/BaseController.js
+msgid "Report type can not be empty"
+msgstr "@@Report type can not be empty"
+
+#: app/module/group/controller/group-item.js
+msgid "Request Membership"
+msgstr "@@Request Membership"
+
+#: app/templates/iphone/group/group-member-list.html
+#: app/templates/iphone/page/page-member-list.html
+msgid "Requested"
+msgstr "@@Requested"
+
+#: app/templates/iphone/page/page-edit-avatar.html
+#: app/templates/iphone/page/page-edit-cover.html
+msgid "Reselect"
+msgstr "@@Reselect"
+
+#: app/templates/iphone/user/signup.html
+msgid "Reselect Photo"
+msgstr "@@Reselect Photo"
+
+#: app/templates/iphone/advfeed/feed-edit.html
+#: app/templates/iphone/advfeed/feed-filter-settings-modal.html
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/forum/forum-post-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+#: app/templates/iphone/group/group-add.html
+#: app/templates/iphone/group/group-edit.html
+#: app/templates/iphone/group/group-topic-add.html
+#: app/templates/iphone/group/group-topic-edit-post.html
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+#: app/templates/iphone/group/group-upload-photo.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/page/page-add.html
+#: app/templates/iphone/page/page-edit-avatar.html
+#: app/templates/iphone/page/page-edit-cover.html
+#: app/templates/iphone/page/page-edit.html
+#: app/templates/iphone/page/page-upload-photo.html
+#: app/templates/iphone/photo/photo-album-add.html
+#: app/templates/iphone/photo/photo-album-edit.html
+#: app/templates/iphone/photo/photo-edit-modal.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+#: app/templates/iphone/quiz/quiz-add.html
+#: app/templates/iphone/quiz/quiz-edit.html
+#: app/templates/iphone/setting/setting-blockedusers.html
+#: app/templates/iphone/setting/setting-defaultcurrency.html
+#: app/templates/iphone/setting/setting-email.html
+#: app/templates/iphone/setting/setting-fullname.html
+#: app/templates/iphone/setting/setting-invisiblemode.html
+#: app/templates/iphone/setting/setting-items.html
+#: app/templates/iphone/setting/setting-language.html
+#: app/templates/iphone/setting/setting-notifications.html
+#: app/templates/iphone/setting/setting-password.html
+#: app/templates/iphone/setting/setting-profile.html
+#: app/templates/iphone/setting/setting-timezone.html
+#: app/templates/iphone/setting/setting-username.html
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-edit-avatar.html
+#: app/templates/iphone/user/user-edit-cover.html
+#: app/templates/iphone/user/user-edit-info.html
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+msgid "Save"
+msgstr "@@Save"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Save Feed"
+msgstr "@@Save Feed"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+#: app/templates/iphone/event/event-search.html
+#: app/templates/iphone/forum/forum-post-search.html
+#: app/templates/iphone/forum/forum-search.html
+#: app/templates/iphone/forum/forum-thread-search.html
+#: app/templates/iphone/group/group-search.html
+#: app/templates/iphone/marketplace/listing-search.html
+#: app/templates/iphone/member/member-search.html
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+#: app/templates/iphone/page/page-search.html
+#: app/templates/iphone/photo/photo-album-search.html
+#: app/templates/iphone/photo/photo-search.html
+#: app/templates/iphone/poll/poll-search.html
+#: app/templates/iphone/quiz/quiz-search.html
+#: app/templates/iphone/search/search-browse.html
+#: app/templates/iphone/search/search-form.html
+#: app/templates/iphone/video/video-search.html
+#: app/module/forum/controller/forum-post-search.js
+#: app/module/forum/controller/forum-thread-search.js
+msgid "Search"
+msgstr "@@Search"
+
+#: app/templates/iphone/forum/forum-search.html
+msgid "Search ..."
+msgstr "@@Search ..."
+
+#: app/templates/iphone/music/music-playlist-search.html
+#: app/templates/iphone/photo/photo-album-search.html
+msgid "Search albums"
+msgstr "@@Search albums"
+
+#: app/templates/iphone/blog/blog-search-dir.html
+msgid "Search blogs"
+msgstr "@@Search blogs"
+
+#: app/templates/iphone/event/event-search.html
+msgid "Search events"
+msgstr "@@Search events"
+
+#: app/templates/iphone/advfeed/tag-friends-modal.html
+#: app/templates/iphone/chat/chat-search-dir.html
+#: app/templates/iphone/cometchat/cometchat-search-dir.html
+#: app/templates/iphone/friend/friend-search.html
+#: app/templates/iphone/ynchat/ynchat-search-dir.html
+msgid "Search friends"
+msgstr "@@Search friends"
+
+#: app/templates/iphone/group/group-search.html
+msgid "Search groups"
+msgstr "@@Search groups"
+
+#: app/templates/iphone/marketplace/listing-search.html
+msgid "Search listings"
+msgstr "@@Search listings"
+
+#: app/templates/iphone/message/conversation-search-dir.html
+msgid "Search messages"
+msgstr "@@Search messages"
+
+#: app/templates/iphone/page/page-search.html
+msgid "Search pages"
+msgstr "@@Search pages"
+
+#: app/templates/iphone/photo/photo-search.html
+msgid "Search photos"
+msgstr "@@Search photos"
+
+#: app/templates/iphone/poll/poll-search.html
+msgid "Search polls"
+msgstr "@@Search polls"
+
+#: app/templates/iphone/forum/forum-post-search.html
+msgid "Search posts for"
+msgstr "@@Search posts for"
+
+#: app/templates/iphone/quiz/quiz-search.html
+msgid "Search quizzes"
+msgstr "@@Search quizzes"
+
+#: app/templates/iphone/music/music-song-search.html
+#: app/templates/iphone/page/page-music-search.html
+msgid "Search songs"
+msgstr "@@Search songs"
+
+#: app/templates/iphone/forum/forum-thread-search.html
+msgid "Search threads for"
+msgstr "@@Search threads for"
+
+#: app/templates/iphone/video/video-search.html
+msgid "Search videos"
+msgstr "@@Search videos"
+
+#: app/templates/iphone/location/location-list-modal.html
+msgid "Search your location"
+msgstr "@@Search your location"
+
+#: app/templates/iphone/photo/photo-detail.html
+msgid "See Less"
+msgstr "@@See Less"
+
+#: app/templates/iphone/photo/photo-detail.html
+msgid "See More"
+msgstr "@@See More"
+
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Select"
+msgstr "@@Select"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Select Category"
+msgstr "@@Select Category"
+
+#: app/module/blog/controller/blog-form.js
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/group/controller/group-add.js
+#: app/module/group/controller/group-edit.js
+#: app/module/group/controller/group-topic-add.js
+#: app/module/group/controller/group-topic-edit-post.js
+#: app/module/group/controller/group-topic-quote-post.js
+#: app/module/group/controller/group-topic-reply.js
+#: app/module/group/controller/group-upload-photo.js
+#: app/module/marketplace/controller/listing-edit.js
+#: app/module/message/controller/conversation-add.js
+#: app/module/message/controller/conversation-reply.js
+#: app/module/page/controller/page-topic-add.js
+#: app/module/page/controller/page-topic-edit-post.js
+#: app/module/page/controller/page-topic-quote-post.js
+#: app/module/page/controller/page-topic-reply.js
+#: app/module/page/controller/page-upload-photo.js
+#: app/module/photo/controller/photo-album-add.js
+#: app/module/photo/controller/photo-album-edit.js
+#: app/module/poll/controller/poll-form.js
+#: app/module/quiz/controller/quiz-form.js
+#: app/module/ynchat/controller/ynchat-base.js
+msgid "Select From Gallery"
+msgstr "@@Select From Gallery"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Select Location"
+msgstr "@@Select Location"
+
+#: app/module/marketplace/controller/listing-form.js
+msgid "Select Sub-Category"
+msgstr "@@Select Sub-Category"
+
+#: app/templates/iphone/video/video-add.html
+msgid "Select Video URL"
+msgstr "@@Select Video URL"
+
+#: app/module/photo/controller/photo-album-add.js
+msgid "Select photo to upload!"
+msgstr "@@Select photo to upload!"
+
+#: app/templates/iphone/chat/chat-detail.html
+#: app/templates/iphone/cometchat/cometchat-detail.html
+#: app/templates/iphone/message/conversation-add.html
+#: app/templates/iphone/message/conversation-reply.html
+#: app/templates/iphone/user/forgot-password.html
+msgid "Send"
+msgstr "@@Send"
+
+#: app/module/user/controller/user-base-detail.js
+#: app/module/user/controller/user-detail.js
+msgid "Send Message"
+msgstr "@@Send Message"
+
+#: app/templates/iphone/group/group-topic-add.html
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+msgid "Send me notifications when other members reply to this topic."
+msgstr "@@Send me notifications when other members reply to this topic."
+
+#: app/module/friend/controller/friend-item.js
+msgid "Send message"
+msgstr "@@Send message"
+
+#: app/templates/iphone/chat/chat-message-list-dir.html
+#: app/templates/iphone/cometchat/cometchat-message-list-dir.html
+msgid "Sending..."
+msgstr "@@Sending..."
+
+#: app/templates/iphone/message/conversation-sent.html
+#: app/templates/iphone/message/message-home.html
+msgid "Sent"
+msgstr "@@Sent"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/setting/setting-home.html app/global/myapp.js
+msgid "Settings"
+msgstr "@@Settings"
+
+#: app/module/forum/controller/forum-thread-detail.js
+#: app/module/group/controller/group-item.js
+#: app/module/page/controller/page-detail.js
+#: app/module/page/controller/page-item.js
+#: app/module/poll/controller/poll-detail.js
+#: app/module/poll/controller/poll-item.js
+#: app/module/quiz/controller/quiz-detail.js
+#: app/module/quiz/controller/quiz-item.js
+#: app/module/video/controller/video-detail.js
+#: app/module/video/controller/video-item.js
+msgid "Share"
+msgstr "@@Share"
+
+#: app/module/event/controller/event-detail.js
+msgid "Share This Event"
+msgstr "@@Share This Event"
+
+#: app/global/base/BaseController.js
+msgid "Share on your wall"
+msgstr "@@Share on your wall"
+
+#: app/global/base/BaseController.js
+msgid "Share via social"
+msgstr "@@Share via social"
+
+#: app/global/base/BaseController.js
+msgid "Sharing..."
+msgstr "@@Sharing..."
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "Short Description"
+msgstr "@@Short Description"
+
+#: app/templates/iphone/poll/poll-detail.html
+msgid "Show Result"
+msgstr "@@Show Result"
+
+#: app/templates/iphone/setting/setting-defaultcurrency.html
+msgid "Show prices and make purchases in this currency."
+msgstr "@@Show prices and make purchases in this currency."
+
+#: app/templates/iphone/user/login.html
+msgid "Sign Up Now"
+msgstr "@@Sign Up Now"
+
+#: app/templates/iphone/user/login.html
+msgid "Sign in"
+msgstr "@@Sign in"
+
+#: app/templates/iphone/user/login.html
+msgid "Signing in..."
+msgstr "@@Signing in..."
+
+#: app/module/user/controller/user-signup.js
+msgid "Signup sucessfully"
+msgstr "@@Signup sucessfully"
+
+#: app/module/marketplace/controller/listing-purchase.js
+msgid "Sorry, we are not supported to buy on this platform."
+msgstr "@@Sorry, we are not supported to buy on this platform."
+
+#: app/templates/iphone/marketplace/listing-search.html
+msgid "Sort"
+msgstr "@@Sort"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "Start Date"
+msgstr "@@Start Date"
+
+#: app/templates/iphone/quiz/quiz-detail.html
+msgid "Start Quiz"
+msgstr "@@Start Quiz"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "Start Time"
+msgstr "@@Start Time"
+
+#: app/templates/iphone/event/event-add.html
+#: app/templates/iphone/event/event-edit.html
+msgid "Starting Date"
+msgstr "@@Starting Date"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "State/Province"
+msgstr "@@State/Province"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+msgid "Status"
+msgstr "@@Status"
+
+#: app/templates/iphone/ynchat/ynchat-smile.html
+msgid "Sticker"
+msgstr "@@Sticker"
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Stop Notifications"
+msgstr "@@Stop Notifications"
+
+#: app/module/group/controller/group-topic-detail.js
+#: app/module/page/controller/page-topic-detail.js
+msgid "Stop Watching"
+msgstr "@@Stop Watching"
+
+#: app/templates/iphone/message/conversation-add.html
+msgid "Subject"
+msgstr "@@Subject"
+
+#: app/templates/iphone/quiz/quiz-start.html
+msgid "Submit"
+msgstr "@@Submit"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "Subscribe"
+msgstr "@@Subscribe"
+
+#: app/module/forum/controller/forum-home.js
+msgid "Subscribed Threads"
+msgstr "@@Subscribed Threads"
+
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+msgid "Subscrible"
+msgstr "@@Subscrible"
+
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "Switching to  will unsubscribe your current Membership. Do you want to continue?"
+msgstr "@@Switching to  will unsubscribe your current Membership. Do you want to continue?"
+
+#: app/templates/iphone/advfeed/tag-friends-modal.html
+msgid "Tag Friends"
+msgstr "@@Tag Friends"
+
+#: app/module/blog/controller/blog-form.js
+#: app/module/event/controller/event-add.js
+#: app/module/event/controller/event-edit.js
+#: app/module/forum/controller/forum-post-form.js
+#: app/module/group/controller/group-add.js
+#: app/module/group/controller/group-edit.js
+#: app/module/group/controller/group-topic-add.js
+#: app/module/group/controller/group-topic-edit-post.js
+#: app/module/group/controller/group-topic-quote-post.js
+#: app/module/group/controller/group-topic-reply.js
+#: app/module/group/controller/group-upload-photo.js
+#: app/module/marketplace/controller/listing-edit.js
+#: app/module/message/controller/conversation-add.js
+#: app/module/message/controller/conversation-reply.js
+#: app/module/page/controller/page-topic-add.js
+#: app/module/page/controller/page-topic-edit-post.js
+#: app/module/page/controller/page-topic-quote-post.js
+#: app/module/page/controller/page-topic-reply.js
+#: app/module/page/controller/page-upload-photo.js
+#: app/module/photo/controller/photo-album-add.js
+#: app/module/photo/controller/photo-album-edit.js
+#: app/module/poll/controller/poll-form.js
+#: app/module/quiz/controller/quiz-form.js
+#: app/module/ynchat/controller/ynchat-base.js
+msgid "Take Photo"
+msgstr "@@Take Photo"
+
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-term.html
+msgid "Term & Service"
+msgstr "@@Term & Service"
+
+#: app/templates/iphone/video/video-detail.html
+msgid "The video you are looking for has not been processed yet"
+msgstr "@@The video you are looking for has not been processed yet"
+
+#: app/templates/iphone/advfeed/feed-add-privacy-modal.html
+msgid "There is no privacy settings for this action"
+msgstr "@@There is no privacy settings for this action"
+
+#: app/templates/iphone/blog/blog-detail.html
+msgid "This blog is pending an Admins approval."
+msgstr "@@This blog is pending an Admins approval."
+
+#: app/templates/iphone/page/page-info.html
+msgid "This page is private"
+msgstr "@@This page is private"
+
+#: app/templates/iphone/poll/poll-detail.html
+msgid "This poll is being moderated and no votes can be added until it has been approved."
+msgstr "@@This poll is being moderated and no votes can be added until it has been approved."
+
+#: app/templates/iphone/group/group-topic-edit-post.html
+msgid "This post has a photo attached. Do you want to delete it?"
+msgstr "@@This post has a photo attached. Do you want to delete it?"
+
+#: app/templates/iphone/forum/forum-detail-thread-list.html
+#: app/templates/iphone/forum/forum-search.html
+msgid "Threads"
+msgstr "@@Threads"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-timezone.html
+msgid "Time Zone"
+msgstr "@@Time Zone"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/group/group-topic-add.html
+#: app/templates/iphone/photo/photo-edit-modal.html
+msgid "Title"
+msgstr "@@Title"
+
+#: app/module/group/controller/group-topic-add.js
+#: app/module/page/controller/page-topic-add.js
+msgid "Title cannot be empty"
+msgstr "@@Title cannot be empty"
+
+#: app/templates/iphone/member/member-search.html
+#: app/templates/iphone/message/conversation-add.html
+msgid "To"
+msgstr "@@To"
+
+#: app/templates/iphone/user/login.html
+msgid "Twitter"
+msgstr "@@Twitter"
+
+#: app/templates/iphone/core/core-report.html
+#: app/templates/iphone/forum/forum-thread-add.html
+msgid "Type"
+msgstr "@@Type"
+
+#: app/module/friend/controller/friend-item.js
+#: app/module/user/controller/user-base-detail.js
+msgid "Un-Block successfully"
+msgstr "@@Un-Block successfully"
+
+#: app/module/marketplace/controller/listing-detail.js
+msgid "Unable to send a private message to this user at the moment."
+msgstr "@@Unable to send a private message to this user at the moment."
+
+#: app/module/advfeed/controller/baseitem.js
+msgid "Unlock Feed"
+msgstr "@@Unlock Feed"
+
+#: app/templates/iphone/event/event-invite-list.html
+#: app/templates/iphone/group/group-invite-list.html
+#: app/templates/iphone/marketplace/listing-invite-list.html
+#: app/templates/iphone/page/page-invite-list.html
+msgid "Unmark All"
+msgstr "@@Unmark All"
+
+#: app/module/chat/controller/chat-home.js
+#: app/module/cometchat/controller/cometchat-home.js
+#: app/module/ynchat/controller/ynchat-home-ipad.js
+#: app/module/ynchat/controller/ynchat-home.js
+msgid "Unmute Notification"
+msgstr "@@Unmute Notification"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "Unsubscribe"
+msgstr "@@Unsubscribe"
+
+#: app/templates/iphone/activity/feed-add.html
+#: app/templates/iphone/advfeed/feed-add.html
+msgid "Update Status"
+msgstr "@@Update Status"
+
+#: app/templates/iphone/user/signup.html
+msgid "Upload Avatar"
+msgstr "@@Upload Avatar"
+
+#: app/module/advfeed-attachment/controller/attachment-add.js
+msgid "Upload From Device"
+msgstr "@@Upload From Device"
+
+#: app/templates/iphone/video/video-add.html
+msgid "Upload Video"
+msgstr "@@Upload Video"
+
+#: app/module/group/controller/group-upload-photo.js
+#: app/module/page/controller/page-upload-photo.js
+msgid "Upload all photos"
+msgstr "@@Upload all photos"
+
+#: app/templates/iphone/setting/setting-home.html
+#: app/templates/iphone/setting/setting-username.html
+msgid "User Name"
+msgstr "@@User Name"
+
+#: app/templates/iphone/quiz/quiz-detail.html
+msgid "User Results"
+msgstr "@@User Results"
+
+#: app/templates/iphone/quiz/quiz-results-modal.html
+msgid "User results"
+msgstr "@@User results"
+
+#: app/templates/iphone/activity-attachment/attachment-add-preview-dir.html
+#: app/templates/iphone/attachment/attachment-add-preview-dir.html
+msgid "Video Title"
+msgstr "@@Video Title"
+
+#: app/module/video/controller/video-add.js
+msgid "Video URL"
+msgstr "@@Video URL"
+
+#: app/templates/iphone/activity-attachment/attachment-add-preview-dir.html
+#: app/templates/iphone/advfeed-attachment/attachment-add-preview-dir.html
+#: app/templates/iphone/attachment/attachment-add-preview-dir.html
+msgid "Video from your device"
+msgstr "@@Video from your device"
+
+#: app/templates/iphone/video/video-add.html
+#: app/templates/iphone/video/video-edit.html
+msgid "Video title"
+msgstr "@@Video title"
+
+#: app/module/video/controller/video-add.js
+#: app/module/video/controller/video-edit.js
+msgid "Video title is required"
+msgstr "@@Video title is required"
+
+#: app/templates/iphone/core/core-menu.html
+#: app/templates/iphone/page/page-video.html
+#: app/templates/iphone/video/video-home.html
+#: app/module/page/controller/page-detail.js app/global/myapp.js
+msgid "Videos"
+msgstr "@@Videos"
+
+#: app/module/page/controller/page-album.js
+#: app/module/page/controller/page-photo.js
+msgid "View Albums"
+msgstr "@@View Albums"
+
+#: app/templates/iphone/message/conversation-popover-list.html
+msgid "View All"
+msgstr "@@View All"
+
+#: app/templates/iphone/marketplace/listing-detail.html
+msgid "View Full Site"
+msgstr "@@View Full Site"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "View Member Votes"
+msgstr "@@View Member Votes"
+
+#: app/module/page/controller/page-album.js
+#: app/module/page/controller/page-photo.js
+msgid "View Photos"
+msgstr "@@View Photos"
+
+#: app/templates/iphone/blog/blog-add.html
+#: app/templates/iphone/blog/blog-edit.html
+msgid "View Privacy"
+msgstr "@@View Privacy"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "View Questions"
+msgstr "@@View Questions"
+
+#: app/module/forum/controller/forum-thread-detail.js
+msgid "View Results"
+msgstr "@@View Results"
+
+#: app/module/ynchat/controller/ynchat-detail.js
+#: app/module/ynchat/controller/ynchat-home-ipad.js
+msgid "View old conversations"
+msgstr "@@View old conversations"
+
+#: app/module/poll/controller/poll-detail.js
+msgid "Voted successfully."
+msgstr "@@Voted successfully."
+
+#: app/templates/iphone/poll/poll-detail.html
+msgid "Votes are hidden for this poll."
+msgstr "@@Votes are hidden for this poll."
+
+#: app/module/group/controller/group-topic-detail.js
+#: app/module/page/controller/page-topic-detail.js
+msgid "Watch Topic"
+msgstr "@@Watch Topic"
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+msgid "What are you selling?"
+msgstr "@@What are you selling?"
+
+#: app/templates/iphone/activity/feed-add.html
+#: app/templates/iphone/advfeed/feed-add.html
+msgid "What's on your mind..."
+msgstr "@@What's on your mind..."
+
+#: app/templates/iphone/advfeed/feed-add-privacy-modal.html
+msgid "Who can view this feed"
+msgstr "@@Who can view this feed"
+
+#: app/templates/iphone/advfeed/feed-add-privacy-dir.html
+msgid "Who can view this feed?"
+msgstr "@@Who can view this feed?"
+
+#: app/module/group/controller/group-item.js
+msgid "Would you like accept the invite?"
+msgstr "@@Would you like accept the invite?"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Would you like to approve this membership request?"
+msgstr "@@Would you like to approve this membership request?"
+
+#: app/module/group/controller/group-member-item.js
+msgid "Would you like to cancel this membership request?"
+msgstr "@@Would you like to cancel this membership request?"
+
+#: app/module/group/controller/group-item.js
+msgid "Would you like to cancel your request?"
+msgstr "@@Would you like to cancel your request?"
+
+#: app/module/group/controller/group-item.js
+msgid "Would you like to join this group?"
+msgstr "@@Would you like to join this group?"
+
+#: app/module/group/controller/group-item.js
+msgid "Would you like to reject the invite?"
+msgstr "@@Would you like to reject the invite?"
+
+#: app/module/group/controller/group-item.js
+msgid "Would you like to request membership in this group?"
+msgstr "@@Would you like to request membership in this group?"
+
+#: app/templates/iphone/share/share-wall.html
+msgid "Write something"
+msgstr "@@Write something"
+
+#: app/templates/iphone/forum/forum-poll-add.html
+#: app/templates/iphone/forum/forum-thread-add.html
+#: app/templates/iphone/forum/forum-thread-edit.html
+#: app/templates/iphone/forum/forum-thread-reply.html
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/poll/poll-add.html
+#: app/templates/iphone/poll/poll-edit.html
+msgid "Yes"
+msgstr "@@Yes"
+
+#: app/templates/iphone/ynchat/ynchat-history.html
+msgid "Yesterday"
+msgstr "@@Yesterday"
+
+#: app/templates/iphone/like/like-stat-dir.html
+#: app/templates/iphone/message/conversation-recipients-dir.html
+#: app/module/dislike/service/dislike.js
+msgid "You"
+msgstr "@@You"
+
+#: app/global/base/BaseController.js
+msgid "You already rated"
+msgstr "@@You already rated"
+
+#: app/templates/iphone/core/core-private-msg.html
+#: app/templates/iphone/core/core-private-page.html
+msgid "You do not have permission to view this private page."
+msgstr "@@You do not have permission to view this private page."
+
+#: app/global/base/BaseController.js
+msgid "You don't have permission to dislike this item"
+msgstr "@@You don't have permission to dislike this item"
+
+#: app/global/base/BaseController.js
+msgid "You don't have permission to like this item"
+msgstr "@@You don't have permission to like this item"
+
+#: app/templates/iphone/advfeed/tag-friends-modal.html
+msgid "You have no friends to tag."
+msgstr "@@You have no friends to tag."
+
+#: app/templates/iphone/event/event-invite-list.html
+#: app/templates/iphone/group/group-invite-list.html
+#: app/templates/iphone/marketplace/listing-invite-list.html
+#: app/templates/iphone/page/page-invite-list.html
+msgid "You have no friends you can invite."
+msgstr "@@You have no friends you can invite."
+
+#: app/templates/iphone/setting/setting-blockedusers.html
+msgid "You have not blocked any users."
+msgstr "@@You have not blocked any users."
+
+#: app/templates/iphone/advfeed/feed-filter-settings-modal.html
+msgid "You have not hidden activity feeds from any sources."
+msgstr "@@You have not hidden activity feeds from any sources."
+
+#: app/module/forum/controller/forum-poll-add.js
+msgid "You have reached your limit."
+msgstr "@@You have reached your limit."
+
+#: app/module/user/controller/user-signup.js
+msgid "You must agree to the terms of service to continue"
+msgstr "@@You must agree to the terms of service to continue"
+
+#: app/module/forum/controller/forum-poll-add.js
+msgid "You must have a minimum of 2 answers."
+msgstr "@@You must have a minimum of 2 answers."
+
+#: app/module/forum/controller/forum-poll-add.js
+msgid "You need to write at least 2 answers."
+msgstr "@@You need to write at least 2 answers."
+
+#: app/templates/iphone/user/forgot-password.html
+msgid "Your Email"
+msgstr "@@Your Email"
+
+#: app/templates/iphone/chat/chat-detail.html
+#: app/templates/iphone/cometchat/cometchat-detail.html
+#: app/templates/iphone/ynchat/ynchat-detail.html
+msgid "Your Message"
+msgstr "@@Your Message"
+
+#: app/module/photo/controller/photo-item.js
+msgid "Your changes has been saved"
+msgstr "@@Your changes has been saved"
+
+#: app/module/setting/controller/setting-password.js
+msgid "Your confirmed password does not match your new password."
+msgstr "@@Your confirmed password does not match your new password."
+
+#: app/templates/iphone/subscription/subscription-upgrade.html
+msgid "Your membership status"
+msgstr "@@Your membership status"
+
+#: app/module/marketplace/controller/listing-purchase.js
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "Your payment is cancelled."
+msgstr "@@Your payment is cancelled."
+
+#: app/module/marketplace/controller/listing-purchase.js
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "Your payment is completed."
+msgstr "@@Your payment is completed."
+
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "Your payment is completed. Please login."
+msgstr "@@Your payment is completed. Please login."
+
+#: app/module/subscription/controller/subscription-confirm.js
+msgid "Your payment is not completed."
+msgstr "@@Your payment is not completed."
+
+#: app/module/activity/controller/feed-add.js
+#: app/module/advfeed/controller/feed-add.js
+msgid "Your video is now processing. We will send you a notification when it's ready to view."
+msgstr "@@Your video is now processing. We will send you a notification when it's ready to view."
+
+#: app/templates/iphone/marketplace/listing-add.html
+#: app/templates/iphone/marketplace/listing-edit.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "Zip / Postal Code"
+msgstr "@@Zip / Postal Code"
+
+#: app/templates/iphone/marketplace/listing-detail.html
+msgid "Zip Code"
+msgstr "@@Zip Code"
+
+#: app/templates/iphone/advfeed/feed-add-privacy-dir.html
+#: app/templates/iphone/advfeed/tag-friends-list-dir.html
+#: app/templates/iphone/advfeed/tag-friends-location-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-location-dir.html
+#: app/templates/iphone/like/like-stat-dir.html
+#: app/templates/iphone/message/conversation-recipients-dir.html
+#: app/module/dislike/service/dislike.js
+msgid "and"
+msgstr "@@and"
+
+#: app/templates/iphone/subscription/subscription-confirm.html
+#: app/templates/iphone/subscription/subscription-list-dir.html
+msgid "and then"
+msgstr "@@and then"
+
+#: app/templates/iphone/advfeed/tag-friends-location-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-location-dir.html
+msgid "at"
+msgstr "@@at"
+
+#: app/module/blog/plugin/activity.js
+msgid "blog entry"
+msgstr "@@blog entry"
+
+#: app/templates/iphone/blog/blog-all-list-dir.html
+#: app/templates/iphone/event/event-info.html
+#: app/templates/iphone/event/event-list.html
+#: app/templates/iphone/forum/forum-detail-announcement-list.html
+#: app/templates/iphone/forum/forum-detail-thread-list.html
+#: app/templates/iphone/forum/forum-post-search-list.html
+#: app/templates/iphone/forum/forum-thread-list.html
+#: app/templates/iphone/forum/forum-thread-search-list.html
+#: app/templates/iphone/music/music-playlist-detail-content.html
+#: app/templates/iphone/music/music-playlist-detail.html
+#: app/templates/iphone/music/music-playlist-list.html
+#: app/templates/iphone/music/music-song-detail-content.html
+#: app/templates/iphone/music/music-song-detail.html
+#: app/templates/iphone/music/music-song-list.html
+#: app/templates/iphone/photo/photo-album-detail.html
+#: app/templates/iphone/poll/poll-detail.html
+#: app/templates/iphone/poll/poll-list.html
+#: app/templates/iphone/quiz/quiz-detail.html
+#: app/templates/iphone/quiz/quiz-list.html
+#: app/templates/iphone/video/video-detail.html
+#: app/templates/iphone/video/video-list.html
+msgid "by"
+msgstr "@@by"
+
+#: app/module/music/controller/music-playlist-detail.js
+#: app/module/photo/controller/photo-detail.js
+#: app/module/photo/controller/photo-item.js app/global/service/http2.js
+msgid "can not get data from server"
+msgstr "@@can not get data from server"
+
+#: app/module/poll/controller/poll-add.js
+#: app/module/quiz/controller/quiz-add.js
+msgid "can not load data from server"
+msgstr "@@can not load data from server"
+
+#: app/module/photo/controller/photo-album-add.js
+msgid "can not upload photos"
+msgstr "@@can not upload photos"
+
+#: app/module/dislike/service/dislike.js
+msgid "disliked this"
+msgstr "@@disliked this"
+
+#: app/templates/iphone/member/member-search.html
+msgid "email, name"
+msgstr "@@email, name"
+
+#: app/templates/iphone/subscription/subscription-confirm.html
+msgid "for"
+msgstr "@@for"
+
+#: app/templates/iphone/request/request-popover-list.html
+msgid "has sent a friend request"
+msgstr "@@has sent a friend request"
+
+#: app/templates/iphone/music/music-song-list.html
+msgid "in"
+msgstr "@@in"
+
+#: app/templates/iphone/like/like-stat-dir.html
+msgid "liked this"
+msgstr "@@liked this"
+
+#: app/templates/iphone/advfeed/feed-add-privacy-dir.html
+msgid "more"
+msgstr "@@more"
+
+#: app/templates/iphone/forum/forum-poll-voters.html
+msgid "on"
+msgstr "@@on"
+
+#: app/templates/iphone/subscription/subscription-confirm.html
+#: app/templates/iphone/subscription/subscription-list-dir.html
+msgid "one time"
+msgstr "@@one time"
+
+#: app/module/user/controller/user-signup.js
+msgid "or lower than"
+msgstr "@@or lower than"
+
+#: app/templates/iphone/user/login.html
+msgid "or using"
+msgstr "@@or using"
+
+#: app/templates/iphone/advfeed/tag-friends-list-dir.html
+#: app/templates/iphone/advfeed/tag-friends-location-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-location-dir.html
+#: app/templates/iphone/message/conversation-recipients-dir.html
+#: app/module/dislike/service/dislike.js
+msgid "other"
+msgstr "@@other"
+
+#: app/templates/iphone/advfeed/tag-friends-list-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-dir.html
+#: app/templates/iphone/message/conversation-recipients-dir.html
+#: app/module/dislike/service/dislike.js
+msgid "others"
+msgstr "@@others"
+
+#: app/templates/iphone/setting/setting-fullname.html
+#: app/templates/iphone/setting/setting-username.html
+msgid "out of"
+msgstr "@@out of"
+
+#: app/module/poll/plugin/activity.js
+msgid "poll"
+msgstr "@@poll"
+
+#: app/templates/iphone/forum/forum-detail-subforum-list.html
+#: app/templates/iphone/forum/forum-list.html
+msgid "post"
+msgstr "@@post"
+
+#: app/templates/iphone/forum/forum-detail-subforum-list.html
+#: app/templates/iphone/forum/forum-list.html
+msgid "posts"
+msgstr "@@posts"
+
+#: app/module/quiz/plugin/activity.js
+msgid "quiz"
+msgstr "@@quiz"
+
+#: app/templates/iphone/group/group-topic-quote-post.html
+#: app/templates/iphone/group/group-topic-reply.html
+msgid "said"
+msgstr "@@said"
+
+#: app/templates/iphone/forum/forum-detail-subforum-list.html
+#: app/templates/iphone/forum/forum-list.html
+msgid "thread"
+msgstr "@@thread"
+
+#: app/templates/iphone/forum/forum-detail-subforum-list.html
+#: app/templates/iphone/forum/forum-list.html
+msgid "threads"
+msgstr "@@threads"
+
+#: app/module/group/plugin/activity.js app/module/page/plugin/activity.js
+msgid "topic"
+msgstr "@@topic"
+
+#: app/templates/iphone/setting/setting-username.html
+msgid "user name changes."
+msgstr "@@user name changes."
+
+#: app/module/video/plugin/activity.js
+msgid "video"
+msgstr "@@video"
+
+#: app/templates/iphone/forum/forum-poll-voters.html
+#: app/templates/iphone/poll/poll-results-modal.html
+msgid "voted"
+msgstr "@@voted"
+
+#: app/templates/iphone/advfeed/tag-friends-location-dir.html
+#: app/templates/iphone/advfeed/tagged-friends-location-dir.html
+msgid "with"
+msgstr "@@with"
+
+#: app/templates/iphone/user/signup.html
+#: app/templates/iphone/user/user-edit-info.html
+msgid "yyyy-MM-dd"
+msgstr "@@yyyy-MM-dd"
+
+#: app/templates/iphone/comment/comment-list.html
+msgid "{{item.getTotalDislike()}} Dislike"
+msgid_plural "{{item.getTotalDislike()}} Dislikes"
+msgstr[0] "@@{{item.getTotalDislike()}} Dislike"
+msgstr[1] "@@{{item.getTotalDislike()}} Dislikes"
+
+#: app/templates/iphone/comment/comment-list.html
+msgid "{{item.getTotalLike()}} Like"
+msgid_plural "{{item.getTotalLike()}} Likes"
+msgstr[0] "@@{{item.getTotalLike()}} Like"
+msgstr[1] "@@{{item.getTotalLike()}} Likes"
+
+#: app/templates/iphone/friend/friend-list.html
+#: app/templates/iphone/member/member-list.html
+msgid "{{item.iMutualFriends }} mutual friend"
+msgid_plural "{{item.iMutualFriends}} mutual friends"
+msgstr[0] "@@{{item.iMutualFriends }} mutual friend"
+msgstr[1] "@@{{item.iMutualFriends}} mutual friends"
+
+#: app/templates/iphone/page/page-member-list-modal.html
+msgid "{{membersPage.title}}"
+msgstr "@@{{membersPage.title}}"

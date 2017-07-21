@@ -1,0 +1,5 @@
+<ion-list>
+  <div class="padding text-center" ng-if="noItems" translate>No FAQs has been added.</div>
+  <directory-faq-item ng-repeat="item in items"></directory-faq-item>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</ion-list>

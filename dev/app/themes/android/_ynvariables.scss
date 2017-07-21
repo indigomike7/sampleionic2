@@ -1,0 +1,95 @@
+/* Override Ionic styles */
+$positive:                        #cd1223 !default;
+$button-bar-button-font-size:     14px;
+$button-light-border:             #e0e4e4;
+$button-stable-border:            #e0e4e4;
+$bar-padding-portrait:            8px;
+$bar-padding-landscape:           8px;
+$tabs-striped-border-width:       4px;
+$item-font-size:                  15px;
+$item-padding:                    12px;
+$item-icon-font-size:             30px;
+$card-border-radius:              0px;
+$range-track-height:              10px;
+$range-default-track-bg:          #dfdfdf;
+$split-pane-menu-width:           320px;
+$split-pane-menu-border-color:    #eee;
+$popover-backdrop-bg-active:      rgba(0,0,0,0);
+$popover-width:                   100%;
+$popover-height:                  auto;
+$popover-border-radius-ios:       0;
+$sheet-options-text-color:        $positive !default;
+$item-avatar-border-radius:       4px;
+$tabs-height:                     44px;
+/* End override Ionic styles */
+
+$ios-statusbar-height:			20px;
+$gray:					  		#b1b5b8;
+$positive-light:                rgba($positive, .8);
+$positive-dark:                 darken($positive, 10%);
+
+/*** color ***/
+$base-background-color:			#fff;
+$sub-background-color:			#f2f6f8;
+$background-color:				#ebeff1;
+$base-color:					#404446;
+$border-color:					#e0e4e4;
+$border-dark-color:				#c1c9cc;
+$tabs-top-bg-color:             #fff;
+
+$slidebar-background-color:		#303439;
+$slidebar-background-active-color:	$positive !default;
+$slidebar-icon-color:			#8d9195;
+$slidebar-color:				#ffffff;
+$slidebar-border-color:			#17191c;
+$slidebar-profile-background-color: #1f2225;
+$slidebar-profile-border-color: #0c0e0f;
+
+$title-color:					#404446;
+$infomartion-color:				#b1b5b8;
+$description-color:				#707679;
+$description-light-color:		#b6b6b6;
+
+$input-background-color:		#eeeeee;
+$active-color:					#e5192c;
+$text-active-color:				#fff;
+$unactive-color:				rgba(#7a7a7a, .7);
+$unactive-border-color:			rgba(#7a7a7a, .7);
+
+$feed-border-color:				#d9dcdc;
+$notification-color: 			lighten($positive, 50%);
+$notification-active-color:		#fff;
+
+$music-playbar-background-color:#dfdfdf;
+$music-track-background-color:	#f6f8f9;
+$popover-footer-bar-color:		#f8f8f8;
+
+$bar-notification-color:		#a80d1b;
+$error-color:					#ec2222;
+
+$photo-detail-color:			#fff;
+$photo-detail-shadow-color:		rgba(0, 0, 0, 0.5);
+$chat-background-color:			#f1f0f0;
+
+$member-brief-color:			#f79b23;
+$forum-sticky-color:			#e9fcff;
+
+$color-divider:                 #707679;
+
+/*** font-size ***/
+$font-slide-menu-size:			17px;
+$font-head-size:                16px;
+$font-default-size:				15px;
+$font-description-size:			14px;
+$font-sub-size:					13px;
+$font-title-size:				15px;
+$font-form-size:				14px;
+$font-event-attend:				11px;
+$font-size-divider:             12px;
+
+/*** icon size ***/
+$icon-search-size:				16px;
+$icon-search-size-large:		20px;
+$icon-setting-size:				20px;
+$icon-expand-size:				24px;
+$icon-subheader-size:			28px;

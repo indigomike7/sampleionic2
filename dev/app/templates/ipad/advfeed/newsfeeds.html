@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-icon icon ion-navicon" toggle-left-dir></button>
+        <h1 class="title has-notification">
+            {{'News Feed' | translate}}
+            <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+        </h1>        
+        <a class="button button-clear icon ion-ios-chatbubble" ng-href="#/app/{{chatModule}}" ng-if="chatModule"></a>
+    </ion-header-bar>
+    <div class="bar bar-subheader bar-composer-top overflow-hidden">
+        <div class="tabs tabs-light tabs-icon-left">
+            <a class="tab-item" href="#/app/feed/add/default"> <i class="icon ion-compose"></i> Status</a>
+            <a class="tab-item" href="#/app/feed/add/camera"> <i class="icon ion-camera"></i> Photo</a>
+            <a class="tab-item" href="#/app/feed/add/location"> <i class="icon ion-location"></i> Check In</a>
+        </div>
+    </div>
+    <ion-content class="has-header has-subheader content-dark" delegate-handle="feed-scroll-content" on-scroll="onIOSScroll()" on-scroll-complete="onIOSScrollComplete()" scroll-event-interval="30">
+        <div class="list newsfeeds-active-list">
+            <feed-filter-dir></feed-filter-dir>
+            <activity-list-dir></activity-list-dir>
+        </div>
+    </ion-content>
+</ion-view>
+

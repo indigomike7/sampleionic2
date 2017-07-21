@@ -1,0 +1,91 @@
+<ion-header-bar align-title="center" class="bar-positive">
+	<button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+	<h1 class="title" translate>Information</h1>
+	<button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+</ion-header-bar>
+<ion-content class="has-header has-footer">
+	<div class="list item-event-detail" ng-if="dataReady">
+
+		<div class="item item-image">
+			<span img-cache ng-background="{{item.getImageSrc()}}" href-dir url="{{item.getUrl()}}"></span>
+		</div>
+
+		<div class="item item-text-wrap">
+			<h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.getTitle()"></h2>
+			<p>
+				<span class="item-author-by">{{'by' | translate}} <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a></span>
+				<span class="icon-separator"></span>
+				<span>{{item.fromNow()}}</span>
+			</p>
+		</div>
+
+		<div class="item item-attend-group row">
+			<div class="col-33" ng-class="{'active': item.getRSVP() == 1}">
+				<label class="item item-checkbox">
+                <span class="checkbox reset-right">
+                    <input type="radio" name="rsvp" class="ng-valid ng-dirty" ng-checked="item.getRSVP() == 1" ng-click="onAttending()"
+						   ng-disabled="!item.canView() || isProcessingRSVP" />
+                </span>
+					<p class="ng-binding"><span>{{item.getTotalGoing()}}</span> <span>{{'Attending' | translate}}</span></p>
+				</label>
+				<div class="list-member">
+					<a ng-repeat="user in item.getGoingList() | limitTo:7" ng-href="#/app/user/{{user.iUserId}}">
+						<img img-cache ng-src="{{user.sBigUserImage}}" />
+					</a>
+				</div>
+			</div>
+			<div class="col-33" ng-class="{'active': item.getRSVP() == 2}">
+				<label class="item item-checkbox">
+                <span class="checkbox reset-right">
+                    <input type="radio" name="rsvp" class="ng-valid ng-dirty" ng-checked="item.getRSVP() == 2" ng-click="onMaybeAttending()"
+						   ng-disabled="!item.canView() || isProcessingRSVP" />
+                </span>
+					<p class="ng-binding"><span>{{item.getTotalMaybe()}}</span> <span>{{'MayBe' | translate}}</span></p>
+				</label>
+				<div class="list-member">
+					<a ng-repeat="user in item.getMaybeList() | limitTo:7" ng-href="#/app/user/{{user.iUserId}}">
+						<img img-cache ng-src="{{user.sBigUserImage}}" />
+					</a>
+				</div>
+			</div>
+			<div class="col-33" ng-class="{'active': item.getRSVP() == 3}">
+				<label class="item item-checkbox">
+                <span class="checkbox reset-right">
+                    <input type="radio" name="rsvp" class="ng-valid ng-dirty" ng-checked="item.getRSVP() == 3" ng-click="onNotAttending()"
+						   ng-disabled="!item.canView() || isProcessingRSVP" />
+                </span>
+					<p class="ng-binding"><span>{{item.getTotalNotAttend()}}</span> <span>{{'Not Attending' | translate}}</span></p>
+				</label>
+				<div class="list-member">
+					<a ng-repeat="user in item.getNotAttendList() | limitTo:7" ng-href="#/app/user/{{user.iUserId}}">
+						<img img-cache ng-src="{{user.sBigUserImage}}" />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="item item-text-wrap" shorten-html-compile="item.getDescriptionParsed()" limit="600" show-more-btn="true" show-less-btn="true" ng-if="item.getDescriptionParsed()">
+		</div>
+
+		<div class="item row">
+			<div class="col col-50 item item-event-detail-time item-icon-left">
+			<i class="icon ion-clock"></i>
+				<div><span>{{item.getStartTimeFormatted('hh:mm A')}}</span> {{item.getStartTimeFormatted('dddd, MMMM D, YYYY')}}</div>
+				<div><span>{{item.getEndTimeFormatted('hh:mm A')}}</span> {{item.getEndTimeFormatted('dddd, MMMM D, YYYY')}}</div>
+			</div>
+
+			<div class="col col-50 item item-icon-left" ng-if="item.getLocation()">
+				<i class="icon ion-location"></i>
+				<span class="black" style="line-height: 44px;" ng-bind-html="item.getLocation()"></span>
+			</div>
+		</div>
+
+		<div class="item row" ng-if="item.getCategory()">
+			<div class="col col-50 item item-icon-left">
+				<i class="icon ion-ios-box"></i>
+				<span class="black">{{item.getCategory()}}</span>
+			</div>
+		</div>
+	</div>
+	<ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+</ion-content>

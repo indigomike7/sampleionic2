@@ -1,0 +1,23 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <button class="button icon-right ion-ios-more button-clear" ng-hide="!dataReady || item.isAnnouncement()" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <ion-content class="has-header content-dark" ng-class="{'has-footer': dataReady && !item.isAnnouncement()}" delegate-handle="forum-thread-detail">
+    <h2 class="item-post-title" ng-bind-html="item.getTitle()"></h2>
+    <forum-thread-detail-poll-detail-dir></forum-thread-detail-poll-detail-dir>
+    <forum-thread-detail-post-list-dir></forum-thread-detail-post-list-dir>
+    <ion-infinite-scroll ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+  <div class="tabs tabs-footer" ng-if="dataReady && !item.isAnnouncement()">
+    <a class="tab-item col-33" href="#/app/forum_thread/{{item.getId()}}/reply" ng-if="!item.isClosed()">
+      {{'Reply' | translate}}
+    </a>
+    <div class="tab-item col-33" ng-if="item.isClosed()">
+      {{'Closed' | translate}}
+    </div>
+    <div class="tab-item">
+      <core-pagination current-page="sendData.iPage" total-page="totalPage"></core-pagination>
+    </div>
+  </div>
+</ion-view>

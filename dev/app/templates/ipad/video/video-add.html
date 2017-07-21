@@ -1,0 +1,53 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left button-clear" back-dir translate>Cancel</button>
+        <h1 class="title">{{'Add Video' | translate}}</h1>
+        <button class="button button-clear" ng-click="doSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </div>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" translate>Video title</span>
+                <input type="text" placeholder="{{'Video title' | translate}}" ng-model="formData.title">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" translate>Description</span>
+                <textarea type="text" placeholder="{{'Description' | translate}}" ng-model="formData.description"></textarea>
+            </label>
+            <label class="item item-input item-select" ng-if="form.categoryOptions.length >0">
+                <span class="input-label">{{'Category'  | translate}}</span>
+                <select ng-model="formData.category_id" ng-options="opt.iCategoryId as opt.sName|translate for opt in form.categoryOptions" required>
+                    <option value="">{{'All Categories' | translate}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select" ng-if="form.viewOptions.length >0">
+                <span class="input-label">{{'Privacy' | translate}}</span>
+                <select ng-model="formData.auth_view" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.viewOptions" required>
+                    <!-- empty -->
+                </select>
+            </label>
+            <label class="item item-input item-select" ng-if="form.commentOptions.length >0">
+                <span class="input-label">{{'Comment Privacy' | translate}}</span>
+                <select ng-model="formData.auth_comment" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.commentOptions" required>
+                    <!-- empty -->
+                </select>
+            </label>
+            <label class="item item-icon-right" ng-if="formData.sUrl">
+                {{formData.sUrl}}
+                <button class="button button-clear icon ion-ios-close" ng-click="doRemoveSelectFromUrl()"></button>
+            </label>
+            <label class="item item-icon-right" ng-if="formData.sPath">
+                {{formData.sPath}}
+                <button class="button button-clear icon ion-ios-close" ng-click="doRemoveSelectFromDevice()"></button>
+            </label>
+            <div class="item" ng-if="!formData.sVideoSource">
+                <button class="button button-small button-positive" ng-click="doSelectFromUrl()">{{'Select Video URL' | translate}}</button>
+                <button ng-if="form.bCanUpload" class="button button-small button-positive" ng-click="doSelectFromDevice()">{{'Upload Video' | translate}}</button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

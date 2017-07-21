@@ -1,0 +1,12 @@
+<!-- photo attachment template -->
+<div ng-repeat="item in aAttachmentItems">
+    <div class="item item-update item-update-photo" ng-if="item.sType == 'photo'">
+        <img ng-src="{{item.sPath}}">
+        <i class="icon ion-close" ng-click="removeAttachment($index)"></i>
+    </div>
+
+    <div class="item item-update item-update-photo" ng-if="item.sType == 'sticker'">
+        <img ng-src="{{item.sPath}}">
+        <i class="icon ion-close" ng-click="removeAttachment($index)"></i>
+    </div>
+</div>

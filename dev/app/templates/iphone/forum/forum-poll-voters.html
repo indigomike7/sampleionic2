@@ -1,0 +1,22 @@
+<ion-modal-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hidePollVoters()"></button>
+    <h1 class="title">{{'Poll Results'|translate}}</h1>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="list" ng-if="!isLoadingPollVoters">
+      <div class="padding text-center" ng-if="!poll.voters.length">{{'No results found'|translate}}</div>
+      <a class="item item-avatar" ng-href="#/app/user/{{voter.iUserId}}" ng-repeat="voter in poll.voters">
+        <img ng-if="voter.sUserImage" ng-src="{{voter.sUserImage}}" />
+        <h2 ng-bind-html="voter.sFullName"></h2>
+        <p>
+          <span>{{'voted'|translate}}</span>
+          <span>"{{voter.sAnswer}}"</span>
+          <span>{{'on'|translate}}</span>
+          <span class="item-date">{{Moment(voter.iTimeStamp * 1e3).format('MMMM D, YYYY')}}</span>
+        </p>
+      </a>
+    </div>
+    <ion-infinite-scroll ng-if="isLoadingPollVoters"></ion-infinite-scroll>
+  </ion-content>
+</ion-modal-view>

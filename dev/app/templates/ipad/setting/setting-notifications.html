@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">{{'Privacy' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list" ng-if="dataReady">
+      <div class="item item-divider">
+        {{'Notifications' | translate}}
+      </div>
+      <div class="item item-toggle" ng-repeat="setting in form">
+        <span ng-bind-html="setting.phrase"></span>
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="formData[setting.key]">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <ion-infinite-scroll ng-if="isLoading"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

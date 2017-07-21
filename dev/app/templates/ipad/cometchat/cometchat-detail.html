@@ -1,0 +1,15 @@
+<ion-modal-view ng-controller="CometchatDetailCtrl">
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideCometchat()"></button>
+    <h1 class="title" ng-bind-html="cometchatObj.getTitle()"></h1>
+  </ion-header-bar>
+  <ion-content class="has-header has-footer" delegate-handle="cometchat-message-list">
+    <cometchat-message-list-dir></cometchat-message-list-dir>
+  </ion-content>
+  <ion-footer-bar keyboard-attach class="item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="{{'Your Message' | translate}}" ng-model="messageData.sMessage" />
+    </label>
+    <button class="button button-small button-positive" ng-class="{disabled: !messageData.sMessage.trim()}" ng-click="onSendMessage()">{{'Send' | translate}}</button>
+  </ion-footer-bar>
+</ion-modal-view>

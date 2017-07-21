@@ -1,0 +1,10 @@
+<div href-dir external-url="{{obj.aAttachments[0].sOriginalLink_Url}}">
+	<div class="item item-image" ng-show="obj.aAttachments[0].sPhoto_Url">
+		<img ng-src="{{obj.aAttachments[0].sPhoto_Url}}">
+	</div>
+	<div class="item">
+		<h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+		<div><a class="subdued">{{obj.aAttachments[0].sOriginalHostName}}</a></div>
+		<p class="nocut" ng-bind-html="obj.aAttachments[0].sDescription"></p>
+	</div>
+</div>

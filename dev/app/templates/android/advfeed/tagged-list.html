@@ -1,0 +1,14 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideTaggedList()"></button>
+        <h1 class="title">People</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <a class="item item-avatar" ng-click="hideTaggedList()" ng-href="#/app/{{item.type}}/{{item.id}}" ng-repeat="item in taggedFriends">
+                <img ng-src="{{item.img}}" />
+                <h2 ng-bind-html="item.title"></h2>
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

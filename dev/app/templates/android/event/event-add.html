@@ -1,0 +1,77 @@
+<ion-view>
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear" back-dir translate>Cancel</button>
+		<div class="h1 title" translate>Create Event</div>
+		<button class="button button-clear" ng-click="onSave()">
+			<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+			<span ng-hide="isProcessing" translate>Save</span>
+		</button>
+	</ion-header-bar>
+	<ion-content class="has-header">
+		<div class="list" ng-if="dataReady">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label" translate>Event Name</span>
+				<input type="text" placeholder="{{'Event Name' | translate}}" ng-model="formData.title" />
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label" translate>Description</span>
+				<textarea placeholder="{{'Description' | translate}}" ng-model="formData.description"></textarea>
+			</label>
+			<div class="item item-input item-stacked-label">
+				<span class="input-label" translate>Starting Date</span>
+				<div class="row">
+					<div class="col col-50">
+						<input type="date" placeholder="{{'Start Date' | translate}}" ng-model="tmpData.start_date" />
+					</div>
+					<div class="col col-50">
+						<input type="time" placeholder="{{'Start Time' | translate}}" ng-model="tmpData.start_time" />
+					</div>
+				</div>
+			</div>
+			<div class="item item-input item-stacked-label">
+				<span class="input-label" translate>Ending Date</span>
+				<div class="row">
+					<div class="col col-50">
+						<input type="date" placeholder="{{'End Date' | translate}}" ng-model="tmpData.end_date" />
+					</div>
+					<div class="col col-50">
+						<input type="time" placeholder="{{'End Time' | translate}}" ng-model="tmpData.end_time" />
+					</div>
+				</div>
+			</div>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label" translate>Location</span>
+				<input type="text" placeholder="{{'Location' | translate}}" ng-model="formData.location" />
+			</label>
+			<label class="item item-input item-select" ng-if="form.categoryOptions.length >0">
+				<span class="input-label" translate>Category</span>
+				<select ng-model="formData.category_id" ng-options="opt.iCategoryId as opt.sName|translate for opt in form.categoryOptions">
+					<option value="">{{'All Categories' | translate}}</option>
+				</select>
+			</label>
+			<label class="item item-input item-select" ng-if="form.viewOptions.length >0">
+				<span class="input-label" translate>Privacy</span>
+				<select ng-model="formData.auth_view" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.viewOptions">
+				</select>
+			</label>
+			<label class="item item-input item-select" ng-if="form.commentOptions.length > 0">
+				<span class="input-label" translate>Comment Privacy</span>
+				<select ng-model="formData.auth_comment" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.commentOptions">
+				</select>
+			</label>
+			<div class="item item-input item-stacked-label noborder-bottom">
+				<span class="input-label" translate>Main Photo</span>
+				<div>
+					<div class="grid-photo-edit" ng-if="formData.photoPath">
+						<img ng-src="{{formData.photoPath}}" />
+						<a class="icon ion-close" ng-click="onRemovePhoto()"></a>
+					</div>
+					<div class="grid-photo-edit" ng-if="!formData.photoPath">
+						<div ng-click="onAddPhoto()" class="grid-photo-add"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

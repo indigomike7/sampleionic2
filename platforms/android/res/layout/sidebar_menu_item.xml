@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="@drawable/sidebar_list_selector"
+    >
+
+    <com.younetco.ionicon.IconTextView
+        android:id="@+id/sidebar_menu_ionicon"
+        android:text="{ion-social-android-outline}"
+        android:textSize="27sp"
+        android:textColor="@drawable/sidebar_text_selector"
+        android:gravity="center"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:paddingLeft="10sp" android:paddingTop="10sp" android:paddingRight="10sp" android:paddingBottom="10sp"
+            />
+
+    <TextView
+        android:id="@+id/sidebar_menu_label"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="Medium Text"
+        android:textAppearance="@android:style/TextAppearance.Medium" android:textColor="@drawable/sidebar_text_selector"
+        android:paddingLeft="0dp" android:paddingTop="10dp" android:paddingRight="10dp"
+        android:paddingBottom="10dp"/>
+
+</LinearLayout>

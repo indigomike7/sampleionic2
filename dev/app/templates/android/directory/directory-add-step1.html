@@ -1,0 +1,68 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button button-clear" back-dir translate>Cancel</button>
+        <h1 class="title">{{'New Business' | translate}}</h1>
+        <button class="button button-clear" ng-click="onNextStep()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Next</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="list padding directory-add-step1" ng-if="dataReady">
+            <div class="directory-add-purpose padding-bottom" ng-show="form.bIsCreator">
+                <h5>{{'Reason for creating business' | translate}}</h5>
+                <div class="ynlisting-add-enddate">
+                    <ul>
+                        <li class="item item-checkbox item-body">
+                            <label class="checkbox">
+                                <input type="radio" name="create_purpose" ng-model="formData.sPurpose" value="personal" />
+                            </label>
+                            <span translate>For my personal purpose.</span>
+                        </li>
+                        <li class="item item-checkbox item-body">
+                            <label class="checkbox">
+                                <input type="radio" name="create_purpose" ng-model="formData.sPurpose" value="claim" />
+                            </label>
+                            <span translate>For claiming.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h5 ng-if="form.aPackages.length">{{'Select package' | translate}}</h5>
+            <div ng-if="form.aPackages.length">
+                <div class="card directory-package" ng-repeat="package in form.aPackages" ng-class="{selected : formData.iPackageId == package.iPackageId}">
+                    <div class="item item-checkbox item-divider directory-package-header">
+                        <label class="checkbox">
+                            <input type="radio" ng-disabled="formData.sPurpose=='claim'" name="package" ng-model="formData.iPackageId" value="{{package.iPackageId}}" />
+                        </label>
+                        <span>{{package.sTitle}}</span>
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="directory-package-price">
+                            Price:
+                            <b>
+                                <span ng-bind-html="package.sCurrencySymbol"></span> 
+                                <span>{{'for' | translate}}</span>
+                                <span ng-if="package.iExpireType != 0">{{package.iValidAmount}}</span>
+                                <span ng-bind-html="package.sValidPeriod"></span>
+                            </b>
+                        </div>
+                        <div class="padding-bottom padding-top">
+                            <h2>{{'Feature available:' | translate}}</h2>
+                            <div class="item-text-wrap" shorten-html-compile="package.sFeatures" limit="100"
+                                 show-more-btn="true" show-less-btn="true" more-btn-text="{{'More' | translate}}" less-btn-text="{{'Less' | translate}}">
+                            </div>
+                        </div>
+                        <div class="padding-bottom">
+                            <h2>{{'Modules available:' | translate}}</h2>
+                            <div class="item-text-wrap" shorten-html-compile="package.sModules" limit="100"
+                                 show-more-btn="true" show-less-btn="true" more-btn-text="{{'More' | translate}}" less-btn-text="{{'Less' | translate}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

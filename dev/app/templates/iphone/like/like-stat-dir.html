@@ -1,0 +1,15 @@
+<div class="item" ng-if="obj.canLike() || 0 < obj.getTotalLike()">
+	<p ng-if="0 == obj.getTotalLike()">{{'Be the first to like this' | translate}}</p>
+	<p ng-if="0 < obj.getTotalLike()">
+		<a class="positive" ng-if="obj.isLiked()" ng-href="{{viewer.getUrl()}}">{{'You' | translate}}</a>
+		<a class="positive" ng-if="!obj.isLiked()" ng-href="{{lastLiked.getUrl()}}" ng-bind-html="lastLiked.getTitle()"></a>
+		<span ng-if="1 < obj.getTotalLike()">
+			<span>{{'and' | translate}}</span>
+			<span class="positive" ng-click="showLikedList()">
+				<span ng-show="obj.getTotalLike() - 1 | isPlural" translate>{{obj.getTotalLike() - 1}} others</span>
+	        	<span ng-hide="obj.getTotalLike() - 1 | isPlural" translate>{{obj.getTotalLike() - 1}} other</span>
+			</span>
+		</span>
+		<span>{{'liked this' | translate}}</span>
+	</p>
+</div>

@@ -1,0 +1,7 @@
+<div class="list padding clearfix page-photo-list">
+  <div class="padding text-center" ng-if="noItems" translate>No photos found.</div>
+  <div class="photo-item" ng-repeat="item in items" ng-controller="PhotoItemCtrl">
+    <div class="grid-photo-item" ng-background="{{item.sPhotoUrl}}" href-dir url="{{item.getUrl()}}"></div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

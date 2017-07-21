@@ -1,0 +1,17 @@
+<div class="list" ng-init="page=item">
+    <div class="padding text-center" ng-if="noItems" translate>
+        No members found.
+    </div>
+    <div ng-repeat="item in items" ng-controller="PageMemberItemCtrl" href-dir url="{{item.getUrl()}}">
+        <div class="item item-avatar item-icon-right">
+          <img img-cache ng-src="{{item.sPhotoUrl}}">
+          <h2 ng-bind-html="item.sTitle"></h2>
+          <p ng-if="item.isOfficer()" translate>Officer</p>
+          <p ng-if="item.isOwner()" translate>Owner</p>
+          <p ng-if="item.isInvited()" translate>Invited</p>
+          <p ng-if="item.isRequestedMembership()" translate>Requested</p>
+          <i class="icon ion-ios-arrow-down gain" ng-if="page.isOwner() && page.user.id != item.getId()" ng-click="onItemSetting()"></i>
+        </div>
+    </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

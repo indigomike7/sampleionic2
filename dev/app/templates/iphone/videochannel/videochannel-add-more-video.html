@@ -1,0 +1,21 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir>{{'Previous' | translate}}</button>
+        <h1 class="title" translate>Add More Videos</h1>
+        <button class="button button-clear" ng-click="doSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </div>
+
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <div class="padding text-center" ng-if="noItems" translate>No videos found.</div>
+            <ion-checkbox class="videochannel-checkbox" ng-model="aVideos[item.url]" ng-repeat="item in data.aVideos">
+                <img class="full-image" src="{{item.image_path}}">
+                <h2 href-dir url="{{item.url}}" ng-bind-html="item.title"></h2>
+            </ion-checkbox>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

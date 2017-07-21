@@ -1,0 +1,15 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Polls' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a ng-if="canCreatePoll" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/polls/add"></a>
+  </ion-header-bar>
+  <poll-search-dir></poll-search-dir>
+  <ion-content class="has-header">
+    <poll-list-dir></poll-list-dir>
+  </ion-content>
+</ion-view>
+

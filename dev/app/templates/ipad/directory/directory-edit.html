@@ -1,0 +1,72 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button button-clear" back-dir translate>Cancel</button>
+        <h1 class="title">{{'Edit Business' | translate}}</h1>
+        <button class="button button-clear" ng-click="save()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Business Name' | translate}}</span>
+                <input type="text" placeholder="{{'Business Name' | translate}}" ng-model="formData.sTitle" />
+            </label>
+            <label class="item item-input item-select">
+                <span class="input-label">*{{'Category' | translate}}</span>
+                <select ng-model="formData.iCategoryId" ng-options="option.id as option.title for option in form.categoryOptions">
+                </select>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Short Description' | translate}}</span>
+                <textarea placeholder="{{'Short Description' | translate}}" ng-model="formData.sShortDesc"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Description' | translate}}</span>
+                <textarea placeholder="{{'Description' | translate}}" ng-model="formData.sDescription"></textarea>
+            </label>
+            <div class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Address' | translate}}</span>
+                <div class="col no-padding col-location">
+                    <div><ion-google-place placeholder="{{'Address' | translate}}" ng-model="tempData.aLocation" /></div>
+                    <i class="icon-minus ion-ios-minus-outline" ng-show="tempData.aLocation" ng-click="removeLocation()"></i>
+                </div>
+            </div>
+            <label class="item item-input item-select">
+                <span class="input-label">{{'Business Sizes' | translate}}</span>
+                <select ng-model="formData.sSize" ng-options="option for option in form.sizeOptions">
+                </select>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Phone' | translate}}</span>
+                <input type="text" placeholder="{{'Phone' | translate}}" ng-model="formData.sPhone" />
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Fax' | translate}}</span>
+                <input type="text" placeholder="{{'Fax' | translate}}" ng-model="formData.sFax" />
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Email' | translate}}</span>
+                <input type="text" placeholder="{{'Email' | translate}}" ng-model="formData.sEmail" />
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Web address' | translate}}</span>
+                <input type="text" placeholder="{{'Web address' | translate}}" ng-model="formData.sWebAddress" />
+            </label>
+            <div class="item item-input item-stacked-label noborder-bottom">
+                <span class="input-label">Logo</span>
+                <div>
+                    <div class="grid-photo-edit" ng-if="formData.sProfilePhoto">
+                        <img ng-src="{{formData.sProfilePhoto}}" />
+                        <a class="icon ion-close" ng-click="onRemovePhoto()"></a>
+                    </div>
+                    <div class="grid-photo-edit" ng-if="!formData.sProfilePhoto">
+                        <div ng-click="onAddPhoto()" class="grid-photo-add"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

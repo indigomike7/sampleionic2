@@ -1,0 +1,26 @@
+<ion-modal-view class="ipad-edit-photo">
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideEditPhotoModal()">
+        </button>
+        <h1 class="title">{{'Edit Photo' | translate}}</h1>
+        <button class="button icon-right button-positive" translate ng-click="onSaveInfo()">
+            Save
+        </button>
+    </div>
+    <ion-content class="has-header">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">
+                    {{'Title' | translate}}
+                </span>
+                <input type="text" placeholder="{{'Title' | translate}}" ng-model="formData.sTitle">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">
+                    {{'Description' | translate}}
+                </span>
+                <textarea placeholder="{{'Description' | translate}}" ng-model="formData.sDescription"></textarea>
+            </label>            
+        </div>
+    </ion-content>
+</ion-modal-view>

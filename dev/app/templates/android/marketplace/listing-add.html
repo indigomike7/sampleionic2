@@ -1,0 +1,91 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear" back-dir translate>Cancel</button>
+    <h1 class="title">{{'Add New Listing' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="list" ng-if="dataReady">
+      <div class="item item-input item-stacked-label item-input-select">
+        <span class="input-label">{{'Category' | translate}}</span>
+        <div class="input-select input-first">
+          <select class="listing-form-category">
+            <option value="">{{'Select Category' | translate}}</option>
+            <option ng-repeat="option in form.category_options" value="{{option.category_id}}">{{option.name | translate}}</option>
+          </select>
+        </div>
+        <div class="listing-form-category-subs-holder"></div>
+      </div>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">{{'What are you selling?' | translate}}</span>
+        <input type="text" placeholder="{{'What are you selling?' | translate}}" ng-model="formData.sTitle" />
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">{{'Short Description' | translate}}</span>
+        <textarea placeholder="{{'Short Description' | translate}}" ng-model="formData.sMiniDescription"></textarea>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">{{'Description' | translate}}</span>
+        <textarea placeholder="{{'Description' | translate}}" ng-model="formData.sDescription"></textarea>
+      </label>
+      <div class="item item-input item-stacked-label item-input-select">
+        <span class="input-label">{{'Price' | translate}}</span>
+        <div class="input-select input-first">
+          <select ng-model="formData.sCurrencyId" 
+            ng-options="option.currency_id as option.name|translate for option in form.currency_options">
+          </select>
+        </div>
+        <input type="text" placeholder="{{'Price' | translate}}" ng-model="formData.sPrice" />
+      </div>
+      <label class="item item-input item-select" ng-if="form.perms.bCanSell">
+        <span class="input-label">{{'Enable Instant Payment' | translate}}</span>
+        <select class="control-full" ng-model="formData.iIsSell">
+          <option value="1">{{'Yes' | translate}}</option>
+          <option value="0">{{'No' | translate}}</option>
+        </select>
+      </label>
+      <div class="item item-input item-stacked-label item-input-select">
+        <span class="input-label">
+          {{'Location' | translate}}
+          <i class="ion-loading-d" ng-if="isLoadingCountryChilds"></i>
+        </span>
+        <div class="input-select input-first">
+          <select ng-model="formData.sCountryIso" ng-change="onChangeCountry()" 
+            ng-options="option.country_iso as option.name|translate for option in form.country_options">
+            <option value="">{{'Select Location' | translate}}</option>
+          </select>
+        </div>
+        <div class="input-select noborder-top" ng-show="form.country_child_options.length">
+          <select ng-model="formData.iCountryChildId" 
+            ng-options="option.child_id as option.name|translate for option in form.country_child_options">
+            <option value="">{{'State/Province' | translate}}</option>
+          </select>
+        </div>
+      </div>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">{{'City' | translate}}</span>
+        <input type="text" placeholder="{{'City' | translate}}" ng-model="formData.sCity" />
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">{{'Zip / Postal Code' | translate}}</span>
+        <input type="text" placeholder="{{'Zip / Postal Code' | translate}}" ng-model="formData.sPostalCode" />
+      </label>
+      <label class="item item-input item-select" ng-if="form.view_options.length > 0">
+        <span class="input-label">{{'Listing Privacy' | translate}}</span>
+        <select ng-model="formData.iPrivacy" 
+          ng-options="opt.sValue as opt.sPhrase|translate for opt in form.view_options">
+        </select>
+      </label>
+      <label class="item item-input item-select" ng-if="form.comment_options.length > 0">
+        <span class="input-label">{{'Comment Privacy' | translate}}</span>
+        <select ng-model="formData.iPrivacyComment" 
+          ng-options="opt.sValue as opt.sPhrase|translate for opt in form.comment_options">
+        </select>
+      </label>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

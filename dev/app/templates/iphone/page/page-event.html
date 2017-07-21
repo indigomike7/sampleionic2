@@ -1,0 +1,9 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title" translate>Events</h1>
+    <a ng-if="item.bCanShareEvents" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/events/add/{{item.getType()}}/{{item.getId()}}"></a>
+</ion-header-bar>
+<event-search-dir></event-search-dir>
+<ion-content class="has-header has-footer">
+    <event-list-dir></event-list-dir>
+</ion-content>

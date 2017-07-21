@@ -1,0 +1,9 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+</ion-header-bar>
+<ion-content class="has-header has-footer">
+    <photo-list-dir ng-show="item.canViewPhoto()"></photo-list-dir>
+    <private-msg-dir ng-if="dataReady && !item.canViewPhoto()"></private-msg-dir>
+    <ion-infinite-scroll ng-if="!dataReady"></ion-infinite-scroll>
+</ion-content>

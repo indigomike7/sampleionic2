@@ -1,0 +1,3 @@
+define([
+	'notification/controllers'
+], function() {});

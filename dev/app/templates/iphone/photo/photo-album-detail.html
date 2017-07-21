@@ -1,0 +1,45 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title"></h1>
+        <button class="button button-clear icon ion-ios-more" ng-click="onItemSetting()">
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header has-footer">
+        <private-msg-dir ng-if="dataReady && !item.bCanView">
+        </private-msg-dir>
+        <div ng-if="dataReady && item.bCanView">
+            <div>
+                <div class="item no-border-bottom no-padding-bottom" >
+                    <h2 ng-bind-html="item.sTitle"></h2>
+                    <div class="item-album-owner" ng-if="item.user" href-dir url="{{item.getPosterUrl()}}">
+                        <img ng-src="{{item.sUserImageUrl}}" />
+                        <span class="item-author-by" translate>by </span>
+                        <span class="item-album-owner-title" ng-bind-html="item.sFullName">
+                        </span>
+                        <span class="icon-separator">
+                        </span>
+                        <span>
+                            {{item.fromNow()}}</span>
+                    </div>
+                    <div class="item-description nocut" ng-if="item.hasDescription()">
+                        {{item.getDescription()}}
+                    </div>
+                </div>                
+            </div>
+            <div class="">
+                <photo-list-simple-dir>
+                </photo-list-simple-dir>
+            </div>
+            <div class="item">
+                <core-action-list-dir>
+                </core-action-list-dir>
+            </div>
+            <like-stat-dir obj="item"></like-stat-dir>
+            <comment-dir obj="item">
+            </comment-dir>
+        </div>
+    </ion-content>
+    <comment-form-footer-dir obj="item" ng-if="dataReady && item.bCanView && item.canComment()">
+    </comment-form-footer-dir>
+</ion-view>

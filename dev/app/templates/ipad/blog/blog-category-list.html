@@ -1,0 +1,20 @@
+<ion-modal-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon-left ion-ios-arrow-left" ng-click="hideCategories()"></button>
+    <h1 class="title">
+      <span ng-if="sCategoriesFilter == 'public'">{{'Public Categories' | translate}}</span>
+      <span ng-if="sCategoriesFilter == 'personal'">{{'Personal Categories' | translate}}</span>
+    </h1>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="list">
+      <div class="padding text-center" ng-if="!form.category_options[sCategoriesFilter].length">{{'No categories added.' | translate}}</div>
+      <label class="item item-icon-right" ng-repeat="cat in form.category_options[sCategoriesFilter]">
+        <h2 ng-bind-html="cat.name"></h2>
+        <div class="icon checkbox">
+          <input type="checkbox" ng-model="cat.selected" />
+        </div>
+      </label>
+    </div>
+  </ion-content>
+</ion-modal-view>

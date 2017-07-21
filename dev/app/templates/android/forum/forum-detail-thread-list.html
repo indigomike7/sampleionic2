@@ -1,0 +1,27 @@
+<div class="padding text-center" ng-if="dataReady && !item.getTotalThread()" translate>No threads found.</div>
+<div class="list thread-list-wrapper" ng-if="item.getTotalThread()">
+  <div class="item item-icon-left item-icon-right thread-list-header">
+    <i class="icon ion-ios-paper-outline"></i>
+    <h2>{{'Threads' | translate}}</h2>
+    <span>({{item.getTotalThread()}})</span>
+    <i class="icon" ng-class="{'ion-arrow-up-b': !hideThreads, 'ion-arrow-down-b': hideThreads}" ng-click="hideThreads = !hideThreads"></i>
+  </div>
+  <div ng-show="!hideThreads">
+    <div class="item item-icon-left item-thread sub-item" ng-class="{'sticky': thread.isSticky()}" ng-repeat="thread in threads" href-dir url="{{thread.getUrl()}}">
+      <i class="icon ion-ios-paper-outline"></i>
+      <h2 ng-bind-html="thread.getTitle()"></h2>    
+      <div class="item-stats">
+        <span class="dark">{{'Last post' | translate}}</span>
+        <span>{{'by' | translate}}</span>
+        <a class="dark" ng-href="{{thread.getLastPosterUrl()}}" ng-bind-html="thread.getLastPosterTitle()"></a>
+      </div>
+      <div class="item-stats">
+        <span>{{thread.getTotalPost()}}</span> <i class="ion-ios-chatbubble"></i>
+        <span class="padding-left">{{thread.getTotalView()}}</span> <i class="ion-ios-eye"></i>
+        <span class="icon-separator"></span>
+        <span>{{thread.fromNow()}}</span>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll ng-if="!hideThreads && isLoadingThreads"></ion-infinite-scroll>
+</div>

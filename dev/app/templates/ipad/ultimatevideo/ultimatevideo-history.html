@@ -1,0 +1,15 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+        <h1 class="title has-notification">
+            {{'History' | translate}}
+            <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+        </h1>
+        <button class="button icon-right ion-ios-more button-clear" ng-click="showHistorySettings()"></button>
+    </ion-header-bar>
+    <ultimatevideo-search-history-dir>Loading...</ultimatevideo-search-history-dir>
+    <ion-content class="has-header has-footer">
+        <ultimatevideo-list-history-dir></ultimatevideo-list-history-dir>
+    </ion-content>
+</ion-view>
+

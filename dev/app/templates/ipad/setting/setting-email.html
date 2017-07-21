@@ -1,0 +1,18 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">{{'Account' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list">
+      <label class="item item-input item-stacked-label item-light"> 
+        <span class="input-label">{{'Email Address' | translate}}</span>
+        <input type="text" placeholder="{{'Email Address' | translate}}" ng-model="formData.email">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

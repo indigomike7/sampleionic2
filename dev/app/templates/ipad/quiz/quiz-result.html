@@ -1,0 +1,37 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir></button>
+    </div>
+    <ion-content class="has-header" delegate-handle="quiz_question_list">
+        <div class="item item-stable" ng-if="dataReady">
+            <p>
+                <span translate>Quiz Results for</span>
+                <a ng-href="#/app/user/{{item.iTakerId}}" ng-bind-html="item.sFullName"></a>
+                <span>({{item.iSuccessPercentage}}%)</span>
+            </p>
+        </div>
+
+        <div class="list quiz-user-result" ng-if="dataReady">
+            <div class="item item-stacked-label" ng-repeat="(answerIndex, answer) in item.aAnswers">
+
+                <label class="quiz-result-question">
+                    <span>{{answerIndex + 1}} .</span>
+                    <span ng-bind-html="answer.sQuestion"></span>
+                </label>
+                <div class="quiz-result-answers">
+                    <p class="item-result" ng-if="answer.iAnswerId != answer.iCorrectAnswer">
+                        <img ng-src="{{item.sUserImage}}" />
+                        <span class="incorrect-answer" ng-bind-html="answer.sAnswer"></span>
+                        <i class="incorrect ion-close" ng-if="answer.iAnswerId != answer.iCorrectAnswer"></i>
+                    </p>
+                    <p class="item-result">
+                        <img ng-if="answer.iAnswerId == answer.iCorrectAnswer" ng-src="{{item.sUserImage}}" />
+                        <i class="positive ion-checkmark-circled" ng-if="answer.iAnswerId != answer.iCorrectAnswer"></i>
+                        <span class="positive">{{answer.sCorrectAnswer}}</span>
+                        <i class="correct ion-checkmark" ng-if="answer.iAnswerId == answer.iCorrectAnswer"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

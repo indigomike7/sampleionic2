@@ -1,0 +1,15 @@
+<div class="list chat-list">
+  <div class="padding text-center" ng-if="noItems && listData.sSearch">
+    <span>{{'No contacts found.' | translate}}</span>
+  </div>
+  <div class="padding text-center" ng-if="noItems && !listData.sSearch">
+    <span>{{'No friends available for chatting.' | translate}}</span>
+  </div>
+  <a class="item item-avatar item-icon-right" ng-class="{'item-stable': item.isUnread()}"
+  collection-repeat="item in items|filter:{bIsHidden: false}" item-height="70px" ng-href="#/app/cometchat/{{item.getId()}}" menu-close>
+    <img ng-src="{{item.getImageSrc()}}" height="50" />
+    <h2 ng-bind-html="item.getTitle()"></h2>
+    <i class="icon ion-record {{item.getStatus()}}"></i>
+  </a>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

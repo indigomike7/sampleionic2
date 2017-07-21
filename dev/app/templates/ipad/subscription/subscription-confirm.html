@@ -1,0 +1,33 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear" ng-click="cancel()">
+      <span ng-if="stateParams.subscriptionId" translate>Logout</span>
+      <span ng-if="!stateParams.subscriptionId" translate>Cancel</span>
+    </button>
+    <h1 class="title">{{'Confirm Payment' | translate}}</h1>
+    <button class="button button-clear" ng-click="onBuy()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Buy</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="padding" ng-if="dataReady">
+      <p>
+        <span>{{'Do you want to buy membership' | translate}}</span>
+        <b ng-bind-html="item.getTitle()"></b>
+        <span>{{'for' | translate}}</span>
+        <span>
+          <span class="energized" ng-bind-html="item.getCurrencySymbol() + item.getDefaultCost()"></span>
+          <span>{{'one time' | translate}}</span>
+        </span>
+        <span ng-if="item.getDefaultRecurringCost()">
+          <span>{{'and then' | translate}}</span>
+          <span class="energized" ng-bind-html="item.getCurrencySymbol() + item.getDefaultRecurringCost()"></span>
+          <span>{{item.getRecurringPeriod()}}</span>
+        </span>
+        <span>?</span>
+      </p>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

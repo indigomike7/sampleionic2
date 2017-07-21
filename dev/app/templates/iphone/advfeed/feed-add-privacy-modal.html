@@ -1,0 +1,26 @@
+<ion-modal-view ng-controller="FeedAddPrivacyModalCtrl">
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-clear" ng-click="hideFeedAddPrivacyModal()" translate>Cancel</button>
+        <div class="h1 title" translate>Who can view this feed</div>
+        <button class="button button-clear" ng-click="onSetFeedPrivacy()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Done</span>
+        </button>
+    </ion-header-bar>
+
+    <ion-content class="has-header">
+        <div class="list">
+            <div class="padding text-center" ng-if="noItems" translate>There is no privacy settings for this action</div>
+            <div ng-repeat="item in items">
+                <div class="item item-divider" ng-if="!createHeader(item.type)"><h2>{{createHeader(item.type)}}</h2></div>
+                <label class="item item-icon-right" ng-class="{'item-avatar': item.photo >''}">
+                    <img ng-if="item.photo" ng-src="{{item.photo}}" />
+                    <h2 ng-class="{'privacy-label': item.photo >''}" ng-bind-html="item.label"></h2>
+                    <div class="icon checkbox">
+                        <input type="checkbox" ng-model="item.selected" />
+                    </div>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

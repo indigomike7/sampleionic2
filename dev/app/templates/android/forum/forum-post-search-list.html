@@ -1,0 +1,22 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No posts found.</div>
+  <div class="item item-post" ng-repeat="item in items">
+    <div class="item item-icon-left item-icon-small">
+      <i class="icon ion-ios-chatbubble gray"></i>
+      <h2>
+        <span class="title-prefix">{{'Posted in' | translate}}</span>
+        <a class="dark" ng-href="{{item.getThreadUrl()}}" ng-bind-html="item.getThreadTitle()"></a>
+      </h2>
+      <div class="item-stats">
+        <span>{{'by' | translate}}</span>
+        <a class="dark" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+        <span class="icon-separator"></span>
+        <span>{{item.fromNow()}}</span>
+      </div>
+    </div>
+    <div class="item-description padding-top">
+      <div class="item-post-detail" ng-bind-html="item.getTextClean()"></div>
+    </div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

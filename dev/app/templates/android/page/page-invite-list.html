@@ -1,0 +1,26 @@
+<ion-modal-view ng-controller="PageInviteListCtrl" ng-init="onInit()">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear" ng-click="hideInviteList()" translate>Cancel</button>
+		<div class="h1 title" translate>Invite Friends</div>
+		<button class="button button-clear" ng-click="onInvite()">
+	    	<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+	    	<span ng-hide="isProcessing" translate>Invite</span>
+	    </button>
+	</ion-header-bar>
+	<ion-content class="has-header has-footer">
+		<div class="list">
+			<div class="padding text-center" ng-if="noItems" translate>You have no friends you can invite.</div>
+			<label class="item item-avatar item-icon-right" ng-href="{{item.getUrl()}}" ng-repeat="item in items">
+				<img ng-src="{{item.UserProfileImg_Url}}" />
+				<h2 ng-bind-html="item.getTitle()"></h2>
+				<div class="icon checkbox">
+					<input type="checkbox" ng-model="item.selected" />
+				</div>
+			</label>
+		</div>
+	</ion-content>
+	<div class="tabs">
+		<a class="tab-item" ng-click="markAll()" translate>Mark All</a>
+		<a class="tab-item" ng-click="unmarkAll()" translate>Unmark All</a>
+	</div>
+</ion-modal-view>

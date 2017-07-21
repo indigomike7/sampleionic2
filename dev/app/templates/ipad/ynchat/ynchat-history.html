@@ -1,0 +1,15 @@
+<ion-modal-view ng-controller="YnchatHistoryCtrl">
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="closeHistory()"></button>
+    <h1 class="title">{{'Message History' | translate}}</h1>
+  </ion-header-bar>
+  <div class="bar bar-subheader item-text-wrap text-center ynchat-history-bar">
+    <span ng-class="{'active': messageListData.sType == 'yesterday'}" ng-click="setHistoryType('yesterday')">{{'Yesterday' | translate}}</span> - 
+    <span ng-class="{'active': messageListData.sType == 'week'}" ng-click="setHistoryType('week')">{{'7 days' | translate}}</span> - 
+    <span ng-class="{'active': messageListData.sType == 'month'}" ng-click="setHistoryType('month')">{{'30 days' | translate}}</span> - 
+    <span ng-class="{'active': messageListData.sType == 'quarter'}" ng-click="setHistoryType('quarter')">{{'3 months' | translate}}</span>
+  </div>
+  <ion-content class="has-subheader ynchat-history-content" delegate-handle="ynchat-history-list">
+    <ynchat-message-list-dir></ynchat-message-list-dir>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,23 @@
+<div class="item item-text-wrap">
+  <p>
+    <span translate>Between</span>
+    <a ng-href="{{Viewer.getUrl()}}" translate>You</a>
+    <span translate>and</span>
+    <span ng-show="!bShowMoreRecipients">
+      <a ng-href="{{item.getRecipients()[0].getUrl()}}" ng-bind-html="item.getRecipients()[0].getTitle()"></a>
+      <span ng-if="item.getTotalRecipients() > 1">
+        <span translate>and</span>
+        <span ng-if="item.getTotalRecipients() == 2">1 {{'other' | translate}}</span>
+        <span ng-if="item.getTotalRecipients() > 2">{{item.getTotalRecipients() - 1}} {{'others' | translate}}</span>
+        <span class="positive" ng-click="showMoreRecipients()" translate>More</span>
+      </span>
+    </span>
+    <span ng-show="bShowMoreRecipients">
+      <span ng-repeat="user in recipients">
+        <span ng-if="$index > 0">, </span>
+        <a ng-href="{{user.getUrl()}}" ng-bind-html="user.getTitle()"></a>
+      </span>
+      <span class="positive" ng-click="showLessRecipients()" translate>Less</span>
+    </span>
+  </p>
+</div>

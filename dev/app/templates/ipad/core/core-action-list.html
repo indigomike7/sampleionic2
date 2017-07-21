@@ -1,0 +1,39 @@
+<div class="item-action-list clearfix">
+    <div class="pull-left">
+        <button class="button button-small button-rounder button-outline button-positive icon-right" ng-click="onItemShare()" ng-if="item.canShare()">
+            <span>{{item.getTotalShare()}}</span>
+            <i class="ion-android-share"></i>
+        </button>
+    </div>
+    <div class="pull-right">
+        <div class="emoticon-reactions-list">
+            <span class="pull-left emoticon-item" ng-repeat="react in item.aReactionEmoticons" ng-if="react.counter">
+                  <img ng-src="{{react.emoticon_icon}}" />
+                <span>{{react.counter}}</span>
+            </span>
+        </div>
+
+        <button ng-if="item.showRate()" class="button button-small button-positive button-rounder icon-right" ng-class="{'button-outline': !item.isRated()}" ng-click="onItemRate()">
+            <span>{{item.getRateNumber()}}</span>
+            <i class="ion-android-star"></i>
+        </button>
+        
+        <button class="button button-small button-rounder button-outline button-positive icon-right" ng-click="onItemComment()" ng-if="item.canComment()">
+            <span>{{item.getTotalComment()}}</span>
+            <i class="ion-chatbox"></i>
+        </button>
+        
+        <button class="button button-small button-positive button-rounder icon-right" ng-class="{'button-outline': !item.isLiked()}" ng-click="onClickItemLike()" ng-if="item.canLike()">
+            <span>{{item.getTotalLike()}}</span>
+            <i class="icon ion-thumbsup"></i>
+        </button>        
+    </div>
+</div>
+
+<div id="reaction_{{item.getType()}}_{{item.getId()}}" class="reactions-emoticons" ng-show="item.isShowEmoticons == 1">
+    <div class="reactions-emoticons-holder clearfix">
+          <span class="pull-left emoticon-item" ng-repeat="item in item.aReactionEmoticons" ng-click="onItemLike({{item.emoticon_id}})">
+              <img ng-src="{{item.emoticon_icon}}" />
+          </span>
+    </div>
+</div>

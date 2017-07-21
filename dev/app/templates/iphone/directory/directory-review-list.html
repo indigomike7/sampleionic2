@@ -1,0 +1,5 @@
+<ion-list>
+  <div class="padding text-center" ng-if="noItems" translate>There are no recent reviews yet</div>
+  <directory-review-item ng-repeat="item in items"></directory-review-item>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</ion-list>

@@ -1,0 +1,5 @@
+<ion-list>
+  <div class="padding text-center" ng-if="noItems" translate>No businesses found</div>
+  <directory-follow-item ng-repeat="item in items"></directory-follow-item>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</ion-list>

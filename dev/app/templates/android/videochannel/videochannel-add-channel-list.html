@@ -1,0 +1,24 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir>{{'Previous' | translate}}</button>
+        <h1 class="title" translate>Add A Channel</h1>
+        <button class="button button-clear" ng-click="doSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Next</span>
+        </button>
+    </div>
+
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <div class="padding text-center" ng-if="noItems" translate>No channels found.</div>
+            <ion-radio class="item item-thumbnail-left" ng-repeat="item in items track by $index" ng-model="formData.iChannelItemId" value="{{$index}}">
+                <img src="{{item.video_image}}">
+                <h3 href-dir url="{{item.link}}" ng-bind-html="item.title"></h3>
+                <p>{{item.summary}}</p>
+            </ion-radio>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-content>
+
+
+</ion-view>

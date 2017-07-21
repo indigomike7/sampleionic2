@@ -1,0 +1,325 @@
+
+ul
+{
+	margin:0;
+	padding:0;
+}
+/** YN audio skin **/
+.yn-music
+{
+	background:url(audio.png) no-repeat;
+	background-position:0 -237px;
+	height:77px;
+	width:494px;
+}
+.song-info
+{
+	height:39px;
+	padding-left:10px;
+}
+.yn-audio-skin
+{
+	background:none;
+	margin-top:3px;
+}
+.mejs-controls .mejs-button button:focus
+{
+	outline:none;
+}
+
+.mejs-controls
+{
+	background:none;
+}
+/** Song Title - Artist **/
+
+.yn-music .song-info marquee
+{
+	line-height:40px;
+	font-size:14px;
+}
+/**End **/
+
+/** List **/
+ul.mejs-list
+{
+	width:493px;
+}
+
+.mejs-list li
+{
+	list-style: none;
+	line-height:40px;
+	height:40px;
+	border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+	padding-left:10px;
+	overflow:hidden;
+	padding-right:10px;
+	background:#fff;
+}
+.small-playlist li{
+	height: 25px;
+    line-height: 25px;
+    text-align: left;
+	font-size:11px;
+}
+.mejs-list li:hover {
+	background: #B9FFFF;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+.mejs-list li.current {
+	background:#B9FFFF;
+}
+.mejs-list li span.link
+{
+	display:none;
+}
+.mejs-list li a span
+{
+	text-indent:-99999px;
+	background:url(audio.png) no-repeat;
+	height:25px;
+	width:25px;
+	display:block;
+	float:right;
+	margin:10px 0px;
+}
+.mejs-list li a span.yn-download
+{
+	background-position: 2px -7px;
+}
+.mejs-list li a:hover span.yn-download
+{
+	background-position: -23px -7px;
+}
+.mejs-list li a span.yn-add-playlist
+{
+	background-position: 2px -32px;
+}
+.mejs-list li a:hover span.yn-add-playlist
+{
+	background-position: -23px -33px;
+}
+.mejs-list li > span
+{
+	float:left;
+	display:block;
+	
+}
+.mejs-list li > span.song-title
+{
+	width:340px;
+}
+.mejs-list.small-playlist li > span.song-title{
+	width: 180px;
+}
+/** progress bar **/
+.mejs-controls .mejs-time-rail .mejs-time-total
+{
+	border:1px solid;
+	border-color:#090909 #464646 #787878 #464646;
+	height:8px;
+}
+.yn-small-audio-skin .mejs-controls .mejs-time-rail .mejs-time-total{
+	height:5px;
+}
+.yn-small-skin .mejs-controls .mejs-time-rail .mejs-time-total{
+	height:6px;
+	margin-top:3px;
+	margin-left:0;
+}
+.mejs-time-rail .mejs-time-current,
+.mejs-controls .mejs-time-rail .mejs-time-loaded
+{
+	height:8px;
+}
+.yn-small-audio-skin .mejs-time-rail .mejs-time-current,
+.yn-small-audio-skin .mejs-controls .mejs-time-rail .mejs-time-loaded{
+	height:5px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded
+{
+	background:#727272;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current
+{
+	background: #03E3E2;
+	background:linear-gradient(0% 90deg,#0F7B97, #0F7B97);
+	background: -moz-linear-gradient(0% 90deg,#03E3E2, #0F7B97);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#0F7B97), to(#03E3E2));
+}
+.mejs-controls .mejs-time-rail .mejs-time-handle
+{
+	background:url(audio.png) no-repeat;
+	display:block;
+	height:16px;
+	width:16px;
+	border:none;
+	background-position:0 -192px;
+	margin-top:-2px;
+	margin-left:-4px;
+}
+.yn-small-audio-skin .mejs-controls .mejs-time-rail .mejs-time-handle{
+	background: url("small-icon.png") no-repeat scroll -3px -90px transparent;
+    margin: 0;
+    width: 10px;
+    height: 10px;
+	
+}
+/** button **/
+.mejs-container .mejs-controls div.mejs-playpause-button
+{
+	width:30px;
+	height:30px;
+	margin-top:0;
+}
+.mejs-container.yn-small-audio-skin .mejs-controls div.mejs-playpause-button{
+	width:21px;
+}
+.mejs-container .mejs-controls div.mejs-playpause-button button
+{
+	background:url(audio.png) no-repeat;
+	width:30px;
+	height:30px;
+	margin-top:0;
+	margin-left:0;
+}
+.mejs-container.yn-small-audio-skin .mejs-controls div.mejs-playpause-button button{
+	background:url(small-icon.png) no-repeat;
+	width:21px;
+}
+.mejs-container .mejs-controls div.mejs-play button
+{
+	background-position: 0 -118px;
+}
+.mejs-container.yn-small-audio-skin .mejs-controls div.mejs-play button{
+	background-position: 0 3px;
+}
+.mejs-container .mejs-controls div.mejs-pause button
+{
+	background-position: -35px -118px;
+}
+.mejs-container.yn-small-audio-skin .mejs-controls div.mejs-pause button{	
+	background-position: 0 -22px;
+}
+/** Prev- Next button **/
+.mejs-controls .mejs-button button 
+{
+	background:url(audio.png) no-repeat;
+	width: 21px;
+    height: 26px;
+    margin-top: 3px;
+	margin-right:2px;
+} 
+.yn-small-audio-skin .mejs-controls .mejs-button button{
+	background:url(small-icon.png) no-repeat;
+	width:20px;
+	height:20px;
+}
+.mejs-controls .mejs-prev-button button
+{
+	background-position: 0 -89px;
+}
+.yn-small-audio-skin .mejs-controls .mejs-prev-button button{
+	background-position: 0 -48px;
+}
+.mejs-controls .mejs-prev-button button
+.yn-small-audio-skin .mejs-controls .mejs-prev-button button{
+	background-position: 0 -47px;
+}
+.mejs-container .mejs-controls div.mejs-next-button
+{
+	width:20px;
+	margin-right:5px;
+}
+.mejs-container.yn-small-audio-skin .mejs-controls div.mejs-next-button{
+	margin-right:0;
+}
+.mejs-controls .mejs-next-button button
+{
+	background-position: -27px -88px;
+	margin-left:0;
+}
+.yn-small-audio-skin .mejs-controls .mejs-next-button button
+{
+	background-position: 0 -67px;
+}
+.mejs-controls .mejs-mute button
+{
+	background-position: -20px -209px;
+}
+.mejs-controls .mejs-unmute button
+{
+	background-position: 0 -209px;
+}
+.mejs-controls .mejs-loop-off button
+{
+	background-position: 0 -148px;
+	margin: 3px 0 0;
+    width: 20px
+}
+.mejs-controls .mejs-loop-off:hover button,
+.mejs-controls .mejs-loop-on button
+{
+	background-position: -26px -148px;
+	margin: 3px 0 0;
+    width: 20px
+}
+.mejs-controls .mejs-shuffle-off button
+{
+	background-position: 0 -167px;
+	margin: 3px 0 0;
+    width: 20px
+}
+.mejs-controls .mejs-shuffle-off:hover button,
+.mejs-controls .mejs-shuffle-on button
+{
+	background-position: -20px -167px;
+	margin: 3px 0 0;
+    width: 20px
+}
+.mejs-container .mejs-controls div.col-vol
+{
+	 border-left: 1px solid #4C4C4C;
+    border-right: 1px solid #131313;
+    margin-top: -1px;
+    padding-bottom: 6px;
+    width: 0;
+}
+/** Volume **/
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total
+{
+	background:url(volume-off.png) repeat-x left;
+	height:8px;
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	width:48px;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current
+{
+	background:url(volume-current.png) repeat-x left;
+	height:8px;
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+}
+.star
+{
+	float: right;
+    line-height: 40px;
+    margin-right: 16px;
+}
+.younet_html5_player .song-info marquee{
+	float:left;
+}
+.younet_html5_player .change_song_rating{
+	float:right;
+	margin-top: 10px;
+	margin-right: 10px;
+}

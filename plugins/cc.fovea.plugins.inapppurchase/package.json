@@ -1,0 +1,23 @@
+{
+    "version": "3.4.1",
+    "name": "cc.fovea.plugins.inapppurchase",
+    "cordova_name": "InAppPurchase",
+    "description": "In app purchase support for iOS",
+    "license": "MIT",
+    "keywords": [
+        "cordova",
+        "phonegap",
+        "purchase",
+        "storekit",
+        "ios"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=2.4.0"
+        }
+    ]
+}

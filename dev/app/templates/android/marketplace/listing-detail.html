@@ -1,0 +1,81 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady || !item.canView()}" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header" ng-class="{'has-footer': dataReady && item.canComment()}">
+    <div class="list item-listing-detail" ng-if="dataReady && item.canView()">
+      <div class="item item-body text-center energized" ng-if="item.isPending()">{{'Listing is pending approval.' | translate}}</div>
+      <div class="item no-border">
+        <h2 ng-bind-html="item.getTitle()"></h2>
+        <p class="item-stats">
+          <span class="item-author-by">{{'by' | translate}} <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a></span>
+          <span class="icon-separator"></span>
+          <span>{{item.fromNow()}}</span>
+        </p>
+      </div>
+      <div class="item no-border item-image">
+        <span img-cache ng-background="{{item.getImageSrc()}}" ng-class="{'no-image': !item.hasImage()}"></span>
+        <span class="item-featured" ng-if="item.isFeatured()"></span>
+      </div>
+      <div class="item no-border listing-photo" ng-class="{'show-more': isShowMorePhotos}" ng-if="item.hasPhotos()">
+        <span class="item-listing-photo" ng-repeat="photo in item.getPhotos()" img-cache ng-background="{{photo.sImagePath}}" ng-click="viewPhotoDetail($index)">
+          <span class="photo-more-btn" ng-if="photoMoreBtnIndex == $index" ng-click="showMorePhotos()">{{'More' | translate}}</span>
+        </span>
+      </div>
+      <div class="item no-border button-bar padding" ng-if="!item.isOwner()">
+        <div class="button button-small button-positive" ng-click="onContactSeller()">
+          {{'Contact Seller' | translate}}
+        </div>
+        <a class="button button-small button-energized" ng-href="#app/listing/{{item.getId()}}/purchase" ng-if="item.isSell() && !item.isFree() && item.canBuyInApp()">
+          {{'Buy Now' | translate}}
+        </a>
+      </div>
+      <div class="item no-border item-stats">
+        <div>
+          <ul>
+            <li>
+              <span>{{'Price' | translate}}</span>
+              <span class="item-price" ng-if="!item.isFree()" ng-bind-html="item.getCurrencySymbol() + ' ' + item.getPrice()"></span>
+              <span class="item-price" ng-if="item.isFree()">{{'Free' | translate}}</span>
+            </li>
+            <li ng-if="item.getCategory()">
+              <span>{{'Category' | translate}}</span>
+              <span ng-bind-html="item.getCategory()"></span>
+            </li>
+            <li ng-if="item.getCountry()">
+              <span>{{'Location' | translate}}</span>
+              <span ng-bind-html="item.getCountry()"></span>
+            </li>
+            <li ng-if="item.getCity()">
+              <span>{{'City' | translate}}</span>
+              <span ng-bind-html="item.getCity()"></span>
+            </li>
+            <li ng-if="item.getZipCode()">
+              <span>{{'Zip Code' | translate}}</span>
+              <span ng-bind-html="item.getZipCode()"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item no-border text-center" ng-if="item.showBuyInFullSite()">
+        <a href-dir external-url="{{item.getFullSiteUrl()}}">{{'View Full Site' | translate}} <i class="ion-chevron-right"></i></a>
+      </div>
+      <div class="item no-border item-text-wrap" ng-if="item.getTextParsed()">
+        <div shorten-html-compile="item.getTextParsed() | prepareHtml" limit="300" show-more-btn="true" show-less-btn="true"></div>
+      </div>
+      <div class="item-separator"></div>
+      <div class="list" ng-if="dataReady">
+        <div class="item">
+          <core-action-list-dir></core-action-list-dir>
+        </div>
+        <like-stat-dir obj="item"></like-stat-dir>
+        <comment-dir obj="item"></comment-dir>
+      </div>
+    </div>
+    <private-msg-dir ng-if="dataReady && !item.canView()"></private-msg-dir>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+  <comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title" translate>Account</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list">
+      <div class="item item-divider">
+        {{'Invisible Mode' | translate}}
+      </div>
+      <div class="padding">
+        {{'Invisible mode allows you to browse the site without appearing on any "Online" lists.' | translate}}
+      </div>
+      <div class="item item-toggle">
+        {{'Enable Invisible Mode' | translate}}
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="formData.invisible">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

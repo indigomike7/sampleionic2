@@ -1,0 +1,19 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No threads found.</div>
+  <div class="item item-thread item-icon-left" ng-class="{'sticky': item.isSticky()}" ng-repeat="item in items" href-dir url="{{item.getUrl()}}">
+    <i class="icon ion-ios-paper-outline"></i>
+    <h2 ng-bind-html="item.getTitle()"></h2>    
+    <div class="item-stats">
+      <span class="dark">{{'Last post' | translate}}</span>
+      <span>{{'by' | translate}}</span>
+      <a class="dark" ng-href="{{item.getLastPosterUrl()}}" ng-bind-html="item.getLastPosterTitle()"></a>
+    </div>
+    <div class="item-stats">
+      <span>{{item.getTotalPost()}}</span> <i class="ion-ios-chatbubble"></i>
+      <span class="padding-left">{{item.getTotalView()}}</span> <i class="ion-ios-eye"></i>
+      <span class="icon-separator"></span>
+      <span>{{item.fromNow()}}</span>
+    </div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

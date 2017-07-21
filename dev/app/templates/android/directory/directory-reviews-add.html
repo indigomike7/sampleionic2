@@ -1,0 +1,23 @@
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <button class="button button-clear" back-dir translate>Cancel</button>
+    <h1 class="title">{{'Add Review' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="list">
+      <div class="item ynlisting-review-rate-bar">
+        <i class="ion-ios-star" ng-class="{rated: $index < formData.iRateValue}" ng-repeat="star in setMaxRate(5)" ng-click="setRateValue($index + 1)"></i>
+      </div>
+      <label class="item item-input">
+        <input type="text" placeholder="{{'Title here...' | translate}}" ng-model="formData.sTitle">
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="{{'Write your review here...' | translate}}" ng-model="formData.sContent"></textarea>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

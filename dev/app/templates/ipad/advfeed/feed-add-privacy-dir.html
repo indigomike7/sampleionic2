@@ -1,0 +1,10 @@
+<div class="item item-text-wrap" ng-click="onFeedAddPrivacyShow()">
+    <span class="icon ion-locked gray"></span>
+    <span class="gray" ng-if="!privacyList.length" translate>Who can view this feed?</span>
+				<span ng-repeat="item in privacyList | limitTo: 10"><span ng-if="$index > 0">, </span>
+					<span class="positive">{{item.label}}</span></span>
+    <span ng-if="privacyList.length > 6">
+        <span translate>and</span>
+        <span>{{privacyList.length - 6}} {{'more' | translate}}</span>
+    </span>
+</div>

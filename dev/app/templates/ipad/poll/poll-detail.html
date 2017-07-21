@@ -1,0 +1,80 @@
+<ion-content class="content-dark has-header" ng-class="{'has-footer': dataReady && item.bCanView && item.bCanComment}" delegate-handle="poll-detail">
+    <div class="padding" ng-if="dataReady && item.bCanView == false">
+        <p>You don't have permission to view this poll!</p>
+    </div>
+
+    <div class="item-poll-detail" ng-if="dataReady && item.bCanView">
+        <div class="item item-image">
+            <span img-cache ng-background="{{item.sPollImage}}"></span>
+        </div>
+
+        <div class="item item-content">
+            <div class="item-icon-right">
+                <h2 ng-bind-html="item.sQuestion"></h2>
+                <i class="icon ion-ios-arrow-down" ng-click="onItemSetting()"></i>
+            </div>
+            <p>
+                <span class="item-author-by">{{'by' | translate}} <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a></span>
+            </p>
+            <p class="item-stats">
+                <span>{{item.fromNow()}}</span>
+            </p>
+        </div>
+        <div class="item item-text-wrap" ng-if="!item.isApproved()" translate>This poll is being moderated and no votes can be added until it has been approved.</div>
+        <ul class="list list-vote" ng-class="{'processing': isProcessing}">
+            <li class="item item-checkbox item-body" ng-repeat="option in item.getOptions()">
+                <label class="checkbox">
+                    <input ng-disabled="!item.canVote()" type="radio" name="option" ng-checked="option.iAnswerId == item.iAnswerId" ng-click="onCheckOption(option)" />
+                </label>
+                <span ng-bind-html="option.sAnswer"></span>
+            </li>
+        </ul>
+        <div ng-if="item.canViewResults()">
+            <div class="item item-divider" ng-click="bShowResult = !bShowResult">
+                <span>{{'Show Result' | translate}}</span>
+                <i class="icon padding-left ion-ios-arrow-down" ng-hide="bShowResult"></i>
+                <i class="icon padding-left ion-ios-arrow-up" ng-show="bShowResult"></i>
+            </div>
+            <div class="list" ng-show="bShowResult">
+                <div class="item item-text-wrap" ng-repeat="option in item.getOptions()">
+                    <span class="item-note">{{option.sTotalVote}} ({{option.iVotePercentage}}%)</span>
+                    <span class="poll-question" ng-bind-html="option.sAnswer"></span>
+                    <div class="poll-result-bar">
+                        <span class="color-bar color-bar-{{$index}}" style="width: {{option.iVotePercentage}}%;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="item-detail-users" ng-show="item.canViewResults() && item.iTotalVotes">
+            <div class="item-separator"></div>
+                <div class="item item-stable item-icon-left" ng-class="{'item-icon-right' : item.canViewUsersResults()}" ng-click="showResults()" >
+                <i class="icon ion-person-stalker"></i>
+                <h2 class="item-note">{{item.getVoteCount()}}</h2>
+                <h2>{{'Members votes' | translate}}</h2>
+                    <i class="icon ion-ios-arrow-right" ng-show="item.canViewUsersResults()"></i>
+            </div>
+                <div class="item list-member" ng-show="item.canViewUsersResults()">
+                <a ng-repeat="obj in item.aVoters" href="#/app/user/{{obj.iUserId}}">
+                    <img img-cache ng-src="{{obj.sUserImage}}" />
+                </a>
+            </div>
+                <div class="item list-member" ng-hide="item.canViewUsersResults()">
+                <div class="energized">{{'Votes are hidden for this poll.' | translate}}</div>
+            </div>
+        </div>
+
+        <div class="item-separator"></div>
+        <div class="list" ng-if="dataReady">
+            <div class="item">
+                <core-action-list-dir></core-action-list-dir>
+            </div>
+            <like-stat-dir obj="item"></like-stat-dir>
+            <comment-dir obj="item"></comment-dir>
+        </div>
+    </div>
+    <div class="padding text-center">
+        <ion-spinner ng-show="isLoading"></ion-spinner>
+    </div>
+</ion-content>
+<comment-form-footer-dir obj="item" ng-if="dataReady&& item.bCanView && item.bCanComment"></comment-form-footer-dir>

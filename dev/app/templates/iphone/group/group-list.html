@@ -1,0 +1,20 @@
+<div class="list">
+	<div class="padding text-center" ng-if="noItems" translate>
+		No groups found.
+	</div>
+	<div class="item item-group" ng-repeat="item in items" ng-controller="GroupItemCtrl" href-dir url="{{item.getUrl()}}">
+		<div class="item-thumbnail-left">
+			<div class="item-thumbnail" ng-background="{{item.sAvatarImage}}"></div>
+			<h2 class="item-title" ng-bind-html="item.sTitle"></h2>
+			<p>
+			<div class="item-stats">
+				<span ng-if="item.sCategoryName" ng-bind-html="item.sCategoryName"></span>
+				<span ng-if="item.sCategoryName" class="icon-separator"></span>
+				{{item.getTotalMembers()}} <i class="ion-ios-people"></i>
+			</div>
+			</p>
+			<p class="item-description" ng-bind-html="item.getCleanDescription()"></p>
+		</div>
+	</div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

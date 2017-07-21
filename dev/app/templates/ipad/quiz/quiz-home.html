@@ -1,0 +1,34 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Quizzes' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/quizzes/add"></a>
+  </ion-header-bar>
+  <quiz-search-dir></quiz-search-dir>
+  <div class="content-column row">
+    <div class="col has-footer">
+      <ion-tabs>
+        <ion-tab title="{{'All Quizzes' | translate}}" ng-click="onClickTab(0)">
+          <ion-view>
+            <ion-content class="has-header">
+              <quiz-list-dir></quiz-list-dir>
+            </ion-content>
+          </ion-view>
+        </ion-tab>
+        <ion-tab title="{{'My Quizzes' | translate}}" ng-click="onClickTab(1)">
+          <ion-view>
+            <ion-content class="has-header">
+              <quiz-list-dir></quiz-list-dir>
+            </ion-content>
+          </ion-view>
+        </ion-tab>
+      </ion-tabs>
+    </div>
+    <div class="col has-footer">
+      <quiz-detail-dir></quiz-detail-dir>
+    </div>
+  </div>
+</ion-view>

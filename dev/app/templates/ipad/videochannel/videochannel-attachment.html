@@ -1,0 +1,19 @@
+<div ng-if="obj.getCount() == 1" class="item-video-attachment" href-dir url="#/app/videochannel/{{obj.aAttachments[0].iId}}">
+	<div class="item item-image">
+		<span img-cache ng-background="{{obj.aAttachments[0].sPhoto_Url}}">
+			<span class="item-video-play ion-ios-play"></span>
+		</span>
+	</div>
+	<div class="item">
+		<h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+		<div><a class="subdued">{{obj.aAttachments[0].sOriginalHostName}}</a></div>
+		<!--<p ng-html-compile="Helper.prepareHTMLText(obj.aAttachments[0].sDescription)"></p>-->
+	</div>
+</div>
+<div ng-if="obj.getCount() > 1" class="clearfix videos-attachment in{{obj.showMaxPhoto()}}">
+	<div class="video-in video{{$index}}" ng-repeat="item in obj.aAttachments" href-dir url="#/app/videochannel/{{item.iId}}">
+		<span img-cache ng-background="{{item.sPhoto_Url}}">
+			<span class="item-video-play ion-ios-play" ng-class="{disabled: $index >= obj.showMaxPhoto() }"></span>
+		</span>
+	</div>
+</div>

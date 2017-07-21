@@ -1,0 +1,24 @@
+<div class="list padding">
+	<div class="padding text-center" ng-if="noItems" translate>
+		No pages found.
+	</div>
+	<div class="card page-item" ng-repeat="item in items" ng-controller="PageItemCtrl" href-dir url="{{item.getUrl()}}">
+		<!--<i ng-if="searchPages.sView == 'my'" class="icon ion-ios-arrow-down" ng-click="onItemSetting()"></i>-->
+		<div class="item item-page-detail">
+			<div class="page-info-cover" img-cache ng-background="{{item.sCoverImage}}" ng-class="{'no-cover': !item.bHasCover}"></div>
+			<div class="page-info-avatar">
+				<span class="page-info-avatar-image" ng-background="{{item.sAvatarImage}}"></span>
+			</div>
+
+			<div class="page-info-detail">
+				<h2 ng-bind-html="item.getTitle()"></h2>
+				<p class="item-stats">
+					<span ng-bind-html="item.sCategoryName"></span>
+					<span ng-if="item.sCategoryName" class="icon-separator"></span>
+				    {{item.getTotalLike()}} <i ng-class="{'ion-thumbsup': item.iPageType == '0', 'ion-ios-people': item.iPageType == '1'}"></i>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

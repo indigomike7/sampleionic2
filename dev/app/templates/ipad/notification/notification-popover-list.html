@@ -1,0 +1,19 @@
+<ion-popover-view>
+	<ion-content class="has-footer">
+		<div class="list" ng-controller="NotificationListCtrl">
+	    	<div class="padding text-center" ng-if="noItems" translate>No new notifications.</div>
+			<div class="item item-avatar" ng-repeat="item in items" ng-controller="NotificationItemCtrl" ng-click="makeRead()" href-dir url="{{item.getUrl()}}">
+				<img ng-src="{{item.getPosterImageSrc()}}" />
+				<p class="item-message" ng-bind-html="item.getMessageParsed()"></p>
+				<span><i class="icon {{item.getNotificationType()}}"></i> {{item.fromNow()}}</span>
+			</div>
+			<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+	<div class="bar bar-footer">
+		<div class="title" ng-click="markReadAllNotification()">
+			<span ng-show="isProcessingMarkRead">{{'Marking All Read...' | translate}}</span>
+            <span ng-hide="isProcessingMarkRead">{{'Mark All Read' | translate}}</span>
+        </div>        
+    </div>
+</ion-popover-view>

@@ -1,0 +1,25 @@
+<div class="list" ng-if="item.hasPoll()">
+  <div class="item item-stable item-text-wrap thread-poll-header">
+    <i class="ion-stats-bars"></i>
+    <span>{{'Poll'|translate}}:</span>
+    <h2 ng-bind-html="poll.getTitle()"></h2>
+    <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onPollSettings()"></i>
+  </div>
+  <ul ng-show="pollView == 'questions'">
+    <li class="item item-checkbox item-body" ng-repeat="option in poll.getOptions()">
+      <label class="checkbox">
+        <input type="radio" name="option" ng-disabled="poll.isVoted() || isProcessingPollVote" ng-checked="option.iAnswerId == poll.iAnswerId" ng-click="onPollVote(option)" />
+      </label>
+      <span ng-bind-html="option.sAnswer"></span>
+    </li>
+  </ul>
+  <div ng-show="pollView == 'results'">
+    <div class="item item-text-wrap" ng-repeat="option in poll.getOptions()">
+      <span class="item-note">{{option.sTotalVote}} ({{option.iVotePercentage}}%)</span>
+      <span class="poll-question" ng-bind-html="option.sAnswer"></span>
+      <div class="poll-result-bar">
+        <span class="color-bar color-bar-{{$index}}" style="width: {{option.iVotePercentage}}%;"></span>
+      </div>
+    </div>
+  </div>
+</div>

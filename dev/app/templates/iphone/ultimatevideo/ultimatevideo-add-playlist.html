@@ -1,0 +1,48 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left button-clear" back-dir translate>Cancel</button>
+        <h1 class="title" translate>Add Playlist</h1>
+        <button class="button button-clear" ng-click="onSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </div>
+    <ion-content class="has-header">
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+        <div class="list" ng-if="dataReady">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Playlist Name' | translate}}</span>
+                <input type="text" placeholder="{{'Playlist Name' | translate}}" ng-model="formData.sTitle" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" translate>Description</span>
+                <textarea type="text" placeholder="{{'Description' | translate}}" ng-model="formData.sDescription"></textarea>
+            </label>
+            <label class="item item-input item-select" ng-if="form.aCategoryOptions.length >0">
+                <span class="input-label">*{{'Category'  | translate}}</span>
+                <select ng-model="formData.iCategoryId" ng-options="opt.iCategoryId as opt.sName|translate for opt in form.aCategoryOptions" required>
+                    <option value="">{{'All Categories' | translate}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select" ng-if="form.aViewOptions.length >0">
+                <span class="input-label">{{'Privacy' | translate}}</span>
+                <select ng-model="formData.iPrivacy" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.aViewOptions" required>
+                    <!-- empty -->
+                </select>
+            </label>
+            <div class="item item-input item-stacked-label noborder-bottom">
+                <span class="input-label" translate>Playlist Image</span>
+                <div>
+                    <div class="grid-photo-edit" ng-if="formData.photoPath">
+                        <img ng-src="{{formData.photoPath}}" />
+                        <a class="icon ion-close" ng-click="onRemovePhoto()"></a>
+                    </div>
+                    <div class="grid-photo-edit" ng-if="!formData.photoPath">
+                        <div ng-click="onAddPhoto()" class="grid-photo-add"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

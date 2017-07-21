@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title has-notification">
+      <span class="title-text" ng-bind-html="item.getTitle()"></span>
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a ng-if="dataReady && item.canAddThread()" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/forum/{{item.getId()}}/thread_add"></a>
+  </ion-header-bar>
+  <forum-search-dir></forum-search-dir>
+  <ion-content class="has-header has-footer" delegate-handle="forum-detail">
+    <forum-detail-subforum-list-dir></forum-detail-subforum-list-dir>
+    <forum-detail-announcement-list-dir></forum-detail-announcement-list-dir>
+    <forum-detail-thread-list-dir></forum-detail-thread-list-dir>
+    <ion-infinite-scroll ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+  <div class="tabs tabs-footer">
+    <div class="tab-item col-33 forum-btn-jump">
+      <span>{{'Jump' | translate}}</span>
+      <select ng-options="opt.iForumId as opt.sName|translate for opt in searchForm.forumOptions" 
+      ng-model="jumpId" ng-change="onJump()"></select>
+    </div>
+    <div class="tab-item">
+      <core-pagination current-page="sendData.iPage" total-page="totalPage"></core-pagination>
+    </div>
+  </div>
+</ion-view>

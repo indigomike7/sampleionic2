@@ -1,0 +1,11 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title">{{'Chat' | translate}}</h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onChatSetting()"></button>
+  </ion-header-bar>
+  <chat-search-dir></chat-search-dir>
+  <ion-content class="has-header">
+    <chat-list-dir></chat-list-dir>
+  </ion-content>
+</ion-view>

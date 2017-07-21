@@ -1,0 +1,15 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title">
+      {{'Memberships' | translate}}
+    </h1>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="item item-text-wrap">
+      <span translate>Your membership status</span>:
+      <b ng-bind-html="currentPackage.getTitle()"></b>
+    </div>
+    <subscription-list-dir></subscription-list-dir>
+  </ion-content>
+</ion-view>

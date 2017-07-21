@@ -1,0 +1,49 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !showSettings}" ng-if="item.canView()" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <ion-content class="has-header" ng-class="{'has-footer': item.canComment()}">
+    <div class="list" ng-if="dataReady && item.canView()">
+      <div class="item no-border-bottom no-padding-bottom">
+        <h2 ng-bind-html="item.getTitle()"></h2>
+      </div>
+      <div class="item item-avatar item-blog-detail item-text-wrap no-border-top">
+        <img ng-src="{{item.getPosterImageSrc()}}" />
+        <p>
+          <span class="item-author-by">{{'by' | translate}} <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a></span>
+        </p>
+        <p class="item-stats">
+          <span>{{item.fromNow()}}</span>
+        </p>
+      </div>
+      <div class="item item-body no-border-bottom no-padding-bottom">
+        <div class="padding-bottom" ng-html-compile="item.getTextParsed()"></div>
+      </div>
+      <div ng-if="item.hasAttachments()">
+        <div class="padding no-padding-bottom gray">{{'Attachments' | translate}}</div>
+        <div class="item-photos padding">
+          <div class="item-photo-thumb" ng-repeat="att in item.getAttachmentPhotos()" img-cache ng-background="{{att.data.photo_url}}" photo-thumb-dir img-src="{{att.data.photo_url}}"></div>
+        </div>
+        <div class="item-links">
+          <div class="item-link item" ng-class="{'item-thumbnail-left': att.data.image}" ng-repeat="att in item.getAttachmentLinks()" href-dir external-url="{{att.data.link}}">
+            <img ng-src="{{att.data.image}}" ng-if="att.data.image" />
+            <h2 ng-bind-html="att.data.title || att.data.link"></h2>
+            <p ng-bind-html="att.data.link"></p>
+            <p ng-bind-html="att.data.description"></p>
+          </div>
+        </div>
+      </div>
+      <div class="item no-border-top" ng-if="item.isApproved()">
+        <core-action-list-dir></core-action-list-dir>
+      </div>
+      <like-stat-dir obj="item" ng-if="item.isApproved()"></like-stat-dir>
+      <comment-dir obj="item" ng-if="item.isApproved()"></comment-dir>
+      <div class="item item-body text-center energized" ng-if="!item.isApproved()">{{'This blog is pending an Admins approval.' | translate}}</div>
+    </div>
+    <private-msg-dir ng-if="dataReady && !item.canView()"></private-msg-dir>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+  <comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>
+</ion-view>

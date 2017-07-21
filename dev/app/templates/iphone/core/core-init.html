@@ -1,0 +1,15 @@
+<ion-view class="user-login-page">
+    <ion-content>
+        <div class="login-logo"></div>
+        <div class="padding text-center">
+            <ion-spinner ng-show="bIsLoadingCss"></ion-spinner>
+            <div ng-show="!bIsLoadingCss && cssError">
+                <p ng-if="cssError == 'no_connection'">{{'Please check your internet connection and try again' | translate}}</p>
+                <p ng-if="cssError == 'data_error'">{{'Can not load data from server' | translate}}</p>
+                <p ng-click="loadCss()" class="button button-icon">
+                    <i class="icon ion-refresh"></i>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

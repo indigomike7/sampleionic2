@@ -1,0 +1,18 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-clear" back-dir translate>Cancel</button>
+        <h1 class="title">{{'Edit Page Photo' | translate}}</h1>
+        <button class="button button-clear" ng-click="save()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header padding">
+        <div id="user_photo_holder">
+            <img ng-src="{{imgSrc}}" class="photo-cropping" />
+        </div>
+    </ion-content>
+    <div class="tabs">
+        <a class="tab-item" ng-click="getPicture()" translate>Reselect</a>
+    </div>
+</ion-view>

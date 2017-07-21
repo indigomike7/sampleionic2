@@ -1,0 +1,41 @@
+<div class="list bar-subheader bar-header-search has-other-button">
+  <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+  <form ng-show="showAdvSearch" class="item-input-search" ng-submit="onSearch()">
+    <div class="bar item-input-inset">
+      <input type="search" class="item-input-search-box" ng-model="listData.sSearch" placeholder="{{'Search businesses'|translate}}">
+    </div>
+  </form>
+  <div ng-show="showAdvSearch" class="advanced-search">
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Category'|translate}}
+      </div>
+      <select ng-model="listData.iCategoryId" ng-options="opt.id as opt.title for opt in searchForm.categoryOptions">
+        <option value="">{{'All Categories'|translate}}</option>
+      </select>
+    </div>
+    <div class="item item-input">
+      <div class="col col-50 no-padding col-location">
+        <div><ion-google-place placeholder="{{'Location'|translate}}" ng-model="listData.aLocation" /></div>
+        <i class="icon-minus ion-ios-minus-outline" ng-show="listData.aLocation" ng-click="removeLocation()"></i>
+      </div>
+      <div class="col col-50 no-padding">
+        <input type="text" placeholder="{{'Radius (mile)'|translate}}" ng-model="listData.sWithin">
+      </div>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Sort by'|translate}}
+      </div>
+      <select ng-model="listData.sOrder">
+        <option value="newest">{{'Newest'|translate}}</option>
+        <option value="oldest">{{'Oldest'|translate}}</option>
+        <option value="a-z">{{'A-Z'|translate}}</option>
+        <option value="z-a">{{'Z-A'|translate}}</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" ng-click="onSearch()">{{'Search' | translate}}</button>
+    </div>
+  </div>
+</div>

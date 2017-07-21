@@ -1,0 +1,14 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Blogs' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/blogs/add" ng-if="canAddBlog"></a>
+  </ion-header-bar>
+  <blog-search-dir></blog-search-dir>
+  <ion-content class="has-header has-footer">
+    <blog-my-list-dir></blog-my-list-dir>
+  </ion-content>
+</ion-view>

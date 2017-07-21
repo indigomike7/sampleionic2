@@ -1,0 +1,8 @@
+<span ng-show="!bShowMore">
+  <span ng-html-compile="shortHtml"></span>
+  <span class="positive" ng-show="showMoreBtn && isOverLimit" ng-click="finalMoreBtnFn()">{{finalMoreBtnText}}</span>
+</span>
+<span ng-show="bShowMore">
+  <span ng-html-compile="longHtml"></span>
+  <span class="positive" ng-show="showLessBtn" ng-click="finalLessBtnFn()">{{finalLessBtnText}}</span>
+</span>

@@ -1,0 +1,22 @@
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title" translate>Activity</h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <div class="bar bar-subheader bar-composer-top overflow-hidden">
+    <div class="tabs tabs-light tabs-icon-left">
+      <a class="tab-item" href="#/app/feed/add/default/{{item.getType()}}/{{item.getId()}}">
+        <i class="icon ion-compose"></i>
+      </a>
+      <a class="tab-item" href="#/app/feed/add/camera/{{item.getType()}}/{{item.getId()}}">
+        <i class="icon ion-camera"></i>
+      </a>
+    </div>
+  </div>
+  <ion-content class="has-header has-subheader has-footer content-dark">
+    <div class="list">
+      <activity-list-dir></activity-list-dir>
+    </div>
+  </ion-content>
+</ion-view>

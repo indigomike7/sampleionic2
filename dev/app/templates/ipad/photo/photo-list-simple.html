@@ -1,0 +1,6 @@
+<div class="list clearfix page-photo-list padding">
+  <div class="padding text-center" ng-if="noItems" translate>No photos found.</div>
+  <div class="photo-item" ng-repeat="item in items" ng-controller="PhotoItemCtrl">
+    <div class="grid-photo-item" style="background-image: url({{item.sPhotoUrl}})" href-dir url="{{item.getUrl()}}"></div>
+  </div>
+</div>

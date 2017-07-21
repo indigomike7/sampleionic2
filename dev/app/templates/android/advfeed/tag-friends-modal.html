@@ -1,0 +1,31 @@
+<ion-modal-view ng-controller="TagFriendsController">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear" ng-click="hideTagFriendsModal()" translate>Cancel</button>
+		<div class="h1 title" translate>Tag Friends</div>
+		<button class="button button-clear" ng-click="onTagFriendsDone()">
+	    	<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+	    	<span ng-hide="isProcessing" translate>Done</span>
+	    </button>
+	</ion-header-bar>
+	<form class="list bar-subheader">
+		<div class="bar item-input-inset">
+			<label class="item-input-wrapper">
+				<i class="icon ion-ios-search placeholder-icon"></i>
+				<input type="search" ng-model="quickSearch" placeholder="{{'Search friends' | translate}}">
+			</label>
+		</div>
+	</form>
+	<ion-content class="has-header has-subheader">
+		<div class="list">
+			<div class="padding text-center" ng-if="noItems" translate>You have no friends to tag.</div>
+			<label class="item item-avatar item-icon-right" ng-href="{{item.getUrl()}}" ng-repeat="item in items | filter:quickSearch">
+				<img ng-src="{{item.getImageSrc()}}" />
+				<h2 class="privacy-label" ng-bind-html="item.getTitle()"></h2>
+				<div class="icon checkbox">
+					<input type="checkbox" ng-model="item.selected" />
+				</div>
+			</label>
+			<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+</ion-modal-view>

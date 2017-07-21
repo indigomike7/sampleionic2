@@ -1,0 +1,30 @@
+<div class="list">
+    <div class="padding text-center" ng-if="noItems" translate>
+        No polls found.
+    </div>
+    <div class="item item-poll" ng-class="{'active': item.getId() == activeObj.getId()}" ng-repeat="item in items" ng-controller="PollItemCtrl" ng-click="onItemClick(item)">
+        <div class="item-thumbnail-left">
+            <div class="item-thumbnail" img-cache ng-background="{{item.sPollImage}}"></div>
+            <h2 class="item-title" ng-bind-html="item.sQuestion"></h2>
+            <p>
+            <span class="item-author-by">
+                <span translate>by</span>
+                <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+            </span>
+            </p>
+            <p>
+            <span class="item-stats">
+                <span>{{item.getVoteCount()}}</span>
+                <i class="ion-person-stalker padding-right"></i>
+                <span>{{item.getTotalLike()}}</span>
+                <i class="ion-thumbsup"></i>
+                <span class="icon-separator"></span>
+                <span class="item-stats livetime" data-livetime="">{{item.fromNow()}}</span>
+            </span>
+                <span class="icon-separator" ng-if="item.bIsClosed"></span>
+                <span ng-if="item.bIsClosed" class="ion-ios-locked"></span>
+            </p>
+        </div>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

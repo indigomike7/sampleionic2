@@ -1,0 +1,15 @@
+<span ng-class="{'active': requestPopover.isShown(), 'ui-active': stat.totalRequest > 0}">
+  <i class="icon ion-person-stalker"></i>
+  <sup ng-if="stat.totalRequest > 0">{{stat.totalRequest}}</sup>
+  <span class="" ng-click="showRequest($event)"></span>
+</span>
+<span ng-class="{'active': messagePopover.isShown(), 'ui-active': stat.totalMessage > 0}">
+  <i class="icon ion-chatboxes"></i>
+  <sup ng-if="stat.totalMessage > 0">{{stat.totalMessage}}</sup>
+  <span class="" ng-click="showMessage($event)"></span>
+</span>
+<span ng-class="{'active': notificationPopover.isShown(), 'ui-active': stat.totalNotification > 0}">
+  <i class="icon ion-android-globe"></i>
+  <sup ng-if="stat.totalNotification > 0">{{stat.totalNotification}}</sup>
+  <span class="" ng-click="showNotification($event)"></span>
+</span>

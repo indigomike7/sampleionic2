@@ -1,0 +1,11 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <ion-content class="has-header content-dark">
+    <conversation-recipients-dir ng-if="dataReady && item.getTotalRecipients() > 0"></conversation-recipients-dir>
+    <message-list-dir></message-list-dir>
+  </ion-content>
+</ion-view>

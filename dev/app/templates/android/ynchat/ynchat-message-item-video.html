@@ -1,0 +1,15 @@
+<img ng-src="{{item.getSenderImageSrc()}}" height="50" ng-if="!item.isViewer()" href-dir url="{{item.getSenderUrl()}}" />
+<div class="item-chat">
+  <div class="item-chat-group">
+    <div class="" ng-class="{'item-stable': !item.isViewer()}">
+      <p ng-html-compile="item.getMessage()"></p>
+      <div class="dotted-top"></div>
+      <div class="item-attachment-large" href-dir external-url="{{item.getAttachment().url}}">
+        <img class="attachment-image" ng-src="{{item.getAttachment().imageUrl}}">
+        <a class="attachment-title" ng-bind-html="item.getAttachment().title"></a>
+        <p class="item-span">{{item.getAttachment().url}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="item-span" ng-if="action == 'getOldConversation'">{{item.getTime()}}</p>

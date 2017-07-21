@@ -1,0 +1,5 @@
+<div class="item item-thumbnail-left" href-dir url="#/app/{{obj.aAttachments[0].sType}}/{{obj.aAttachments[0].iId}}">
+    <div class="item-thumbnail" img-cache ng-background="{{obj.aAttachments[0].sPhoto_Url}}"></div>
+    <h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+    <p ng-html-compile="Helper.prepareHTMLText(obj.aAttachments[0].sDescription)"></p>
+</div>

@@ -1,0 +1,267 @@
+.directory-add-step1 {
+
+  .directory-add-purpose {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .item-checkbox {
+    padding-left: 44px;
+  }
+
+  .checkbox input {
+    width: 22px;
+    height: 22px;
+    margin-top: 3px;
+    &:after {
+      width: 12px;
+    }
+  }
+
+  .directory-package {
+
+    &.selected {
+
+      border: 1px solid $positive;
+
+      .directory-package-header {
+
+        color: white;
+        background-color: $positive;
+
+        .checkbox input {
+          &:before {
+            background-color: white;
+            border: $positive;
+          }
+          &:after {
+            border-color: $positive;
+          }
+        }
+      }
+
+      .item-text-wrap {
+        background-color: lighten($positive, 53%);
+      }
+    }
+  }
+
+  .directory-package {
+
+    .directory-package-price {
+
+      padding-bottom: $content-padding;
+      border-bottom: 1px solid $border-color;
+
+      b {
+        color: #ff9600;
+      }
+    }
+  }
+}
+
+.item-business {
+  &.item-thumbnail-left {
+    min-height: 96px;
+    padding-left: 94px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+
+    .item-thumbnail {
+      @include border-radius(4px);
+
+      background-position: center;
+      top: 12px;
+      left: 12px;
+      width: 72px;
+      height: 72px;
+      overflow: hidden;
+
+      .status-mark {
+        @include rotate(45deg);
+
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        right: -23px;
+        bottom: -23px;
+
+        .status-icon {
+          @include rotate(-45deg);
+
+          display: block;
+          width: 23px;
+          height: 23px;
+          margin-top: 11px;
+          color: #fff;
+        }
+
+        &.checkmark {
+          background-color: #72ca23;
+
+          .ion-checkmark {
+            font-size: 14px;
+            padding-left: 4px;
+          }
+        }
+
+        &.locked {
+          background-color: #999999;
+
+          .ion-locked {
+            font-size: 12px;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .item-title {
+      line-height: 1.4;
+    }
+
+    .item-info {
+      * {
+        font-size: $font-sub-size;
+        line-height: 1.4;
+
+        .ion-ios-star {
+          font-size: $font-default-size;
+          line-height: 1.2;
+
+          &.active {
+            color: $energized;
+          }
+        }
+      }
+    }
+
+    .item-content-bottom {
+      margin-top: 4px;
+      margin-left: -82px;
+
+      * {
+        font-size: $font-sub-size;
+      }
+    }
+
+    &.item-my,
+    &.item-claim {
+      min-height: 84px;
+      padding-left: 82px;
+
+      .item-thumbnail {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &.item-my {
+      .item-title {
+        line-height: 1.6;
+      }
+
+      .item-info {
+        p {
+          line-height: 1.6;
+        }
+      }
+
+      .item-content-bottom {
+        margin-left: -70px;
+      }
+    }
+
+    &.item-claim {
+      .item-title {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &.item-icon-right {
+    .ion-ios-arrow-down {
+      right: 0;
+      max-height: ceil( ($item-padding * 3) + ($item-padding / 3) );
+      width: ceil( ($item-padding * 3) + ($item-padding / 3) );
+
+      &:before {
+        width: ceil( ($item-padding * 3) + ($item-padding / 3) );
+      }
+    }
+
+    .item-content-bottom {
+      margin-right: - ceil( ($item-padding * 3) + ($item-padding / 3) - $item-padding );
+    }
+  }
+}
+
+.business-overview-content {
+  &.content-info {
+    .item-info {
+      .item-info-avatar {
+        @include box-shadow(none);
+      }
+
+      .item-info-detail {
+        .ion-ios-star {
+          font-size: $font-default-size;
+          line-height: 1.2;
+
+          &.active {
+            color: $energized;
+          }
+        }
+
+        h2 {
+          -webkit-line-clamp: 1;
+        }
+      }
+    }
+  }
+}
+
+.business-page-content {
+  .item-divider {
+    font-size: $font-size-divider;
+    color: $color-divider;
+
+    .icon {
+      font-size: $font-size-base;
+      color: $gray;
+    }
+
+    .count {
+      font-size: $font-size-base;
+      color: $base-color;
+    }
+  }
+
+  h2 {
+    margin-bottom: 4px;
+  }
+
+  .ion-ios-star {
+    &.active {
+      color: $energized;
+    }
+  }
+
+  .item-description-wrap {
+    @extend .item-text-wrap;
+    margin-bottom: 6px;
+  }
+
+  .item-info-bottom {
+    font-size: $font-sub-size;
+
+    .user-img {
+      @include border-radius(4px);
+
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-right: 2px;
+    }
+  }
+}

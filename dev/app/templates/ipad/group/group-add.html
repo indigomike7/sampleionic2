@@ -1,0 +1,41 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir>
+        </button>
+        <div class="h1 title" translate>
+            Add Group
+        </div>
+        <button class="button button-clear" ng-click="onSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Save</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" translate>
+                    Group Name</span>
+                <input type="text" placeholder="{{'Group Name' | translate}}" ng-model="formData.sTitle" />
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" translate>
+                    Information</span>
+                <textarea class="textarea-large" placeholder="{{'Information' | translate}}" ng-model="formData.sInfo"></textarea>
+            </label>
+
+            <label class="item item-input item-select" ng-class="{'noborder-bottom': form.categoryOptions.length > 0}" ng-if="form.typeOptions.length > 0">
+                <span class="input-label">
+                    {{'Category'  | translate}}</span>
+                <select ng-model="formData.iTypeId" ng-options="opt.type_id as opt.name|translate for opt in form.typeOptions" ng-change="onTypeChanged()">
+                </select>
+            </label>
+
+            <label class="item item-input item-select noborder-top" ng-if="form.categoryOptions.length > 0">
+                <span class="input-label">&nbsp;</span>
+                <select ng-model="formData.iCategoryId" ng-options="opt.category_id as opt.name|translate for opt in form.categoryOptions" ng-change="onParentCategoryChange($index)">
+                    <option value="">{{'Choose a category' | translate}}</option>
+                </select>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

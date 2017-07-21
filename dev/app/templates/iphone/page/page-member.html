@@ -1,0 +1,12 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+</ion-header-bar>
+<div class="bar bar-stable bar-icon-left subheader-title bar-subheader">
+    <i class="icon icon ion-person-stalker"></i>
+    <span class="bar-title">{{sView == 'guest' ? 'Invite/Waiting Members' : 'Members' | translate}}</span>
+    <span class="item-note">{{sView == 'guest' ? item.iTotalGuest : item.iTotalMember}}</span>
+</div>
+<ion-content class="has-header has-subheader">
+    <page-member-list-dir></page-member-list-dir>
+</ion-content>

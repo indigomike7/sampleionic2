@@ -1,0 +1,46 @@
+<ion-side-menus enable-menu-with-back-views="true" delegate-handle="side-menus-left">
+    <ion-pane ion-side-menu-content>
+        <!-- No animation for two columns views -->
+        <ion-nav-view name="menuContent" animation="no-animation">
+        </ion-nav-view>
+    </ion-pane>
+    <ion-side-menu side="left">
+        <ion-content class="slide-menu">
+            <div class="list">
+                <a ng-if="viewer.iUserId" class="item item-menu-profile item-thumbnail-left bg-gain" menu-close ng-click="goToPage('app/user-from-nav/' + viewer.iUserId)">
+                    <span class="profile-img user-profile-info-avatar" ng-background="{{viewer.BigUserProfileImg_Url}}"></span>
+                    <h2 class="slide-menu-username" ng-bind-html="viewer.sFullName"></h2>
+                </a>
+                <div ng-repeat="menu in menus" >
+                <p class="item item-group-name" ng-if="menu.type == 'menu_group' && menu.children.length">{{menu.label | translate}}</p>
+                <div ng-if="menu.type == 'menu_group'" ng-repeat="child in menu.children">
+                    <a class="item item-icon-left item-children" ng-if="child.type == 'menu_item'" ng-class="{'active': state.current.module == child.name}" menu-close ng-click="goToPage(child.href)">
+                        <i class="icon {{child.icon}}"></i>
+                        {{child.label | translate}}
+                    </a>
+                </div>
+                <a class="item item-icon-left" ng-if="menu.type == 'menu_item'" ng-class="{'active': state.current.module == menu.name}" menu-close ng-click="goToPage(menu.href)">
+                    <i class="icon {{menu.icon}}"></i>
+                    {{menu.label | translate}}
+                </a>
+                </div>
+                <a class="item item-icon-left" ng-click="doLanguageSetting()" ng-show="isShowLanguageMenu">
+                    <i class="icon ion-earth"></i>
+                    {{ 'Language' | translate }}
+                </a>
+                <a class="item item-icon-left" menu-close ng-click="doConfirmLogout()">
+                    <i class="icon ion-power"></i>
+                    {{ 'Logout' | translate}}
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+    <ion-side-menu side="right" is-enabled="viewer.iUserId && chatModule">
+        <chat-side-menu ng-if="viewer.iUserId && chatModule == 'chat'"></chat-side-menu>
+        <cometchat-side-menu ng-if="viewer.iUserId && chatModule == 'cometchat'"></cometchat-side-menu>
+        <ynchat-side-menu ng-if="viewer.iUserId && chatModule == 'ynchat'"></ynchat-side-menu>
+    </ion-side-menu>
+</ion-side-menus>
+<chat-ocn-dir ng-if="viewer.iUserId && chatModule == 'chat'"></chat-ocn-dir>
+<cometchat-ocn-dir ng-if="viewer.iUserId && chatModule == 'cometchat'"></cometchat-ocn-dir>
+<ynchat-ocn-dir ng-if="viewer.iUserId && chatModule == 'ynchat'"></ynchat-ocn-dir>

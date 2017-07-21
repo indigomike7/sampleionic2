@@ -1,0 +1,22 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No packages found.</div>
+  <div class="item item-member item-thumbnail-left item-subscription" ng-repeat="item in items" 
+  href-dir url="{{subscriptionListData.sView == 'signup' ? '' : item.getUrl()}}">
+    <span class="item-image" ng-background="{{item.getPackageImageSrc()}}" ng-if="item.hasImage()"></span>
+    <i class="item-image icon ion-ribbon-b" ng-if="!item.hasImage()"></i>
+    <h2 ng-bind-html="item.getTitle()"></h2>
+    <div class="item-text-wrap">
+      <span>
+        <span class="energized" ng-bind-html="item.getCurrencySymbol() + item.getDefaultCost()"></span>
+        <span>{{'one time' | translate}}</span>
+      </span>
+      <span ng-if="item.getDefaultRecurringCost()">
+        <span>{{'and then' | translate}}</span>
+        <span class="energized" ng-bind-html="item.getCurrencySymbol() + item.getDefaultRecurringCost()"></span>
+        <span>{{item.getRecurringPeriod()}}</span>
+      </span>
+    </div>
+    <p class="item-description" ng-bind-html="item.getDescription()"></p>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

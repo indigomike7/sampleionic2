@@ -1,0 +1,10 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">{{'Albums' | translate}}</h1>
+    <!--<a ng-if="item.bCanUploadPhoto" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/page_uploadphoto/{{item.getId()}}"></a>-->
+    <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onPagePhotoMenu()"></button>
+</ion-header-bar>
+<album-search-dir></album-search-dir>
+<ion-content class="has-header has-footer">
+    <photo-album-list-dir></photo-album-list-dir>
+</ion-content>

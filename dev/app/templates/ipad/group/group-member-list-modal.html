@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideMemberListModal()">
+            {{membersGroup.group_title}}
+        </button>
+        <div class="h1 title">{{membersGroup.title}}</div>
+    </ion-header-bar>
+    <div class="bar bar-stable bar-icon-left subheader-title bar-subheader">
+        <i class="icon {{membersGroup.icon}}"></i>
+        <span class="bar-title">{{membersGroup.sub_title}}</span>
+        <span class="item-note">{{membersGroup.items.length}}</span>
+    </div>
+    <ion-content class="has-header has-subheader">
+        <div class="list">
+            <div class="padding text-center" ng-if="noItems" translate>No members found</div>
+            <a class="item item-avatar" ng-href="#/app/user/{{item.user_id}}" ng-repeat="item in membersGroup.items">
+                <img ng-if="item.user_image" ng-src="{{item.user_image}}" />
+                <h2 ng-bind-html="item.full_name"></h2>
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

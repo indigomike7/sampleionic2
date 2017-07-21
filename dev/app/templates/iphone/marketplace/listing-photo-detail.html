@@ -1,0 +1,15 @@
+<ion-view>
+  <button class="button button-icon icon ion-close button-close-photo-detail" ng-click="goBack()"></button>
+  <div class="swiper-container content-photo-detail" id="photo-slider" style="position:fixed;left:0;top:0;bottom:0;right:0;background-color:#000;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" ng-repeat="item in items"> 
+        <div class="content-slide">
+          <div class="photo_display" style="height: {{wrapperHeightInPx}};">
+            <img class="photo-detail-image" ng-src="{{item.sImagePath}}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <i class="icon-loading ion-loading-d" ng-if="!dataReady"></i>
+  </div>
+</ion-view>

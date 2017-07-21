@@ -1,0 +1,15 @@
+<ion-item class="item-business-review" ng-class="{'item-icon-right': hasActions()}">
+  <i class="icon ion-ios-arrow-down" ng-show="hasActions()" ng-click="onItemSetting()"></i>
+  <h2 class="item-title" ng-if="item.sTitle" ng-bind-html="item.sTitle"></h2>
+  <div class="item-info">
+    <core-stars active="{{item.iRateValue}}" total="5"></core-stars>
+  </div>
+  <div class="item-description-wrap" shorten-html-compile="item.sContent | prepareHtml" limit="200" show-more-btn="true" show-less-btn="true"></div>
+  <div class="item-info-bottom">
+    <img class="user-img" ng-src="{{item.user.img}}">
+    <span class="gray">{{'by' | translate}}</span>
+    <a class="black" ng-href="#/app/{{item.user.type}}/{{item.user.id}}" ng-bind-html="item.user.title"></a>
+    &middot;
+    <span class="gray">{{item.iTimeStamp | unixFromNow}}</span>
+  </div>
+</ion-item>

@@ -1,0 +1,32 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems">{{notFoundText}}</div>
+  <div class="item-forum-wrapper" ng-repeat="item in items">
+    <div class="item item-forum item-icon-left" ng-class="{'item-category item-icon-right': item.isCategory()}" href-dir url="{{item.getUrl()}}">
+      <i class="icon" ng-class="{'ion-ios-chatboxes-outline': !item.isCategory(), 'ion-ios-box': item.isCategory()}"></i>
+      <h2 ng-bind-html="item.getTitle()"></h2>
+      <span ng-if="item.isCategory()">({{item.getTotalSubForum()}})</span>
+      <p class="item-stats" ng-if="!item.isCategory()">
+        <span ng-if="item.getTotalThread() == 1">1 {{'thread'|translate}}</span>
+        <span ng-if="item.getTotalThread() != 1">{{item.getTotalThread()}} {{'threads'|translate}}</span>
+        <span class="icon-separator"></span>
+        <span ng-if="item.getTotalPost() == 1">1 {{'post'|translate}}</span>
+        <span ng-if="item.getTotalPost() != 1">{{item.getTotalPost()}} {{'posts'|translate}}</span>
+      </p>
+      <i class="icon" ng-class="{'ion-arrow-up-b': !item.hideSubs, 'ion-arrow-down-b': item.hideSubs}" ng-show="item.isCategory()" ng-click="item.hideSubs = !item.hideSubs"></i>
+    </div>
+    <div ng-if="item.isCategory() && !item.hideSubs">
+      <div class="item item-icon-left sub-item item-sub-forum" ng-repeat="subItem in item.getSubForums()" href-dir url="{{subItem.getUrl()}}">
+        <i class="icon ion-ios-chatboxes-outline"></i>
+        <h2 ng-bind-html="subItem.getTitle()"></h2>
+        <p class="item-stats">
+          <span ng-if="subItem.getTotalThread() == 1">1 {{'thread'|translate}}</span>
+          <span ng-if="subItem.getTotalThread() != 1">{{subItem.getTotalThread()}} {{'threads'|translate}}</span>
+          <span class="icon-separator"></span>
+          <span ng-if="subItem.getTotalPost() == 1">1 {{'post'|translate}}</span>
+          <span ng-if="subItem.getTotalPost() != 1">{{subItem.getTotalPost()}} {{'posts'|translate}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

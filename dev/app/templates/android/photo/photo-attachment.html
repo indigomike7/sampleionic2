@@ -1,0 +1,6 @@
+<!-- photo attachment.html -->
+<div class="clearfix photos-attachment in{{obj.showMaxPhoto()}}">
+    <div class="photo-in photo{{$index}}" ng-repeat="img in obj.aAttachments" href-dir url="{{obj.detailPhotoUrl($index)}}">
+    	<span img-cache ng-background="{{img.sPhoto_Url}}"></span>
+    </div>
+</div>

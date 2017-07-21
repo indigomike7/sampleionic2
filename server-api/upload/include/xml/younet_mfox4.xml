@@ -1,0 +1,82 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_mfox4</product_id>
+		<is_core>0</is_core>
+		<title>Younet Mobile Fox 4</title>
+		<description>Younet Mobile Fox 4</description>
+		<version>4.06</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/10/Mobile_App_FullPackage.jpg</icon>
+		<vendor>YouNet Company</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[require_once PHPFOX_DIR . 'module/mfox/install/v3.01.php';]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.04</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v3.04.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.06</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v3.06.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.07</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v3.07.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.08</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v3.08.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.09</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v3.09.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v4.01.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.03</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v4.03.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.04</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v4.04.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.05</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v4.05.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.06</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'mfox/install/v4.06.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>mfox</module_id>
+	</modules>
+</product>

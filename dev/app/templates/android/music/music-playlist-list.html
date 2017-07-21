@@ -1,0 +1,24 @@
+<div class="list page-music-landing">
+  <div class="padding text-center" ng-if="noItems" translate>
+    No albums found.
+  </div>
+  <div class="item item-thumbnail-left item-music" ng-repeat="item in items" ng-controller="MusicPlaylistItemCtrl" href-dir url="{{item.getUrl()}}">
+    <div class="item-thumbnail" img-cache ng-background="{{item.getImageSrc()}}">
+      <span class="item-music-play ion-ios-play"></span>
+    </div>
+    <h2 class="yncontent-title" ng-bind-html="item.getTitle()"></h2>
+    <div class="music-info">
+      <span class="item-author-by">
+        {{'by' | translate}} <a class="item-title" href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+      </span>
+      <div class="music-info-properties item-stats">
+        <a class="gray padding-right">{{item.getTrackCount()}} <i class="ion-music-note"></i></a>
+        <a class="gray"><i class="ion-headphone"></i> {{item.getPlayCount()}}</a>
+        <span class="icon-separator"></span>
+        <span>{{item.fromNow()}}</span>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()">
+  </ion-infinite-scroll>
+</div>

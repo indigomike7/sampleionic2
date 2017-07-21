@@ -1,0 +1,9 @@
+<div ui-view="tabContent">
+    
+</div>
+<div class="tabs tabs-footer tabs-overflow">
+    <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentPath == '/app/{{item.getType()}}/' + item.getId()}" ng-click="goToPath('/app/{{item.getType()}}/{{item.getId()}}')" ng-if="is_show_info">{{'Information' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentPath == '/app/page_activity/' + item.getId()}" ng-click="goToPath('/app/page_activity/{{item.getId()}}')" ng-if="is_show_activity">{{'Activity' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentPath == '/app/page_events/' + item.getId()}" ng-click="goToPath('/app/page_events/{{item.getId()}}')" ng-if="is_show_events">{{'Events' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentPath == '/app/page_photos/' + item.getId() || currentPath == '/app/page_albums/' + item.getId()}" ng-click="goToPath('/app/page_photos/{{item.getId()}}')" ng-if="is_show_photos">{{'Photos' | translate}}</a>
+</div>

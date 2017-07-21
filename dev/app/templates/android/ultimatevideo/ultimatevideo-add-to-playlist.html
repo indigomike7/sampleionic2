@@ -1,0 +1,15 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir translate ng-bind-html="getPrevPageTitle()"></button>
+        <a ng-if="canCreatePlaylist" class="button button-clear icon ion-ios-plus-empty" ng-click="doAddToNewPlaylist()"></a>
+    </div>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <div class="item item-divider">
+                {{'Add to' | translate}}
+            </div>
+            <div class="padding text-center" ng-if="noItems" translate>Currently, you do not have any playlist</div>
+            <ion-checkbox ng-repeat="item in data.aPlaylists track by $index" ng-model="item.bIsAdded" ng-change="updatePlaylistVideo($index)">{{ item.sTitle }}</ion-checkbox>
+        </div>
+    </ion-content>
+</ion-view>

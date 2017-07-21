@@ -1,0 +1,27 @@
+<div class="list page-album-list cleafix">
+    <div class="padding text-center" ng-if="noItems" translate>
+        No albums found
+    </div>
+    <div class="album-photo-item clearfix" ng-repeat="item in items" ng-controller="PhotoAlbumItemCtrl" href-dir url="{{item.getUrl()}}">
+        <div class="list-photo-item">
+            <div class="item-image">
+                <span ng-background="{{item.sAlbumImageURL}}">
+                    <i ng-if="sView=='my' && (item.canEdit()  || item.canDelete())" class="icon ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+                </span>
+            </div>
+            <div class="item item-content">
+                <h2 class="text-center" ng-bind-html="item.sName"></h2>
+                <div class="text-center">
+                    {{item.getTotalPhoto()}}
+                    <i class="icon ion-images"></i>
+                    <span class="middot">
+                        &middot;</span>
+                    {{item.getTotalLike()}}
+                    <i class="icon ion-thumbsup"></i>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()">
+    </ion-infinite-scroll>
+</div>

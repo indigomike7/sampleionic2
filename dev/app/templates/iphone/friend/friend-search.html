@@ -1,0 +1,8 @@
+<form class="list bar-subheader bar-header-search" ng-submit="onSearch()">
+    <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+    <div ng-show="showAdvSearch" class="item-input-search">
+        <div class="bar item-input-inset">
+            <input type="search" class="item-input-search-box"  ng-model="searchFriends.sSearch" placeholder="{{'Search friends' | translate}}">
+        </div>
+    </div>
+</form>

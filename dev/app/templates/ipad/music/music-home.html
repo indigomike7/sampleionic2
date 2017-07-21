@@ -1,0 +1,33 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Music' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+  </ion-header-bar>
+  <music-playlist-search-dir ng-if="currentState.itemType != 'song'"></music-playlist-search-dir>
+  <music-song-search-dir ng-if="currentState.itemType == 'song'"></music-song-search-dir>
+  <div class="content-column row">
+    <div class="col has-footer">
+      <div ui-view="leftContent"></div>
+      <div class="tabs tabs-footer tabs-overflow">
+        <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/music_songs'}" ng-href="#/app/music_songs">
+          {{'All Songs' | translate}}
+        </a>
+        <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/music_my_songs'}" ng-href="#/app/music_my_songs">
+          {{'My Songs' | translate}}
+        </a>
+        <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/music_playlists'}" ng-href="#/app/music_playlists">
+          {{'All Albums' | translate}}
+        </a>
+        <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/music_my_playlists'}" ng-href="#/app/music_my_playlists">
+          {{'My Albums' | translate}}
+        </a>
+      </div>
+    </div>
+    <div class="col has-footer">
+      <div ui-view="rightContent"></div>
+    </div>
+  </div>
+</ion-view>

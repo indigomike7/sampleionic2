@@ -1,0 +1,64 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title"></h1>
+    <button class="button icon-right ion-ios-more button-clear" ng-show="dataReady && getSettingBtns().length" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+  </ion-header-bar>
+  <ion-content class="has-header" ng-class="{'has-footer': dataReady && item.canComment()}">
+    <private-msg-dir ng-if="dataReady && !item.bCanView"></private-msg-dir>
+    <div class="page-music-detail" ng-if="dataReady && item.bCanView">
+      <div class="padding">
+        <h2 class="yncontent-title text-center" ng-bind-html="item.getTitle()"></h2>
+        <div class="music-detail-info text-center">
+          <span class="item-avatar-small">
+            <img ng-src="{{item.getPosterImageSrc()}}" />
+            <span class="item-author-by">{{'by' | translate}}</span>
+            <a class="item-title" href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+          </span>
+          <span class="icon-separator"></span>
+          <span class="item-stats">{{item.getPlayCount()}} <i class="ion-headphone"></i></span>
+        </div>
+      </div>
+      <div class="music-player music-cover-image" ng-class="{rotation: audio.paused == false}">
+        <div class="music-player-image" img-cache ng-background="{{item.getAlbumImageSrc()}}"></div>
+        <span class="music-player-image-bar"></span>
+      </div>
+      <div class="musicContent miniplayer-content">
+        <div class="younet_html5_player mobile">        
+          <div class="title-info" id="id_player">
+            <audio src="javascript:void(0);" width="100%" autoplay="false"></audio>
+          </div>
+          <div class="padding no-padding-top text-center gray" ng-if="item.getAlbumId() || item.getGenre()">
+            <span ng-if="item.getAlbumId()">
+              <span>{{'Album' | translate}}:</span>
+              <a class="dark" ng-href="{{item.getAlbumUrl()}}" ng-bind-html="item.getAlbumTitle()"></a>
+            </span>
+            <span ng-if="item.getGenre()">
+              <span class="icon-separator" ng-if="item.getAlbumId()"></span>
+              <span>{{'Genre' | translate}}:</span>
+              <span class="dark" ng-bind-html="item.getGenre()"></span>
+            </span>
+          </div>
+          <div class="list text-left">
+            <div id="listsong">
+              <ul class="mejs-list scroll-pane song-list">
+                <li class="item music-song-item" ng-repeat="song in songs" >
+                  <!-- song item of song list -->
+                  <span class="song-order">{{$index + 1}}</span>
+                  <span class="song-title" ng-bind-html="song.sTitle"></span>
+                  <span class="link">{{song.sSongPath}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <core-action-list-dir></core-action-list-dir>    
+      </div>
+      <like-stat-dir obj="item"></like-stat-dir>
+      <comment-dir obj="item"></comment-dir>
+    </div>
+  </ion-content>
+  <comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>
+</ion-view>

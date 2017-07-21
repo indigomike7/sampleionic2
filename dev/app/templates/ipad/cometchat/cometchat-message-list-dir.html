@@ -1,0 +1,21 @@
+<ion-refresher pulling-text="{{'Pull down to load more' | translate}}" refreshing-text="{{'Loading...' | translate}}" on-refresh="loadMore()"></ion-refresher>
+<ion-infinite-scroll distance="62px" ng-if="isFirstLoad"></ion-infinite-scroll>
+<ion-list class="chat-message-list">
+  <div class="padding text-center" ng-if="noItems">
+    <span>{{'No messages.' | translate}}</span>
+  </div>
+  <div class="item item-text-wrap" ng-repeat="itemLv1 in groupedItems" 
+  ng-class="{'item-avatar item-icon-right': !itemLv1[0][0].isViewer(), 'text-right item-icon-left': itemLv1[0][0].isViewer()}">
+    <img ng-src="{{itemLv1[0][0].getSenderImageSrc()}}" height="50" ng-if="!itemLv1[0][0].isViewer()" href-dir url="{{itemLv1[0][0].getSenderUrl()}}" />
+    <p class="item-span" ng-if="itemLv1[0][0].getStatus() == ''">{{itemLv1[0][0].getTimeFormatted()}}</p>
+    <p class="item-span" ng-if="itemLv1[0][0].getStatus() == 'sending'">{{'Sending...' | translate}}</p>
+    <p class="item-span" ng-if="itemLv1[0][0].getStatus() == 'error'">{{'Message was not delivered' | translate}} <i class="ion-alert-circled"></i></p>
+    <div class="item-chat" ng-repeat="itemsLv2 in itemLv1">
+      <div class="item item-chat-group">
+      	<div class="" ng-class="{'item-stable': !item.isViewer()}" ng-repeat="item in itemsLv2">
+      		<p ng-bind-html="item.getMessage()"></p>
+      	</div>
+      </div>
+    </div>
+  </div>
+<ion-list>

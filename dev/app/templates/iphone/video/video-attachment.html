@@ -1,0 +1,12 @@
+<div class="item-video-attachment" href-dir url="#/app/video/{{obj.aAttachments[0].iId}}">
+	<div class="item item-image">
+		<span img-cache ng-background="{{obj.aAttachments[0].sPhoto_Url}}">
+			<span class="item-video-play ion-ios-play"></span>
+		</span>
+	</div>
+	<div class="item">
+		<h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+		<div><a class="subdued">{{obj.aAttachments[0].sOriginalHostName}}</a></div>
+		<!--<p ng-html-compile="Helper.prepareHTMLText(obj.aAttachments[0].sDescription)"></p>-->
+	</div>
+</div>

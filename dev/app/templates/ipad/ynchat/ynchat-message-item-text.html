@@ -1,0 +1,9 @@
+<img ng-src="{{item.getSenderImageSrc()}}" height="50" ng-if="!item.isViewer()" href-dir url="{{item.getSenderUrl()}}" />
+<div class="item-chat">
+  <div class="item-chat-group">
+    <div class="" ng-class="{'item-stable': !item.isViewer()}">
+      <p ng-html-compile="item.getMessage()"></p>
+    </div>
+  </div>
+</div>
+<p class="item-span" ng-if="action == 'getOldConversation'">{{item.getTime()}}</p>

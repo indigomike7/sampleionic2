@@ -1,0 +1,17 @@
+<div class="item-listing" href-dir url="#/app/{{obj.aAttachments[0].sType}}/{{obj.aAttachments[0].iId}}">
+  <div class="item item-image">
+    <span img-cache ng-background="{{obj.aAttachments[0].sPhoto_Url}}" ng-class="{'no-image': !obj.aAttachments[0].bHasImage}"></span>
+  </div>
+  <div class="item">
+    <h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+    <p class="item-listing-info clearfix">        
+      <span class="item-price pull-right" ng-if="obj.aAttachments[0].sPrice != 0" ng-bind-html="obj.aAttachments[0].sSymbol + ' ' + obj.aAttachments[0].sPrice"></span>
+      <span class="item-price pull-right" ng-if="obj.aAttachments[0].sPrice == 0">{{'Free' | translate}}</span>
+      <span class="item-location overflow-hidden">
+        <i class="ion-location"></i>
+        <span ng-bind-html="obj.aAttachments[0].sCountry"></span>
+        <span ng-if="obj.aAttachments[0].sCity" ng-bind-html="' » ' + obj.aAttachments[0].sCity"></span>
+      </span>
+    </p>
+  </div>
+</div>

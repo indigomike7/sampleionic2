@@ -1,0 +1,33 @@
+<div ui-view="tabContent"></div>
+<div class="tabs tabs-footer tabs-overflow">
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessId' || currentState.name == 'app.directoryBusinessDetail'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}')" ng-if="is_show_overview">
+    {{'Overview' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessIdActivity'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/activity')" ng-if="is_show_activity">
+    {{'Activity' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessIdMembers'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/members')" ng-if="is_show_members">
+    {{'Members' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessIdFollowers'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/followers')" ng-if="is_show_followers">
+    {{'Followers' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessIdReviews'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/reviews')" ng-if="is_show_reviews">
+    {{'Reviews' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryDetailPhoto'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/photos')" ng-if="is_show_photos">
+    {{'Photos' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryDetailVideo'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/videos')" ng-if="is_show_videos">
+    {{'Videos' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryDetailVideochannel'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/videochannel')" ng-if="is_show_videochannel">
+    {{'Videos' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessIdMusic'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/music')" ng-if="is_show_musics">
+    {{'Music' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" ng-class="{'tab-item-active': currentState.name == 'app.directoryBusinessIdEvents'}" ng-click="goToPath('/app/directory/business/{{item.getId()}}/events')" ng-if="is_show_events">
+    {{'Events' | translate}}
+  </a>
+</div>

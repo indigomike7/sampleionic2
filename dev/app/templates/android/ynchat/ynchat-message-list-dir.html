@@ -1,0 +1,9 @@
+<ion-infinite-scroll distance="62px" ng-if="isProcessingLoad"></ion-infinite-scroll>
+<ion-list class="chat-message-list ynchat-message-list">
+  <div class="padding text-center" ng-if="noItems">
+    <span>{{'No messages.' | translate}}</span>
+  </div>
+  <ynchat-message-item ng-repeat="item in items" item="item" action="{{messageListData.action}}" class="item item-text-wrap message-item-{{item.getType()}}" 
+  ng-class="{'item-avatar item-icon-right': !item.isViewer(), 'text-right item-icon-left': item.isViewer(), 'item-date': item.getType() == 'date'}">
+  </ynchat-message-item>
+<ion-list>

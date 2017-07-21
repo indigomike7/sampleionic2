@@ -1,0 +1,13 @@
+<ion-view>
+<ion-header-bar align-title="center" class="bar-positive">
+  <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+  <h1 class="title has-notification">
+  	{{'My Albums' | translate}}
+  	<span class="header-notification"><header-stat-dir></header-stat-dir></span>
+  </h1>
+  <a class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/albums/add"></a>
+</ion-header-bar>
+<photo-album-search-dir></photo-album-search-dir>
+<ion-content class="has-header content-dark has-footer">
+    <photo-album-list-dir></photo-album-list-dir>
+</ion-content>

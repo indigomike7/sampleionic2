@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See htt
+            ps://issues.apache.org/jira/browse/CB-4323 -->
+            <!-- solution: http://stackoverflow.com/questions/19169115/phonegap-keyboard-changes-window-height-in-ios-7 -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <title>Connect</title>
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <div id="main" class="page-main">
+                <div class="page user-login-page twitter-connect signin-loading">
+                    <div class="content swiper-container" id="content">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="login-logo"></div>
+                                <div class="signing-in">
+                                    <div class="loading-image"></div>
+                                    <div class="loading-content">Loading social connect...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/require.js"></script>
+        <script type="text/javascript" src="js/site.js"></script>
+        <script>
+            require(['settings/site'],function(site){
+                window.setTimeout(function(){
+                    var url = site.siteUrl+'PF.Base/module/mfox/twitter.php';
+                
+                    var meta = document.createElement('meta');
+                    meta.setAttribute('http-equiv','refresh');
+                    meta.setAttribute('content','0;url='+url);
+                    
+                    var head = document.getElementsByTagName('head')[0].appendChild(meta);
+                    
+                    console.log('refresh url: url');
+                    // document.write('<meta http-equiv="refresh" content=0;url=' + url + '>');
+                },2000);
+                
+            });
+        </script>
+</html>

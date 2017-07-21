@@ -1,0 +1,14 @@
+{
+    "Social.framework": 2,
+    "MessageUI.framework": 1,
+    "AudioToolbox.framework": 2,
+    "SystemConfiguration.framework": 1,
+    "CoreLocation.framework": 2,
+    "ImageIO.framework": 2,
+    "QuartzCore.framework": 1,
+    "StoreKit.framework": 1,
+    "libsqlite3.dylib": 1,
+    "Accounts.framework": 1,
+    "Security.framework": 1,
+    "AVFoundation.framework": 1
+}

@@ -1,0 +1,37 @@
+<div class="list bar-subheader bar-header-search has-other-button">
+  <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+  <form ng-show="showAdvSearch" class="item-input-search" ng-submit="onSearch()">
+    <div class="bar item-input-inset">
+      <input type="search" class="item-input-search-box" ng-model="listingListData.sSearch" placeholder="{{'Search listings' | translate}}">
+    </div>
+  </form>
+  <div ng-show="showAdvSearch" class="advanced-search">
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Category' | translate}}
+      </div>
+      <select ng-model="listingListData.iCategoryId" ng-options="option.category_id as option.name for option in searchForm.aCategory">
+      </select>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Location' | translate}}
+      </div>
+      <select ng-model="listingListData.sCountryIso" ng-options="option.country_iso as option.name for option in searchForm.aLocation">
+      </select>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label">
+        {{'Sort' | translate}}
+      </div>
+      <select ng-model="listingListData.sOrder">
+        <option value="latest">{{'Latest' | translate}}</option>
+        <option value="most_liked">{{'Most Liked' | translate}}</option>
+        <option value="most_discussed">{{'Most Discussed' | translate}}</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" ng-click="onSearch()">{{'Search' | translate}}</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<ion-modal-view class="conversation-add-view" ng-controller="CoreShareOnWallCtrl">
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-clear" ng-click="hideShareOnFriendWallModal()" translate>Cancel</button>
+        <h1 class="title" translate>Share on a friend's wall</h1>
+        <button class="button button-clear" ng-click="onSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Post</span>
+        </button>
+    </ion-header-bar>
+    <ion-content id="trigger_content" class="has-header">
+        <div>
+            <div class="list to-list">
+                <div class="item item-input item-stacked-label">
+                    <form ng-submit="onSubmitSearch()">
+                        <input type="search" placeholder="{{'To' | translate}}" ng-model="searchFriends.sSearch" ng-change="onSearch()" />
+                    </form>
+                    <div ng-show="!searchFriends.sSearch">
+                        <div ng-repeat="user in selectedFriends">
+                            <span ng-bind-html="user.getTitle(22)"></span>
+                            <i class="ion-ios-minus-outline" ng-click="deselectFriend(user)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list" ng-show="!searchFriends.sSearch">
+                <label class="item item-input item-stacked-label">
+                    <textarea placeholder="{{'Write something' | translate}}" ng-model="shareData.sContent"></textarea>
+                </label>
+            </div>
+            <friend-autocomplete-list-dir ng-show="searchFriends.sSearch"></friend-autocomplete-list-dir>
+        </div>
+    </ion-content>
+</ion-modal-view>

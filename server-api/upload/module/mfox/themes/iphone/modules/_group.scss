@@ -1,0 +1,183 @@
+.item-group {
+  .item-thumbnail-left {
+    min-height: 62px;
+    padding-left: 74px;
+
+    .item-thumbnail {
+      border-radius: 5px !important;
+      width: 62px;
+      height: 62px;
+      top: 13px;
+      left: 12px;
+      background-color: #ebeff1;
+    }
+
+    p {
+      margin: 0 0 1px 0;
+      -webkit-line-clamp: 1;
+    }
+  }
+}
+
+.item-group-info {
+  padding: 0;
+  border-bottom: none;
+  position: relative;
+  min-height: 110px;
+
+  .group-info-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 165px;
+
+    &.no-cover {
+      height: 18px;
+    }
+
+    .button-group-like-cover {
+      padding-top: 4px;
+      background-color: rgba(166, 166, 166, 0.8);
+      text-align: center;
+      display: block;
+      width: 32px;
+      height: 32px;
+      color: $text-active-color;
+      border-left: 1px solid $text-active-color;
+      border-bottom: 1px solid $text-active-color;
+      @include border-bottom-left-radius(4px);
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 21px;
+
+      &.is-liked {
+      background-color: $positive-light;
+      }
+
+      &.activated {
+      background-color: $positive-dark;
+      }
+
+      &.processing {
+      background-color: $positive-dark;
+      }
+    }
+  }
+
+  .group-info-avatar {
+    position: absolute;
+    left: $item-padding;
+    bottom: 0px;
+
+    width: 104px;
+    height: 104px;
+    background-color: $base-background-color;
+    @include border-radius(6px);
+
+    .group-info-avatar-image {
+      width: 96px;
+      height: 96px;
+      margin: 4px;
+      border: 0;
+      display:block;
+      background-size: cover;
+      @include border-radius(4px);
+      background-color: #ebeff1;
+    }
+  }
+
+  .group-info-detail {
+    margin-left: 126px;
+    margin-right: $item-padding;
+    height: 56px;
+    text-align: left;
+    border-bottom: 1px $border-color solid;
+    margin-bottom: 3px;
+
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 4px;
+      color: $active-color;
+    }
+
+    &.no-cover {
+      height: 96px;
+      padding-top: 16px;
+    }
+  }
+
+  .item-text-wrap {
+    border-top: none;
+  }
+
+  .group-detail-member {
+    .item { border: 0; }
+    .item.item-icon-left {
+      padding-left: $item-icon-font-size + $content-padding;
+      padding-top: 8px;
+      height: 32px;
+    }
+    .item > .icon:first-child {
+      font-size: $icon-search-size;
+      color: $description-light-color;
+    }
+
+    h2 {
+      font-size: 14px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: $description-color;
+    }
+
+    h2 + .icon {
+      right: 0;
+      font-size: $icon-subheader-size;
+      color: $description-light-color;
+    }
+
+    .list-member {
+      white-space: nowrap;
+
+      a {
+        display: inline-block;
+        height: 40px;
+        margin-right: $item-padding;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        @include border-radius(4px);
+      }
+    }
+
+    .item-group-photo {
+      width: 91px;
+      height: 91px;
+      display: inline-block;
+      margin-right: $item-padding;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .item-stats{
+    span + span{
+      &:before{
+        content: ".";
+        margin: 0 5px;
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+}
+
+.item-attachment-group {
+  .item-thumbnail {
+    background-color: #ebeff1;
+  }
+}

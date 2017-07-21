@@ -1,0 +1,1705 @@
+<module>
+	<data>
+		<module_id>mfox</module_id>
+		<product_id>younet_mfox4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:4:{s:29:"mfox.admin_menu_manage_styles";a:1:{s:3:"url";a:3:{i:0;s:4:"mfox";i:1;s:6:"styles";i:2;s:6:"manage";}}s:32:"mfox.admin_menu_add_custom_style";a:1:{s:3:"url";a:2:{i:0;s:4:"mfox";i:1;s:6:"styles";}}s:28:"mfox.admin_menu_manage_menus";a:1:{s:3:"url";a:2:{i:0;s:4:"mfox";i:1;s:4:"menu";}}s:30:"mfox.admin_menu_add_menu_group";a:1:{s:3:"url";a:3:{i:0;s:4:"mfox";i:1;s:4:"menu";i:2;s:8:"addgroup";}}}]]></menu>
+		<phrase_var_name>module_mfox</phrase_var_name>
+		<version>4.06</version>
+		<author>YouNet Company</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>Younet Mobile Fox 4</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/Mobile_App_FullPackage.jpg</apps_icon>
+	</data>
+	<setting_groups>
+		<name module_id="mfox" version_id="3.5.0" var_name="setting_group_mobile_phpfox">mobile_phpfox</name>
+	</setting_groups>
+	<settings>
+		<setting group="" module_id="mfox" is_hidden="0" type="string" var_name="google_key" phrase_var_name="setting_google_key" ordering="1" version_id="3.5.0">AIzaSyCnrRJ6ngfBN7XEYjtiSF-R0B0hgbw6aFk</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="string" var_name="mfox_apns_cert_file" phrase_var_name="setting_mfox_apns_cert_file" ordering="2" version_id="3.5.0" />
+		<setting group="" module_id="mfox" is_hidden="0" type="string" var_name="mfox_apns_passphrase" phrase_var_name="setting_mfox_apns_passphrase" ordering="3" version_id="3.5.0" />
+		<setting group="" module_id="mfox" is_hidden="0" type="string" var_name="mfox_apns_ipad_cert_file" phrase_var_name="setting_mfox_apns_ipad_cert_file" ordering="4" version_id="3.6.0" />
+		<setting group="" module_id="mfox" is_hidden="0" type="string" var_name="mfox_apns_ipad_passphrase" phrase_var_name="setting_mfox_apns_ipad_passphrase" ordering="5" version_id="3.6.0" />
+		<setting group="" module_id="mfox" is_hidden="0" type="drop" var_name="chat_module" phrase_var_name="setting_chat_module" ordering="6" version_id="4.1.2"><![CDATA[a:2:{s:7:"default";s:17:"Instant Messaging";s:6:"values";a:4:{i:0;s:17:"Instant Messaging";i:1;s:9:"CometChat";i:2;s:6:"YNChat";i:3;s:4:"None";}}]]></setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="boolean" var_name="is_show_buy_in_full_site" phrase_var_name="setting_is_show_buy_in_full_site" ordering="7" version_id="3.6.0">1</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="boolean" var_name="replace_event" phrase_var_name="setting_replace_event" ordering="9" version_id="4.3.2">0</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="boolean" var_name="replace_photo" phrase_var_name="setting_replace_photo" ordering="10" version_id="4.3.2">0</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="boolean" var_name="replace_marketplace" phrase_var_name="setting_replace_marketplace" ordering="11" version_id="4.3.2">0</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="boolean" var_name="replace_music" phrase_var_name="setting_replace_music" ordering="12" version_id="4.3.2">0</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="boolean" var_name="enable_log" phrase_var_name="setting_enable_log" ordering="14" version_id="4.3.2">0</setting>
+		<setting group="" module_id="mfox" is_hidden="0" type="integer" var_name="log_chunk_size" phrase_var_name="setting_log_chunk_size" ordering="15" version_id="4.3.2">100</setting>
+		<setting group="" module_id="mfox" is_hidden="1" type="boolean" var_name="is_allow_buy_in_app" phrase_var_name="setting_is_allow_buy_in_app" ordering="8" version_id="3.6.0">0</setting>
+	</settings>
+	<phrases>
+		<phrase var_name="module_mfox" added="1490673697">Mobile Phpfox</phrase>
+		<phrase var_name="setting_group_mobile_phpfox" added="1490673697"><![CDATA[<title>Mobile phpFox</title><info>Mobile phpFox Settings</info>]]></phrase>
+		<phrase var_name="setting_google_key" added="1490673697"><![CDATA[<title>Google Api Key</title><info>Google Api Key https://code.google.com/apis/console/</info>]]></phrase>
+		<phrase var_name="homelistviewitem_id_background" added="1490673697">homelistviewitem_id_background</phrase>
+		<phrase var_name="homelistviewitem_id_color" added="1490673697">homelistviewitem_id_color</phrase>
+		<phrase var_name="a_color" added="1490673697">a_color</phrase>
+		<phrase var_name="purple_btn_background" added="1490673697">purple_btn_background</phrase>
+		<phrase var_name="purple_btn_color" added="1490673697">purple_btn_color</phrase>
+		<phrase var_name="header_background" added="1490673697">header_background</phrase>
+		<phrase var_name="fm_guide_container_background" added="1490673697">fm_guide_container_background</phrase>
+		<phrase var_name="leftnavi_menu_id_menu_color" added="1490673697">leftnavi_menu_id_menu_color</phrase>
+		<phrase var_name="landingpage_background" added="1490673697">landingpage_background</phrase>
+		<phrase var_name="button_green_background" added="1490673697">button_green_background</phrase>
+		<phrase var_name="login_form_input_color" added="1490673697">login_form_input_color</phrase>
+		<phrase var_name="popupcontent_background" added="1490673697">popupcontent_background</phrase>
+		<phrase var_name="menu_footer_background" added="1490673697">menu_footer_background</phrase>
+		<phrase var_name="menu_footer_a_color" added="1490673697">menu_footer_a_color</phrase>
+		<phrase var_name="menu_footer_activebutton_background" added="1490673697">menu_footer_activebutton_background</phrase>
+		<phrase var_name="menu_footer_activebutton_a_color" added="1490673697">menu_footer_activebutton_a_color</phrase>
+		<phrase var_name="comment_actions_background" added="1490673697">comment_actions_background</phrase>
+		<phrase var_name="comment_actions_div_a_color" added="1490673697">comment_actions_div_a_color</phrase>
+		<phrase var_name="comment_actions_div_a_likeactive_color" added="1490673697">comment_actions_div_a_likeactive_color</phrase>
+		<phrase var_name="feed_entry_color" added="1490673697">feed_entry_color</phrase>
+		<phrase var_name="user_post_content_color" added="1490673697">user_post_content_color</phrase>
+		<phrase var_name="slide_photo_content_background" added="1490673697">slide_photo_content_background</phrase>
+		<phrase var_name="extra_color" added="1490673697">extra_color</phrase>
+		<phrase var_name="navigation" added="1490673697">Navigation</phrase>
+		<phrase var_name="no_navigations" added="1490673697">No navigations.</phrase>
+		<phrase var_name="manage_navigations" added="1490673697">Manage Navigations</phrase>
+		<phrase var_name="order" added="1490673697">Order</phrase>
+		<phrase var_name="navigations_successfully_edited" added="1490673697">Navigations succesfully edited.</phrase>
+		<phrase var_name="navigations_not_edited" added="1490673697">Navigations not edited.</phrase>
+		<phrase var_name="custom_styles" added="1490673697">Custom Styles</phrase>
+		<phrase var_name="navigations_successfully_deleted" added="1490673697">Navigations successfully deleted.</phrase>
+		<phrase var_name="deactivate" added="1490673697">Deactivate</phrase>
+		<phrase var_name="activate" added="1490673697">Activate</phrase>
+		<phrase var_name="enable" added="1490673697">Enable</phrase>
+		<phrase var_name="manage" added="1490673697">Manage</phrase>
+		<phrase var_name="are_you_sure" added="1490673697">Are you sure?</phrase>
+		<phrase var_name="delete" added="1490673697">Delete</phrase>
+		<phrase var_name="edit" added="1490673697">Edit</phrase>
+		<phrase var_name="edit_navigation" added="1490673697">Edit Navigation</phrase>
+		<phrase var_name="navigation_successfully_updated" added="1490673697">Navigation successfully updated!</phrase>
+		<phrase var_name="navigation_successfully_added" added="1490673697">Navigation successfully added!</phrase>
+		<phrase var_name="provide_a_name_for_this_navigation" added="1490673697">Provide a name for this navigation.</phrase>
+		<phrase var_name="provide_a_label_for_this_navigation" added="1490673697">Provide a label for this navigation.</phrase>
+		<phrase var_name="provide_a_layout_for_this_navigation" added="1490673697">Provide a layout for this navigation.</phrase>
+		<phrase var_name="provide_a_icon_for_this_navigation" added="1490673697">Provide a icon for this navigation.</phrase>
+		<phrase var_name="provide_a_url_for_this_navigation" added="1490673697">Provide a url for this navigation.</phrase>
+		<phrase var_name="navigation_info" added="1490673697">Navigation Info</phrase>
+		<phrase var_name="label" added="1490673697">Label</phrase>
+		<phrase var_name="layout" added="1490673697">Layout</phrase>
+		<phrase var_name="icon" added="1490673697">Icon</phrase>
+		<phrase var_name="submit" added="1490673697">Submit</phrase>
+		<phrase var_name="name" added="1490673697">Name</phrase>
+		<phrase var_name="yes" added="1490673697">Yes</phrase>
+		<phrase var_name="no" added="1490673697">No</phrase>
+		<phrase var_name="is_enabled" added="1490673697">Is enabled?</phrase>
+		<phrase var_name="url" added="1490673697">Url</phrase>
+		<phrase var_name="custom_css_details" added="1490673697">Custom CSS details</phrase>
+		<phrase var_name="manage_styles" added="1490673697">Manage Styles</phrase>
+		<phrase var_name="style_id" added="1490673697">Style Id</phrase>
+		<phrase var_name="style_name" added="1490673697">Revision</phrase>
+		<phrase var_name="no_styles" added="1490673697">No styles.</phrase>
+		<phrase var_name="style_active" added="1490673697">Style Active</phrase>
+		<phrase var_name="delete_selected" added="1490673697">Delete selected</phrase>
+		<phrase var_name="add_custom_styles" added="1490673697">Add custom styles</phrase>
+		<phrase var_name="style_is_not_valid" added="1490673697">Style is not valid!</phrase>
+		<phrase var_name="style_successfully_edited" added="1490673697">Style successfully edited.</phrase>
+		<phrase var_name="style_successfully_added" added="1490673697">Style successfully added.</phrase>
+		<phrase var_name="add_navigation" added="1490673697">Add navigation</phrase>
+		<phrase var_name="setting_mfox_apns_cert_file" added="1490673697"><![CDATA[<title>Apple certificate file</title><info>Apple certificated file path</info>]]></phrase>
+		<phrase var_name="setting_mfox_apns_passphrase" added="1490673697"><![CDATA[<title>Apple SSL passphrase</title><info>Apple SSL passphrase</info>]]></phrase>
+		<phrase var_name="full_name_wants_to_list_you_both_as_relationship" added="1490673697">{full_name} wants to list you both as {relationship}</phrase>
+		<phrase var_name="full_name_wants_to_list_you_in_a_relationship" added="1490673697">{full_name} wants to list you in a relationship</phrase>
+		<phrase var_name="user_want_to_add_you_as_gender_friends" added="1490673697">{full_name} want to add you as {gender} friends.</phrase>
+		<phrase var_name="setting_limit_photo_to_scroll" added="1490673697"><![CDATA[<title>How many photos to scroll in album list or news feed?</title><info>How many photos to scroll in album list or news feed?</info>]]></phrase>
+		<phrase var_name="setting_mfox_apns_ipad_cert_file" added="1490673697"><![CDATA[<title>Apple certificate file for Ipad</title><info>Apple certificate file for Ipad</info>]]></phrase>
+		<phrase var_name="setting_mfox_apns_ipad_passphrase" added="1490673697"><![CDATA[<title>Apple SSL passphrase for Ipad</title><info>Apple SSL passphrase for Ipad</info>]]></phrase>
+		<phrase var_name="setting_is_allow_buy_in_app" added="1490673697"><![CDATA[<title>Allow users purchase listings on app</title><info>Allow users purchase listings on app</info>]]></phrase>
+		<phrase var_name="setting_is_show_buy_in_full_site" added="1490673697"><![CDATA[<title>Show "Buy in full site" on app</title><info>Show "Buy in full site" on app</info>]]></phrase>
+		<phrase var_name="initialized" added="1490673697">Initialized</phrase>
+		<phrase var_name="expired" added="1490673697">Expired</phrase>
+		<phrase var_name="pending" added="1490673697">Pending</phrase>
+		<phrase var_name="completed" added="1490673697">Completed</phrase>
+		<phrase var_name="cancelled" added="1490673697">Cancelled</phrase>
+		<phrase var_name="inapppurchase" added="1490673697">In App Purchase</phrase>
+		<phrase var_name="module" added="1490673697">Module</phrase>
+		<phrase var_name="store_kit_product" added="1490673697">Store Kit Product</phrase>
+		<phrase var_name="save" added="1490673697">Save</phrase>
+		<phrase var_name="save_successfully" added="1490673697">Save successfully</phrase>
+		<phrase var_name="manage_store_kit_product_on_iap" added="1490673697">Manage Store Kit Product on IAP</phrase>
+		<phrase var_name="ipad" added="1490673697">iPad</phrase>
+		<phrase var_name="iphone" added="1490673697">iPhone</phrase>
+		<phrase var_name="android" added="1490673697">Android</phrase>
+		<phrase var_name="device" added="1490673697">Device</phrase>
+		<phrase var_name="admin_menu_manage_store_kit_product_on_iap" added="1490673697">Manage Store Kit Product on IAP</phrase>
+		<phrase var_name="admin_menu_manage_styles" added="1490673697">Manage Styles</phrase>
+		<phrase var_name="admin_menu_add_custom_style" added="1490673697">Add Custom Style</phrase>
+		<phrase var_name="add_custom_style" added="1490673697">Add Custom Style</phrase>
+		<phrase var_name="terms_of_service_content" added="1490673697"><![CDATA[<p>You will not tag users or send email invitations to non-users without their consent. We offers social reporting tools to enable users to provide feedback about tagging.</p><p>You will not post unauthorized commercial communications (such as spam).</p><p>You will not post content that: is hate speech, threatening, or pornographic; incites violence; or contains nudity or graphic or gratuitous violence.</p><p>You will not facilitate or encourage any violations of this Statement or our policies.</p>]]></phrase>
+		<phrase var_name="30_days" added="1490673697">30 days</phrase>
+		<phrase var_name="3_months" added="1490673697">3 months</phrase>
+		<phrase var_name="7_days" added="1490673697">7 days</phrase>
+		<phrase var_name="_1_s_added_1_photo_in_the_event_2_s" added="1490673697">%1$s added 1 photo in the event %2$s</phrase>
+		<phrase var_name="_1_s_added_2_s_photos_in_the_event_3_s" added="1490673697">%1$s added %2$s photos in the event %3$s</phrase>
+		<phrase var_name="_1_s_added_a_new_video_in_the_event_2_s" added="1490673697">%1$s added a new video in the event %2$s</phrase>
+		<phrase var_name="_1_s_added_new_topic_in_the_event_2_s" added="1490673697">%1$s added new topic in the event %2$s</phrase>
+		<phrase var_name="_1_s_added_video_2_s_to_his_her_favourite_playlist" added="1490673697">%1$s added video %2$s to his/her favourite playlist</phrase>
+		<phrase var_name="_1_s_commented_on_2_s_s_3_s" added="1490673697"><![CDATA[%1$s commented on %2$s's %3$s]]></phrase>
+		<phrase var_name="_1_s_has_been_made_an_officer_for_the_group_2_s" added="1490673697">%1$s has been made an officer for the group %2$s</phrase>
+		<phrase var_name="_1_s_has_been_made_an_officer_for_the_page_2_s" added="1490673697">%1$s has been made an officer for the page %2$s</phrase>
+		<phrase var_name="_1_s_has_checked_in_at_2_s" added="1490673697">%1$s has checked in - at %2$s</phrase>
+		<phrase var_name="_1_s_is_now_friend_with_2_s" added="1490673697">%1$s is now friend with %2$s</phrase>
+		<phrase var_name="_1_s_joined_the_event_2_s" added="1490673697">%1$s joined the event %2$s</phrase>
+		<phrase var_name="_1_s_joined_the_group_2_s" added="1490673697">%1$s joined the group %2$s</phrase>
+		<phrase var_name="_1_s_joined_the_network_2_s" added="1490673697">%1$s joined the network %2$s</phrase>
+		<phrase var_name="_1_s_joined_the_page_2_s" added="1490673697">%1$s joined the page %2$s</phrase>
+		<phrase var_name="_1_s_posted_a_2_s_in_the_group_3_s" added="1490673697">%1$s posted a %2$s in the group %3$s</phrase>
+		<phrase var_name="_1_s_posted_a_2_s_in_the_page_3_s" added="1490673697">%1$s posted a %2$s in the page %3$s</phrase>
+		<phrase var_name="_1_s_rarr_2_s" added="1490673697"><![CDATA[%1$s &rarr; %2$s]]></phrase>
+		<phrase var_name="_1_s_replied_to_a_2_s_in_the_group_3_s" added="1490673697">%1$s replied to a %2$s in the group %3$s</phrase>
+		<phrase var_name="_1_s_replied_to_a_2_s_in_the_page_3_s" added="1490673697">%1$s replied to a %2$s in the page %3$s</phrase>
+		<phrase var_name="_1_s_replied_to_a_topic_in_the_event_2_s" added="1490673697">%1$s replied to a topic in the event %2$s</phrase>
+		<phrase var_name="_1_s_shared_2_s_s_3_s" added="1490673697"><![CDATA[%1$s shared %2$s's %3$s]]></phrase>
+		<phrase var_name="_item_gettotaldislike_dislike" added="1490673697">{{item.getTotalDislike()}} Dislike</phrase>
+		<phrase var_name="_item_gettotaldislike_dislikes" added="1490673697">{{item.getTotalDislike()}} Dislikes</phrase>
+		<phrase var_name="_item_gettotallike_like" added="1490673697">{{item.getTotalLike()}} Like</phrase>
+		<phrase var_name="_item_gettotallike_likes" added="1490673697">{{item.getTotalLike()}} Likes</phrase>
+		<phrase var_name="_item_gettotalquestion_question" added="1490673697">{{item.getTotalQuestion()}} Question</phrase>
+		<phrase var_name="_item_gettotalquestion_questions" added="1490673697">{{item.getTotalQuestion()}} Questions</phrase>
+		<phrase var_name="_item_imutualfriends_mutual_friend" added="1490673697">{{item.iMutualFriends}} mutual friend</phrase>
+		<phrase var_name="_item_imutualfriends_mutual_friends" added="1490673697">{{item.iMutualFriends}} mutual friends</phrase>
+		<phrase var_name="_obj_gettotallike_1_other" added="1490673697">{{obj.getTotalLike() - 1}} other</phrase>
+		<phrase var_name="_obj_gettotallike_1_others" added="1490673697">{{obj.getTotalLike() - 1}} others</phrase>
+		<phrase var_name="_s" added="1490673697">%s</phrase>
+		<phrase var_name="_s_created_a_group" added="1490673697">%s created a group</phrase>
+		<phrase var_name="_s_created_a_listing_" added="1490673697">%s created a listing.</phrase>
+		<phrase var_name="_s_created_a_new_album" added="1490673697">%s created a new album</phrase>
+		<phrase var_name="_s_created_a_new_event" added="1490673697">%s created a new event</phrase>
+		<phrase var_name="_s_created_a_new_poll" added="1490673697">%s created a new poll</phrase>
+		<phrase var_name="_s_created_a_new_quiz" added="1490673697">%s created a new quiz</phrase>
+		<phrase var_name="_s_created_a_page" added="1490673697">%s created a page</phrase>
+		<phrase var_name="_s_has_added_a_new_profile_photo_" added="1490673697">%s has added a new profile photo.</phrase>
+		<phrase var_name="_s_has_just_signed_up_say_hello_" added="1490673697">%s has just signed up. Say hello!</phrase>
+		<phrase var_name="_s_posted_a_new_video" added="1490673697">%s posted a new video</phrase>
+		<phrase var_name="_s_posted_a_new_video_playlist" added="1490673697">%s posted a new video playlist</phrase>
+		<phrase var_name="_s_posted_a_thread_" added="1490673697">%s posted a thread.</phrase>
+		<phrase var_name="_s_shared_" added="1490673697">%s shared...</phrase>
+		<phrase var_name="_s_shared_a_few_photos" added="1490673697">%s shared a few photos</phrase>
+		<phrase var_name="_s_shared_a_photo" added="1490673697">%s shared a photo</phrase>
+		<phrase var_name="_s_shared_a_song" added="1490673697">%s shared a song</phrase>
+		<phrase var_name="_s_shared_a_video" added="1490673697">%s shared a video</phrase>
+		<phrase var_name="_s_wrote_a_new_blog_entry" added="1490673697">%s wrote a new blog entry</phrase>
+		<phrase var_name="about" added="1490673697">About</phrase>
+		<phrase var_name="accept" added="1490673697">Accept</phrase>
+		<phrase var_name="accept_friend_request" added="1490673697">Accept Friend Request</phrase>
+		<phrase var_name="accept_invitation" added="1490673697">Accept Invitation</phrase>
+		<phrase var_name="accept_request" added="1490673697">Accept Request</phrase>
+		<phrase var_name="account" added="1490673697">Account</phrase>
+		<phrase var_name="account_settings" added="1490673697">Account Settings</phrase>
+		<phrase var_name="account_settings_updated_" added="1490673697">Account settings updated.</phrase>
+		<phrase var_name="action_completed" added="1490673697">Action completed</phrase>
+		<phrase var_name="action_completed_" added="1490673697">Action completed!</phrase>
+		<phrase var_name="action_failed" added="1490673697">Action failed</phrase>
+		<phrase var_name="action_is_not_valid" added="1490673697">Action is not valid</phrase>
+		<phrase var_name="activity" added="1490673697">Activity</phrase>
+		<phrase var_name="activity_does_not_exist" added="1490673697">Activity does not exist</phrase>
+		<phrase var_name="add_album" added="1490673697">Add Album</phrase>
+		<phrase var_name="add_friend" added="1490673697">Add Friend</phrase>
+		<phrase var_name="add_friends_to_list_successfully" added="1490673697">Add friends to list successfully</phrase>
+		<phrase var_name="add_from_url" added="1490673697">Add From URL</phrase>
+		<phrase var_name="add_group" added="1490673697">Add Group</phrase>
+		<phrase var_name="add_new_blog" added="1490673697">Add New Blog</phrase>
+		<phrase var_name="add_new_listing" added="1490673697">Add New Listing</phrase>
+		<phrase var_name="add_page" added="1490673697">Add Page</phrase>
+		<phrase var_name="add_photo" added="1490673697">Add Photo</phrase>
+		<phrase var_name="add_photos" added="1490673697">Add Photos</phrase>
+		<phrase var_name="add_poll" added="1490673697">Add Poll</phrase>
+		<phrase var_name="add_quiz" added="1490673697">Add Quiz</phrase>
+		<phrase var_name="add_some_content_to_your_blog" added="1490673697">Add some content to your blog</phrase>
+		<phrase var_name="add_some_text_to_your_comment" added="1490673697">Add some text to your comment</phrase>
+		<phrase var_name="add_video" added="1490673697">Add Video</phrase>
+		<phrase var_name="added_invoice_successfully" added="1490673697">Added invoice successfully</phrase>
+		<phrase var_name="admin" added="1490673697">ADMIN</phrase>
+		<phrase var_name="age" added="1490673697">Age</phrase>
+		<phrase var_name="album_id_is_missing" added="1490673697">Album id is missing</phrase>
+		<phrase var_name="album_id_is_missing_or_invalid" added="1490673697">Album id is missing or invalid</phrase>
+		<phrase var_name="album_id_is_not_valid" added="1490673697">Album id is not valid</phrase>
+		<phrase var_name="album_is_not_available" added="1490673697">Album is not available</phrase>
+		<phrase var_name="album_is_not_valid" added="1490673697">Album is not valid</phrase>
+		<phrase var_name="album_name" added="1490673697">Album Name</phrase>
+		<phrase var_name="album_or_song_does_not_exists" added="1490673697">Album or song does not exists</phrase>
+		<phrase var_name="albums" added="1490673697">Albums</phrase>
+		<phrase var_name="alert" added="1490673697">Alert</phrase>
+		<phrase var_name="all" added="1490673697">All</phrase>
+		<phrase var_name="all_albums" added="1490673697">All Albums</phrase>
+		<phrase var_name="all_blogs" added="1490673697">All Blogs</phrase>
+		<phrase var_name="all_categories" added="1490673697">All Categories</phrase>
+		<phrase var_name="all_events" added="1490673697">All Events</phrase>
+		<phrase var_name="all_forums" added="1490673697">All Forums</phrase>
+		<phrase var_name="all_genres" added="1490673697">All Genres</phrase>
+		<phrase var_name="all_listings" added="1490673697">All Listings</phrase>
+		<phrase var_name="all_polls" added="1490673697">All Polls</phrase>
+		<phrase var_name="all_quizzes" added="1490673697">All Quizzes</phrase>
+		<phrase var_name="all_songs" added="1490673697">All Songs</phrase>
+		<phrase var_name="an_email_with_instruction_will_be_sent_to_your_email_below_to_reset_password_" added="1490673697">An email with instruction will be sent to your email below to reset password.</phrase>
+		<phrase var_name="and" added="1490673697">and</phrase>
+		<phrase var_name="and_then" added="1490673697">and then</phrase>
+		<phrase var_name="announcements" added="1490673697">Announcements</phrase>
+		<phrase var_name="answer" added="1490673697">Answer</phrase>
+		<phrase var_name="answers" added="1490673697">Answers</phrase>
+		<phrase var_name="answers_could_not_be_empty_" added="1490673697">Answers could not be empty!</phrase>
+		<phrase var_name="anywhere" added="1490673697">Anywhere</phrase>
+		<phrase var_name="approved" added="1490673697">Approved</phrase>
+		<phrase var_name="approved_members" added="1490673697">Approved Members</phrase>
+		<phrase var_name="archive" added="1490673697">Archive</phrase>
+		<phrase var_name="are_you_sure_" added="1490673697">Are you sure?</phrase>
+		<phrase var_name="are_you_sure_that_you_want_to_delete_this_poll_" added="1490673697">Are you sure that you want to delete this poll?</phrase>
+		<phrase var_name="are_you_sure_that_you_want_to_delete_this_quiz_" added="1490673697">Are you sure that you want to delete this quiz?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_album_" added="1490673697">Are you sure to delete this album?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_blog_entry_" added="1490673697">Are you sure to delete this blog entry?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_comment_" added="1490673697">Are you sure to delete this comment?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_event_" added="1490673697">Are you sure to delete this event?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_listing_" added="1490673697">Are you sure to delete this listing?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_post_" added="1490673697">Are you sure to delete this post?</phrase>
+		<phrase var_name="are_you_sure_to_delete_this_topic_" added="1490673697">Are you sure to delete this topic?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_demote_this_member_from_officer_" added="1490673697">Are you sure you want to demote this member from officer?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_leave_this_group_" added="1490673697">Are you sure you want to leave this group?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_promote_this_member_to_officer_" added="1490673697">Are you sure you want to promote this member to officer?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_remove_this_member_from_the_group_" added="1490673697">Are you sure you want to remove this member from the group?</phrase>
+		<phrase var_name="article" added="1490673697">article</phrase>
+		<phrase var_name="at" added="1490673697">at</phrase>
+		<phrase var_name="attach_a_photo" added="1490673697">Attach a Photo</phrase>
+		<phrase var_name="attach_link" added="1490673697">Attach link</phrase>
+		<phrase var_name="attach_poll" added="1490673697">Attach Poll</phrase>
+		<phrase var_name="attach_video" added="1490673697">Attach Video</phrase>
+		<phrase var_name="attachments" added="1490673697">Attachments</phrase>
+		<phrase var_name="attending" added="1490673697">Attending</phrase>
+		<phrase var_name="available" added="1490673697">Available</phrase>
+		<phrase var_name="basic_information" added="1490673697">Basic Information</phrase>
+		<phrase var_name="be_the_first_to_like_this" added="1490673697">Be the first to like this</phrase>
+		<phrase var_name="between" added="1490673697">Between</phrase>
+		<phrase var_name="birthday_can_not_be_larger_than_1_s_or_lower_than_2_s" added="1490673697">Birthday can not be larger than %1$s or lower than %2$s</phrase>
+		<phrase var_name="block" added="1490673697">Block</phrase>
+		<phrase var_name="block_successfully" added="1490673697">Block successfully</phrase>
+		<phrase var_name="blocked_users" added="1490673697">Blocked Users</phrase>
+		<phrase var_name="blog" added="1490673697">blog</phrase>
+		<phrase var_name="blog_entry" added="1490673697">blog entry</phrase>
+		<phrase var_name="blog_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Blog has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="blog_id_is_not_valid" added="1490673697">Blog id is not valid</phrase>
+		<phrase var_name="blog_preview" added="1490673697">Blog Preview</phrase>
+		<phrase var_name="blogs" added="1490673697">Blogs</phrase>
+		<phrase var_name="browse_by" added="1490673697">Browse By</phrase>
+		<phrase var_name="browse_videos" added="1490673697">Browse Videos</phrase>
+		<phrase var_name="busy" added="1490673697">Busy</phrase>
+		<phrase var_name="buy" added="1490673697">Buy</phrase>
+		<phrase var_name="buy_now" added="1490673697">Buy Now</phrase>
+		<phrase var_name="by" added="1490673697">by</phrase>
+		<phrase var_name="by_clicking_on_the_button_below_you_commit_to_buy_this_item_from_the_seller_" added="1490673697">By clicking on the button below, you commit to buy this item from the seller.</phrase>
+		<phrase var_name="can_not_connect_to_server" added="1490673697">Can not connect to server</phrase>
+		<phrase var_name="can_not_connect_to_store_please_try_again_" added="1490673697">Can not connect to Store. Please try again.</phrase>
+		<phrase var_name="can_not_delete_photo_please_try_again_later_" added="1490673697">Can not delete photo. Please try again later.</phrase>
+		<phrase var_name="can_not_delete_this_photo__maybe_you_do_not_have_permission_to_delete_it" added="1490673697">Can not delete this photo  maybe you do not have permission to delete it</phrase>
+		<phrase var_name="can_not_delete_this_photo_maybe_you_do_not_have_permission_to_delete_it" added="1490673697">Can not delete this photo maybe you do not have permission to delete it</phrase>
+		<phrase var_name="can_not_find_the_item" added="1490673697">Can not find the item</phrase>
+		<phrase var_name="can_not_find_this_event" added="1490673697">Can not find this event</phrase>
+		<phrase var_name="can_not_load_country_childs" added="1490673697">Can not load country childs</phrase>
+		<phrase var_name="can_not_load_emoticons_from_server" added="1490673697">Can not load emoticons from server</phrase>
+		<phrase var_name="can_not_load_file_reader" added="1490673697">Can not load file reader</phrase>
+		<phrase var_name="can_not_process_login_by_facebook" added="1490673697">Can not process login by facebook</phrase>
+		<phrase var_name="can_not_process_your_request" added="1490673697">Can not process your request</phrase>
+		<phrase var_name="can_not_upload_file_please_try_again_later" added="1490673697">Can not upload file. Please try again later</phrase>
+		<phrase var_name="can_not_upload_photo_s_please_try_again_later_" added="1490673697">Can not upload photo(s). Please try again later.</phrase>
+		<phrase var_name="can_not_upload_photos" added="1490673697">can not upload photos</phrase>
+		<phrase var_name="can_not_upload_video" added="1490673697">Can not upload video</phrase>
+		<phrase var_name="can_not_view_pending_events" added="1490673697">Can not view pending events</phrase>
+		<phrase var_name="cancel" added="1490673697">Cancel</phrase>
+		<phrase var_name="cancel_membership_request" added="1490673697">Cancel Membership Request</phrase>
+		<phrase var_name="cancel_request" added="1490673697">Cancel Request</phrase>
+		<phrase var_name="cancel_request_failed" added="1490673697">Cancel request failed</phrase>
+		<phrase var_name="cancel_request_successfully" added="1490673697">Cancel request successfully</phrase>
+		<phrase var_name="cannot_add_link" added="1490673697">Cannot add link</phrase>
+		<phrase var_name="cannot_connect_to_server" added="1490673697">Cannot connect to server</phrase>
+		<phrase var_name="cannot_contain_more_than_one_item_please_remove_the_current_selection_before_adding_another_ite_" added="1490673697">Cannot contain more than one item. Please remove the current selection before adding another item.</phrase>
+		<phrase var_name="cannot_delete_attachment" added="1490673697">Cannot delete attachment</phrase>
+		<phrase var_name="cannot_get_link" added="1490673697">Cannot get link</phrase>
+		<phrase var_name="categories" added="1490673697">Categories</phrase>
+		<phrase var_name="category" added="1490673697">Category</phrase>
+		<phrase var_name="category_is_not_valid" added="1490673697">Category is not valid</phrase>
+		<phrase var_name="chat" added="1490673697">Chat</phrase>
+		<phrase var_name="chat_message_can_not_be_empty" added="1490673697">Chat message can not be empty</phrase>
+		<phrase var_name="chat_service_is_not_available" added="1490673697">Chat service is not available</phrase>
+		<phrase var_name="check_in" added="1490673697">Check In</phrase>
+		<phrase var_name="check_in_sucessfully" added="1490673697">Check in sucessfully</phrase>
+		<phrase var_name="check_the_boxes_to_unblock_users_" added="1490673697">Check the boxes to unblock users.</phrase>
+		<phrase var_name="choose_a_category" added="1490673697">Choose a category</phrase>
+		<phrase var_name="city" added="1490673697">City</phrase>
+		<phrase var_name="close" added="1490673697">Close</phrase>
+		<phrase var_name="closed" added="1490673697">Closed</phrase>
+		<phrase var_name="comment" added="1490673697">Comment</phrase>
+		<phrase var_name="comment_does_not_exist_or_has_been_deleted" added="1490673697">Comment does not exist or has been deleted</phrase>
+		<phrase var_name="comment_has_been_deleted" added="1490673697">Comment has been deleted</phrase>
+		<phrase var_name="comment_here" added="1490673697">Comment here</phrase>
+		<phrase var_name="comment_posted_successfully" added="1490673697">Comment posted successfully</phrase>
+		<phrase var_name="comment_privacy" added="1490673697">Comment Privacy</phrase>
+		<phrase var_name="compose" added="1490673697">Compose</phrase>
+		<phrase var_name="confirm" added="1490673697">Confirm</phrase>
+		<phrase var_name="confirm_failed" added="1490673697">Confirm failed</phrase>
+		<phrase var_name="confirm_password" added="1490673697">Confirm Password</phrase>
+		<phrase var_name="confirm_payment" added="1490673697">Confirm Payment</phrase>
+		<phrase var_name="confirm_purchase" added="1490673697">Confirm Purchase</phrase>
+		<phrase var_name="confirm_your_new_password_" added="1490673697">Confirm your new password.</phrase>
+		<phrase var_name="confirmed" added="1490673697">Confirmed</phrase>
+		<phrase var_name="connect_twitter_error" added="1490673697">connect twitter error</phrase>
+		<phrase var_name="contact_information" added="1490673697">Contact Information</phrase>
+		<phrase var_name="contact_seller" added="1490673697">Contact Seller</phrase>
+		<phrase var_name="content" added="1490673697">Content</phrase>
+		<phrase var_name="content_cannot_be_empty" added="1490673697">Content cannot be empty</phrase>
+		<phrase var_name="could_not_find_plugin_facebookconnectplugin_" added="1490673697">Could not find plugin facebookConnectPlugin!</phrase>
+		<phrase var_name="could_not_find_requested_member" added="1490673697">Could not find requested member</phrase>
+		<phrase var_name="could_not_find_user" added="1490673697">Could not find user</phrase>
+		<phrase var_name="could_not_rate_this_song" added="1490673697">Could not rate this song</phrase>
+		<phrase var_name="count_not_get_data_from_server" added="1490673697">Count not get data from server</phrase>
+		<phrase var_name="create_event" added="1490673697">Create Event</phrase>
+		<phrase var_name="current_photo_does_not_exist_in_this_ablum" added="1490673697">Current photo does not exist in this ablum</phrase>
+		<phrase var_name="current_photo_id_is_not_valid" added="1490673697">Current photo id is not valid</phrase>
+		<phrase var_name="current_photo_is_not_valid" added="1490673697">Current photo is not valid</phrase>
+		<phrase var_name="customize_how_other_users_interact_with_your_profile_" added="1490673697">Customize how other users interact with your profile.</phrase>
+		<phrase var_name="customize_your_default_settings_for_when_sharing_new_items_on_the_site_note_this_only_changes_y_" added="1490673697">Customize your default settings for when sharing new items on the site. Note this only changes your default settings for future items and does not change any items you have already shared. To change the privacy settings on those items you can customize the items privacy by editing the item itself.</phrase>
+		<phrase var_name="date_of_birth" added="1490673697">Date of Birth</phrase>
+		<phrase var_name="delete_album" added="1490673697">Delete Album</phrase>
+		<phrase var_name="delete_blog" added="1490673697">Delete Blog</phrase>
+		<phrase var_name="delete_event" added="1490673697">Delete Event</phrase>
+		<phrase var_name="delete_feed" added="1490673697">Delete Feed</phrase>
+		<phrase var_name="delete_friend_failed" added="1490673697">Delete friend failed</phrase>
+		<phrase var_name="delete_image_successfully" added="1490673697">Delete image successfully</phrase>
+		<phrase var_name="delete_listing" added="1490673697">Delete Listing</phrase>
+		<phrase var_name="delete_photo" added="1490673697">Delete Photo</phrase>
+		<phrase var_name="delete_poll" added="1490673697">Delete Poll</phrase>
+		<phrase var_name="delete_post" added="1490673697">Delete post</phrase>
+		<phrase var_name="delete_quiz" added="1490673697">Delete Quiz</phrase>
+		<phrase var_name="delete_successfully" added="1490673697">Delete successfully</phrase>
+		<phrase var_name="delete_this_post" added="1490673697">Delete this post</phrase>
+		<phrase var_name="delete_this_video" added="1490673697">Delete this video</phrase>
+		<phrase var_name="delete_thread" added="1490673697">Delete thread</phrase>
+		<phrase var_name="demote_officer" added="1490673697">Demote officer</phrase>
+		<phrase var_name="denied" added="1490673697">Denied</phrase>
+		<phrase var_name="deny" added="1490673697">Deny</phrase>
+		<phrase var_name="deny_friend_request" added="1490673697">Deny Friend Request</phrase>
+		<phrase var_name="deny_request" added="1490673697">Deny Request</phrase>
+		<phrase var_name="description" added="1490673697">Description</phrase>
+		<phrase var_name="description_can_not_be_empty" added="1490673697">Description can not be empty</phrase>
+		<phrase var_name="device_cannot_get_your_current_position" added="1490673697">Device cannot get your current position</phrase>
+		<phrase var_name="disable_comments" added="1490673697">Disable Comments</phrase>
+		<phrase var_name="disable_vibration" added="1490673697">Disable Vibration</phrase>
+		<phrase var_name="discussion" added="1490673697">Discussion</phrase>
+		<phrase var_name="discussions" added="1490673697">Discussions</phrase>
+		<phrase var_name="dislike" added="1490673697">Dislike</phrase>
+		<phrase var_name="dislike_setting_is_disable" added="1490673697">Dislike setting is disable</phrase>
+		<phrase var_name="disliked_this" added="1490673697">disliked this</phrase>
+		<phrase var_name="display_results_as" added="1490673697">Display results as</phrase>
+		<phrase var_name="do_you_want_to_accept_this_friend_request_" added="1490673697">Do you want to accept this friend request?</phrase>
+		<phrase var_name="do_you_want_to_add_this_member_to_your_friend_list" added="1490673697">Do you want to add this member to your friend list</phrase>
+		<phrase var_name="do_you_want_to_block_this_member_" added="1490673697">Do you want to block this member?</phrase>
+		<phrase var_name="do_you_want_to_buy_membership" added="1490673697">Do you want to buy membership</phrase>
+		<phrase var_name="do_you_want_to_cancel_friend_request_to_this_member_" added="1490673697">Do you want to cancel friend request to this member?</phrase>
+		<phrase var_name="do_you_want_to_delete_this_group_" added="1490673697">Do you want to delete this group?</phrase>
+		<phrase var_name="do_you_want_to_delete_this_page_" added="1490673697">Do you want to delete this page?</phrase>
+		<phrase var_name="do_you_want_to_delete_this_photo_" added="1490673697">Do you want to delete this photo?</phrase>
+		<phrase var_name="do_you_want_to_delete_this_video_" added="1490673697">Do you want to delete this video?</phrase>
+		<phrase var_name="do_you_want_to_deny_this_friend_request_" added="1490673697">Do you want to deny this friend request?</phrase>
+		<phrase var_name="do_you_want_to_log_out_of_application_" added="1490673697">Do you want to log out of application?</phrase>
+		<phrase var_name="do_you_want_to_make_this_photo_your_profile_picture_" added="1490673697">Do you want to make this photo your profile picture?</phrase>
+		<phrase var_name="do_you_want_to_remove_this_member_from_your_friend_list" added="1490673697">Do you want to remove this member from your friend list</phrase>
+		<phrase var_name="do_you_want_to_un_block_this_member_" added="1490673697">Do you want to un-block this member?</phrase>
+		<phrase var_name="done" added="1490673697">Done</phrase>
+		<phrase var_name="draft" added="1490673697">Draft</phrase>
+		<phrase var_name="edit_album" added="1490673697">Edit Album</phrase>
+		<phrase var_name="edit_blog" added="1490673697">Edit Blog</phrase>
+		<phrase var_name="edit_cover_photo" added="1490673697">Edit Cover Photo</phrase>
+		<phrase var_name="edit_event" added="1490673697">Edit Event</phrase>
+		<phrase var_name="edit_feed" added="1490673697">Edit Feed</phrase>
+		<phrase var_name="edit_group" added="1490673697">Edit Group</phrase>
+		<phrase var_name="edit_listing" added="1490673697">Edit Listing</phrase>
+		<phrase var_name="edit_my_photo" added="1490673697">Edit My Photo</phrase>
+		<phrase var_name="edit_page" added="1490673697">Edit Page</phrase>
+		<phrase var_name="edit_page_cover" added="1490673697">Edit Page Cover</phrase>
+		<phrase var_name="edit_page_info" added="1490673697">Edit Page Info</phrase>
+		<phrase var_name="edit_page_photo" added="1490673697">Edit Page Photo</phrase>
+		<phrase var_name="edit_personal_info" added="1490673697">Edit Personal Info</phrase>
+		<phrase var_name="edit_photo" added="1490673697">Edit Photo</phrase>
+		<phrase var_name="edit_photos" added="1490673697">Edit Photos</phrase>
+		<phrase var_name="edit_poll" added="1490673697">Edit Poll</phrase>
+		<phrase var_name="edit_quiz" added="1490673697">Edit Quiz</phrase>
+		<phrase var_name="edit_sucessfully" added="1490673697">Edit sucessfully</phrase>
+		<phrase var_name="edit_this_video" added="1490673697">Edit this video</phrase>
+		<phrase var_name="edit_thread" added="1490673697">Edit thread</phrase>
+		<phrase var_name="edit_video" added="1490673697">Edit Video</phrase>
+		<phrase var_name="edited_failed" added="1490673697">Edited failed</phrase>
+		<phrase var_name="edited_successfully" added="1490673697">Edited successfully</phrase>
+		<phrase var_name="editing_post" added="1490673697">Editing Post</phrase>
+		<phrase var_name="editing_thread" added="1490673697">Editing Thread</phrase>
+		<phrase var_name="email" added="1490673697">Email</phrase>
+		<phrase var_name="email_address" added="1490673697">Email Address</phrase>
+		<phrase var_name="email_address_invalid" added="1490673697">Email address invalid</phrase>
+		<phrase var_name="email_is_not_valid" added="1490673697">Email is not valid</phrase>
+		<phrase var_name="email_name" added="1490673697">email, name</phrase>
+		<phrase var_name="emoticons" added="1490673697">Emoticons</phrase>
+		<phrase var_name="enable_comments" added="1490673697">Enable Comments</phrase>
+		<phrase var_name="enable_instant_payment" added="1490673697">Enable Instant Payment</phrase>
+		<phrase var_name="enable_invisible_mode" added="1490673697">Enable Invisible Mode</phrase>
+		<phrase var_name="enable_vibration" added="1490673697">Enable Vibration</phrase>
+		<phrase var_name="end_date" added="1490673697">End Date</phrase>
+		<phrase var_name="end_time" added="1490673697">End Time</phrase>
+		<phrase var_name="end_time_must_be_greater_than_start_time_" added="1490673697">End Time must be greater than Start Time.</phrase>
+		<phrase var_name="ending_date" added="1490673697">Ending Date</phrase>
+		<phrase var_name="establishing_connection_please_wait_" added="1490673697">Establishing connection. Please wait...</phrase>
+		<phrase var_name="event" added="1490673697">event</phrase>
+		<phrase var_name="event_has_been_created_successfully" added="1490673697">Event has been created successfully</phrase>
+		<phrase var_name="event_has_been_updated_successfully" added="1490673697">Event has been updated successfully</phrase>
+		<phrase var_name="event_invites" added="1490673697">Event Invites</phrase>
+		<phrase var_name="event_is_not_available" added="1490673697">Event is not available</phrase>
+		<phrase var_name="event_is_not_valid" added="1490673697">Event is not valid</phrase>
+		<phrase var_name="event_is_not_valid_or_has_been_deleted" added="1490673697">Event is not valid or has been deleted</phrase>
+		<phrase var_name="event_name" added="1490673697">Event Name</phrase>
+		<phrase var_name="events" added="1490673697">Events</phrase>
+		<phrase var_name="everything" added="1490673697">Everything</phrase>
+		<phrase var_name="facebook" added="1490673697">Facebook</phrase>
+		<phrase var_name="failed_limit_reached" added="1490673697">Failed limit reached</phrase>
+		<phrase var_name="failed_limit_reached_attachment" added="1490673697">Failed limit reached attachment</phrase>
+		<phrase var_name="feed_is_not_valid" added="1490673697">Feed is not valid</phrase>
+		<phrase var_name="feed_is_not_valid_or_you_don_not_have_permission_to_view_this_feed" added="1490673697">Feed is not valid or you don not have permission to view this feed</phrase>
+		<phrase var_name="feed_settings" added="1490673697">Feed Settings</phrase>
+		<phrase var_name="female" added="1490673697">Female</phrase>
+		<phrase var_name="fill_in_a_title_for_your_blog" added="1490673697">Fill in a title for your blog</phrase>
+		<phrase var_name="filter_by" added="1490673697">Filter By</phrase>
+		<phrase var_name="find_in_forum" added="1490673697">Find in forum</phrase>
+		<phrase var_name="for" added="1490673697">for</phrase>
+		<phrase var_name="forgot_password" added="1490673697">Forgot Password</phrase>
+		<phrase var_name="forgot_password_" added="1490673697">Forgot Password?</phrase>
+		<phrase var_name="forum" added="1490673697">Forum</phrase>
+		<phrase var_name="forums" added="1490673697">Forums</phrase>
+		<phrase var_name="free" added="1490673697">Free</phrase>
+		<phrase var_name="friend" added="1490673697">FRIEND</phrase>
+		<phrase var_name="friend_list_is_not_valid" added="1490673697">Friend list is not valid</phrase>
+		<phrase var_name="friends_id_is_not_valid" added="1490673697">Friends id is not valid</phrase>
+		<phrase var_name="from" added="1490673697">From</phrase>
+		<phrase var_name="full_name" added="1490673697">Full Name</phrase>
+		<phrase var_name="fullname_can_not_be_empty" added="1490673697">Fullname can not be empty</phrase>
+		<phrase var_name="gender" added="1490673697">Gender</phrase>
+		<phrase var_name="genre" added="1490673697">Genre</phrase>
+		<phrase var_name="genres" added="1490673697">Genres</phrase>
+		<phrase var_name="get_errors_when_attach_file_please_try_again" added="1490673697">Get errors when attach file please try again</phrase>
+		<phrase var_name="get_notifications" added="1490673697">Get Notifications</phrase>
+		<phrase var_name="go_offline" added="1490673697">Go Offline</phrase>
+		<phrase var_name="go_online" added="1490673697">Go Online</phrase>
+		<phrase var_name="group_has_been_updated_successfully" added="1490673697">Group has been updated successfully</phrase>
+		<phrase var_name="group_name" added="1490673697">Group Name</phrase>
+		<phrase var_name="groups" added="1490673697">Groups</phrase>
+		<phrase var_name="has_sent_a_friend_request" added="1490673697">has sent a friend request</phrase>
+		<phrase var_name="hide_all_from" added="1490673697">Hide all from</phrase>
+		<phrase var_name="hide_feeds_from_" added="1490673697">Hide feeds from:</phrase>
+		<phrase var_name="highest_rated" added="1490673697">Highest Rated</phrase>
+		<phrase var_name="i_don_t_want_to_see_this" added="1490673697"><![CDATA[I don't want to see this]]></phrase>
+		<phrase var_name="i_m_attending" added="1490673697"><![CDATA[I'm Attending]]></phrase>
+		<phrase var_name="i_m_not_attending" added="1490673697"><![CDATA[I'm Not Attending]]></phrase>
+		<phrase var_name="i_may_attend" added="1490673697">I May Attend</phrase>
+		<phrase var_name="ignore_invitation" added="1490673697">Ignore Invitation</phrase>
+		<phrase var_name="iminid_is_not_valid" added="1490673697">Iminid is not valid</phrase>
+		<phrase var_name="in" added="1490673697">in</phrase>
+		<phrase var_name="in_app_billing_is_not_available_" added="1490673697">In-App Billing is not available.</phrase>
+		<phrase var_name="in_app_purchases_does_not_support_this_currency_please_purchase_in_web_site_" added="1490673697">In-App Purchases does not support this currency. Please purchase in web site.</phrase>
+		<phrase var_name="in_app_purchases_is_not_available_" added="1490673697">In-App Purchases is not available.</phrase>
+		<phrase var_name="inbox" added="1490673697">Inbox</phrase>
+		<phrase var_name="info" added="1490673697">Info</phrase>
+		<phrase var_name="information" added="1490673697">Information</phrase>
+		<phrase var_name="insert_image" added="1490673697">Insert Image</phrase>
+		<phrase var_name="invalid_account" added="1490673697">Invalid account</phrase>
+		<phrase var_name="invalid_credentials" added="1490673697">Invalid credentials</phrase>
+		<phrase var_name="invalid_currency" added="1490673697">Invalid currency</phrase>
+		<phrase var_name="invalid_data" added="1490673697">Invalid data</phrase>
+		<phrase var_name="invalid_language" added="1490673697">Invalid language</phrase>
+		<phrase var_name="invalid_module" added="1490673697">Invalid module</phrase>
+		<phrase var_name="invalid_timezone" added="1490673697">Invalid timezone</phrase>
+		<phrase var_name="invalid_video_url" added="1490673697">Invalid Video URL</phrase>
+		<phrase var_name="invisible" added="1490673697">Invisible</phrase>
+		<phrase var_name="invisible_mode" added="1490673697">Invisible Mode</phrase>
+		<phrase var_name="invisible_mode_allows_you_to_browse_the_site_without_appearing_on_any_online_lists_" added="1490673697"><![CDATA[Invisible mode allows you to browse the site without appearing on any "Online" lists.]]></phrase>
+		<phrase var_name="invite" added="1490673697">Invite</phrase>
+		<phrase var_name="invite_friends" added="1490673697">Invite Friends</phrase>
+		<phrase var_name="invite_guests" added="1490673697">Invite Guests</phrase>
+		<phrase var_name="invite_waiting_members" added="1490673697">Invite/Waiting Members</phrase>
+		<phrase var_name="invited" added="1490673697">Invited</phrase>
+		<phrase var_name="invited_member_s_successfully_" added="1490673697">Invited member(s) successfully.</phrase>
+		<phrase var_name="invited_successfully_" added="1490673697">Invited successfully.</phrase>
+		<phrase var_name="it_is_not_link_please_provide_again" added="1490673697">It is not link please provide again</phrase>
+		<phrase var_name="item" added="1490673697">item</phrase>
+		<phrase var_name="items" added="1490673697">Items</phrase>
+		<phrase var_name="join" added="1490673697">Join</phrase>
+		<phrase var_name="jump" added="1490673697">Jump</phrase>
+		<phrase var_name="keywords" added="1490673697">Keywords</phrase>
+		<phrase var_name="language" added="1490673697">Language</phrase>
+		<phrase var_name="last_comment_viewd_does_not_exist_or_has_been_deleted" added="1490673697">Last comment viewd does not exist or has been deleted</phrase>
+		<phrase var_name="last_post" added="1490673697">Last post</phrase>
+		<phrase var_name="last_post_by" added="1490673697">Last post by</phrase>
+		<phrase var_name="latest" added="1490673697">Latest</phrase>
+		<phrase var_name="learn_more_about_our_memberships" added="1490673697">Learn more about our memberships</phrase>
+		<phrase var_name="leave_group" added="1490673697">Leave Group</phrase>
+		<phrase var_name="less" added="1490673697">Less</phrase>
+		<phrase var_name="like" added="1490673697">Like</phrase>
+		<phrase var_name="like_module_is_disable" added="1490673697">Like module is disable</phrase>
+		<phrase var_name="liked" added="1490673697">LIKED</phrase>
+		<phrase var_name="liked_this" added="1490673697">liked this</phrase>
+		<phrase var_name="link_does_not_found" added="1490673697">Link does not found</phrase>
+		<phrase var_name="link_is_not_valid" added="1490673697">Link is not valid</phrase>
+		<phrase var_name="list_by" added="1490673697">List By</phrase>
+		<phrase var_name="listing" added="1490673697">listing</phrase>
+		<phrase var_name="listing_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Listing has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="listing_id_is_not_valid" added="1490673697">Listing id is not valid</phrase>
+		<phrase var_name="listing_is_pending_approval_" added="1490673697">Listing is pending approval.</phrase>
+		<phrase var_name="listing_privacy" added="1490673697">Listing Privacy</phrase>
+		<phrase var_name="listing_successfully_added_" added="1490673697">Listing successfully added.</phrase>
+		<phrase var_name="loading_" added="1490673697">Loading...</phrase>
+		<phrase var_name="location" added="1490673697">Location</phrase>
+		<phrase var_name="lock_feed" added="1490673697">Lock Feed</phrase>
+		<phrase var_name="login_by_invalid_method" added="1490673697">Login by invalid method</phrase>
+		<phrase var_name="login_failed" added="1490673697">Login failed</phrase>
+		<phrase var_name="login_id" added="1490673697">Login ID</phrase>
+		<phrase var_name="logout" added="1490673697">Logout</phrase>
+		<phrase var_name="mail" added="1490673697">Mail</phrase>
+		<phrase var_name="main_photo" added="1490673697">Main Photo</phrase>
+		<phrase var_name="make_officer" added="1490673697">Make officer</phrase>
+		<phrase var_name="make_profile_photo" added="1490673697">Make Profile Photo</phrase>
+		<phrase var_name="male" added="1490673697">Male</phrase>
+		<phrase var_name="manage_page" added="1490673697">Manage Page</phrase>
+		<phrase var_name="mark_all" added="1490673697">Mark All</phrase>
+		<phrase var_name="mark_all_read" added="1490673697">Mark All Read</phrase>
+		<phrase var_name="marketplace" added="1490673697">Marketplace</phrase>
+		<phrase var_name="marking_all_read_" added="1490673697">Marking All Read...</phrase>
+		<phrase var_name="maybe" added="1490673697">MayBe</phrase>
+		<phrase var_name="maybe_attending" added="1490673697">Maybe Attending</phrase>
+		<phrase var_name="members_invited" added="1490673697">Members invited</phrase>
+		<phrase var_name="members_votes" added="1490673697">Members votes</phrase>
+		<phrase var_name="membership" added="1490673697">Membership</phrase>
+		<phrase var_name="memberships" added="1490673697">Memberships</phrase>
+		<phrase var_name="message" added="1490673697">Message</phrase>
+		<phrase var_name="message_history" added="1490673697">Message History</phrase>
+		<phrase var_name="message_is_not_valid" added="1490673697">Message is not valid</phrase>
+		<phrase var_name="message_members" added="1490673697">Message Members</phrase>
+		<phrase var_name="message_was_not_delivered" added="1490673697">Message was not delivered</phrase>
+		<phrase var_name="messages" added="1490673697">Messages</phrase>
+		<phrase var_name="missing_album_name" added="1490673697">Missing album name</phrase>
+		<phrase var_name="missing_email_address" added="1490673697">Missing email address</phrase>
+		<phrase var_name="missing_fullname_field" added="1490673697">Missing fullname field</phrase>
+		<phrase var_name="missing_item_id" added="1490673697">Missing item id</phrase>
+		<phrase var_name="missing_location_latitude" added="1490673697">Missing location latitude</phrase>
+		<phrase var_name="missing_location_longitude" added="1490673697">Missing location longitude</phrase>
+		<phrase var_name="missing_location_title" added="1490673697">Missing location title</phrase>
+		<phrase var_name="missing_module_name" added="1490673697">Missing module name</phrase>
+		<phrase var_name="missing_new_password_" added="1490673697">Missing new password.</phrase>
+		<phrase var_name="missing_old_password_" added="1490673697">Missing old password.</phrase>
+		<phrase var_name="missing_params_ipollid" added="1490673697">Missing params ipollid</phrase>
+		<phrase var_name="missing_params_iquizid" added="1490673697">Missing params iquizid</phrase>
+		<phrase var_name="missing_params_iuserid" added="1490673697">Missing params iuserid</phrase>
+		<phrase var_name="missing_poll_id_param" added="1490673697">Missing poll id param</phrase>
+		<phrase var_name="missing_questions" added="1490673697">Missing questions</phrase>
+		<phrase var_name="missing_quiz_description" added="1490673697">Missing quiz description</phrase>
+		<phrase var_name="missing_quiz_title" added="1490673697">Missing quiz title</phrase>
+		<phrase var_name="missing_rating_value" added="1490673697">Missing rating value</phrase>
+		<phrase var_name="missing_sloginuid" added="1490673697">Missing sloginuid</phrase>
+		<phrase var_name="missing_token" added="1490673697">Missing token</phrase>
+		<phrase var_name="missing_url" added="1490673697">Missing url</phrase>
+		<phrase var_name="missing_user_id" added="1490673697">Missing user id</phrase>
+		<phrase var_name="missing_user_name" added="1490673697">Missing user name</phrase>
+		<phrase var_name="most_discussed" added="1490673697">Most Discussed</phrase>
+		<phrase var_name="most_liked" added="1490673697">Most Liked</phrase>
+		<phrase var_name="most_recent" added="1490673697">Most Recent</phrase>
+		<phrase var_name="most_viewed" added="1490673697">Most Viewed</phrase>
+		<phrase var_name="music" added="1490673697">Music</phrase>
+		<phrase var_name="music_sharing_does_not_support_rating" added="1490673697">Music sharing does not support rating</phrase>
+		<phrase var_name="mute_notification" added="1490673697">Mute Notification</phrase>
+		<phrase var_name="mutual_friends" added="1490673697">mutual friends</phrase>
+		<phrase var_name="my_albums" added="1490673697">My Albums</phrase>
+		<phrase var_name="my_blogs" added="1490673697">My Blogs</phrase>
+		<phrase var_name="my_events" added="1490673697">My Events</phrase>
+		<phrase var_name="my_groups" added="1490673697">My Groups</phrase>
+		<phrase var_name="my_listings" added="1490673697">My Listings</phrase>
+		<phrase var_name="my_pages" added="1490673697">My Pages</phrase>
+		<phrase var_name="my_photos" added="1490673697">My Photos</phrase>
+		<phrase var_name="my_polls" added="1490673697">My Polls</phrase>
+		<phrase var_name="my_quizzes" added="1490673697">My Quizzes</phrase>
+		<phrase var_name="my_songs" added="1490673697">My Songs</phrase>
+		<phrase var_name="my_threads" added="1490673697">My Threads</phrase>
+		<phrase var_name="my_videos" added="1490673697">My Videos</phrase>
+		<phrase var_name="name_is_not_valid" added="1490673697">Name is not valid</phrase>
+		<phrase var_name="new_message" added="1490673697">New Message</phrase>
+		<phrase var_name="new_password" added="1490673697">New Password</phrase>
+		<phrase var_name="new_posts" added="1490673697">New Posts</phrase>
+		<phrase var_name="news_feed" added="1490673697">News Feed</phrase>
+		<phrase var_name="next" added="1490673697">Next</phrase>
+		<phrase var_name="no_account_will_be_created_if_you_cancel_this_screen" added="1490673697">No account will be created if you cancel this screen</phrase>
+		<phrase var_name="no_activities_found_" added="1490673697">No activities found!</phrase>
+		<phrase var_name="no_albums_found" added="1490673697">No albums found</phrase>
+		<phrase var_name="no_albums_found_" added="1490673697">No albums found.</phrase>
+		<phrase var_name="no_blogs_found_" added="1490673697">No blogs found.</phrase>
+		<phrase var_name="no_categories_added_" added="1490673697">No categories added.</phrase>
+		<phrase var_name="no_comment" added="1490673697">No comment</phrase>
+		<phrase var_name="no_contacts_found_" added="1490673697">No contacts found.</phrase>
+		<phrase var_name="no_events_found_" added="1490673697">No events found.</phrase>
+		<phrase var_name="no_file" added="1490673697">No file</phrase>
+		<phrase var_name="no_file_to_upload" added="1490673697">No file to upload</phrase>
+		<phrase var_name="no_forums_found_" added="1490673697">No forums found.</phrase>
+		<phrase var_name="no_friends_available_for_chatting_" added="1490673697">No friends available for chatting.</phrase>
+		<phrase var_name="no_friends_found" added="1490673697">No friends found</phrase>
+		<phrase var_name="no_friends_found_" added="1490673697">No friends found.</phrase>
+		<phrase var_name="no_groups_found_" added="1490673697">No groups found.</phrase>
+		<phrase var_name="no_guests_found_" added="1490673697">No guests found.</phrase>
+		<phrase var_name="no_image_uploaded_please_try_upload_a_new_one" added="1490673697">No image uploaded please try upload a new one</phrase>
+		<phrase var_name="no_listings_found_" added="1490673697">No listings found.</phrase>
+		<phrase var_name="no_locations_found_" added="1490673697">No locations found.</phrase>
+		<phrase var_name="no_logged_in_users" added="1490673697">No logged in users</phrase>
+		<phrase var_name="no_members_found" added="1490673697">No members found</phrase>
+		<phrase var_name="no_members_found_" added="1490673697">No members found.</phrase>
+		<phrase var_name="no_messages_" added="1490673697">No messages.</phrase>
+		<phrase var_name="no_messages_found_" added="1490673697">No messages found.</phrase>
+		<phrase var_name="no_more_activities" added="1490673697">No more activities</phrase>
+		<phrase var_name="no_more_albums" added="1490673697">No more albums</phrase>
+		<phrase var_name="no_more_blogs" added="1490673697">No more blogs</phrase>
+		<phrase var_name="no_more_events" added="1490673697">No more events</phrase>
+		<phrase var_name="no_more_forums" added="1490673697">No more forums</phrase>
+		<phrase var_name="no_more_friends" added="1490673697">No more friends</phrase>
+		<phrase var_name="no_more_groups" added="1490673697">No more groups</phrase>
+		<phrase var_name="no_more_items" added="1490673697">No more items</phrase>
+		<phrase var_name="no_more_listings" added="1490673697">No more listings</phrase>
+		<phrase var_name="no_more_locations" added="1490673697">No more locations</phrase>
+		<phrase var_name="no_more_members" added="1490673697">No more members</phrase>
+		<phrase var_name="no_more_messages" added="1490673697">No more messages</phrase>
+		<phrase var_name="no_more_notifications" added="1490673697">No more notifications</phrase>
+		<phrase var_name="no_more_pages" added="1490673697">No more pages</phrase>
+		<phrase var_name="no_more_photos" added="1490673697">No more photos</phrase>
+		<phrase var_name="no_more_polls_" added="1490673697">No more polls.</phrase>
+		<phrase var_name="no_more_posts" added="1490673697">No more posts</phrase>
+		<phrase var_name="no_more_quizzes_" added="1490673697">No more quizzes.</phrase>
+		<phrase var_name="no_more_result" added="1490673697">No more result</phrase>
+		<phrase var_name="no_more_sources" added="1490673697">No more sources</phrase>
+		<phrase var_name="no_more_threads" added="1490673697">No more threads</phrase>
+		<phrase var_name="no_more_topics_" added="1490673697">No more topics.</phrase>
+		<phrase var_name="no_more_videos" added="1490673697">No more videos</phrase>
+		<phrase var_name="no_music_found_" added="1490673697">No music found.</phrase>
+		<phrase var_name="no_new_messages_" added="1490673697">No new messages.</phrase>
+		<phrase var_name="no_new_notifications_" added="1490673697">No new notifications.</phrase>
+		<phrase var_name="no_one_has_written_any_blog_entries_yet_" added="1490673697">No one has written any blog entries yet.</phrase>
+		<phrase var_name="no_packages_found_" added="1490673697">No packages found.</phrase>
+		<phrase var_name="no_pages_found_" added="1490673697">No pages found.</phrase>
+		<phrase var_name="no_photos_found_" added="1490673697">No photos found.</phrase>
+		<phrase var_name="no_polls_found_" added="1490673697">No polls found.</phrase>
+		<phrase var_name="no_posts_found_" added="1490673697">No posts found.</phrase>
+		<phrase var_name="no_quizzes_found_" added="1490673697">No quizzes found.</phrase>
+		<phrase var_name="no_record_found_with_this_email" added="1490673697">No record found with this email</phrase>
+		<phrase var_name="no_requests_found_" added="1490673697">No requests found.</phrase>
+		<phrase var_name="no_results_found" added="1490673697">No results found</phrase>
+		<phrase var_name="no_results_found_" added="1490673697">No results found.</phrase>
+		<phrase var_name="no_threads_found_" added="1490673697">No threads found.</phrase>
+		<phrase var_name="no_topics_found_" added="1490673697">No topics found.</phrase>
+		<phrase var_name="no_user_found" added="1490673697">No user found</phrase>
+		<phrase var_name="no_valid_photos_has_been_selected_please_try_again_" added="1490673697">No valid photos has been selected. Please try again.</phrase>
+		<phrase var_name="no_videos_found_" added="1490673697">No videos found.</phrase>
+		<phrase var_name="none_category" added="1490673697">None Category</phrase>
+		<phrase var_name="not_a_valid_invoice" added="1490673697">Not a valid invoice</phrase>
+		<phrase var_name="not_a_valid_poll" added="1490673697">Not a valid poll</phrase>
+		<phrase var_name="not_attending" added="1490673697">Not Attending</phrase>
+		<phrase var_name="not_implement" added="1490673697">Not implement</phrase>
+		<phrase var_name="not_support_attach_this_type" added="1490673697">Not support attach this type</phrase>
+		<phrase var_name="not_support_attach_video" added="1490673697">Not support attach video</phrase>
+		<phrase var_name="not_support_dislike_for_music_album" added="1490673697">Not support dislike for music album</phrase>
+		<phrase var_name="not_support_this_status_yet" added="1490673697">Not support this status yet</phrase>
+		<phrase var_name="not_support_video_yet" added="1490673697">Not support video yet</phrase>
+		<phrase var_name="not_support_yet" added="1490673697">Not support yet</phrase>
+		<phrase var_name="notifications" added="1490673697">Notifications</phrase>
+		<phrase var_name="off" added="1490673697">Off</phrase>
+		<phrase var_name="officer" added="1490673697">Officer</phrase>
+		<phrase var_name="offline" added="1490673697">Offline</phrase>
+		<phrase var_name="ok" added="1490673697">OK</phrase>
+		<phrase var_name="old_password" added="1490673697">Old Password</phrase>
+		<phrase var_name="one_file_per_time_only" added="1490673697">One file per time only</phrase>
+		<phrase var_name="one_time" added="1490673697">one time</phrase>
+		<phrase var_name="online" added="1490673697">Online</phrase>
+		<phrase var_name="oops_the_action_not_found" added="1490673697">Oops the action not found</phrase>
+		<phrase var_name="oops_the_activity_not_found" added="1490673697">Oops the activity not found</phrase>
+		<phrase var_name="opps_the_action_not_found" added="1490673697">Opps the action not found</phrase>
+		<phrase var_name="opps_the_activity_not_found" added="1490673697">Opps the activity not found</phrase>
+		<phrase var_name="opps_the_album_not_found" added="1490673697">Opps the album not found</phrase>
+		<phrase var_name="or_using" added="1490673697">or using</phrase>
+		<phrase var_name="other" added="1490673697">other</phrase>
+		<phrase var_name="others" added="1490673697">others</phrase>
+		<phrase var_name="out_of" added="1490673697">out of</phrase>
+		<phrase var_name="owner" added="1490673697">Owner</phrase>
+		<phrase var_name="owner_" added="1490673697">Owner:</phrase>
+		<phrase var_name="package_you_are_looking_for_either_does_not_exist_or_has_been_removed" added="1490673697">Package you are looking for either does not exist or has been removed</phrase>
+		<phrase var_name="page_admins" added="1490673697">Page admins</phrase>
+		<phrase var_name="page_has_been_updated_successfully" added="1490673697">Page has been updated successfully</phrase>
+		<phrase var_name="page_name" added="1490673697">Page Name</phrase>
+		<phrase var_name="pages" added="1490673697">Pages</phrase>
+		<phrase var_name="parameters_is_not_valid" added="1490673697">Parameters is not valid</phrase>
+		<phrase var_name="password" added="1490673697">Password</phrase>
+		<phrase var_name="password_can_not_be_empty" added="1490673697">Password can not be empty</phrase>
+		<phrase var_name="password_must_be_longer_than_6" added="1490673697">Password must be longer than 6</phrase>
+		<phrase var_name="password_successfully_updated_" added="1490673697">Password successfully updated.</phrase>
+		<phrase var_name="paste_your_video_url" added="1490673697">Paste your video URL</phrase>
+		<phrase var_name="paste_youtube_vimeo_url" added="1490673697">Paste YouTube/Vimeo URL</phrase>
+		<phrase var_name="people_who_disliked_this" added="1490673697">People who disliked this</phrase>
+		<phrase var_name="people_who_liked_this" added="1490673697">People who liked this</phrase>
+		<phrase var_name="people_who_liked_this_page" added="1490673697">People who liked this page</phrase>
+		<phrase var_name="personal" added="1490673697">Personal</phrase>
+		<phrase var_name="personal_categories" added="1490673697">Personal Categories</phrase>
+		<phrase var_name="photo_id_is_missing" added="1490673697">Photo id is missing</phrase>
+		<phrase var_name="photo_is_deleted" added="1490673697">Photo is deleted</phrase>
+		<phrase var_name="photo_is_not_valid" added="1490673697">Photo is not valid</phrase>
+		<phrase var_name="photo_is_not_valid_or_has_been_deleted" added="1490673697">Photo is not valid or has been deleted</phrase>
+		<phrase var_name="photo_must_be_approved_first" added="1490673697">Photo must be approved first</phrase>
+		<phrase var_name="photo_not_found" added="1490673697">Photo not found</phrase>
+		<phrase var_name="please_answer_all_questions_" added="1490673697">Please answer all questions.</phrase>
+		<phrase var_name="please_choose_a_recipient" added="1490673697">Please choose a recipient</phrase>
+		<phrase var_name="please_enter_a_valid_email" added="1490673697">Please enter a valid email</phrase>
+		<phrase var_name="please_enter_event_name_" added="1490673697">Please enter Event Name.</phrase>
+		<phrase var_name="please_enter_event_name_no_more_than_64_characters_" added="1490673697">Please enter Event Name no more than 64 characters.</phrase>
+		<phrase var_name="please_enter_group_name_" added="1490673697">Please enter group name.</phrase>
+		<phrase var_name="please_enter_page_name_" added="1490673697">Please enter page name.</phrase>
+		<phrase var_name="please_enter_the_message" added="1490673697">Please enter the message</phrase>
+		<phrase var_name="please_enter_title_no_more_than_64_characters" added="1490673697">Please enter Title no more than 64 characters</phrase>
+		<phrase var_name="please_enter_your_comment" added="1490673697">Please enter your comment</phrase>
+		<phrase var_name="please_enter_your_email" added="1490673697">Please enter your email</phrase>
+		<phrase var_name="please_enter_your_message" added="1490673697">Please enter your message</phrase>
+		<phrase var_name="please_login_first" added="1490673697">Please login first</phrase>
+		<phrase var_name="please_provide_keyword" added="1490673697">Please provide keyword</phrase>
+		<phrase var_name="please_provide_list_of_photo_id" added="1490673697">Please provide list of photo id</phrase>
+		<phrase var_name="please_provide_title_for_this_photo" added="1490673697">Please provide title for this photo</phrase>
+		<phrase var_name="please_select_end_date_" added="1490673697">Please select end date.</phrase>
+		<phrase var_name="please_select_end_time_" added="1490673697">Please select end time.</phrase>
+		<phrase var_name="please_select_friend_to_invite_" added="1490673697">Please select friend to invite.</phrase>
+		<phrase var_name="please_select_photos_to_upload" added="1490673697">Please select photos to upload</phrase>
+		<phrase var_name="please_select_start_date_" added="1490673697">Please select start date.</phrase>
+		<phrase var_name="please_select_start_time_" added="1490673697">Please select start time.</phrase>
+		<phrase var_name="please_select_video" added="1490673697">Please select video</phrase>
+		<phrase var_name="please_try_again" added="1490673697">Please try again</phrase>
+		<phrase var_name="please_write_something_to_share" added="1490673697">Please write something to share</phrase>
+		<phrase var_name="poll_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Poll has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="poll_id_is_not_valid" added="1490673697">Poll id is not valid</phrase>
+		<phrase var_name="poll_results" added="1490673697">Poll Results</phrase>
+		<phrase var_name="poll_title_is_required_" added="1490673697">Poll title is required.</phrase>
+		<phrase var_name="polls" added="1490673697">Polls</phrase>
+		<phrase var_name="popuplar" added="1490673697">Popuplar</phrase>
+		<phrase var_name="posible_answers" added="1490673697">Posible Answers</phrase>
+		<phrase var_name="positive" added="1490673697">Positive</phrase>
+		<phrase var_name="post_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Post has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="post_new_thread" added="1490673697">Post New Thread</phrase>
+		<phrase var_name="post_successfully_deleted" added="1490673697">Post successfully deleted</phrase>
+		<phrase var_name="post_topic" added="1490673697">Post Topic</phrase>
+		<phrase var_name="posted_in" added="1490673697">Posted in</phrase>
+		<phrase var_name="preferred_currency" added="1490673697">Preferred Currency</phrase>
+		<phrase var_name="preview" added="1490673697">Preview</phrase>
+		<phrase var_name="price" added="1490673697">Price</phrase>
+		<phrase var_name="primary_language" added="1490673697">Primary Language</phrase>
+		<phrase var_name="privacy" added="1490673697">Privacy</phrase>
+		<phrase var_name="privacy_settings" added="1490673697">Privacy Settings</phrase>
+		<phrase var_name="privacy_settings_successfully_updated_" added="1490673697">Privacy settings successfully updated.</phrase>
+		<phrase var_name="private_page" added="1490673697">Private Page</phrase>
+		<phrase var_name="profile" added="1490673697">Profile</phrase>
+		<phrase var_name="profile_id_is_not_valid" added="1490673697">Profile id is not valid</phrase>
+		<phrase var_name="profile_is_not_valid" added="1490673697">Profile is not valid</phrase>
+		<phrase var_name="profile_is_private_" added="1490673697">Profile is private.</phrase>
+		<phrase var_name="provide_a_category_this_listing_will_belong_to_" added="1490673697">Provide a category this listing will belong to.</phrase>
+		<phrase var_name="provide_a_location_for_this_listing_" added="1490673697">Provide a location for this listing.</phrase>
+		<phrase var_name="provide_a_name_for_this_listing_" added="1490673697">Provide a name for this listing.</phrase>
+		<phrase var_name="provide_a_question_for_your_poll" added="1490673697">Provide a question for your poll</phrase>
+		<phrase var_name="provide_a_question_for_your_poll_" added="1490673697">Provide a question for your poll.</phrase>
+		<phrase var_name="provide_a_title_for_your_thread" added="1490673697">Provide a title for your thread</phrase>
+		<phrase var_name="provide_a_user_name_" added="1490673697">Provide a user name.</phrase>
+		<phrase var_name="provide_a_valid_email_address_" added="1490673697">Provide a valid email address.</phrase>
+		<phrase var_name="provide_a_valid_price" added="1490673697">Provide a valid price</phrase>
+		<phrase var_name="provide_a_valid_price_" added="1490673697">Provide a valid price.</phrase>
+		<phrase var_name="provide_some_text" added="1490673697">Provide some text</phrase>
+		<phrase var_name="provide_title_for_your_thread" added="1490673697">Provide title for your thread</phrase>
+		<phrase var_name="provide_your_full_name_" added="1490673697">Provide your full name.</phrase>
+		<phrase var_name="public_categories" added="1490673697">Public Categories</phrase>
+		<phrase var_name="public_votes" added="1490673697">Public Votes</phrase>
+		<phrase var_name="publish" added="1490673697">Publish</phrase>
+		<phrase var_name="pull_down_to_load_more" added="1490673697">Pull down to load more</phrase>
+		<phrase var_name="pull_down_to_refresh" added="1490673697">Pull down to refresh</phrase>
+		<phrase var_name="purchase_is_not_valid" added="1490673697">Purchase is not valid</phrase>
+		<phrase var_name="question" added="1490673697">Question</phrase>
+		<phrase var_name="questions_and_answers_could_not_be_empty_" added="1490673697">Questions and Answers could not be empty!</phrase>
+		<phrase var_name="quiz" added="1490673697">quiz</phrase>
+		<phrase var_name="quiz_description_is_required_" added="1490673697">Quiz description is required.</phrase>
+		<phrase var_name="quiz_results_for" added="1490673697">Quiz Results for</phrase>
+		<phrase var_name="quiz_title" added="1490673697">Quiz Title</phrase>
+		<phrase var_name="quiz_title_is_required_" added="1490673697">Quiz title is required.</phrase>
+		<phrase var_name="quizzes" added="1490673697">Quizzes</phrase>
+		<phrase var_name="quote_post" added="1490673697">Quote post</phrase>
+		<phrase var_name="rate" added="1490673697">Rate</phrase>
+		<phrase var_name="rating_failed" added="1490673697">Rating failed</phrase>
+		<phrase var_name="read_and_agree_with" added="1490673697">Read and agree with</phrase>
+		<phrase var_name="reason_is_not_valid" added="1490673697">Reason is not valid</phrase>
+		<phrase var_name="recent" added="1490673697">Recent</phrase>
+		<phrase var_name="release_to_refresh" added="1490673697">Release to refresh</phrase>
+		<phrase var_name="remove" added="1490673697">Remove</phrase>
+		<phrase var_name="remove_dislike" added="1490673697">Remove Dislike</phrase>
+		<phrase var_name="remove_friend" added="1490673697">Remove Friend</phrase>
+		<phrase var_name="remove_from_saved_feeds" added="1490673697">Remove From Saved Feeds</phrase>
+		<phrase var_name="remove_invitation" added="1490673697">Remove Invitation</phrase>
+		<phrase var_name="reply" added="1490673697">Reply</phrase>
+		<phrase var_name="reply_message_" added="1490673697">Reply Message...</phrase>
+		<phrase var_name="report" added="1490673697">Report</phrase>
+		<phrase var_name="report_feed" added="1490673697">Report Feed</phrase>
+		<phrase var_name="report_successfully" added="1490673697">Report successfully</phrase>
+		<phrase var_name="report_this_album" added="1490673697">Report this album</phrase>
+		<phrase var_name="report_this_photo" added="1490673697">Report this photo</phrase>
+		<phrase var_name="report_this_post" added="1490673697">Report this post</phrase>
+		<phrase var_name="report_this_song" added="1490673697">Report this song</phrase>
+		<phrase var_name="report_this_video" added="1490673697">Report this video</phrase>
+		<phrase var_name="request_membership" added="1490673697">Request Membership</phrase>
+		<phrase var_name="requested" added="1490673697">Requested</phrase>
+		<phrase var_name="reselect" added="1490673697">Reselect</phrase>
+		<phrase var_name="reselect_photo" added="1490673697">Reselect Photo</phrase>
+		<phrase var_name="said" added="1490673697">said</phrase>
+		<phrase var_name="save_feed" added="1490673697">Save Feed</phrase>
+		<phrase var_name="search" added="1490673697">Search</phrase>
+		<phrase var_name="search_" added="1490673697">Search ...</phrase>
+		<phrase var_name="search_albums" added="1490673697">Search albums</phrase>
+		<phrase var_name="search_blogs" added="1490673697">Search blogs</phrase>
+		<phrase var_name="search_events" added="1490673697">Search events</phrase>
+		<phrase var_name="search_friends" added="1490673697">Search friends</phrase>
+		<phrase var_name="search_groups" added="1490673697">Search groups</phrase>
+		<phrase var_name="search_listings" added="1490673697">Search listings</phrase>
+		<phrase var_name="search_messages" added="1490673697">Search messages</phrase>
+		<phrase var_name="search_pages" added="1490673697">Search pages</phrase>
+		<phrase var_name="search_photos" added="1490673697">Search photos</phrase>
+		<phrase var_name="search_polls" added="1490673697">Search polls</phrase>
+		<phrase var_name="search_posts_for" added="1490673697">Search posts for</phrase>
+		<phrase var_name="search_quizzes" added="1490673697">Search quizzes</phrase>
+		<phrase var_name="search_songs" added="1490673697">Search songs</phrase>
+		<phrase var_name="search_threads_for" added="1490673697">Search threads for</phrase>
+		<phrase var_name="search_videos" added="1490673697">Search videos</phrase>
+		<phrase var_name="search_your_location" added="1490673697">Search your location</phrase>
+		<phrase var_name="see_less" added="1490673697">See Less</phrase>
+		<phrase var_name="see_more" added="1490673697">See More</phrase>
+		<phrase var_name="select" added="1490673697">Select</phrase>
+		<phrase var_name="select_categories" added="1490673697">Select Categories</phrase>
+		<phrase var_name="select_category" added="1490673697">Select Category</phrase>
+		<phrase var_name="select_from_gallery" added="1490673697">Select From Gallery</phrase>
+		<phrase var_name="select_location" added="1490673697">Select Location</phrase>
+		<phrase var_name="select_photo_to_upload_" added="1490673697">Select photo to upload!</phrase>
+		<phrase var_name="select_sub_category" added="1490673697">Select Sub-Category</phrase>
+		<phrase var_name="select_video_url" added="1490673697">Select Video URL</phrase>
+		<phrase var_name="send" added="1490673697">Send</phrase>
+		<phrase var_name="send_me_notifications_when_other_members_reply_to_this_topic_" added="1490673697">Send me notifications when other members reply to this topic.</phrase>
+		<phrase var_name="sending_" added="1490673697">Sending...</phrase>
+		<phrase var_name="sent" added="1490673697">Sent</phrase>
+		<phrase var_name="sent_chat_message_successfully" added="1490673697">Sent chat message successfully</phrase>
+		<phrase var_name="server_needs_to_be_installed_socialbridge_module_first" added="1490673697">Server needs to be installed socialbridge module first</phrase>
+		<phrase var_name="set_as_profile_photo_successfully" added="1490673697">Set as profile photo successfully</phrase>
+		<phrase var_name="set_cover_photo_successfully" added="1490673697">Set cover photo successfully</phrase>
+		<phrase var_name="settings" added="1490673697">Settings</phrase>
+		<phrase var_name="share" added="1490673697">Share</phrase>
+		<phrase var_name="share_on_your_wall" added="1490673697">Share on your wall</phrase>
+		<phrase var_name="share_this_event" added="1490673697">Share This Event</phrase>
+		<phrase var_name="sharing_" added="1490673697">Sharing...</phrase>
+		<phrase var_name="short_description" added="1490673697">Short Description</phrase>
+		<phrase var_name="show_prices_and_make_purchases_in_this_currency_" added="1490673697">Show prices and make purchases in this currency.</phrase>
+		<phrase var_name="show_result" added="1490673697">Show Result</phrase>
+		<phrase var_name="sign_in" added="1490673697">Sign in</phrase>
+		<phrase var_name="sign_up" added="1490673697">Sign up</phrase>
+		<phrase var_name="sign_up_now" added="1490673697">Sign Up Now</phrase>
+		<phrase var_name="signing_in_" added="1490673697">Signing in...</phrase>
+		<phrase var_name="signup_sucessfully" added="1490673697">Signup sucessfully</phrase>
+		<phrase var_name="someone_has_already_registered_this_email_address_please_use_another_one" added="1490673697">Someone has already registered this email address please use another one</phrase>
+		<phrase var_name="someone_has_already_registered_this_user_name_please_use_another_one" added="1490673697">Someone has already registered this user name please use another one</phrase>
+		<phrase var_name="song" added="1490673697">song</phrase>
+		<phrase var_name="song_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Song has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="song_id_is_not_valid" added="1490673697">Song id is not valid</phrase>
+		<phrase var_name="song_successfully_added" added="1490673697">Song successfully added</phrase>
+		<phrase var_name="song_successfully_updated" added="1490673697">Song successfully updated</phrase>
+		<phrase var_name="sorry_we_are_not_supported_to_buy_on_this_platform_" added="1490673697">Sorry, we are not supported to buy on this platform.</phrase>
+		<phrase var_name="sort" added="1490673697">Sort</phrase>
+		<phrase var_name="start_date" added="1490673697">Start Date</phrase>
+		<phrase var_name="start_date_or_end_date_is_not_valid" added="1490673697">Start date or end date is not valid</phrase>
+		<phrase var_name="start_quiz" added="1490673697">Start Quiz</phrase>
+		<phrase var_name="start_time" added="1490673697">Start Time</phrase>
+		<phrase var_name="starting_date" added="1490673697">Starting Date</phrase>
+		<phrase var_name="state_province" added="1490673697">State/Province</phrase>
+		<phrase var_name="status" added="1490673697">Status</phrase>
+		<phrase var_name="sticker" added="1490673697">Sticker</phrase>
+		<phrase var_name="stop_notifications" added="1490673697">Stop Notifications</phrase>
+		<phrase var_name="stop_watching" added="1490673697">Stop Watching</phrase>
+		<phrase var_name="subscribe" added="1490673697">Subscribe</phrase>
+		<phrase var_name="subscribe_successfully" added="1490673697">Subscribe successfully</phrase>
+		<phrase var_name="subscribed_threads" added="1490673697">Subscribed Threads</phrase>
+		<phrase var_name="subscrible" added="1490673697">Subscrible</phrase>
+		<phrase var_name="successful" added="1490673697">Successful</phrase>
+		<phrase var_name="successfully" added="1490673697">Successfully</phrase>
+		<phrase var_name="switching_to_will_unsubscribe_your_current_membership_do_you_want_to_continue_" added="1490673697">Switching to  will unsubscribe your current Membership. Do you want to continue?</phrase>
+		<phrase var_name="tag_friends" added="1490673697">Tag Friends</phrase>
+		<phrase var_name="take_photo" added="1490673697">Take Photo</phrase>
+		<phrase var_name="terms_of_service" added="1490673697">Terms of Service</phrase>
+		<phrase var_name="test" added="1490673697">Test</phrase>
+		<phrase var_name="the_blog_you_are_looking_for_cannot_be_found" added="1490673697">The blog you are looking for cannot be found</phrase>
+		<phrase var_name="the_event_you_are_looking_for_does_not_exist_or_has_been_removed" added="1490673697">The event you are looking for does not exist or has been removed</phrase>
+		<phrase var_name="the_listing_you_are_looking_for_cannot_be_found" added="1490673697">The listing you are looking for cannot be found</phrase>
+		<phrase var_name="the_poll_you_are_looking_for_cannot_be_found" added="1490673697">The poll you are looking for cannot be found</phrase>
+		<phrase var_name="the_quiz_you_are_looking_for_cannot_be_found" added="1490673697">The quiz you are looking for cannot be found</phrase>
+		<phrase var_name="the_thread_you_are_looking_for_cannot_be_found" added="1490673697">The thread you are looking for cannot be found</phrase>
+		<phrase var_name="the_title__is_required_and_can_not_be_empty" added="1490673697">The title  is required and can not be empty</phrase>
+		<phrase var_name="the_video_you_are_looking_for_has_not_been_processed_yet" added="1490673697">The video you are looking for has not been processed yet</phrase>
+		<phrase var_name="there_are_errors_when_processing_please_try_again" added="1490673697">There are errors when processing please try again</phrase>
+		<phrase var_name="there_are_some_errors_when_processing_please_check_again" added="1490673697">There are some errors when processing please check again</phrase>
+		<phrase var_name="there_is_a_friend_request_is_sent_before" added="1490673697">There is a friend request is sent before</phrase>
+		<phrase var_name="there_is_error_when_processing_please_try_again" added="1490673697">There is error when processing please try again</phrase>
+		<phrase var_name="there_is_no_privacy_settings_for_this_action" added="1490673697">There is no privacy settings for this action</phrase>
+		<phrase var_name="this_account_does_not_exists_please_create_a_new_one_" added="1490673697">This account does not exists, please create a new one.</phrase>
+		<phrase var_name="this_activity_item_has_been_removed" added="1490673697">This activity item has been removed</phrase>
+		<phrase var_name="this_album_already_has_this_song" added="1490673697">This album already has this song</phrase>
+		<phrase var_name="this_blog_is_pending_an_admins_approval_" added="1490673697">This blog is pending an Admins approval.</phrase>
+		<phrase var_name="this_email_address_is_not_available_please_use_another_one" added="1490673697">This email address is not available please use another one</phrase>
+		<phrase var_name="this_item_has_successfully_been_submitted" added="1490673697">This item has successfully been submitted</phrase>
+		<phrase var_name="this_page_is_private" added="1490673697">This page is private</phrase>
+		<phrase var_name="this_poll_is_being_moderated_and_no_votes_can_be_added_until_it_has_been_approved_" added="1490673697">This poll is being moderated and no votes can be added until it has been approved.</phrase>
+		<phrase var_name="this_post_has_a_photo_attached_do_you_want_to_delete_it_" added="1490673697">This post has a photo attached. Do you want to delete it?</phrase>
+		<phrase var_name="this_song_may_be_deleted" added="1490673697">This song may be deleted</phrase>
+		<phrase var_name="this_user_is_already_a_friend" added="1490673697">This user is already a friend</phrase>
+		<phrase var_name="this_user_name_is_not_available_please_use_another_one" added="1490673697">This user name is not available please use another one</phrase>
+		<phrase var_name="thread" added="1490673697">thread</phrase>
+		<phrase var_name="thread_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Thread has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="time_zone" added="1490673697">Time Zone</phrase>
+		<phrase var_name="title" added="1490673697">Title</phrase>
+		<phrase var_name="title_cannot_be_empty" added="1490673697">Title cannot be empty</phrase>
+		<phrase var_name="title_is_not_valid" added="1490673697">Title is not valid</phrase>
+		<phrase var_name="to" added="1490673697">To</phrase>
+		<phrase var_name="token_is_not_valid" added="1490673697">Token is not valid</phrase>
+		<phrase var_name="token_required" added="1490673697">Token required</phrase>
+		<phrase var_name="topic" added="1490673697">topic</phrase>
+		<phrase var_name="twitter" added="1490673697">Twitter</phrase>
+		<phrase var_name="type" added="1490673697">Type</phrase>
+		<phrase var_name="un_block" added="1490673697">Un-Block</phrase>
+		<phrase var_name="un_block_successfully" added="1490673697">Un-Block successfully</phrase>
+		<phrase var_name="unable_to_attain_a_password_for_this_account" added="1490673697">Unable to attain a password for this account</phrase>
+		<phrase var_name="unable_to_comment_this_item_due_to_privacy_settings" added="1490673697">Unable to comment this item due to privacy settings</phrase>
+		<phrase var_name="unable_to_find_the_album_you_want_to_delete" added="1490673697">Unable to find the album you want to delete</phrase>
+		<phrase var_name="unable_to_find_the_album_you_want_to_get_songs" added="1490673697">Unable to find the album you want to get songs</phrase>
+		<phrase var_name="unable_to_find_the_listing_you_are_trying_to_edit" added="1490673697">Unable to find the listing you are trying to edit</phrase>
+		<phrase var_name="unable_to_find_this_album" added="1490673697">Unable to find this album</phrase>
+		<phrase var_name="unable_to_send_a_private_message_to_this_user_at_the_moment_" added="1490673697">Unable to send a private message to this user at the moment.</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1490673697">Unable to view this item due to privacy settings</phrase>
+		<phrase var_name="unlike_with_error" added="1490673697">Unlike with error</phrase>
+		<phrase var_name="unlock_feed" added="1490673697">Unlock Feed</phrase>
+		<phrase var_name="unmark_all" added="1490673697">Unmark All</phrase>
+		<phrase var_name="unmute_notification" added="1490673697">Unmute Notification</phrase>
+		<phrase var_name="unsubscribe" added="1490673697">Unsubscribe</phrase>
+		<phrase var_name="unsubscribe_successfully" added="1490673697">Unsubscribe successfully</phrase>
+		<phrase var_name="update_counter_music_successfully" added="1490673697">Update counter music successfully</phrase>
+		<phrase var_name="update_status" added="1490673697">Update Status</phrase>
+		<phrase var_name="update_sucessfully" added="1490673697">Update sucessfully</phrase>
+		<phrase var_name="updated_successfully" added="1490673697">Updated successfully</phrase>
+		<phrase var_name="upload_all_photos" added="1490673697">Upload all photos</phrase>
+		<phrase var_name="upload_fail" added="1490673697">Upload fail</phrase>
+		<phrase var_name="upload_from_device" added="1490673697">Upload From Device</phrase>
+		<phrase var_name="upload_image_for_event_successfully" added="1490673697">Upload image for event successfully</phrase>
+		<phrase var_name="upload_successfully" added="1490673697">Upload successfully</phrase>
+		<phrase var_name="upload_video" added="1490673697">Upload Video</phrase>
+		<phrase var_name="user_id_is_not_valid" added="1490673697">User id is not valid</phrase>
+		<phrase var_name="user_is_not_valid" added="1490673697">User is not valid</phrase>
+		<phrase var_name="user_name" added="1490673697">User Name</phrase>
+		<phrase var_name="user_name_changes_" added="1490673697">user name changes.</phrase>
+		<phrase var_name="user_name_is_not_valid" added="1490673697">User name is not valid</phrase>
+		<phrase var_name="user_need_to_verify_first" added="1490673697">User need to verify first</phrase>
+		<phrase var_name="user_not_found" added="1490673697">User not found</phrase>
+		<phrase var_name="user_status_is_invalid" added="1490673697">User status is invalid</phrase>
+		<phrase var_name="user_status_is_required" added="1490673697">User status is required</phrase>
+		<phrase var_name="video" added="1490673697">video</phrase>
+		<phrase var_name="video_from_your_device" added="1490673697">Video from your device</phrase>
+		<phrase var_name="video_title_is_required" added="1490673697">Video title is required</phrase>
+		<phrase var_name="video_url" added="1490673697">Video URL</phrase>
+		<phrase var_name="videos" added="1490673697">videos</phrase>
+		<phrase var_name="view_albums" added="1490673697">View Albums</phrase>
+		<phrase var_name="view_all" added="1490673697">View All</phrase>
+		<phrase var_name="view_full_site" added="1490673697">View Full Site</phrase>
+		<phrase var_name="view_member_votes" added="1490673697">View Member Votes</phrase>
+		<phrase var_name="view_old_conversations" added="1490673697">View old conversations</phrase>
+		<phrase var_name="view_photos" added="1490673697">View Photos</phrase>
+		<phrase var_name="view_privacy" added="1490673697">View Privacy</phrase>
+		<phrase var_name="view_questions" added="1490673697">View Questions</phrase>
+		<phrase var_name="view_results" added="1490673697">View Results</phrase>
+		<phrase var_name="voted" added="1490673697">voted</phrase>
+		<phrase var_name="voted_successfully_" added="1490673697">Voted successfully.</phrase>
+		<phrase var_name="votes_are_hidden_for_this_poll_" added="1490673697">Votes are hidden for this poll.</phrase>
+		<phrase var_name="watch_topic" added="1490673697">Watch Topic</phrase>
+		<phrase var_name="what_are_you_selling_" added="1490673697">What are you selling?</phrase>
+		<phrase var_name="what_s_on_your_mind_" added="1490673697"><![CDATA[What's on your mind...]]></phrase>
+		<phrase var_name="who_can_view_this_feed" added="1490673697">Who can view this feed</phrase>
+		<phrase var_name="who_can_view_this_feed_" added="1490673697">Who can view this feed?</phrase>
+		<phrase var_name="with" added="1490673697">with</phrase>
+		<phrase var_name="would_you_like_accept_the_invite_" added="1490673697">Would you like accept the invite?</phrase>
+		<phrase var_name="would_you_like_to_approve_this_membership_request_" added="1490673697">Would you like to approve this membership request?</phrase>
+		<phrase var_name="would_you_like_to_cancel_this_membership_request_" added="1490673697">Would you like to cancel this membership request?</phrase>
+		<phrase var_name="would_you_like_to_cancel_your_request_" added="1490673697">Would you like to cancel your request?</phrase>
+		<phrase var_name="would_you_like_to_join_this_group_" added="1490673697">Would you like to join this group?</phrase>
+		<phrase var_name="would_you_like_to_reject_the_invite_" added="1490673697">Would you like to reject the invite?</phrase>
+		<phrase var_name="would_you_like_to_request_membership_in_this_group_" added="1490673697">Would you like to request membership in this group?</phrase>
+		<phrase var_name="write_something" added="1490673697">Write something</phrase>
+		<phrase var_name="wrong_birthday_format" added="1490673697">Wrong birthday format</phrase>
+		<phrase var_name="yesterday" added="1490673697">Yesterday</phrase>
+		<phrase var_name="you" added="1490673697">You</phrase>
+		<phrase var_name="you_already_rated" added="1490673697">You already rated</phrase>
+		<phrase var_name="you_are_friend_with_the_requested_member" added="1490673697">You are friend with the requested member</phrase>
+		<phrase var_name="you_can_not_mark_this_message" added="1490673697">You can not mark this message</phrase>
+		<phrase var_name="you_can_not_view_feeds_because_of_having_privacy_problem" added="1490673697">You can not view feeds because of having privacy problem</phrase>
+		<phrase var_name="you_can_not_view_photos" added="1490673697">You can not view photos</phrase>
+		<phrase var_name="you_could_not_add_friend_yourself" added="1490673697">You could not add friend yourself</phrase>
+		<phrase var_name="you_disliked_successful" added="1490673697">You disliked successful</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_blog" added="1490673697">You do not have permission to access blog</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_forum" added="1490673697">You do not have permission to access forum</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_it" added="1490673697">You do not have permission to access it</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_marketplace" added="1490673697">You do not have permission to access marketplace</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_music" added="1490673697">You do not have permission to access music</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_music_module" added="1490673697">You do not have permission to access music module</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_polls" added="1490673697">You do not have permission to access polls</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_video_module" added="1490673697">You do not have permission to access video module</phrase>
+		<phrase var_name="you_do_not_have_permission_to_access_videos" added="1490673697">You do not have permission to access videos</phrase>
+		<phrase var_name="you_do_not_have_permission_to_add_friend" added="1490673697">You do not have permission to add friend</phrase>
+		<phrase var_name="you_do_not_have_permission_to_add_song" added="1490673697">You do not have permission to add song</phrase>
+		<phrase var_name="you_do_not_have_permission_to_approve_marketplace" added="1490673697">You do not have permission to approve marketplace</phrase>
+		<phrase var_name="you_do_not_have_permission_to_approve_songs" added="1490673697">You do not have permission to approve songs</phrase>
+		<phrase var_name="you_do_not_have_permission_to_comment_on_this_action" added="1490673697">You do not have permission to comment on this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_comment_on_this_item" added="1490673697">You do not have permission to comment on this item</phrase>
+		<phrase var_name="you_do_not_have_permission_to_confirm_this_friend" added="1490673697">You do not have permission to confirm this friend</phrase>
+		<phrase var_name="you_do_not_have_permission_to_create_new_blog" added="1490673697">You do not have permission to create new blog</phrase>
+		<phrase var_name="you_do_not_have_permission_to_create_new_listing" added="1490673697">You do not have permission to create new listing</phrase>
+		<phrase var_name="you_do_not_have_permission_to_create_new_poll" added="1490673697">You do not have permission to create new poll</phrase>
+		<phrase var_name="you_do_not_have_permission_to_delete" added="1490673697">You do not have permission to delete</phrase>
+		<phrase var_name="you_do_not_have_permission_to_delete_it" added="1490673697">You do not have permission to delete it</phrase>
+		<phrase var_name="you_do_not_have_permission_to_delete_this_action" added="1490673697">You do not have permission to delete this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_dislike_this_action" added="1490673697">You do not have permission to dislike this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_dislike_this_feed" added="1490673697">You do not have permission to dislike this feed</phrase>
+		<phrase var_name="you_do_not_have_permission_to_dislike_this_item" added="1490673697">You do not have permission to dislike this item</phrase>
+		<phrase var_name="you_do_not_have_permission_to_do_this_action" added="1490673697">You do not have permission to do this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_edit_this_listing" added="1490673697">You do not have permission to edit this listing</phrase>
+		<phrase var_name="you_do_not_have_permission_to_edit_this_photo" added="1490673697">You do not have permission to edit this photo</phrase>
+		<phrase var_name="you_do_not_have_permission_to_like_this_action" added="1490673697">You do not have permission to like this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_like_this_feed" added="1490673697">You do not have permission to like this feed</phrase>
+		<phrase var_name="you_do_not_have_permission_to_like_this_item" added="1490673697">You do not have permission to like this item</phrase>
+		<phrase var_name="you_do_not_have_permission_to_mark_read_all_notifications" added="1490673697">You do not have permission to mark read all notifications</phrase>
+		<phrase var_name="you_do_not_have_permission_to_post_comment_on_blog" added="1490673697">You do not have permission to post comment on blog</phrase>
+		<phrase var_name="you_do_not_have_permission_to_post_comment_on_listing" added="1490673697">You do not have permission to post comment on listing</phrase>
+		<phrase var_name="you_do_not_have_permission_to_post_comment_on_polls" added="1490673697">You do not have permission to post comment on polls</phrase>
+		<phrase var_name="you_do_not_have_permission_to_post_comment_on_this_item" added="1490673697">You do not have permission to post comment on this item</phrase>
+		<phrase var_name="you_do_not_have_permission_to_rate_this_item" added="1490673697">You do not have permission to rate this item</phrase>
+		<phrase var_name="you_do_not_have_permission_to_rate_this_photo" added="1490673697">You do not have permission to rate this photo</phrase>
+		<phrase var_name="you_do_not_have_permission_to_remove_dislike_on_this_action" added="1490673697">You do not have permission to remove dislike on this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_remove_dislike_on_this_feed" added="1490673697">You do not have permission to remove dislike on this feed</phrase>
+		<phrase var_name="you_do_not_have_permission_to_remove_this_action" added="1490673697">You do not have permission to remove this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_set_cover_this_photo" added="1490673697">You do not have permission to set cover this photo</phrase>
+		<phrase var_name="you_do_not_have_permission_to_set_profile_this_photo" added="1490673697">You do not have permission to set profile this photo</phrase>
+		<phrase var_name="you_do_not_have_permission_to_share_this_action" added="1490673697">You do not have permission to share this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_share_this_item_or_it_has_been_deleted" added="1490673697">You do not have permission to share this item or it has been deleted</phrase>
+		<phrase var_name="you_do_not_have_permission_to_this_action" added="1490673697">You do not have permission to this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_unlike_this_action" added="1490673697">You do not have permission to unlike this action</phrase>
+		<phrase var_name="you_do_not_have_permission_to_upload_music_public" added="1490673697">You do not have permission to upload music public</phrase>
+		<phrase var_name="you_do_not_have_permission_to_upload_photo" added="1490673697">You do not have permission to upload photo</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_feed_on_wall" added="1490673697">You do not have permission to view feed on wall</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_photos" added="1490673697">You do not have permission to view photos</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_feed" added="1490673697">You do not have permission to view this feed</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_item_or_it_has_been_deleted" added="1490673697">You do not have permission to view this item or it has been deleted</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_photo_album" added="1490673697">You do not have permission to view this photo album</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_photo_albums" added="1490673697">You do not have permission to view this photo albums</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_private_page_" added="1490673697">You do not have permission to view this private page.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_profile" added="1490673697">You do not have permission to view this profile</phrase>
+		<phrase var_name="you_don_t_have_permission_to_dislike_this_item" added="1490673697"><![CDATA[You don't have permission to dislike this item]]></phrase>
+		<phrase var_name="you_don_t_have_permission_to_like_this_item" added="1490673697"><![CDATA[You don't have permission to like this item]]></phrase>
+		<phrase var_name="you_have_added_new_quiz" added="1490673697">You have added new quiz</phrase>
+		<phrase var_name="you_have_already_rated_this_item" added="1490673697">You have already rated this item</phrase>
+		<phrase var_name="you_have_already_unliked_this_item" added="1490673697">You have already unliked this item</phrase>
+		<phrase var_name="you_have_no_friends_to_tag_" added="1490673697">You have no friends to tag.</phrase>
+		<phrase var_name="you_have_no_friends_you_can_invite_" added="1490673697">You have no friends you can invite.</phrase>
+		<phrase var_name="you_have_no_permission_to_delete_this_quiz" added="1490673697">You have no permission to delete this quiz</phrase>
+		<phrase var_name="you_have_not_blocked_any_users_" added="1490673697">You have not blocked any users.</phrase>
+		<phrase var_name="you_have_not_hidden_activity_feeds_from_any_sources_" added="1490673697">You have not hidden activity feeds from any sources.</phrase>
+		<phrase var_name="you_have_reached_your_limit_" added="1490673697">You have reached your limit.</phrase>
+		<phrase var_name="you_liked_successful" added="1490673697">You liked successful</phrase>
+		<phrase var_name="you_must_agree_to_the_terms_of_service_to_continue" added="1490673697">You must agree to the Terms of Service to continue</phrase>
+		<phrase var_name="you_must_have_a_minimum_of_2_answers_" added="1490673697">You must have a minimum of 2 answers.</phrase>
+		<phrase var_name="you_need_to_write_at_least_2_answers" added="1490673697">You need to write at least 2 answers</phrase>
+		<phrase var_name="you_need_to_write_at_least_2_answers_" added="1490673697">You need to write at least 2 answers.</phrase>
+		<phrase var_name="you_removed_disliked_successful" added="1490673697">You removed disliked successful</phrase>
+		<phrase var_name="you_unliked_successful" added="1490673697">You unliked successful</phrase>
+		<phrase var_name="your_account_has_been_banned" added="1490673697">Your account has been banned</phrase>
+		<phrase var_name="your_account_has_been_denied" added="1490673697">Your account has been denied</phrase>
+		<phrase var_name="your_changes_has_been_saved" added="1490673697">Your changes has been saved</phrase>
+		<phrase var_name="your_confirmed_password_does_not_match_your_new_password_" added="1490673697">Your confirmed password does not match your new password.</phrase>
+		<phrase var_name="your_email" added="1490673697">Your Email</phrase>
+		<phrase var_name="your_membership_status" added="1490673697">Your membership status</phrase>
+		<phrase var_name="your_message" added="1490673697">Your Message</phrase>
+		<phrase var_name="your_message_was_successfully_sent" added="1490673697">Your message was successfully sent</phrase>
+		<phrase var_name="your_payment_is_cancelled_" added="1490673697">Your payment is cancelled.</phrase>
+		<phrase var_name="your_payment_is_completed_" added="1490673697">Your payment is completed.</phrase>
+		<phrase var_name="your_payment_is_completed_please_login_" added="1490673697">Your payment is completed. Please login.</phrase>
+		<phrase var_name="your_payment_is_not_completed_" added="1490673697">Your payment is not completed.</phrase>
+		<phrase var_name="your_report_has_been_submitted" added="1490673697">Your report has been submitted</phrase>
+		<phrase var_name="your_rsvp_has_been_updated" added="1490673697">Your rsvp has been updated</phrase>
+		<phrase var_name="your_video_is_now_processing_we_will_send_you_a_notification_when_it_s_ready_to_view_" added="1490673697"><![CDATA[Your video is now processing. We will send you a notification when it's ready to view.]]></phrase>
+		<phrase var_name="zip_code" added="1490673697">Zip Code</phrase>
+		<phrase var_name="zip_postal_code" added="1490673697">Zip / Postal Code</phrase>
+		<phrase var_name="select_a_friend_to_share_this_with" added="1490673697">Select a friend to share this with.</phrase>
+		<phrase var_name="about_me" added="1490673697">About me</phrase>
+		<phrase var_name="about_me_" added="1490673697">About Me</phrase>
+		<phrase var_name="album" added="1490673697">album</phrase>
+		<phrase var_name="album_" added="1490673697">Album</phrase>
+		<phrase var_name="business_directory" added="1490673697">Business Directory</phrase>
+		<phrase var_name="can_not_get_data_from_server" added="1490673697">can not get data from server</phrase>
+		<phrase var_name="can_not_get_data_from_server_" added="1490673697">Can not get data from server</phrase>
+		<phrase var_name="can_not_load_data_from_server" added="1490673697">can not load data from server</phrase>
+		<phrase var_name="can_not_load_data_from_server_" added="1490673697">Can not load data from server</phrase>
+		<phrase var_name="edit_post" added="1490673697">Edit post</phrase>
+		<phrase var_name="edit_post_" added="1490673697">Edit Post</phrase>
+		<phrase var_name="friends" added="1490673697">Friends</phrase>
+		<phrase var_name="friends_" added="1490673697">FRIENDS</phrase>
+		<phrase var_name="guest_list" added="1490673697">Guest List</phrase>
+		<phrase var_name="members" added="1490673697">Members</phrase>
+		<phrase var_name="members_" added="1490673697">MEMBERS</phrase>
+		<phrase var_name="more" added="1490673697">more</phrase>
+		<phrase var_name="more_" added="1490673697">More</phrase>
+		<phrase var_name="on" added="1490673697">on</phrase>
+		<phrase var_name="on_" added="1490673697">On</phrase>
+		<phrase var_name="page" added="1490673697">page</phrase>
+		<phrase var_name="page_" added="1490673697">Page</phrase>
+		<phrase var_name="people" added="1490673697">People</phrase>
+		<phrase var_name="photo" added="1490673697">photo</phrase>
+		<phrase var_name="photo_" added="1490673697">Photo</phrase>
+		<phrase var_name="photos" added="1490673697">Photos</phrase>
+		<phrase var_name="photos_" added="1490673697">PHOTOS</phrase>
+		<phrase var_name="please_check_your_internet_connection_and_try_again" added="1490673697">Please check your internet connection and try again</phrase>
+		<phrase var_name="poll" added="1490673697">poll</phrase>
+		<phrase var_name="poll_" added="1490673697">Poll</phrase>
+		<phrase var_name="post" added="1490673697">post</phrase>
+		<phrase var_name="post_" added="1490673697">Post</phrase>
+		<phrase var_name="posts" added="1490673697">posts</phrase>
+		<phrase var_name="posts_" added="1490673697">Posts</phrase>
+		<phrase var_name="send_message" added="1490673697">Send message</phrase>
+		<phrase var_name="send_message_" added="1490673697">Send Message</phrase>
+		<phrase var_name="share_on_a_friend_s_wall" added="1490673697"><![CDATA[Share on a friend's wall]]></phrase>
+		<phrase var_name="threads" added="1490673697">threads</phrase>
+		<phrase var_name="threads_" added="1490673697">Threads</phrase>
+		<phrase var_name="user_results" added="1490673697">User results</phrase>
+		<phrase var_name="user_results_" added="1490673697">User Results</phrase>
+		<phrase var_name="video_channel" added="1490673697">Video Channel</phrase>
+		<phrase var_name="video_title" added="1490673697">Video title</phrase>
+		<phrase var_name="video_title_" added="1490673697">Video Title</phrase>
+		<phrase var_name="videochannel" added="1490673697">videochannel</phrase>
+		<phrase var_name="yyyy_mm_dd" added="1490673697">yyyy-MM-dd</phrase>
+		<phrase var_name="featured" added="1490673697">Featured</phrase>
+		<phrase var_name="please_provide_a_valid_url_for_your_video_" added="1490673697">Please provide a valid URL for your video.</phrase>
+		<phrase var_name="provide_a_category_this_video_will_belong_to_" added="1490673697">Provide a category this video will belong to.</phrase>
+		<phrase var_name="_1_s_checked_in_this_business_" added="1490673697">%1$s checked in this business.</phrase>
+		<phrase var_name="_1_s_created_a_business_" added="1490673697">%1$s created a business.</phrase>
+		<phrase var_name="a_z" added="1490673697">A-Z</phrase>
+		<phrase var_name="add_new_business" added="1490673697">Add New Business</phrase>
+		<phrase var_name="add_new_photos" added="1490673697">Add New Photos</phrase>
+		<phrase var_name="add_review" added="1490673697">Add Review</phrase>
+		<phrase var_name="address" added="1490673697">Address</phrase>
+		<phrase var_name="address_is_required" added="1490673697">Address is required</phrase>
+		<phrase var_name="all_businesses" added="1490673697">All Businesses</phrase>
+		<phrase var_name="are_you_sure_you_want_to_close_this_business_" added="1490673697">Are you sure you want to close this business?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_business_" added="1490673697">Are you sure you want to delete this business?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_claim_" added="1490673697">Are you sure you want to delete this claim?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_published_this_business_" added="1490673697">Are you sure you want to published this business?</phrase>
+		<phrase var_name="business" added="1490673697">business</phrase>
+		<phrase var_name="business_name" added="1490673697">Business Name</phrase>
+		<phrase var_name="business_name_is_required" added="1490673697">Business Name is required</phrase>
+		<phrase var_name="business_size" added="1490673697">Business Size</phrase>
+		<phrase var_name="business_sizes" added="1490673697">Business Sizes</phrase>
+		<phrase var_name="businesses" added="1490673697">Businesses</phrase>
+		<phrase var_name="category_is_required" added="1490673697">Category is required</phrase>
+		<phrase var_name="check_in_here" added="1490673697">Check-in Here</phrase>
+		<phrase var_name="claim_a_business" added="1490673697">Claim A Business</phrase>
+		<phrase var_name="claim_this_business" added="1490673697">Claim This Business</phrase>
+		<phrase var_name="edit_business" added="1490673697">Edit Business</phrase>
+		<phrase var_name="edit_information" added="1490673697">Edit Information</phrase>
+		<phrase var_name="edit_review" added="1490673697">Edit Review</phrase>
+		<phrase var_name="email_is_required" added="1490673697">Email is required</phrase>
+		<phrase var_name="faqs" added="1490673697">FAQs</phrase>
+		<phrase var_name="favorite" added="1490673697">Favorite</phrase>
+		<phrase var_name="fax" added="1490673697">Fax</phrase>
+		<phrase var_name="feature_available_" added="1490673697">Feature available:</phrase>
+		<phrase var_name="follow" added="1490673697">Follow</phrase>
+		<phrase var_name="followers" added="1490673697">Followers</phrase>
+		<phrase var_name="for_claiming_" added="1490673697">For claiming.</phrase>
+		<phrase var_name="for_my_personal_purpose_" added="1490673697">For my personal purpose.</phrase>
+		<phrase var_name="founders" added="1490673697">Founders</phrase>
+		<phrase var_name="include_in_search_results" added="1490673697">Include in search results</phrase>
+		<phrase var_name="leave" added="1490673697">Leave</phrase>
+		<phrase var_name="leave_this_business" added="1490673697">Leave This Business</phrase>
+		<phrase var_name="locations" added="1490673697">Locations</phrase>
+		<phrase var_name="message_owner" added="1490673697">Message Owner</phrase>
+		<phrase var_name="modules_available_" added="1490673697">Modules available:</phrase>
+		<phrase var_name="my_businesses" added="1490673697">My Businesses</phrase>
+		<phrase var_name="my_claiming_businesses" added="1490673697">My Claiming Businesses</phrase>
+		<phrase var_name="my_favourite_businesses" added="1490673697">My Favourite Businesses</phrase>
+		<phrase var_name="my_following_businesses" added="1490673697">My Following Businesses</phrase>
+		<phrase var_name="new_business" added="1490673697">New Business</phrase>
+		<phrase var_name="newest" added="1490673697">Newest</phrase>
+		<phrase var_name="no_businesses_found" added="1490673697">No businesses found</phrase>
+		<phrase var_name="no_faqs_has_been_added_" added="1490673697">No FAQs has been added.</phrase>
+		<phrase var_name="no_followers_found_" added="1490673697">No followers found.</phrase>
+		<phrase var_name="no_more_business" added="1490673697">No more business</phrase>
+		<phrase var_name="no_more_faq" added="1490673697">No more faq</phrase>
+		<phrase var_name="no_more_followers" added="1490673697">No more followers</phrase>
+		<phrase var_name="no_more_reviews" added="1490673697">No more reviews</phrase>
+		<phrase var_name="no_more_songs" added="1490673697">No more songs</phrase>
+		<phrase var_name="oldest" added="1490673697">Oldest</phrase>
+		<phrase var_name="operating_hours" added="1490673697">Operating Hours</phrase>
+		<phrase var_name="overview" added="1490673697">Overview</phrase>
+		<phrase var_name="phone" added="1490673697">Phone</phrase>
+		<phrase var_name="phone_is_required" added="1490673697">Phone is required</phrase>
+		<phrase var_name="radius_mile_" added="1490673697">Radius (mile)</phrase>
+		<phrase var_name="rate_is_required" added="1490673697">Rate is required</phrase>
+		<phrase var_name="reason_for_creating_business" added="1490673697">Reason for creating business</phrase>
+		<phrase var_name="report_business" added="1490673697">Report Business</phrase>
+		<phrase var_name="review" added="1490673697">Review</phrase>
+		<phrase var_name="review_content_is_required" added="1490673697">Review content is required</phrase>
+		<phrase var_name="reviews" added="1490673697">Reviews</phrase>
+		<phrase var_name="role" added="1490673697">Role</phrase>
+		<phrase var_name="search_businesses" added="1490673697">Search businesses</phrase>
+		<phrase var_name="select_package" added="1490673697">Select package</phrase>
+		<phrase var_name="short_description_is_required" added="1490673697">Short Description is required</phrase>
+		<phrase var_name="sort_by" added="1490673697">Sort by</phrase>
+		<phrase var_name="there_are_no_recent_reviews_yet" added="1490673697">There are no recent reviews yet</phrase>
+		<phrase var_name="there_is_no_packages" added="1490673697">There is no packages</phrase>
+		<phrase var_name="title_here_" added="1490673697">Title here...</phrase>
+		<phrase var_name="unfavorite" added="1490673697">Unfavorite</phrase>
+		<phrase var_name="unfavourite" added="1490673697">Unfavourite</phrase>
+		<phrase var_name="unfollow" added="1490673697">Unfollow</phrase>
+		<phrase var_name="unlike" added="1490673697">Unlike</phrase>
+		<phrase var_name="update_cover_photos" added="1490673697">Update Cover Photos</phrase>
+		<phrase var_name="web_address" added="1490673697">Web address</phrase>
+		<phrase var_name="website" added="1490673697">Website</phrase>
+		<phrase var_name="working_here" added="1490673697">Working Here</phrase>
+		<phrase var_name="write_your_review_here_" added="1490673697">Write your review here...</phrase>
+		<phrase var_name="you_can_add_maximum_imaxcover_cover_photo" added="1490673697">You can add maximum {{iMaxCover}} cover photo</phrase>
+		<phrase var_name="you_can_add_maximum_imaxcover_cover_photos" added="1490673697">You can add maximum {{iMaxCover}} cover photos</phrase>
+		<phrase var_name="z_a" added="1490673697">Z-A</phrase>
+		<phrase var_name="canceled" added="1490673697">Canceled</phrase>
+		<phrase var_name="uploading_s_please_wait_" added="1490673697">Uploading %s%%, please wait ...</phrase>
+		<phrase var_name="additional_information" added="1490673697">Additional Information</phrase>
+		<phrase var_name="setting_chat_module" added="1490673697"><![CDATA[<title>Default Chat Module</title><info>Support YNChat, CometChat, Instant Messaging module on mobile</info>]]></phrase>
+		<phrase var_name="none" added="1490673697">None</phrase>
+		<phrase var_name="ynchat" added="1490673697">YNChat</phrase>
+		<phrase var_name="cometchat" added="1490673697">CometChat</phrase>
+		<phrase var_name="illegal_access" added="1490673697">Illegal Access</phrase>
+		<phrase var_name="password_request_successfully_sent_check_your_email_to_verify_your_request_" added="1490673697">Password request successfully sent. Check your email to verify your request.</phrase>
+		<phrase var_name="manage_menus" added="1490673697">Manage Menus</phrase>
+		<phrase var_name="update_order" added="1490673697">Update Order</phrase>
+		<phrase var_name="menu_order_successfully_updated" added="1490673697">Menu order successfully updated.</phrase>
+		<phrase var_name="menu_successfully_deleted" added="1490673697">Menu successfully deleted.</phrase>
+		<phrase var_name="menu_not_found" added="1490673697">Menu not found.</phrase>
+		<phrase var_name="can_not_delete_this_menu" added="1490673697">Can not delete this menu.</phrase>
+		<phrase var_name="menu_details" added="1490673697">Menu Details</phrase>
+		<phrase var_name="group" added="1490673697">Group</phrase>
+		<phrase var_name="active" added="1490673697">Active</phrase>
+		<phrase var_name="menu_successfully_updated" added="1490673697">Menu successfully updated.</phrase>
+		<phrase var_name="menu_successfully_added" added="1490673697">Menu successfully added.</phrase>
+		<phrase var_name="menu_group_successfully_updated" added="1490673697">Menu Group successfully updated.</phrase>
+		<phrase var_name="menu_group_successfully_added" added="1490673697">Menu Group successfully added.</phrase>
+		<phrase var_name="edit_a_menu" added="1490673697">Edit A Menu</phrase>
+		<phrase var_name="create_a_new_menu" added="1490673697">Create A New Menu</phrase>
+		<phrase var_name="menu_group_details" added="1490673697">Menu Group Details</phrase>
+		<phrase var_name="edit_a_menu_group" added="1490673697">Edit A Menu Group</phrase>
+		<phrase var_name="create_a_new_menu_group" added="1490673697">Create A New Menu Group</phrase>
+		<phrase var_name="label_is_required" added="1490673697">Label is required.</phrase>
+		<phrase var_name="admin_menu_manage_menus" added="1490673697">Manage Menus</phrase>
+		<phrase var_name="admin_menu_add_menu_group" added="1490673697">Add Menu Group</phrase>
+		<phrase var_name="setting_replace_music" added="1490673697"><![CDATA[<title>Use Music Sharing on mobile app</title><info>If select "True" and the Music Sharing is enable on full site, system will use it in mobile app. Otherwise, the Default Music will be used.</info>]]></phrase>
+		<phrase var_name="setting_replace_event" added="1490673697"><![CDATA[<title>Use Advanced Event on mobile app</title><info>If select "True" and the Advanced Event is enable on full site, system will use it in mobile app. Otherwise, the Default Event will be used.</info>]]></phrase>
+		<phrase var_name="setting_replace_photo" added="1490673697"><![CDATA[<title>Use Advanced Photo on mobile app</title><info>If select "True" and the Advanced Photo is enable on full site, system will use it in mobile app. Otherwise, the Default Photo will be used.</info>]]></phrase>
+		<phrase var_name="setting_replace_marketplace" added="1490673697"><![CDATA[<title>Use Advanced Marketplace on mobile app</title><info>If select "True" and the Advanced Marketplace is enable on full site, system will use it in mobile app. Otherwise, the Default Marketplace will be used.</info>]]></phrase>
+		<phrase var_name="not_a_valid_post" added="1490673697">Not a valid post.</phrase>
+		<phrase var_name="not_a_valid_item_to_rate" added="1490673697">Not a valid item to rate.</phrase>
+		<phrase var_name="sorry_you_are_not_able_to_rate_your_own_item" added="1490673697">Sorry you are not able to rate your own item.</phrase>
+		<phrase var_name="you_have_already_voted_on_this_item" added="1490673697">You have already voted on this item.</phrase>
+		<phrase var_name="setting_enable_log" added="1490673697"><![CDATA[<title>Enable Api Logging</title><info>Enable log api data to file.</info>]]></phrase>
+		<phrase var_name="setting_log_chunk_size" added="1490673697"><![CDATA[<title>Log file chunk size</title><info>The size of log file before create a new one, in MB.</info>]]></phrase>
+		<phrase var_name="_edit_channel_translate_" added="1490673697"><![CDATA[{{'Edit Channel' | translate}}]]></phrase>
+		<phrase var_name="_next_translate_" added="1490673697"><![CDATA[{{'Next' | translate}}]]></phrase>
+		<phrase var_name="activity_points" added="1490673697">Activity Points</phrase>
+		<phrase var_name="add_a_channel" added="1490673697">Add A Channel</phrase>
+		<phrase var_name="add_more_videos" added="1490673697">Add more videos</phrase>
+		<phrase var_name="add_more_videos_" added="1490673697">Add More Videos</phrase>
+		<phrase var_name="add_playlist" added="1490673697">Add Playlist</phrase>
+		<phrase var_name="add_to" added="1490673697">Add to</phrase>
+		<phrase var_name="add_to_new_playlist" added="1490673697">Add to new playlist</phrase>
+		<phrase var_name="add_to_playlist" added="1490673697">Add to playlist</phrase>
+		<phrase var_name="adding_channel_by_searching_keywords" added="1490673697">Adding channel by searching keywords</phrase>
+		<phrase var_name="adding_channel_by_url" added="1490673697">Adding channel by URL</phrase>
+		<phrase var_name="all_channels" added="1490673697">All Channels</phrase>
+		<phrase var_name="all_playlists" added="1490673697">All Playlists</phrase>
+		<phrase var_name="all_videos" added="1490673697">All Videos</phrase>
+		<phrase var_name="also_upload_this_video_to_youtube" added="1490673697">Also upload this video to Youtube</phrase>
+		<phrase var_name="attach_link_" added="1490673697">Attach Link</phrase>
+		<phrase var_name="auto_update" added="1490673697">Auto update</phrase>
+		<phrase var_name="browse_playlists" added="1490673697">Browse Playlists</phrase>
+		<phrase var_name="cannot_contain_more_than_one_item_please_remove_the_current_selection_before_adding_another_item_" added="1490673697">Cannot contain more than one item. Please remove the current selection before adding another item.</phrase>
+		<phrase var_name="channel_detail" added="1490673697">Channel Detail</phrase>
+		<phrase var_name="channel_source" added="1490673697">Channel Source</phrase>
+		<phrase var_name="channel_title_is_required" added="1490673697">Channel title is required</phrase>
+		<phrase var_name="channel_url" added="1490673697">Channel URL</phrase>
+		<phrase var_name="currently_you_do_not_have_any_playlist" added="1490673697">Currently, you do not have any playlist</phrase>
+		<phrase var_name="customize_your_default_settings_for_when_sharing_new_items_on_the_site_note_this_only_changes_your_d_" added="1490673697">Customize your default settings for when sharing new items on the site. Note this only changes your default settings for future items and does not change any items you have already shared. To change the privacy settings on those items you can customize the items privacy by editing the item itself.</phrase>
+		<phrase var_name="delete_this_channel" added="1490673697">Delete this channel</phrase>
+		<phrase var_name="do_you_want_to_delete_this_channel_" added="1490673697">Do you want to delete this channel?</phrase>
+		<phrase var_name="do_you_want_to_delete_this_playlist_" added="1490673697">Do you want to delete this playlist?</phrase>
+		<phrase var_name="edit_channel" added="1490673697">Edit Channel</phrase>
+		<phrase var_name="edit_channels" added="1490673697">Edit Channels</phrase>
+		<phrase var_name="edit_group_cover" added="1490673697">Edit Group Cover</phrase>
+		<phrase var_name="edit_group_info" added="1490673697">Edit Group Info</phrase>
+		<phrase var_name="edit_group_photo" added="1490673697">Edit Group Photo</phrase>
+		<phrase var_name="edit_successfully" added="1490673697">Edit successfully</phrase>
+		<phrase var_name="edit_this_channel" added="1490673697">Edit this channel</phrase>
+		<phrase var_name="favorite_videos" added="1490673697">Favorite Videos</phrase>
+		<phrase var_name="friend_s_videos" added="1490673697"><![CDATA[Friend's Videos]]></phrase>
+		<phrase var_name="group_admins" added="1490673697">Group admins</phrase>
+		<phrase var_name="history" added="1490673697">History</phrase>
+		<phrase var_name="manage_group" added="1490673697">Manage Group</phrase>
+		<phrase var_name="mfox.action_failed" added="1490673697">Action failed</phrase>
+		<phrase var_name="mfox.action_is_not_valid" added="1490673697">Action is not valid</phrase>
+		<phrase var_name="mfox.activity_does_not_exist" added="1490673697">Activity does not exist</phrase>
+		<phrase var_name="mfox.add_friends_to_list_successfully" added="1490673697">Add friends to list successfully</phrase>
+		<phrase var_name="mfox.add_some_content_to_your_blog" added="1490673697">Add some content to your blog</phrase>
+		<phrase var_name="mfox.add_some_text_to_your_comment" added="1490673697">Add some text to your comment</phrase>
+		<phrase var_name="mfox.added_invoice_successfully" added="1490673697">Added invoice successfully</phrase>
+		<phrase var_name="mfox.album_id_is_missing" added="1490673697">Album id is missing</phrase>
+		<phrase var_name="mfox.album_id_is_missing_or_invalid" added="1490673697">Album id is missing or invalid</phrase>
+		<phrase var_name="mfox.album_id_is_not_valid" added="1490673697">Album id is not valid</phrase>
+		<phrase var_name="mfox.album_is_not_available" added="1490673697">Album is not available</phrase>
+		<phrase var_name="mfox.album_is_not_valid" added="1490673697">Album is not valid</phrase>
+		<phrase var_name="mfox.album_or_song_does_not_exists" added="1490673697">Album or song does not exists</phrase>
+		<phrase var_name="mfox.android" added="1490673697">Android</phrase>
+		<phrase var_name="mfox.blog_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Blog has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.blog_id_is_not_valid" added="1490673697">Blog id is not valid</phrase>
+		<phrase var_name="mfox.can_not_delete_this_photo__maybe_you_do_not_have_permission_to_delete_it" added="1490673697">Can not delete this photo  maybe you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.can_not_delete_this_photo_maybe_you_do_not_have_permission_to_delete_it" added="1490673697">Can not delete this photo maybe you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.can_not_find_the_item" added="1490673697">Can not find the item</phrase>
+		<phrase var_name="mfox.can_not_find_this_event" added="1490673697">Can not find this event</phrase>
+		<phrase var_name="mfox.can_not_view_pending_events" added="1490673697">Can not view pending events</phrase>
+		<phrase var_name="mfox.cancel_request_failed" added="1490673697">Cancel request failed</phrase>
+		<phrase var_name="mfox.cancel_request_successfully" added="1490673697">Cancel request successfully</phrase>
+		<phrase var_name="mfox.cancelled" added="1490673697">Cancelled</phrase>
+		<phrase var_name="mfox.cannot_add_link" added="1490673697">Cannot add link</phrase>
+		<phrase var_name="mfox.cannot_delete_attachment" added="1490673697">Cannot delete attachment</phrase>
+		<phrase var_name="mfox.cannot_get_link" added="1490673697">Cannot get link</phrase>
+		<phrase var_name="mfox.category_is_not_valid" added="1490673697">Category is not valid</phrase>
+		<phrase var_name="mfox.chat_service_is_not_available" added="1490673697">Chat service is not available</phrase>
+		<phrase var_name="mfox.check_in_sucessfully" added="1490673697">Check in sucessfully</phrase>
+		<phrase var_name="mfox.comment_does_not_exist_or_has_been_deleted" added="1490673697">Comment does not exist or has been deleted</phrase>
+		<phrase var_name="mfox.comment_has_been_deleted" added="1490673697">Comment has been deleted</phrase>
+		<phrase var_name="mfox.completed" added="1490673697">Completed</phrase>
+		<phrase var_name="mfox.confirm_failed" added="1490673697">Confirm failed</phrase>
+		<phrase var_name="mfox.could_not_find_requested_member" added="1490673697">Could not find requested member</phrase>
+		<phrase var_name="mfox.could_not_find_user" added="1490673697">Could not find user</phrase>
+		<phrase var_name="mfox.could_not_rate_this_song" added="1490673697">Could not rate this song</phrase>
+		<phrase var_name="mfox.current_photo_does_not_exist_in_this_ablum" added="1490673697">Current photo does not exist in this ablum</phrase>
+		<phrase var_name="mfox.current_photo_id_is_not_valid" added="1490673697">Current photo id is not valid</phrase>
+		<phrase var_name="mfox.current_photo_is_not_valid" added="1490673697">Current photo is not valid</phrase>
+		<phrase var_name="mfox.delete_friend_failed" added="1490673697">Delete friend failed</phrase>
+		<phrase var_name="mfox.delete_image_successfully" added="1490673697">Delete image successfully</phrase>
+		<phrase var_name="mfox.delete_successfully" added="1490673697">Delete successfully</phrase>
+		<phrase var_name="mfox.dislike_setting_is_disable" added="1490673697">Dislike setting is disable</phrase>
+		<phrase var_name="mfox.edit_sucessfully" added="1490673697">Edit sucessfully</phrase>
+		<phrase var_name="mfox.edited_failed" added="1490673697">Edited failed</phrase>
+		<phrase var_name="mfox.edited_successfully" added="1490673697">Edited successfully</phrase>
+		<phrase var_name="mfox.email_address_invalid" added="1490673697">Email address invalid</phrase>
+		<phrase var_name="mfox.event_is_not_available" added="1490673697">Event is not available</phrase>
+		<phrase var_name="mfox.event_is_not_valid" added="1490673697">Event is not valid</phrase>
+		<phrase var_name="mfox.event_is_not_valid_or_has_been_deleted" added="1490673697">Event is not valid or has been deleted</phrase>
+		<phrase var_name="mfox.expired" added="1490673697">Expired</phrase>
+		<phrase var_name="mfox.failed_limit_reached" added="1490673697">Failed limit reached</phrase>
+		<phrase var_name="mfox.failed_limit_reached_attachment" added="1490673697">Failed limit reached attachment</phrase>
+		<phrase var_name="mfox.feed_is_not_valid" added="1490673697">Feed is not valid</phrase>
+		<phrase var_name="mfox.feed_is_not_valid_or_you_don_not_have_permission_to_view_this_feed" added="1490673697">Feed is not valid or you don not have permission to view this feed</phrase>
+		<phrase var_name="mfox.fill_in_a_title_for_your_blog" added="1490673697">Fill in a title for your blog</phrase>
+		<phrase var_name="mfox.friend_list_is_not_valid" added="1490673697">Friend list is not valid</phrase>
+		<phrase var_name="mfox.friends_id_is_not_valid" added="1490673697">Friends id is not valid</phrase>
+		<phrase var_name="mfox.get_errors_when_attach_file_please_try_again" added="1490673697">Get errors when attach file please try again</phrase>
+		<phrase var_name="mfox.iminid_is_not_valid" added="1490673697">Iminid is not valid</phrase>
+		<phrase var_name="mfox.inapppurchase" added="1490673697">Inapppurchase</phrase>
+		<phrase var_name="mfox.initialized" added="1490673697">Initialized</phrase>
+		<phrase var_name="mfox.invalid_account" added="1490673697">Invalid account</phrase>
+		<phrase var_name="mfox.invalid_credentials" added="1490673697">Invalid credentials</phrase>
+		<phrase var_name="mfox.invalid_currency" added="1490673697">Invalid currency</phrase>
+		<phrase var_name="mfox.invalid_data" added="1490673697">Invalid data</phrase>
+		<phrase var_name="mfox.invalid_language" added="1490673697">Invalid language</phrase>
+		<phrase var_name="mfox.invalid_module" added="1490673697">Invalid module</phrase>
+		<phrase var_name="mfox.invalid_timezone" added="1490673697">Invalid timezone</phrase>
+		<phrase var_name="mfox.ipad" added="1490673697">Ipad</phrase>
+		<phrase var_name="mfox.iphone" added="1490673697">Iphone</phrase>
+		<phrase var_name="mfox.it_is_not_link_please_provide_again" added="1490673697">It is not link please provide again</phrase>
+		<phrase var_name="mfox.last_comment_viewd_does_not_exist_or_has_been_deleted" added="1490673697">Last comment viewd does not exist or has been deleted</phrase>
+		<phrase var_name="mfox.like_module_is_disable" added="1490673697">Like module is disable</phrase>
+		<phrase var_name="mfox.link_does_not_found" added="1490673697">Link does not found</phrase>
+		<phrase var_name="mfox.link_is_not_valid" added="1490673697">Link is not valid</phrase>
+		<phrase var_name="mfox.listing_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Listing has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.listing_id_is_not_valid" added="1490673697">Listing id is not valid</phrase>
+		<phrase var_name="mfox.login_by_invalid_method" added="1490673697">Login by invalid method</phrase>
+		<phrase var_name="mfox.login_failed" added="1490673697">Login failed</phrase>
+		<phrase var_name="mfox.members_invited" added="1490673697">Members invited</phrase>
+		<phrase var_name="mfox.message_is_not_valid" added="1490673697">Message is not valid</phrase>
+		<phrase var_name="mfox.missing_album_name" added="1490673697">Missing album name</phrase>
+		<phrase var_name="mfox.missing_email_address" added="1490673697">Missing email address</phrase>
+		<phrase var_name="mfox.missing_fullname_field" added="1490673697">Missing fullname field</phrase>
+		<phrase var_name="mfox.missing_item_id" added="1490673697">Missing item id</phrase>
+		<phrase var_name="mfox.missing_location_latitude" added="1490673697">Missing location latitude</phrase>
+		<phrase var_name="mfox.missing_location_longitude" added="1490673697">Missing location longitude</phrase>
+		<phrase var_name="mfox.missing_location_title" added="1490673697">Missing location title</phrase>
+		<phrase var_name="mfox.missing_module_name" added="1490673697">Missing module name</phrase>
+		<phrase var_name="mfox.missing_params_ipollid" added="1490673697">Missing params ipollid</phrase>
+		<phrase var_name="mfox.missing_params_iquizid" added="1490673697">Missing params iquizid</phrase>
+		<phrase var_name="mfox.missing_params_iuserid" added="1490673697">Missing params iuserid</phrase>
+		<phrase var_name="mfox.missing_poll_id_param" added="1490673697">Missing poll id param</phrase>
+		<phrase var_name="mfox.missing_questions" added="1490673697">Missing questions</phrase>
+		<phrase var_name="mfox.missing_quiz_description" added="1490673697">Missing quiz description</phrase>
+		<phrase var_name="mfox.missing_quiz_title" added="1490673697">Missing quiz title</phrase>
+		<phrase var_name="mfox.missing_rating_value" added="1490673697">Missing rating value</phrase>
+		<phrase var_name="mfox.missing_sloginuid" added="1490673697">Missing sloginuid</phrase>
+		<phrase var_name="mfox.missing_token" added="1490673697">Missing token</phrase>
+		<phrase var_name="mfox.missing_url" added="1490673697">Missing url</phrase>
+		<phrase var_name="mfox.missing_user_id" added="1490673697">Missing user id</phrase>
+		<phrase var_name="mfox.missing_user_name" added="1490673697">Missing user name</phrase>
+		<phrase var_name="mfox.music_sharing_does_not_support_rating" added="1490673697">Music sharing does not support rating</phrase>
+		<phrase var_name="mfox.name_is_not_valid" added="1490673697">Name is not valid</phrase>
+		<phrase var_name="mfox.no_comment" added="1490673697">No comment</phrase>
+		<phrase var_name="mfox.no_file" added="1490673697">No file</phrase>
+		<phrase var_name="mfox.no_file_to_upload" added="1490673697">No file to upload</phrase>
+		<phrase var_name="mfox.no_image_uploaded_please_try_upload_a_new_one" added="1490673697">No image uploaded please try upload a new one</phrase>
+		<phrase var_name="mfox.no_logged_in_users" added="1490673697">No logged in users</phrase>
+		<phrase var_name="mfox.no_record_found_with_this_email" added="1490673697">No record found with this email</phrase>
+		<phrase var_name="mfox.no_user_found" added="1490673697">No user found</phrase>
+		<phrase var_name="mfox.not_a_valid_invoice" added="1490673697">Not a valid invoice</phrase>
+		<phrase var_name="mfox.not_a_valid_poll" added="1490673697">Not a valid poll</phrase>
+		<phrase var_name="mfox.not_implement" added="1490673697">Not implement</phrase>
+		<phrase var_name="mfox.not_support_attach_this_type" added="1490673697">Not support attach this type</phrase>
+		<phrase var_name="mfox.not_support_attach_video" added="1490673697">Not support attach video</phrase>
+		<phrase var_name="mfox.not_support_dislike_for_music_album" added="1490673697">Not support dislike for music album</phrase>
+		<phrase var_name="mfox.not_support_this_status_yet" added="1490673697">Not support this status yet</phrase>
+		<phrase var_name="mfox.not_support_video_yet" added="1490673697">Not support video yet</phrase>
+		<phrase var_name="mfox.not_support_yet" added="1490673697">Not support yet</phrase>
+		<phrase var_name="mfox.one_file_per_time_only" added="1490673697">One file per time only</phrase>
+		<phrase var_name="mfox.oops_the_action_not_found" added="1490673697">Oops the action not found</phrase>
+		<phrase var_name="mfox.oops_the_activity_not_found" added="1490673697">Oops the activity not found</phrase>
+		<phrase var_name="mfox.opps_the_action_not_found" added="1490673697">Opps the action not found</phrase>
+		<phrase var_name="mfox.opps_the_activity_not_found" added="1490673697">Opps the activity not found</phrase>
+		<phrase var_name="mfox.opps_the_album_not_found" added="1490673697">Opps the album not found</phrase>
+		<phrase var_name="mfox.package_you_are_looking_for_either_does_not_exist_or_has_been_removed" added="1490673697">Package you are looking for either does not exist or has been removed</phrase>
+		<phrase var_name="mfox.parameters_is_not_valid" added="1490673697">Parameters is not valid</phrase>
+		<phrase var_name="mfox.pending" added="1490673697">Pending</phrase>
+		<phrase var_name="mfox.photo_id_is_missing" added="1490673697">Photo id is missing</phrase>
+		<phrase var_name="mfox.photo_is_not_valid" added="1490673697">Photo is not valid</phrase>
+		<phrase var_name="mfox.photo_is_not_valid_or_has_been_deleted" added="1490673697">Photo is not valid or has been deleted</phrase>
+		<phrase var_name="mfox.photo_must_be_approved_first" added="1490673697">Photo must be approved first</phrase>
+		<phrase var_name="mfox.please_login_first" added="1490673697">Please login first</phrase>
+		<phrase var_name="mfox.please_provide_keyword" added="1490673697">Please provide keyword</phrase>
+		<phrase var_name="mfox.please_provide_list_of_photo_id" added="1490673697">Please provide list of photo id</phrase>
+		<phrase var_name="mfox.please_try_again" added="1490673697">Please try again</phrase>
+		<phrase var_name="mfox.poll_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Poll has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.poll_id_is_not_valid" added="1490673697">Poll id is not valid</phrase>
+		<phrase var_name="mfox.positive" added="1490673697">Positive</phrase>
+		<phrase var_name="mfox.post_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Post has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.post_successfully_deleted" added="1490673697">Post successfully deleted</phrase>
+		<phrase var_name="mfox.profile_id_is_not_valid" added="1490673697">Profile id is not valid</phrase>
+		<phrase var_name="mfox.profile_is_not_valid" added="1490673697">Profile is not valid</phrase>
+		<phrase var_name="mfox.provide_a_question_for_your_poll" added="1490673697">Provide a question for your poll</phrase>
+		<phrase var_name="mfox.provide_a_valid_price" added="1490673697">Provide a valid price</phrase>
+		<phrase var_name="mfox.provide_some_text" added="1490673697">Provide some text</phrase>
+		<phrase var_name="mfox.provide_title_for_your_thread" added="1490673697">Provide title for your thread</phrase>
+		<phrase var_name="mfox.purchase_is_not_valid" added="1490673697">Purchase is not valid</phrase>
+		<phrase var_name="mfox.rating_failed" added="1490673697">Rating failed</phrase>
+		<phrase var_name="mfox.reason_is_not_valid" added="1490673697">Reason is not valid</phrase>
+		<phrase var_name="mfox.report_successfully" added="1490673697">Report successfully</phrase>
+		<phrase var_name="mfox.server_needs_to_be_installed_socialbridge_module_first" added="1490673697">Server needs to be installed socialbridge module first</phrase>
+		<phrase var_name="mfox.set_as_profile_photo_successfully" added="1490673697">Set as profile photo successfully</phrase>
+		<phrase var_name="mfox.set_cover_photo_successfully" added="1490673697">Set cover photo successfully</phrase>
+		<phrase var_name="mfox.someone_has_already_registered_this_email_address_please_use_another_one" added="1490673697">Someone has already registered this email address please use another one</phrase>
+		<phrase var_name="mfox.someone_has_already_registered_this_user_name_please_use_another_one" added="1490673697">Someone has already registered this user name please use another one</phrase>
+		<phrase var_name="mfox.song_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Song has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.song_id_is_not_valid" added="1490673697">Song id is not valid</phrase>
+		<phrase var_name="mfox.song_successfully_added" added="1490673697">Song successfully added</phrase>
+		<phrase var_name="mfox.song_successfully_updated" added="1490673697">Song successfully updated</phrase>
+		<phrase var_name="mfox.start_date_or_end_date_is_not_valid" added="1490673697">Start date or end date is not valid</phrase>
+		<phrase var_name="mfox.subscribe_successfully" added="1490673697">Subscribe successfully</phrase>
+		<phrase var_name="mfox.successful" added="1490673697">Successful</phrase>
+		<phrase var_name="mfox.successfully" added="1490673697">Successfully</phrase>
+		<phrase var_name="mfox.test" added="1490673697">Test</phrase>
+		<phrase var_name="mfox.the_blog_you_are_looking_for_cannot_be_found" added="1490673697">The blog you are looking for cannot be found</phrase>
+		<phrase var_name="mfox.the_event_you_are_looking_for_does_not_exist_or_has_been_removed" added="1490673697">The event you are looking for does not exist or has been removed</phrase>
+		<phrase var_name="mfox.the_listing_you_are_looking_for_cannot_be_found" added="1490673697">The listing you are looking for cannot be found</phrase>
+		<phrase var_name="mfox.the_poll_you_are_looking_for_cannot_be_found" added="1490673697">The poll you are looking for cannot be found</phrase>
+		<phrase var_name="mfox.the_quiz_you_are_looking_for_cannot_be_found" added="1490673697">The quiz you are looking for cannot be found</phrase>
+		<phrase var_name="mfox.the_thread_you_are_looking_for_cannot_be_found" added="1490673697">The thread you are looking for cannot be found</phrase>
+		<phrase var_name="mfox.the_title__is_required_and_can_not_be_empty" added="1490673697">The title  is required and can not be empty</phrase>
+		<phrase var_name="mfox.there_are_errors_when_processing_please_try_again" added="1490673697">There are errors when processing please try again</phrase>
+		<phrase var_name="mfox.there_are_some_errors_when_processing_please_check_again" added="1490673697">There are some errors when processing please check again</phrase>
+		<phrase var_name="mfox.there_is_a_friend_request_is_sent_before" added="1490673697">There is a friend request is sent before</phrase>
+		<phrase var_name="mfox.there_is_error_when_processing_please_try_again" added="1490673697">There is error when processing please try again</phrase>
+		<phrase var_name="mfox.this_activity_item_has_been_removed" added="1490673697">This activity item has been removed</phrase>
+		<phrase var_name="mfox.this_album_already_has_this_song" added="1490673697">This album already has this song</phrase>
+		<phrase var_name="mfox.this_email_address_is_not_available_please_use_another_one" added="1490673697">This email address is not available please use another one</phrase>
+		<phrase var_name="mfox.this_item_has_successfully_been_submitted" added="1490673697">This item has successfully been submitted</phrase>
+		<phrase var_name="mfox.this_song_may_be_deleted" added="1490673697">This song may be deleted</phrase>
+		<phrase var_name="mfox.this_user_is_already_a_friend" added="1490673697">This user is already a friend</phrase>
+		<phrase var_name="mfox.this_user_name_is_not_available_please_use_another_one" added="1490673697">This user name is not available please use another one</phrase>
+		<phrase var_name="mfox.thread_has_been_deleted_or_you_do_not_have_permission_to_delete_it" added="1490673697">Thread has been deleted or you do not have permission to delete it</phrase>
+		<phrase var_name="mfox.title_is_not_valid" added="1490673697">Title is not valid</phrase>
+		<phrase var_name="mfox.token_is_not_valid" added="1490673697">Token is not valid</phrase>
+		<phrase var_name="mfox.token_required" added="1490673697">Token required</phrase>
+		<phrase var_name="mfox.unable_to_attain_a_password_for_this_account" added="1490673697">Unable to attain a password for this account</phrase>
+		<phrase var_name="mfox.unable_to_comment_this_item_due_to_privacy_settings" added="1490673697">Unable to comment this item due to privacy settings</phrase>
+		<phrase var_name="mfox.unable_to_find_the_album_you_want_to_delete" added="1490673697">Unable to find the album you want to delete</phrase>
+		<phrase var_name="mfox.unable_to_find_the_album_you_want_to_get_songs" added="1490673697">Unable to find the album you want to get songs</phrase>
+		<phrase var_name="mfox.unable_to_find_the_listing_you_are_trying_to_edit" added="1490673697">Unable to find the listing you are trying to edit</phrase>
+		<phrase var_name="mfox.unable_to_find_this_album" added="1490673697">Unable to find this album</phrase>
+		<phrase var_name="mfox.unable_to_view_this_item_due_to_privacy_settings" added="1490673697">Unable to view this item due to privacy settings</phrase>
+		<phrase var_name="mfox.unlike_with_error" added="1490673697">Unlike with error</phrase>
+		<phrase var_name="mfox.unsubscribe_successfully" added="1490673697">Unsubscribe successfully</phrase>
+		<phrase var_name="mfox.update_counter_music_successfully" added="1490673697">Update counter music successfully</phrase>
+		<phrase var_name="mfox.update_sucessfully" added="1490673697">Update sucessfully</phrase>
+		<phrase var_name="mfox.updated_successfully" added="1490673697">Updated successfully</phrase>
+		<phrase var_name="mfox.upload_fail" added="1490673697">Upload fail</phrase>
+		<phrase var_name="mfox.upload_image_for_event_successfully" added="1490673697">Upload image for event successfully</phrase>
+		<phrase var_name="mfox.upload_successfully" added="1490673697">Upload successfully</phrase>
+		<phrase var_name="mfox.user_id_is_not_valid" added="1490673697">User id is not valid</phrase>
+		<phrase var_name="mfox.user_is_not_valid" added="1490673697">User is not valid</phrase>
+		<phrase var_name="mfox.user_name_is_not_valid" added="1490673697">User name is not valid</phrase>
+		<phrase var_name="mfox.user_need_to_verify_first" added="1490673697">User need to verify first</phrase>
+		<phrase var_name="mfox.user_not_found" added="1490673697">User not found</phrase>
+		<phrase var_name="mfox.user_status_is_invalid" added="1490673697">User status is invalid</phrase>
+		<phrase var_name="mfox.user_status_is_required" added="1490673697">User status is required</phrase>
+		<phrase var_name="mfox.wrong_birthday_format" added="1490673697">Wrong birthday format</phrase>
+		<phrase var_name="mfox.you_are_friend_with_the_requested_member" added="1490673697">You are friend with the requested member</phrase>
+		<phrase var_name="mfox.you_can_not_mark_this_message" added="1490673697">You can not mark this message</phrase>
+		<phrase var_name="mfox.you_can_not_view_feeds_because_of_having_privacy_problem" added="1490673697">You can not view feeds because of having privacy problem</phrase>
+		<phrase var_name="mfox.you_can_not_view_photos" added="1490673697">You can not view photos</phrase>
+		<phrase var_name="mfox.you_could_not_add_friend_yourself" added="1490673697">You could not add friend yourself</phrase>
+		<phrase var_name="mfox.you_disliked_successful" added="1490673697">You disliked successful</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_blog" added="1490673697">You do not have permission to access blog</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_forum" added="1490673697">You do not have permission to access forum</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_it" added="1490673697">You do not have permission to access it</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_marketplace" added="1490673697">You do not have permission to access marketplace</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_music" added="1490673697">You do not have permission to access music</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_music_module" added="1490673697">You do not have permission to access music module</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_polls" added="1490673697">You do not have permission to access polls</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_video_module" added="1490673697">You do not have permission to access video module</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_access_videos" added="1490673697">You do not have permission to access videos</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_add_friend" added="1490673697">You do not have permission to add friend</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_add_song" added="1490673697">You do not have permission to add song</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_approve_marketplace" added="1490673697">You do not have permission to approve marketplace</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_approve_songs" added="1490673697">You do not have permission to approve songs</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_comment_on_this_action" added="1490673697">You do not have permission to comment on this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_comment_on_this_item" added="1490673697">You do not have permission to comment on this item</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_confirm_this_friend" added="1490673697">You do not have permission to confirm this friend</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_create_new_blog" added="1490673697">You do not have permission to create new blog</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_create_new_listing" added="1490673697">You do not have permission to create new listing</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_create_new_poll" added="1490673697">You do not have permission to create new poll</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_delete" added="1490673697">You do not have permission to delete</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_delete_it" added="1490673697">You do not have permission to delete it</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_delete_this_action" added="1490673697">You do not have permission to delete this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_dislike_this_action" added="1490673697">You do not have permission to dislike this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_dislike_this_feed" added="1490673697">You do not have permission to dislike this feed</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_dislike_this_item" added="1490673697">You do not have permission to dislike this item</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_do_this_action" added="1490673697">You do not have permission to do this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_edit_this_listing" added="1490673697">You do not have permission to edit this listing</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_edit_this_photo" added="1490673697">You do not have permission to edit this photo</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_like_this_action" added="1490673697">You do not have permission to like this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_like_this_feed" added="1490673697">You do not have permission to like this feed</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_like_this_item" added="1490673697">You do not have permission to like this item</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_mark_read_all_notifications" added="1490673697">You do not have permission to mark read all notifications</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_post_comment_on_blog" added="1490673697">You do not have permission to post comment on blog</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_post_comment_on_listing" added="1490673697">You do not have permission to post comment on listing</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_post_comment_on_polls" added="1490673697">You do not have permission to post comment on polls</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_post_comment_on_this_item" added="1490673697">You do not have permission to post comment on this item</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_rate_this_item" added="1490673697">You do not have permission to rate this item</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_rate_this_photo" added="1490673697">You do not have permission to rate this photo</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_remove_dislike_on_this_action" added="1490673697">You do not have permission to remove dislike on this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_remove_dislike_on_this_feed" added="1490673697">You do not have permission to remove dislike on this feed</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_remove_this_action" added="1490673697">You do not have permission to remove this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_set_cover_this_photo" added="1490673697">You do not have permission to set cover this photo</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_set_profile_this_photo" added="1490673697">You do not have permission to set profile this photo</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_share_this_action" added="1490673697">You do not have permission to share this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_share_this_item_or_it_has_been_deleted" added="1490673697">You do not have permission to share this item or it has been deleted</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_this_action" added="1490673697">You do not have permission to this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_unlike_this_action" added="1490673697">You do not have permission to unlike this action</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_upload_music_public" added="1490673697">You do not have permission to upload music public</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_upload_photo" added="1490673697">You do not have permission to upload photo</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_feed_on_wall" added="1490673697">You do not have permission to view feed on wall</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_photos" added="1490673697">You do not have permission to view photos</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_this_feed" added="1490673697">You do not have permission to view this feed</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_this_item_or_it_has_been_deleted" added="1490673697">You do not have permission to view this item or it has been deleted</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_this_photo_album" added="1490673697">You do not have permission to view this photo album</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_this_photo_albums" added="1490673697">You do not have permission to view this photo albums</phrase>
+		<phrase var_name="mfox.you_do_not_have_permission_to_view_this_profile" added="1490673697">You do not have permission to view this profile</phrase>
+		<phrase var_name="mfox.you_have_added_new_quiz" added="1490673697">You have added new quiz</phrase>
+		<phrase var_name="mfox.you_have_already_rated_this_item" added="1490673697">You have already rated this item</phrase>
+		<phrase var_name="mfox.you_have_already_unliked_this_item" added="1490673697">You have already unliked this item</phrase>
+		<phrase var_name="mfox.you_have_no_permission_to_delete_this_quiz" added="1490673697">You have no permission to delete this quiz</phrase>
+		<phrase var_name="mfox.you_liked_successful" added="1490673697">You liked successful</phrase>
+		<phrase var_name="mfox.you_need_to_write_at_least_2_answers" added="1490673697">You need to write at least 2 answers</phrase>
+		<phrase var_name="mfox.you_removed_disliked_successful" added="1490673697">You removed disliked successful</phrase>
+		<phrase var_name="mfox.you_unliked_successful" added="1490673697">You unliked successful</phrase>
+		<phrase var_name="mfox.your_account_has_been_banned" added="1490673697">Your account has been banned</phrase>
+		<phrase var_name="mfox.your_account_has_been_denied" added="1490673697">Your account has been denied</phrase>
+		<phrase var_name="mfox.your_message_was_successfully_sent" added="1490673697">Your message was successfully sent</phrase>
+		<phrase var_name="mfox.your_report_has_been_submitted" added="1490673697">Your report has been submitted</phrase>
+		<phrase var_name="mfox.your_rsvp_has_been_updated" added="1490673697">Your rsvp has been updated</phrase>
+		<phrase var_name="most_commented" added="1490673697">Most Commented</phrase>
+		<phrase var_name="most_members" added="1490673697">Most Members</phrase>
+		<phrase var_name="my_channels" added="1490673697">My Channels</phrase>
+		<phrase var_name="my_favorite_videos" added="1490673697">My Favorite Videos</phrase>
+		<phrase var_name="my_favorites" added="1490673697">My Favorites</phrase>
+		<phrase var_name="my_playlists" added="1490673697">My Playlists</phrase>
+		<phrase var_name="no_channels_found_" added="1490673697">No channels found.</phrase>
+		<phrase var_name="no_items_found_" added="1490673697">No items found.</phrase>
+		<phrase var_name="no_more_channels" added="1490673697">No more channels</phrase>
+		<phrase var_name="no_more_playlists" added="1490673697">No more playlists</phrase>
+		<phrase var_name="no_playlists_found_" added="1490673697">No playlists found.</phrase>
+		<phrase var_name="not_supported_video_url" added="1490673697">Not Supported Video URL</phrase>
+		<phrase var_name="paste_your_link_here" added="1490673697">Paste your link here</phrase>
+		<phrase var_name="playlist" added="1490673697">playlist</phrase>
+		<phrase var_name="playlist_has_been_created_successfully" added="1490673697">Playlist has been created successfully</phrase>
+		<phrase var_name="playlist_image" added="1490673697">Playlist Image</phrase>
+		<phrase var_name="playlist_name" added="1490673697">Playlist Name</phrase>
+		<phrase var_name="please_enter_channel_keywords" added="1490673697">Please enter channel keywords</phrase>
+		<phrase var_name="please_input_a_valid_url" added="1490673697">Please input a valid url</phrase>
+		<phrase var_name="please_select_a_channel" added="1490673697">Please select a channel</phrase>
+		<phrase var_name="prev" added="1490673697">Prev</phrase>
+		<phrase var_name="previous" added="1490673697">Previous</phrase>
+		<phrase var_name="search_channels" added="1490673697">Search channels</phrase>
+		<phrase var_name="search_playlists" added="1490673697">Search playlists</phrase>
+		<phrase var_name="search_videos_playlists" added="1490673697">Search videos/playlists</phrase>
+		<phrase var_name="select_channel" added="1490673697">Select Channel</phrase>
+		<phrase var_name="summary" added="1490673697">Summary</phrase>
+		<phrase var_name="tags" added="1490673697">Tags</phrase>
+		<phrase var_name="tags_keywords_" added="1490673697">Tags (Keywords)</phrase>
+		<phrase var_name="this_group_is_private" added="1490673697">This group is private</phrase>
+		<phrase var_name="ultimate_videos" added="1490673697">Ultimate Videos</phrase>
+		<phrase var_name="unwatched" added="1490673697">Unwatched</phrase>
+		<phrase var_name="videos_" added="1490673697">Videos</phrase>
+		<phrase var_name="videos_in_playlist" added="1490673697">Videos in playlist</phrase>
+		<phrase var_name="watch_later" added="1490673697">Watch later</phrase>
+		<phrase var_name="watch_later_" added="1490673697">Watch Later</phrase>
+		<phrase var_name="_s_added_new_videos" added="1490673697">%s added new videos</phrase>
+		<phrase var_name="_s_created_a_new_playlist" added="1490673697">%s created a new playlist</phrase>
+		<phrase var_name="check_in_" added="1490673697">Check-in</phrase>
+		<phrase var_name="photo__" added="1490673697">PHOTO</phrase>
+		<phrase var_name="please_choose_select_category_the_playlist_will_belong_to" added="1490673697">Please choose select category the playlist will belong to</phrase>
+		<phrase var_name="please_input_channel_title" added="1490673697">Please input channel title</phrase>
+		<phrase var_name="please_input_playlist_name" added="1490673697">Please input playlist name</phrase>
+		<phrase var_name="provide_a_category_this_channel_will_belong_to_" added="1490673697">Provide a category this channel will belong to.</phrase>
+		<phrase var_name="provide_a_category_this_video_will_belong_to" added="1490673697">Provide a category this video will belong to</phrase>
+		<phrase var_name="mutual_friend" added="1490673697">mutual friend</phrase>
+		<phrase var_name="mutual_friends_" added="1490673697">Mutual Friends</phrase>
+		<phrase var_name="1_mutual_friend" added="1490673697">1 mutual friend</phrase>
+		<phrase var_name="edit_playlist" added="1490673697">Edit Playlist</phrase>
+		<phrase var_name="remove_all_items" added="1490673697">Remove all items</phrase>
+	</phrases>
+</module>

@@ -1,0 +1,22 @@
+<div class="item-header item-header-avatar item-header-icon-right">
+    <img class="img-avatar" ng-src="{{item.getPosterImageSrc()}}" href-dir url="{{item.getPosterUrl()}}" />
+    <span>
+        <span ng-bind-html="headline" class="nocut"></span>
+        <i class="gray icon {{item.getPrivacyIcon(item.getPrivacy())}}" ng-if="item.parentModuleId == 'feed'"></i>
+    </span>
+    <div class="item-time">
+        {{item.fromNow()}}
+    </div>
+    <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+</div>
+<div class="item-subheader" ng-if="item.getContent()" ng-html-compile="item.getContentParsed()">
+</div>
+<div class="item-tagged" ng-if="item.hasTagged()">
+    <tagged-friends-location-dir></tagged-friends-location-dir>
+</div>
+<div class="item-attachment" ng-if="item.hasAttachment()">
+    <attachment-dir obj="item"></attachment-dir>
+</div>
+<div class="clearfix item-subfooter">
+    <core-action-list-dir></core-action-list-dir>
+</div>

@@ -1,0 +1,14 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'My Events' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a ng-if="canCreate" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/events/add"></a>
+  </ion-header-bar>
+  <event-search-dir></event-search-dir>
+  <ion-content class="has-header has-footer">
+    <event-list-dir></event-list-dir>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,10 @@
+{
+	"paths": {
+		"0": "PF.Base/cometchat/cometchat_api.php",
+		"1": "PF.Base/cometchat/cometchat_api_mysqli.php",
+		"2": "PF.Base/file/mfox/css/android_0.css",
+		"3": "PF.Base/file/mfox/css/ipad_0.css",
+		"4": "PF.Base/file/mfox/css/iphone_0.css",
+		"5": "PF.Base/module/mfox"
+	}
+}

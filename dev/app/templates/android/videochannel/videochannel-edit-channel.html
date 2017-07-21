@@ -1,0 +1,38 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir>{{'Previous' | translate}}</button>
+        <h1 class="title">{{'Edit Channel' | translate}}</h1>
+        <button class="button button-clear" ng-click="doSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Next</span>
+        </button>
+    </div>
+    <ion-content class="has-header">
+        <ion-infinite-scroll ng-if="!dataReady"></ion-infinite-scroll>
+        <div class="list" ng-if="dataReady">
+            <ion-item class="item item-image" >
+                <img class="round-img" style="background-image:url('{{formData.sImg}}');">
+            </ion-item>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">*{{'Title' | translate}}</span>
+                <input type="text" placeholder="{{'Title' | translate}}" ng-model="formData.sTitle">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Summary' | translate}}</span>
+                <textarea placeholder="{{'Summary' | translate}}" ng-model="formData.sDescription"></textarea>
+            </label>
+            <label class="item item-input item-select" ng-if="form.categoryOptions.length >0">
+                <span class="input-label">*{{'Category' | translate}}</span>
+                <select ng-model="formData.iCategoryId" ng-options="opt.iCategoryId as opt.sName|translate for opt in form.categoryOptions" required>
+                    <option value="">{{'All Categories' | translate}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select" ng-if="form.viewOptions.length >0">
+                <span class="input-label">{{'Privacy' | translate}}</span>
+                <select ng-model="formData.auth_view" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.viewOptions" required>
+                    <!-- empty -->
+                </select>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

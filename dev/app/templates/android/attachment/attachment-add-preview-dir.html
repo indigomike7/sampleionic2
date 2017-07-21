@@ -1,0 +1,39 @@
+<!-- core_link attachment template -->
+<div class="item item-update item-update-link" ng-class="{'no-image': !attachmentItem.sDefaultImage}" ng-if="attachmentItem.sType == 'core_link'">
+	<img ng-src="{{attachmentItem.sDefaultImage}}" ng-if="attachmentItem.sDefaultImage">
+	<h2 href-dir external-url="{{attachmentItem.sLink}}" ng-bind-html="attachmentItem.sTitle || attachmentItem.sLink"></h2>
+	<p>{{attachmentItem.sLink}}</p>
+	<p ng-bind-html="attachmentItem.sDescription" ng-if="attachmentItem.sDescription"></p>
+	<i class="icon ion-close" ng-click="removeAttachment()"></i>
+</div>
+
+<!-- location attachment template -->
+<div class="item item-update item-update-location" ng-if="attachmentItem.sType == 'location'">
+	<img ng-src="{{attachmentItem.getImageSrc(14, 300, 100)}}">
+	<h2 ng-bind-html="attachmentItem.getTitle()"></h2>
+	<p ng-bind-html="attachmentItem.getDescription()"></p>
+	<i class="icon ion-close" ng-click="removeAttachment()"></i>
+</div>
+
+<!-- photo attachment template -->
+<div class="item item-update item-update-photo" ng-if="attachmentItem.sType == 'photo'">
+	<img ng-src="{{attachmentItem.sPath}}">
+	<i class="icon ion-close" ng-click="removeAttachment()"></i>
+</div>
+
+<!-- video attachment template -->
+<div class="item item-update item-update-video" ng-if="attachmentItem.sType == 'video'">
+	<img ng-src="{{attachmentItem.sThumb}}">
+	<h2 href-dir external-url="{{attachmentItem.sLink}}" ng-bind-html="attachmentItem.sTitle"></h2>
+	<p ng-bind-html="attachmentItem.sDescription"></p>
+	<i class="icon ion-close" ng-click="removeAttachment()"></i>
+</div>
+
+<!-- video_upload attachment template -->
+<div class="item item-update item-update-video-upload" ng-if="attachmentItem.sType == 'video_upload'">
+	<h2 translate>Video from your device</h2>
+	<input type="text" placeholder="{{'Video Title' | translate}}" ng-model="attachmentItem.sTitle" />
+	<i class="icon ion-close" ng-click="removeAttachment()"></i>
+</div>
+
+<ion-infinite-scroll distance="62px" ng-if="isProcessingAttach"></ion-infinite-scroll>

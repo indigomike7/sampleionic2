@@ -1,0 +1,28 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideResults()">
+            {{membersPage.page_title}}
+        </button>
+        <div class="h1 title" translate>Poll Results</div>
+    </ion-header-bar>
+    <div class="bar bar-stable bar-icon-left subheader-title bar-subheader">
+        <i class="icon icon ion-person-stalker"></i>
+        <span class="bar-title">{{'Members votes' | translate}}</span>
+        <span class="item-note">{{item.aVoters.length}}</span>
+    </div>
+    <ion-content class="has-header has-subheader">
+        <div class="list">
+            <div class="padding text-center" ng-if="noItems" translate>No results found</div>
+            <a class="item item-avatar" ng-href="#/app/user/{{item.iUserId}}" ng-repeat="item in item.aVoters">
+                <img ng-if="item.sUserImage" ng-src="{{item.sUserImage}}" />
+                <h2 ng-bind-html="item.sFullName"></h2>
+                <p>
+                    <span translate>voted</span>
+                    <span>"{{item.sAnswer}}"</span>
+                    <span>on</span>
+                    <span class="item-date">{{Moment(item.iTimeStamp * 1e3).format('MMMM D, YYYY')}}</span>
+                </p>
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

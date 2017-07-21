@@ -1,0 +1,32 @@
+<ion-popover-view class="popover-ipad-search" ng-controller="MusicSongSearchCtrl">
+  <form class="list" ng-submit="onSearch()">
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" ng-model="searchMusic.sSearch" placeholder="{{'Search songs' | translate}}">
+      </label>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label" translate>
+        Genres
+      </div>
+      <select ng-model="searchMusic.iCategoryId" ng-options="opt.genre_id as opt.name|translate for opt in searchForm.genres">
+          <option value="">{{'All Genres' | translate}}</option>
+      </select>
+    </div>
+    <div class="item item-input item-select">
+      <div class="input-label" translate>
+        List By
+      </div>
+      <select ng-model="searchMusic.sOrder">
+        <option value="latest" selected="selected" translate>Latest</option>
+        <option value="most_viewed" translate>Most Viewed</option>
+        <option value="most_liked" translate>Most Liked</option>
+        <option value="most_discussed" translate>Most Discussed</option>
+      </select>
+    </div>
+    <div class="item padding">
+      <button class="button button-block button-positive" type="submit" translate>Search</button>
+    </div>
+  </form>
+</ion-popover-view>

@@ -1,0 +1,22 @@
+<div class="item-video-attachment" href-dir url="#/app/ultimatevideo/playlist/{{obj.aAttachments[0].iId}}">
+    <div class="item item-image">
+			<span img-cache ng-background="{{obj.aAttachments[0].sPhoto_Url}}">
+			</span>
+        <div class="playlist-over">
+            <div class="playlist-over-content">
+                <span>{{obj.aAttachments[0].iTotalVideo}}</span>
+                <p ng-if="obj.aAttachments[0].iTotalVideo == 1">{{'video' | translate}}</p>
+                <p ng-if="obj.aAttachments[0].iTotalVideo != 1">{{'videos' | translate}}</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="item item-content">
+        <h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+        <ion-list ng-if="obj.aAttachments[0].aVideoList.length">
+            <ion-item ng-repeat="video in obj.aAttachments[0].aVideoList" class="item-borderless">
+                <a ng-href="#/app/ultimatevideo/video/{{video.video_id}}">{{video.title}}</a>
+            </ion-item>
+        </ion-list>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="item item-image">
+	<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{obj.aAttachments[0].fLatitude}},{{obj.aAttachments[0].fLongitude}}&amp;zoom=15&amp;size={{Window.innerWidth}}x{{Window.Math.ceil(Window.innerWidth*9/16)}}&amp;maptype=roadmap&amp;markers=color:red%7C{{obj.aAttachments[0].fLatitude}},{{obj.aAttachments[0].fLongitude}}&amp;sensor=false">
+</div>
+
+<div class="item item-icon-left assertive">
+	<i class="icon ion-android-locate"></i>
+	<span ng-bind-html="obj.aAttachments[0].sTitle"></span>
+</div>

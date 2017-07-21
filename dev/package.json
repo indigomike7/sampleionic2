@@ -1,0 +1,19 @@
+{
+  "name": "www",
+  "version": "0.0.0",
+  "description": "curl'http://semobi.younetco.com/?m=lite&name=api&delay=0&module=ynmobile&request=like/unlike' - H'Pragma: no-cache' - H'Origin: http://namnv.local' - H'Accept-Encoding: gzip,deflate,sdch' - H'Accept-Language: en-US,en;q=0.8,fr;q=0.6,vi;q=0.4,fr-FR;q=0.2,es;q=0.2' - H'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36' - H'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' - H'Accept: application/json, text/javascript, */*; q=0.01' - H'Cache-Control: no-cache' - H'Referer: http://namnv.local/Mobile/semobi/platforms/ios/www/' - H'Connection: keep-alive' - H'token: ixC9I00FC6JM7AA7g0zHBfkb'--data'sItemType=activity_action&iItemId=57398'--compressed",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-angular-gettext": "^0.2.14",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-requirejs": "~0.4.3",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-sass": "^2.0.0"
+  }
+}

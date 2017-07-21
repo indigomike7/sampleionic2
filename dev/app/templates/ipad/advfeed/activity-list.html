@@ -1,0 +1,8 @@
+<ion-refresher pulling-text="Pull down to refresh" on-refresh="loadNew()"></ion-refresher>
+<div class="padding text-center" ng-if="noItems" translate>
+    No activities found!
+</div>
+<div class="item activity-item feed-item" ng-repeat="item in items" href-dir url="{{item.getUrl()}}">
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()">
+</ion-infinite-scroll>

@@ -1,0 +1,5 @@
+<div class="item item-thumbnail-left" href-dir url="#/app/{{obj.aAttachments[0].sType}}/{{obj.aAttachments[0].iId}}{{obj.parentModuleId != 'feed' ? '/' + obj.parentModuleId + '/' + obj.iParentUserId : ''}}">
+  <span class="image" ng-background="{{obj.aAttachments[0].sPhoto_Url}}"></span>
+  <h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+  <p ng-bind-html="obj.aAttachments[0].sDescription"></p>
+</div>

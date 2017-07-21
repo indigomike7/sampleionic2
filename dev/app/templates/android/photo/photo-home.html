@@ -1,0 +1,17 @@
+<div ui-view="tabContent">
+
+</div>
+<div class="tabs tabs-footer tabs-overflow">
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/albums'}" ng-href="#/app/albums">
+    {{'Albums' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/photos'}" ng-href="#/app/photos">
+    {{'Photos' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/albums/my'}" ng-href="#/app/albums/my">
+    {{'My Albums' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/photos/my'}" ng-href="#/app/photos/my">
+    {{'My Photos' | translate}}
+  </a>
+</div>

@@ -1,0 +1,17 @@
+<div ui-view="tabContent">
+
+</div>
+<div class="tabs tabs-footer tabs-overflow">
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/forums'}" ng-href="#/app/forums">
+    {{'Forums' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/forum_threads/new'}" ng-href="#/app/forum_threads/new">
+    {{'New Posts' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/forum_threads/my-thread'}" ng-href="#/app/forum_threads/my-thread">
+    {{'My Threads' | translate}}
+  </a>
+  <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/forum_threads/subscribed'}" ng-href="#/app/forum_threads/subscribed">
+    {{'Subscribed Threads' | translate}}
+  </a>
+</div>

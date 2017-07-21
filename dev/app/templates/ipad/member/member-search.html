@@ -1,0 +1,37 @@
+<form class="list bar-subheader bar-header-search" ng-submit="onSearch()">
+    <i class="icon ion-ios-search placeholder-icon" ng-click="showAdvSearch = !showAdvSearch"></i>
+    <div ng-show="showAdvSearch" class="item-input-search">
+        <div class="bar item-input-inset">
+          <input type="search" class="item-input-search-box" ng-model="searchMembers.sSearch" placeholder="{{'email, name' | translate}}">
+        </div>
+    </div>
+    <div ng-show="showAdvSearch" class="advanced-search">
+        <div class="item item-input">
+            <div class="col col-50 input-label no-padding">
+                {{'Age' | translate }}
+            </div>
+            <div class="col col-25">
+                <select ng-model="searchMembers.age_from" class="select-no-box">
+                    <option value="0">{{'From' | translate}}</option>
+                    <option ng-repeat="opt in searchForm.age_options" value="{{opt.key}}">{{opt.val}}</option>
+                </select>
+            </div>
+            <div class="col col-25">
+                <select ng-model="searchMembers.age_to" class="select-no-box">
+                    <option value="0">{{'To' | translate}}</option>
+                    <option ng-repeat="opt in searchForm.age_options" value="{{opt.key}}">{{opt.val}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="item item-input item-select">
+            <div class="input-label">
+                {{'Gender' | translate}}
+            </div>
+            <select ng-model="searchMembers.gender" ng-options="opt.key as opt.val for opt in searchForm.gender_options">
+            </select>
+        </div>
+        <div class="item padding">
+            <button class="button button-block button-positive" type="submit">{{'Search' | translate}}</button>
+        </div>
+    </div>
+</form>

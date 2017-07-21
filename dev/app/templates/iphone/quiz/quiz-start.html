@@ -1,0 +1,32 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir></button>
+        <button class="button button-clear" ng-click="onSubmit()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Submit</span>
+        </button>
+    </div>
+    <ion-content class="content-dark has-header" delegate-handle="quiz_question_list">
+        <div class="list" ng-if="dataReady">
+            <div>
+                <div class="item-quiz-question" ng-repeat="(questionIndex, question) in form.aQuestions">
+                    <div class="item item-divider item-button-right">
+                        <span input-label>{{'Question' | translate}} {{questionIndex + 1}} / {{item.getTotalQuestion()}}</span>
+                    </div>
+                    <div class="">
+                        <h2 class="item" ng-html-compile="question.sQuestion"></h2>
+                        <ul class="list list-vote" ng-class="{'processing': isProcessing}">
+                            <li class="item item-checkbox item-body" ng-repeat="answer in question.aAnswers">
+                                <label class="checkbox">
+                                    <input type="radio" value="{{answer.iAnswerId}}" ng-model="question.iSelectedAnswer" />
+                                </label>
+                                <span ng-bind-html="answer.sAnswer"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-separator"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

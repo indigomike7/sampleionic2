@@ -1,0 +1,51 @@
+<div class="list no-padding-top">
+  <div class="activity-item item-thread-post" ng-repeat="post in posts" ng-controller="ForumPostItemCtrl">
+    <div class="item item-avatar item-text-wrap no-border-bottom no-padding-bottom">
+      <img ng-src="{{post.getPosterImageSrc()}}" href-dir url="{{post.getPosterUrl()}}" />
+      <h2 ng-bind-html="post.getPosterTitle()" href-dir url="{{post.getPosterUrl()}}"></h2>
+      <p class="item-stats">
+        <span>{{'Posts' | translate}}:</span>
+        <span class="dark">{{post.getPosterTotalPost()}}</span>
+      </p>
+      <p class="item-stats">
+        <span>{{post.fromNow()}}</span>
+      </p>
+      <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onPostSetting()"></i>
+    </div>
+    <div class="item item-body no-border no-padding-bottom">
+      <div class="padding-bottom" ng-html-compile="post.getTextParsed()"></div>
+    </div>
+    <div ng-if="post.hasAttachments()">
+      <div class="padding no-padding-bottom gray">{{'Attachments' | translate}}</div>
+      <div class="item-photos padding">
+        <div class="item-photo-thumb" ng-repeat="att in post.getAttachmentPhotos()" img-cache ng-background="{{att.data.photo_url}}" photo-thumb-dir img-src="{{att.data.photo_url}}"></div>
+      </div>
+      <div class="item-links">
+        <div class="item-link item" ng-class="{'item-thumbnail-left': att.data.image}" ng-repeat="att in post.getAttachmentLinks()" href-dir external-url="{{att.data.link}}">
+          <img ng-src="{{att.data.image}}" ng-if="att.data.image" />
+          <h2 ng-bind-html="att.data.title || att.data.link"></h2>
+          <p ng-bind-html="att.data.link"></p>
+          <p ng-bind-html="att.data.description"></p>
+        </div>
+      </div>
+    </div>
+    <div class="item item-action-list no-border-top">
+      <div class="pull-left">
+        <button class="button button-small button-rounder button-positive icon-right button-outline" ng-click="onPostShare()" ng-if="post.canShare()">
+          <span>{{post.getTotalShare()}}</span>
+          <i class="ion-ios-redo"></i>
+        </button>
+        <button class="button button-small button-rounder button-positive icon-right button-outline" ng-click="onPostQuote()" ng-if="post.canQuote() && !item.isAnnouncement()">
+          <i class="ion-quote"></i>
+        </button>
+      </div>
+      <div class="pull-right">
+        <button class="button button-small button-rounder button-positive icon-right" ng-class="{'button-outline': !post.isLiked()}" ng-click="onPostLike()" ng-if="post.canLike()">
+          <span>{{post.getTotalLike()}}</span>
+          <i class="icon ion-thumbsup"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll ng-if="isLoadingPosts"></ion-infinite-scroll>
+</div>

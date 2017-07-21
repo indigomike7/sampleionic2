@@ -1,0 +1,19 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems">{{notFoundText}}</div>
+  <div class="item item-blog" ng-repeat="item in items" ng-controller="BlogItemCtrl" href-dir url="{{item.getUrl()}}">    
+    <h2 ng-bind-html="item.getTitle()"></h2>
+    <div class="item item-avatar">
+      <img ng-src="{{item.getPosterImageSrc()}}" href-dir url="{{item.getPosterUrl()}}" />
+      <p>
+        <span class="item-author-by">{{'by'|translate}} <a class="item-title" ng-href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a></span>
+      </p>
+      <p class="item-stats">
+        <span ng-if="item.getCategory()" ng-bind-html="item.getCategory()"></span>
+        <span class="icon-separator" ng-if="item.getCategory()"></span>
+        <span>{{item.fromNow()}}</span>
+      </p>  
+    </div>    
+    <p class="item-description" ng-bind-html="item.getCleanText()"></p>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

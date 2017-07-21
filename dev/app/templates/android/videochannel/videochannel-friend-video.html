@@ -1,0 +1,11 @@
+<ion-view>
+<ion-header-bar align-title="center" class="bar-positive">
+  <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+  <h1 class="title" translate>Video Channel</h1>
+  <a ng-if="canCreateVideo" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/videochannel/add"></a>
+</ion-header-bar>
+  <videochannel-search-dir></videochannel-search-dir>
+  <ion-content class="has-header has-footer">
+   <videochannel-list-dir></videochannel-list-dir>
+  </ion-content>
+</ion-view>

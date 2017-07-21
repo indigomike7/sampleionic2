@@ -1,0 +1,12 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideCommentBox()"></button>
+        <div class="h1 title" translate>
+            Comment
+        </div>
+    </ion-header-bar>
+    <ion-content ng-class="{'has-footer': commentObj.canComment()}">
+        <comment-dir obj="item"></comment-dir>
+    </ion-content>
+    <comment-form-footer-dir obj="item" ng-if="commentObj.canComment()"></comment-form-footer-dir>
+</ion-modal-view>

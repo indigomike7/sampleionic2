@@ -1,0 +1,21 @@
+<div class="list thread-list-wrapper" ng-if="announcements.length">
+  <div class="item item-icon-left item-icon-right thread-list-header announcement-list-header">
+    <i class="icon ion-speakerphone"></i>
+    <h2>{{'Announcements' | translate}}</h2>
+    <span>({{announcements.length}})</span>
+    <i class="icon" ng-class="{'ion-arrow-up-b': !hideAnnouncements, 'ion-arrow-down-b': hideAnnouncements}" ng-click="hideAnnouncements = !hideAnnouncements"></i>
+  </div>
+  <div ng-show="!hideAnnouncements">
+    <div class="item item-icon-left item-thread item-announcement sticky sub-item" ng-repeat="announcement in announcements" href-dir url="{{announcement.getUrl()}}">
+      <i class="icon ion-speakerphone"></i>
+      <h2 ng-bind-html="announcement.getTitle()"></h2>    
+      <div class="item-stats">
+        <span class="dark">{{'Last post' | translate}}</span>
+        <span>{{'by' | translate}}</span>
+        <a class="dark" ng-href="{{announcement.getLastPosterUrl()}}" ng-bind-html="announcement.getLastPosterTitle()"></a>
+        <span class="icon-separator"></span>
+        <span>{{announcement.fromNow()}}</span>
+      </div>
+    </div>
+  </div>
+</div>

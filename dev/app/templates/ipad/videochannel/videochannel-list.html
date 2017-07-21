@@ -1,0 +1,16 @@
+<div class="list padding video-listing clearfix">
+  <div class="padding text-center" ng-if="noItems" translate>No videos found.</div>
+  <div class="item-video" ng-repeat="item in items" ng-controller="VideoChannelItemCtrl" href-dir url="{{item.getUrl()}}">
+    <div class="item item-image">
+        <span img-cache ng-background="{{item.sVideoImage}}">
+          <span class="item-video-play ion-ios-play"></span>
+        </span>
+    </div>
+    <div class="item item-content">
+      <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+	<h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.sTitle"></h2>
+      <core-action-list-dir></core-action-list-dir>
+    </div>
+  </div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

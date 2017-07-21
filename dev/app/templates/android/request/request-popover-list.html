@@ -1,0 +1,21 @@
+<ion-popover-view>
+	<ion-content>
+		<div class="list" ng-controller="RequestListCtrl">
+	    	<div class="padding text-center" ng-if="noItems">{{'No requests found.' | translate}}</div>
+			<div class="item item-avatar" ng-repeat="item in items" ng-controller="RequestItemCtrl">
+				<img ng-src="{{item.getImageSrc()}}" href-dir url="{{item.getUrl()}}" />
+				<p class="item-message">
+					<a ng-href="{{item.getUrl()}}" ng-bind-html="item.getTitle()"></a>
+					<span>{{'has sent a friend request' | translate}}</span>
+				</p>
+				<p ng-if="!(isProcessingConfirm || isConfirmed || isProcessingDeny || isDenied)">
+					<button class="button button-small button-positive" ng-click="onConfirm()">{{'Accept' | translate}}</button>
+					<button class="button button-small button-light" ng-click="onDeny()">{{'Deny' | translate}}</button>
+				</p>
+				<p ng-if="isProcessingConfirm || isConfirmed">{{'Confirmed' | translate}}</p>
+				<p ng-if="isProcessingDeny || isDenied">{{'Denied' | translate}}</p>
+			</div>
+			<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+</ion-popover-view>

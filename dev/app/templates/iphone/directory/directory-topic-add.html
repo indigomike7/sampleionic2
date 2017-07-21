@@ -1,0 +1,28 @@
+<ion-view>
+	<ion-header-bar class="bar-positive">
+		<button class="button button-clear" back-dir translate>Cancel</button>
+		<div class="h1 title">{{'Post Topic' | translate}}</div>
+		<button class="button button-clear" ng-click="onSave()">
+	    	<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+	    	<span ng-hide="isProcessing" translate>Save</span>
+	    </button>
+	</ion-header-bar>
+    <ion-content class="has-header">
+		<div class="list">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">{{'Title' | translate}}</span>
+				<input type="text" placeholder="{{'Title' | translate}}" ng-model="formData.sTitle" />
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">{{'Content' | translate}}</span>
+				<textarea placeholder="{{'Content' | translate}}" ng-model="formData.sBody"></textarea>
+			</label>
+			<div class="item item-checkbox item-text-wrap">
+				<label class="checkbox">
+					<input type="checkbox" ng-model="formData.iWatch">
+				</label>
+				<span>{{'Send me notifications when other members reply to this topic.' | translate}}</span>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

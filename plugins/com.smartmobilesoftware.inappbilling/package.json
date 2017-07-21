@@ -1,0 +1,12 @@
+{
+    "version": "3.0.0",
+    "name": "com.smartmobilesoftware.inappbilling",
+    "cordova_name": "Android InAppBilling",
+    "description": "Use this In-app Billing plugin to sell digital goods, including one-time items and recurring subscriptions from your Cordova application. Main repo with full documentation located at: https://github.com/poiuytrez/AndroidInAppBilling",
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

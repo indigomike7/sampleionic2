@@ -1,0 +1,45 @@
+<ion-view class="conversation-add-view">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear" back-dir translate>Cancel</button>
+		<div class="h1 title" translate>Compose</div>
+		<button class="button button-clear" ng-click="onSave()">
+			<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+			<span ng-hide="isProcessing" translate>Send</span>
+		</button>
+	</ion-header-bar>
+	<ion-content id="trigger_content" class="has-header">
+		<div ng-if="dataReady">
+			<div class="list to-list">
+				<div class="item item-input item-stacked-label">
+					<form ng-submit="onSubmitSearch()">
+						<span class="input-label" translate>To</span>
+						<input type="search" placeholder="{{'To' | translate}}" ng-model="searchFriends.sSearch" ng-change="onSearch()" ng-hide="oneRecipient" />
+					</form>
+					<div ng-show="!searchFriends.sSearch">
+						<div ng-repeat="user in selectedFriends">
+							<span ng-bind-html="user.getTitle(22)"></span>
+							<i class="ion-ios-minus-outline" ng-click="deselectFriend(user)" ng-hide="oneRecipient"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list" ng-show="!searchFriends.sSearch">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label" translate>Message</span>
+					<textarea placeholder="{{'Message' | translate}}" ng-model="messageData.sText"></textarea>
+				</label>
+				<div class="padding">
+					<div class="grid-photo-edit" ng-if="photoURI">
+						<img ng-src="{{photoURI}}" />
+						<a class="icon ion-close" ng-click="onRemovePhoto()"></a>
+					</div>
+					<div class="grid-photo-edit" ng-if="!photoURI">
+						<div class="grid-photo-add" ng-click="onAddPhoto()"></div>
+					</div>
+				</div>
+			</div>
+		    <message-friend-autocomplete-list ng-show="searchFriends.sSearch"></message-friend-autocomplete-list>
+		</div>
+		<ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

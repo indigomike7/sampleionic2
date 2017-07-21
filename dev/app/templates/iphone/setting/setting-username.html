@@ -1,0 +1,22 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title" translate>Account</h1>
+    <button class="button button-clear" ng-disabled="!dataReady || form.total_user_change >= form.perms.total_times_can_change_user_name" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list" ng-if="dataReady">
+      <label class="item item-input item-stacked-label item-light"> 
+        <span class="input-label">{{'User Name' | translate}}</span>
+        <input type="text" placeholder="{{'User Name' | translate}}" ng-model="formData.user_name" ng-disabled="form.total_user_change >= form.perms.total_times_can_change_user_name" />
+      </label>
+      <div class="padding">
+        {{form.total_user_change}} {{'out of' | translate}} {{form.perms.total_times_can_change_user_name}} {{'user name changes.' | translate}}
+      </div>
+    </div>
+    <ion-infinite-scroll ng-if="isLoading"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-modal-view>
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideDislikedList()"></button>
+		<h1 class="title">{{'People who disliked this' | translate}}</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list" ng-controller="DislikedListCtrl">
+			<a class="item item-avatar" ng-href="#/app/user/{{item.getId()}}" ng-repeat="item in items">
+				<img ng-src="{{item.getImageSrc()}}" />
+				<h2 ng-bind-html="item.getTitle()"></h2>
+			</a>
+			<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+</ion-modal-view>

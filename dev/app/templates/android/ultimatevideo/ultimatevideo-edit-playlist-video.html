@@ -1,0 +1,10 @@
+<div class="list">
+    <div class="padding text-center" ng-if="noItems" translate>No videos found.</div>
+    <div class="item-video" ng-repeat="item in items track by $index" ng-controller="UltimateVideoItemVideoCtrl">
+        <div class="item item-content item-borderless">
+            <i class="activity-del-button ion-ios-close-empty" ng-click="removeFromPlaylist()" style="color: red"></i>
+            <p href-dir url="{{item.getUrl()}}" ng-bind-html="item.sTitle"></p>
+        </div>
+    </div>
+</div>
+<ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>

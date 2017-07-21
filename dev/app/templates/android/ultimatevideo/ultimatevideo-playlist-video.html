@@ -1,0 +1,19 @@
+<div class="list">
+    <ng-pluralize count="listData.iTotalVideo" when="{
+                    '0': 'No videos found.',
+                    '1': '1 video',
+                    'other': '{} videos'}">
+    </ng-pluralize>
+    <div class="item item-thumbnail-left item-borderless" ng-repeat="item in items.slice(iBeginIndex, iBeginIndex + listData.iLimit)" ng-controller="UltimateVideoItemVideoCtrl" href-dir url="{{item.getUrl()}}">
+        <i class="activity-del-button ion-ios-arrow-down gain" ng-click="onItemSetting()"></i>
+        <span class="item-image" ng-background="{{item.sVideoImage}}"></span>
+        <h2 href-dir url="{{item.getUrl()}}" ng-bind-html="item.sTitle" class="item-icon-right"></h2>
+        <p><span translate>by</span> <a class="item-title" href="#/app/{{item.user.type}}/{{item.user.id}}" ng-bind-html="item.sFullname"></a></p>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+</div>
+<div class="item-action-list clearfix text-center" ng-if="dataReady">
+    <a class="button icon-left ion-chevron-left button-calm button-clear button-small" ng-click="loadPrev()" ng-if="iBeginIndex > 0">{{'Prev' | translate}}</a>
+    <a class="button icon-right ion-chevron-right button-calm button-clear button-small" ng-click="loadNext()" ng-if="iBeginIndex + listData.iLimit < listData.iTotalVideo">{{'Next' | translate}}</a>
+</div>
+

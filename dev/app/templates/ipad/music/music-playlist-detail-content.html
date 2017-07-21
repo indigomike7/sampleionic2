@@ -1,0 +1,51 @@
+<ion-content delegate-handle="content" class="has-header" ng-class="{'has-footer': dataReady && item.canComment()}" delegate-handle="music-playlist-detail">
+  <private-msg-dir ng-if="dataReady && !item.bCanView"></private-msg-dir>
+  <div class="page-music-detail" ng-if="dataReady && item.bCanView">
+    <div class="padding">
+      <h2 class="yncontent-title text-center" ng-bind-html="item.getTitle()"></h2>
+      <div class="music-detail-info text-center">
+        <span class="item-avatar-small">
+          <img ng-src="{{item.getPosterImageSrc()}}" />
+          <span class="item-author-by">{{'by' | translate}}</span>
+          <a class="item-title" href="{{item.getPosterUrl()}}" ng-bind-html="item.getPosterTitle()"></a>
+        </span>
+        <span class="icon-separator"></span>
+        <span class="item-stats">{{item.getTrackCount()}} <i class="ion-music-note"></i></span>
+        <span class="item-stats padding-left">{{item.getPlayCount()}} <i class="ion-headphone"></i></span>
+      </div>
+    </div>
+    <div class="music-player music-cover-image" ng-class="{rotation: audio.paused == false}">
+      <div class="music-player-image" img-cache ng-background="{{item.getImageSrc()}}"></div>
+      <span class="music-player-image-bar"></span>
+    </div>
+    <div class="musicContent miniplayer-content">
+      <div class="younet_html5_player mobile">        
+        <div class="title-info" id="id_player">
+          <audio src="javascript:void(0);" width="100%" autoplay="false"></audio>
+        </div>
+        <div class="item item-body no-border-bottom no-padding-bottom">
+          <div class="padding-bottom" shorten-html-compile="item.getDescriptionParsed()" limit="900" show-more-btn="true" show-less-btn="true"></div>
+        </div>
+        <div class="list text-left">
+          <div id="listsong">
+            <ul class="mejs-list scroll-pane song-list">
+              <li class="item music-song-item" ng-repeat="song in songs" >
+                <!-- song item of song list -->
+                <span class="song-order">{{$index + 1}}</span>
+                <span class="song-title" ng-bind-html="song.sTitle"></span>
+                <span class="link">{{song.sSongPath}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <core-action-list-dir></core-action-list-dir>    
+    </div>
+    <like-stat-dir obj="item"></like-stat-dir>
+    <comment-dir obj="item"></comment-dir>
+  </div>
+  <ion-infinite-scroll distance="62px" ng-if="isLoading"></ion-infinite-scroll>
+</ion-content>
+<comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>

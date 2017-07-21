@@ -1,0 +1,8 @@
+<div class="item" ng-class="{'item-thumbnail-left': obj.aAttachments[0].sPhoto_Url}" href-dir url="#/app/{{obj.aAttachments[0].sType}}/{{obj.aAttachments[0].iId}}">
+    <div class="item-thumbnail" img-cache ng-background="{{obj.aAttachments[0].sPhoto_Url}}"></div>
+    <h2 ng-bind-html="obj.aAttachments[0].sTitle"></h2>
+    <span class="item-stats">
+        <span>{{obj.aAttachments[0].iTotalVotes || 0}}</span>
+        <i class="ion-person-stalker padding-right"></i>
+    </span>
+</div>

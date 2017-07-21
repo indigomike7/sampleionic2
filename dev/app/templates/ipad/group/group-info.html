@@ -1,0 +1,76 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title" translate>Information</h1>
+        <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <ion-content delegate-handle="content" class="content-dark has-header has-footer">
+        <div ng-if="dataReady" class="list item-group-info">
+            <div class="item item-group-info">
+                <div class="group-info-cover" img-cache ng-background="{{item.sCoverImage}}" ng-class="{'no-cover': !item.bHasCover}">
+                    <span class="button-group-like-cover icon ion-log-in" ng-class="{
+                        'processing': isProcessingLike
+                    }" ng-if="item.bCanLike" ng-click="likeGroup()"></span>
+                    <span class="button-group-like-cover icon is-liked ion-log-out" ng-class="{
+                        'processing': isProcessingLike
+                    }" ng-if="item.bCanUnlike" ng-click="unlikeGroup()"></span>
+                </div>
+
+                <div class="group-info-avatar">
+                    <span class="group-info-avatar-image" ng-background="{{item.sAvatarImage}}"></span>
+                </div>
+
+                <div class="group-info-detail" ng-class="{'no-cover': !item.sCoverImage}">
+                    <h2 ng-bind-html="item.getTitle()"></h2>
+                    <p class="item-stats">
+                        <span>
+                            <i class="icon ion-earth" ng-show="item.iRegMethod == '0' "></i>
+                            <i class="icon ion-unlocked" ng-show="item.iRegMethod == '1' "></i>
+                            <i class="icon ion-locked" ng-show="item.iRegMethod == '2' "></i>
+                            {{item.getRegMethodText() | translate }}
+                        </span>
+                        <span ng-if="item.sCategoryName" class="icon-separator"></span>
+                        <span>{{item.sCategoryName || 'No Category' }}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="item item-text-wrap" shorten-html-compile="item.getDescriptionParsed() | prepareHtml" limit="600" show-more-btn="true" show-less-btn="true" ng-if="item.getDescriptionParsed()"></div>
+            <div ng-if="item.bCanView">
+                <!-- total member/liked -->
+                <div class="group-detail-member" ng-if="item.iTotalMembers">
+                    <div class="item-separator"></div>
+                    <div class="item item-stable item-icon-left item-icon-right" ng-click="showMembers('liked')">
+                        <i class="icon ion-ios-people"></i>
+                        <h2 class="item-note">{{item.iTotalMembers}}</h2>
+                        <h2>{{'MEMBERS' | translate}}</h2>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </div>
+                    <div class="item list-member">
+                        <a ng-repeat="obj in item.aMembers | limitTo:6" href="#/app/user/{{obj.user_id}}">
+                            <img img-cache ng-src="{{obj.user_image}}" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- total admin -->
+                <div class="group-detail-member" ng-if="item.iTotalAdmins && item.bCanShowAdmin">
+                    <div class="item-separator"></div>
+                    <div class="item item-stable item-icon-left item-icon-right" ng-click="showMembers('admin')">
+                        <i class="icon ion-person"></i>
+                        <h2 class="item-note">{{item.iTotalAdmins}}</h2>
+                        <h2>{{'ADMIN' | translate}}</h2>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </div>
+                    <div class="item list-member">
+                        <a ng-repeat="obj in item.aAdmins | limitTo:6" href="#/app/user/{{obj.user_id}}">
+                            <img img-cache ng-src="{{obj.user_image}}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="dataReady && !item.canView()">
+                <p class="padding" translate>This group is private</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

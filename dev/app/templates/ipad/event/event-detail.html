@@ -1,0 +1,7 @@
+<div ui-view="tabContent">
+    
+</div>
+<div class="tabs tabs-footer">
+    <a class="tab-item" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/' + item.getType() + '/' + item.getId()}" ng-href="#/app/{{item.getType()}}/{{item.getId()}}">{{'Information' | translate}}</a>
+    <a class="tab-item" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/' + item.getType() + '/' + item.getId() + '/activity'}" ng-href="#/app/{{item.getType()}}/{{item.getId()}}/activity">{{'Activity' | translate}}</a>
+</div>

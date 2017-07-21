@@ -1,0 +1,24 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" ng-click="hideResults()">
+        </button>
+    </ion-header-bar>
+    <div class="bar bar-stable bar-icon-left subheader-title bar-subheader">
+        <i class="icon icon ion-checkmark-circled"></i>
+        <span class="bar-title">{{'User results' | translate}}</span>
+        <span class="item-note">{{item.takers.length}}</span>
+    </div>
+    <ion-content class="has-header has-subheader">
+        <div class="list">
+            <div class="padding text-center" ng-if="noItems" translate>No results found</div>
+            <div class="item item-avatar" ng-repeat="taker in item.takers" ng-click="showUserResult(taker.iUserId)">
+                <img ng-if="taker.sImageUrl" ng-src="{{taker.sImageUrl}}" href-dir url="#/app/user/{{taker.iUserId}}" />
+                <h2 ng-bind-html="taker.sFullName"></h2>
+                <p>
+                    <span>{{taker.iSuccessPercentage}}</span>
+                    <span>%</span>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

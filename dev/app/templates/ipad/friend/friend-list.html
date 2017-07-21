@@ -1,0 +1,15 @@
+<div class="padding text-center" ng-if="noItems" translate>No friends found</div>
+<div class="list">
+    <div ng-repeat="item in items" ng-controller="FriendItemCtrl" href-dir url="{{item.getUrl()}}">
+        <div class="item item-avatar item-icon-right item-member">
+          <img img-cache ng-src="{{item.UserProfileImg_Url}}"/>
+          <h2 ng-bind-html="item.sFullName"></h2>
+          <p class="item-friend" ng-if="item.iMutualFriends > 0 && !item.isOwner()">
+            <span ng-show="item.iMutualFriends | isPlural">{{item.iMutualFriends}} {{'mutual friends' | translate }}</span>
+            <span ng-hide="item.iMutualFriends | isPlural">{{item.iMutualFriends}} {{'mutual friend' | translate}}</span>
+          </p>
+          <i ng-click="onItemSetting()" class="icon ion-ios-arrow-down" ng-if="!item.isOwner()"></i>
+        </div>
+    </div>
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

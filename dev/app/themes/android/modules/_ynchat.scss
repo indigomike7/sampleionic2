@@ -1,0 +1,390 @@
+/**
+ * Ynchat form message
+ */
+.bar.bar-footer.ynchat-form-message {
+  padding-left: 0;
+  padding-right: $bar-padding-portrait;
+
+  .icon {
+    font-size: 18px;
+
+    &.icon-camera {
+      padding: $button-padding;
+      padding-right: $button-padding / 2;
+
+      &.spinner {
+        svg {
+          width: 15px;
+          height: 18px;
+        }
+      }
+    }
+
+    &.icon-smile {
+      padding: 0 $button-padding $button-padding ($button-padding / 2);
+      margin-top: $button-padding;
+    }
+  }
+
+  .item-input-wrapper {
+    padding: 0;
+    margin: 0;
+
+    .input-message {
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      background: none;
+      margin: 4px 0;
+      padding: 0 4px;
+    }
+  }
+
+  .input-file {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+  }
+
+  .button-send {
+    border: none;
+    width: 28px;
+    height: 28px;
+    min-height: 28px;
+    margin-left: 10px;
+    background-image: url("#{$image-path}/icon-send.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+/**
+ * Yn chat popover smile
+ */
+.popover-backdrop {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.ynchat-popover-smile {
+	bottom: initial;
+	height: 240px;
+
+  .emoticonsticker-header {
+    color: rgb(20, 24, 35);
+    display: block;
+    font-size: 12px;
+    height: 40px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    white-space: nowrap;
+    zoom: 1;
+
+    span {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 5px;
+      cursor: pointer;
+
+      &:last-child {
+        border-right: 1px solid #ddd;
+      }
+
+      &.active {
+        background-color: #ddd;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .emoticonsticker-body {
+    position: absolute;
+    top: 40px;
+    height: auto;
+    bottom: 0;
+    margin-bottom: 9px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+
+    .emoticon-list {
+      span {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .sticker-list {
+      span {
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    > * {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    > * span {
+      cursor: pointer;
+      display: inline-block;
+      padding: 8px 0 0 8px;
+
+      &:active {
+        background-color: #dddddd;
+      }
+    }
+  }
+}
+
+.platform-android {
+  .ynchat-popover-smile {
+    top: initial !important;
+    bottom: 47px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.35);
+
+    .popover-arrow {
+      top: initial;
+      bottom: -17px;
+
+      &:after {
+        top: initial;
+        bottom: 12px;
+      }
+    }
+  }
+}
+
+/**
+ * Ynchat history
+ */
+.ynchat-history-bar {
+  span {
+    color: #01a0db;
+    line-height: 30px;
+
+    &.active {
+      color: #404446;
+      font-weight: bold;
+    }
+  }
+}
+
+/**
+ * Ynchat list
+ */
+.ynchat-list {
+  .item {
+    &.item-icon-right {
+      &.available {
+        padding-right: 60px;
+      }
+    }
+
+    .icon-status {
+      font-size: $font-size-small;
+
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        display: inline-block;
+        font-family: "Ionicons";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f21b";
+      }
+
+      span {
+        padding-right: 4px;
+      }
+    }
+  }
+}
+
+/**
+ * Ynchat message list
+ */
+.ynchat-message-list {
+  .list {
+    padding-top: 8px;
+  }
+
+  .item {
+    padding-top: $item-padding / 4;
+    padding-bottom: $item-padding /4;
+
+    .item-chat {
+      margin-bottom: 0;
+
+      .item-chat-group {
+        min-height: 30px;
+      }
+    }
+
+    &.message-item-file,
+    &.message-item-link,
+    &.message-item-video {
+      .item-chat-group {
+        max-width: 216px;
+      }
+    }
+
+    &.item-icon-right {
+      .item-chat-group {
+        background-color: #edecec;
+        box-shadow: 0 1px #dadee0;
+
+        p {
+          color: #313436;
+        }
+      }
+    }
+
+    &.item-icon-left {
+      .item-chat-group {
+        background-color: #c4f0ff;
+        box-shadow: 0 1px #92d2f4;
+
+        &:after {
+          background-color: #c4f0ff;
+        }
+
+        p {
+          color: #0a4b6d;
+        }
+      }
+    }
+
+    &.item-avatar {
+      padding-left: 52px;
+      min-height: 37px;
+
+      > img:first-child {
+        top: 3px;
+        max-width: 30px;
+        max-height: 30px;
+      }
+    }
+
+    &.item-date {
+      min-height: initial;
+      width: calc(100% - 16px);
+      height: 12px;
+      line-height: 12px;
+      font-size: 12px;
+      text-align: center;
+      color: #b6b6b6;
+      margin: 0.5em auto;
+      padding: 0;
+
+      &:before {
+        content: "";
+        display: block;
+        border-bottom: 1px solid #d2d2d2;
+        padding-top: 6px;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+      }
+
+      span {
+        margin: auto;
+        background: #fff;
+        padding: 0 10px;
+        position: relative;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      word-break: break-word;
+    }
+
+    p.item-span {
+      line-height: $font-default-size;
+      margin-bottom: $item-padding / 4;
+    }
+
+    .item-file-img {
+      margin-top: $item-padding / 2;
+    }
+
+    .dotted-top {
+      border-top: 1px dotted #d2d2d2;
+      height: $item-padding / 2;
+    }
+
+    .item-attachment-large {
+      .attachment-image {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Side menu */
+.menu.menu-right {
+  .bar-header {
+    border-color: $slidebar-border-color;
+    background-color: $slidebar-profile-background-color;
+    background-image: initial;
+  }
+
+  .bar-subheader.bar-header-search {
+    .item-input-search {
+      left: 0;
+
+      .bar.item-input-inset {
+        background-color: $slidebar-profile-background-color;
+
+        .item-input-search-box {
+          background-color: $slidebar-profile-background-color;
+        }
+      }
+    }
+  }
+
+  ion-content {
+    background-color: $slidebar-background-color;
+    color: $slidebar-color;
+  }
+  
+  .item {
+    border-color: $slidebar-border-color;
+    background-color: $slidebar-background-color;
+    color: $slidebar-color;
+
+    h2 {
+      color: $slidebar-color;
+    }
+
+    &.active {
+      background-color: $slidebar-background-active-color;
+      color: $text-active-color;
+
+      h2 {
+        color: $text-active-color;
+      }
+    }
+  }
+}

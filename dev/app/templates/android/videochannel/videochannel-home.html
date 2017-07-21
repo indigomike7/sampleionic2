@@ -1,0 +1,11 @@
+<div ui-view="tabContent">
+
+</div>
+<div class="tabs tabs-footer tabs-overflow">
+    <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/videochannel'}" ng-href="#/app/videochannel">{{'Videos' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" nav-transition="none" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/videochannel/my'}" ng-href="#/app/videochannel/my">{{'My Videos' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" nav-transition="none" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/videochannel/friend'}" ng-href="#/app/videochannel/friend">{{'Friend\'s Videos' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/videochannel/favorite'}" ng-href="#/app/videochannel/favorite">{{'My Favorites' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/videochannel/all_channels'}" ng-href="#/app/videochannel/all_channels" ng-if="canViewAllChannel">{{'All Channels' | translate}}</a>
+    <a class="tab-item" data-prevent-scroll="true" nav-transition="none" ng-class="{'tab-item-active': currentPath == '/app/videochannel/my_channels'}" ng-href="#/app/videochannel/my_channels" ng-if="canViewMyChannel">{{'My Channels' | translate}}</a>
+</div>

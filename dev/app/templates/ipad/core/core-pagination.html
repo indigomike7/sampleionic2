@@ -1,0 +1,16 @@
+<span>{{'Page' | translate}}:</span>
+<span class="button page-btn" ng-class="{'disabled': currentPage == 1}" data-page="1" ng-click="onChangePage(1)">
+  <i class="ion-ios-arrow-back"></i><i class="ion-ios-arrow-back"></i>
+</span>
+<span class="button page-btn" ng-class="{'disabled': currentPage == 1}" ng-click="onChangePage(currentPage - 1)">
+  <i class="ion-ios-arrow-back"></i>
+</span>
+<span class="button page-btn button-positive">
+  {{currentPage}}
+</span>
+<span class="button page-btn" ng-class="{'disabled': currentPage == totalPage}" ng-click="onChangePage(currentPage + 1)">
+  <i class="ion-ios-arrow-forward"></i>
+</span>
+<span class="button page-btn" ng-class="{'disabled': currentPage == totalPage}" ng-click="onChangePage(totalPage)">
+  <i class="ion-ios-arrow-forward"></i><i class="ion-ios-arrow-forward"></i>
+</span>

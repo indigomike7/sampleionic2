@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir></button>
+        <h1 class="title" translate>Add Album</h1>
+        <button class="button button-clear" ng-click="onSave()" translate ng-class="{disabled: !dataReady || isProcessing}">Save</button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="list" ng-if="dataReady">
+            <label class="item item-input item-stacked-label" required>
+                <span class="input-label" translate>Album Name</span>
+                <input type="text" placeholder="{{'Album Name'| translate}}" ng-model="formData.sTitle">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" translate>Description</span>
+                <input type="text" placeholder="{{'Description' | translate }}" ng-model="formData.sDescription">
+            </label>
+
+            <label class="item item-input item-select" ng-if="form.viewOptions.length">
+                <div class="input-label" translate>
+                    Privacy
+                </div>
+                <select ng-model="formData.sAuthView" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.viewOptions" required></select>
+            </label>
+            <label class="item item-input item-select" ng-if="form.commentOptions.length">
+                <div class="input-label" translate>
+                    Comment
+                </div>
+                <select ng-model="formData.sAuthComment" ng-options="opt.sValue as opt.sPhrase|translate for opt in form.commentOptions" required></select>
+            </label>
+            <div class="padding">
+                <div ng-repeat="item in photoItems" class="grid-photo-edit">
+                    <div class="img" ng-background="{{item.sPhotoUrl}}"></div>
+                    <a class="icon ion-close" ng-click="onRemovePhotoItem({{item.iPhotoId}})"></a>
+                </div>
+                <div class="grid-photo-edit">
+                    <div ng-click="onAddPhoto()" title="Add Photos" class="grid-photo-add">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

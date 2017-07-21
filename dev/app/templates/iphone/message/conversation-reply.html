@@ -1,0 +1,27 @@
+<ion-view>
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear" back-dir translate>Cancel</button>
+		<h1 class="title" translate>Reply</h1>
+		<button class="button button-clear" ng-click="onSave()">
+	    	<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+	    	<span ng-hide="isProcessing" translate>Send</span>
+	    </button>
+	</ion-header-bar>
+    <ion-content class="has-header content-dark">
+		<div class="list">
+			<conversation-recipients-dir ng-if="dataReady"></conversation-recipients-dir>
+			<label class="item item-input">
+				<textarea placeholder="{{'Reply Message...' | translate}}" ng-model="messageData.sText"></textarea>
+			</label>
+			<!--<div class="padding">-->
+                <!--<div class="grid-photo-edit" ng-if="photoURI">-->
+                    <!--<img ng-src="{{photoURI}}" />-->
+                    <!--<a class="icon ion-close" ng-click="onRemovePhoto()"></a>-->
+                <!--</div>-->
+                <!--<div class="grid-photo-edit" ng-if="!photoURI">-->
+                    <!--<div class="grid-photo-add" ng-click="onAddPhoto()"></div>-->
+                <!--</div>-->
+            <!--</div>-->
+		</div>
+	</ion-content>
+</ion-view>

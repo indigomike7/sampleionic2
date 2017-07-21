@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/sidebar_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303439">
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/sidebar_items"
+            android:layout_gravity="left|top"
+            android:choiceMode="singleChoice"
+            android:saveEnabled="false"
+            android:persistentDrawingCache="all"
+            android:drawingCacheQuality="high"
+            android:listSelector="@drawable/sidebar_list_selector"
+            tools:listitem="@layout/sidebar_menu_item"
+            tools:listheader="@layout/sidebar_viewer"
+            android:scrollingCache="true" android:smoothScrollbar="true"/>
+</FrameLayout>

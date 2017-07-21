@@ -1,0 +1,71 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear" back-dir translate>Cancel</button>
+    <h1 class="title">{{'Post New Thread' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="list item-forum-reply" ng-if="dataReady">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">{{'Title' | translate}}</span>
+        <input type="text" placeholder="{{'Title' | translate}}" ng-model="formData.sTitle" />
+      </label>
+      <div class="item item-input item-stacked-label">
+        <span class="input-label">{{'Message' | translate}}</span>
+        <span class="input-label item-note gray" ng-click="onAttachPhoto()">+ {{'Insert Image' | translate}}</span>
+        <textarea placeholder="{{'Post' | translate}}" ng-model="formData.sText"></textarea>
+      </div>
+      <label class="item item-input item-select">
+        <span class="input-label">{{'Subscrible' | translate}}</span>
+        <select class="control-full" ng-model="formData.iIsSubscribed">
+          <option value="1">{{'Yes' | translate}}</option>
+          <option value="0">{{'No' | translate}}</option>
+        </select>
+      </label>
+      <label class="item item-input item-select" ng-if="form.types.length > 1">
+        <span class="input-label">{{'Type' | translate}}</span>
+        <select class="control-full" ng-model="formData.sTypeId" ng-options="option.sValue as option.sPhrase for option in form.types">
+        </select>
+      </label>
+      <label class="item item-input item-select" ng-if="form.bCanSetClosed">
+        <span class="input-label">{{'Closed' | translate}}</span>
+        <select class="control-full" ng-model="formData.iIsClosed">
+          <option value="1">{{'Yes' | translate}}</option>
+          <option value="0">{{'No' | translate}}</option>
+        </select>
+      </label>
+      <div class="item item-input item-stacked-label">
+        <span class="input-label">{{'Attachments' | translate}}</span>
+        <div class="button-bar padding">
+          <div class="button button-small" ng-click="onAttachFile()" ng-disabled="isProcessingAttach"><i class="ion-image"></i></div>
+          <div class="button button-small" ng-click="onAttachLink()" ng-disabled="isProcessingAttach"><i class="ion-link"></i></div>
+          <div class="button button-small" ng-if="form.bCanAddPoll" ng-click="onAttachPoll()" ng-disabled="isProcessingAttach || attachedPoll.iPollId"><i class="ion-stats-bars"></i></div>
+        </div>
+      </div>
+      <div class="item item-icon-left item-icon-right" ng-if="attachedPoll.iPollId">
+        <i class="icon ion-stats-bars"></i>
+        <h2 ng-bind-html="attachedPoll.sQuestion"></h2>
+        <a class="icon ion-close" ng-click="onRemoveAttachedPoll()"></a>
+      </div>
+      <div class="padding overflow-hidden attachment-photos" ng-show="attachedFiles.length">
+        <div ng-repeat="att in attachedFiles" class="grid-photo-edit">
+          <img ng-src="{{att.sImagePath}}" />
+          <a class="icon ion-close" ng-click="onRemoveAttachment(att)"></a>
+        </div>
+      </div>
+      <div class="attachment-links" ng-show="attachedLinks.length">
+        <div ng-repeat="att in attachedLinks" class="item item-icon-right" ng-class="{'item-thumbnail-left': att.image}">
+          <img ng-src="{{att.image}}" ng-if="att.image" />
+          <h2 ng-bind-html="att.title || att.url"></h2>
+          <p ng-bind-html="att.url"></p>
+          <p ng-bind-html="att.description"></p>
+          <i class="icon ion-close" ng-click="onRemoveAttachment(att)"></i>
+        </div>
+      </div>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

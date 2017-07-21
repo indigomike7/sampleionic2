@@ -1,0 +1,7 @@
+<ion-item class="item item-thumbnail-left" ng-if="dataReady">
+    <img style="background-image:url('{{item.sVideoImage}}'); border-radius:50%; background-position:center center; background-size:cover; width:100%; height:100%;">
+    <h2 class="item-title" ng-bind-html="item.sTitle"></h2>
+    <p ng-if="item.iNumberVideos != 1">{{item.iNumberVideos}} {{'videos' | translate}}</p>
+    <p ng-if="item.iNumberVideos == 1">{{item.iNumberVideos}} {{'video' | translate}}</p>
+</ion-item>
+<div class="item item-text-wrap" shorten-html-compile="item.sSummary | prepareHtml" limit="300" show-more-btn="true" show-less-btn="true" ng-if="item.sSummary"></div>

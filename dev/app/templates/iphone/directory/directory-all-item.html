@@ -1,0 +1,25 @@
+<ion-item class="item-business item-thumbnail-left" ng-class="{'item-icon-right': hasActions()}" href-dir url="#/app/directory/business/{{item.getId()}}">
+  <div class="item-thumbnail" ng-background="{{item.sPhotoUrl}}" img-cache>
+    <div class="status-mark checkmark" ng-if="item.sStatus == 'published'"><i class="status-icon ion-checkmark"></i></div>
+    <div class="status-mark locked" ng-if="item.sStatus == 'unclaimed'"><i class="status-icon ion-locked"></i></div>
+  </div>
+  <i class="icon ion-ios-arrow-down" ng-show="hasActions()" ng-click="onItemSetting()"></i>
+  <h2 class="item-title" ng-bind-html="item.sTitle"></h2>
+  <div class="item-info">
+    <p>
+      <core-stars active="{{item.fRating}}" total="5"></core-stars>
+      <span ng-if="item.bIsFeatured">
+        <span class="gray">&middot;</span>
+        <span class="positive">{{'Featured' | translate}}</span>
+      </span>
+    </p>
+    <p>
+      <i class="ion-ios-folder gray"></i>
+      <span ng-bind-html="item.sCategory"></span>
+    </p>
+    <p>
+      <i class="ion-ios-location gray"></i>
+      <span ng-bind-html="item.sLocation"></span>
+    </p>
+  </div>
+</ion-item>

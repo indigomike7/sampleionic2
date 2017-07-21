@@ -1,0 +1,24 @@
+<div class="item-action-list clearfix">
+    <div class="pull-left">
+        <button class="button button-small button-rounder button-outline button-positive icon-right" ng-click="onItemShare()" ng-if="item.canShare()">
+            <span>{{item.getTotalShare()}}</span>
+            <i class="ion-android-share"></i>
+        </button>
+    </div>
+    <div class="pull-right">
+        <button ng-if="item.showRate()" class="button button-small button-positive button-rounder icon-right" ng-class="{'button-outline': !item.isRated()}" ng-click="onItemRate()">
+            <span>{{item.getRateNumber()}}</span>
+            <i class="ion-android-star"></i>
+        </button>
+        
+        <button class="button button-small button-rounder button-outline button-positive icon-right" ng-click="onItemComment()" ng-if="item.canComment()">
+            <span>{{item.getTotalComment()}}</span>
+            <i class="ion-chatbox"></i>
+        </button>
+        
+        <button class="button button-small button-positive button-rounder icon-right" ng-class="{'button-outline': !item.isLiked()}" ng-click="onItemLike()" ng-if="item.canLike()">
+            <span>{{item.getTotalLike()}}</span>
+            <i class="icon ion-thumbsup"></i>
+        </button>        
+    </div>
+</div>

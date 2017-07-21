@@ -1,0 +1,12 @@
+<div class="list">
+	<label class="item item-input item-select">
+		<div class="input-label" translate>
+			Type
+		</div>
+		<select ng-model="reportData.iReport" ng-options="opt.iReportId as opt.sMessage|translate for opt in reportForm">
+		</select>
+	</label>
+	<label class="item item-input">
+		<textarea ng-model="reportData.sDescription" type="text" placeholder="{{'Description' | translate}}"></textarea>
+	</label>
+</div>

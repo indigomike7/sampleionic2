@@ -1,0 +1,17 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir></button>
+    <h1 class="title">{{'Confirm Purchase'|translate}}</h1>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <div class="list" ng-if="dataReady">
+      <div class="padding">
+        <span>{{'By clicking on the button below, you commit to buy this item from the seller.'|translate}}</span>
+        <div class="button button-small button-full button-energized" ng-disabled="isProcessing" ng-click="onBuy()">
+          {{(isProcessing ? 'Processing...' : 'Commit to Buy')|translate}}
+        </div>
+      </div>
+    </div>
+    <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

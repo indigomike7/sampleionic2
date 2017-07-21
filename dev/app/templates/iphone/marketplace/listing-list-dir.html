@@ -1,0 +1,25 @@
+<div class="list">
+  <div class="padding text-center" ng-if="noItems" translate>No listings found.</div>
+  
+  <div class="card item-listing" ng-class="{'item-my-listing': listingListData.sView == 'my'}" ng-repeat="item in items" ng-controller="ListingItemCtrl">
+    <div class="item item-image" href-dir url="{{item.getUrl()}}">
+      <span img-cache ng-background="{{item.getImageSrc()}}" ng-class="{'no-image': !item.hasImage()}"></span>
+    </div>
+    <div class="item" ng-class="{'item-icon-right': listingListData.sView == 'my'}">
+      <h2 class="title" href-dir url="{{item.getUrl()}}" ng-bind-html="item.getTitle()"></h2>
+      
+      <p class="item-listing-info clearfix">        
+        <span class="item-price pull-right" ng-if="!item.isFree()" ng-bind-html="item.getCurrencySymbol() + ' ' + item.getPrice()"></span>
+        <span class="item-price pull-right" ng-if="item.isFree()">{{'Free' | translate}}</span>
+        <span class="item-location overflow-hidden" ng-if="item.getLocation()">
+          <i class="ion-location"></i>
+          <span ng-bind-html="item.getLocation()"></span>
+        </span>        
+      </p>
+      
+      <i class="icon ion-ios-arrow-down" ng-click="onItemSetting()" ng-if="listingListData.sView == 'my'"></i>
+    </div>
+  </div>
+
+  <ion-infinite-scroll distance="62px" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+</div>

@@ -1,0 +1,33 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+        <h1 class="title"></h1>
+        <button class="button icon-right ion-ios-more button-clear" ng-class="{disabled: !dataReady}" ng-click="onItemSetting()"></button>
+    </ion-header-bar>
+    <ion-content class="has-header" ng-class="{'has-footer': dataReady && item.canComment()}">
+        <ion-infinite-scroll distance="62px" ng-if="!dataReady"></ion-infinite-scroll>
+        <div ng-if="dataReady">
+            <div class="item activity-item-detail">
+                <div class="item-header item-header-avatar item-header-icon-right">
+                    <img class="img-avatar" ng-src="{{item.getPosterImageSrc()}}" href-dir url="{{item.getPosterUrl()}}" />
+                    <span>
+                        <span ng-bind-html="headline" class="nocut"></span>
+                        <i class="gray icon {{item.getPrivacyIcon(item.getPrivacy())}}" ng-if="item.parentModuleId == 'feed'"></i>
+                    </span>
+                    <div class="item-time">{{item.fromNow()}}</div>
+                </div>
+                <div class="item-subheader" ng-if="item.getContent()" ng-html-compile="item.getContentParsed()">
+                </div>
+                <div class="item-attachment" ng-if="item.hasAttachment()">
+                    <attachment-dir obj="item"></attachment-dir>
+                </div>
+                <div class="clearfix item-subfooter">
+                    <core-action-list-dir></core-action-list-dir>
+                </div>
+            </div>
+            <like-stat-dir obj="item"></like-stat-dir>
+            <comment-dir obj="item"></comment-dir>
+        </div>
+    </ion-content>
+    <comment-form-footer-dir obj="item" ng-if="dataReady && item.canComment()"></comment-form-footer-dir>
+</ion-view>

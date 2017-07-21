@@ -1,0 +1,51 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <button class="button button-clear" ng-click="cancel()" translate>
+            Cancel
+        </button>
+        <h1 class="title">
+            {{'Sign up' | translate}}
+        </h1>
+        <button class="button button-clear" ng-show="formReady" ng-click="onSave()">
+            <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+            <span ng-hide="isProcessing" translate>Next</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="list" ng-show="formReady">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Full Name' | translate}}</span>
+                <input type="text" placeholder="{{'Full Name' | translate}}" ng-model="data.sFullName" ng-class="{error: invalidData.sFullName || error.sFullName}">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Email' | translate}}</span>
+                <input type="email" placeholder="{{'Email' | translate}}" ng-model="data.sEmail" ng-class="{error: invalidData.sEmail || error.sEmail}">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'Password' | translate}}</span>
+                <input type="password" placeholder="{{'Password' | translate}}" ng-model="data.sPassword" ng-class="{error: invalidData.sPassword}">
+            </label>
+            <label class="item item-input item-select" ng-show="packagesData.length">
+                <div class="input-label">
+                    {{'Membership' | translate}}
+                </div>
+                <select ng-model="data.iPackageId" ng-options="option.iPackageId as option.sTitle for option in packagesData">
+                </select>
+            </label>
+            <label class="item" ng-click="showPackages()" ng-show="packagesData.length">
+                <p>
+                    {{'Learn more about our memberships' | translate}}
+                </p>
+            </label>
+            <div class="item item-checkbox">
+                <span class="checkbox reset-right">
+                    <input type="checkbox" ng-model="data.bIsAgreeTerms">
+                </span>
+                <p>
+                    {{'Read and agree with' | translate}} <a ng-click="showTerm()">{{'Terms of Service' | translate}}</a>
+                </p>
+            </div>
+        </div>
+        <ion-infinite-scroll distance="62px" ng-if="!formReady"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

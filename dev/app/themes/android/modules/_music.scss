@@ -1,0 +1,393 @@
+/*music*/
+.music-playlist-detail-info {
+  padding: ceil($item-padding/2);
+  border-bottom: 1px dashed $border-color;
+  margin-bottom: ceil($item-padding/2);
+}
+
+.music-playlist-detail-info .item-headline {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.music-playlist-detail-info .item-subline {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.music-playlist-detail-info .item-subline .item-stats {
+  display: inline-block;
+}
+
+.music-playlist-detail-info .item-subline .next {
+  padding-left: ceil($item-padding/2);
+}
+
+.music-playlist-detail-info .item-subline .text-info,
+.music-playlist-detail-info .item-subline .text-anchor {
+  color: $infomartion-color;
+  font-size: 14px;
+}
+
+.music-playlist-detail-info .item-subline .rated .text-info,
+.music-playlist-detail-info .item-subline .liked .text-info {
+  color: $active-color;
+}
+
+.music-cover-image {
+  margin: 0 $item-padding;
+  @include border-radius(4px);
+  overflow: hidden;
+  position: relative;
+
+  .music-player-image {
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 1px auto 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .music-player-image-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 50px;
+    width: 100%;    
+  }
+}
+
+.younet_html5_player {
+  .mejs-container {
+    background: transparent;
+
+    .mejs-controls {
+      height: ceil(30+2*$item-padding);
+      padding: $item-padding 0;
+      background: transparent;
+
+      .mejs-time {
+        color: $base-color;
+        font-size: 13px;
+        padding: 10px $item-padding;
+
+        &.mejs-currenttime-container {
+          padding-right: 5px;
+        }
+
+        &.mejs-duration-container {
+          padding-left: 5px;
+        }
+      }
+
+      .mejs-button {
+        position: absolute;
+        margin-top: -58px;
+        width: 50px;
+        height: 50px;
+        left: 50%;                
+
+        button {
+          content: "";
+          background: transparent;  
+          margin: 0;
+          padding: 0;
+          width: 50px;
+          height: 50px;
+
+          &:before {
+            display: inline-block;
+            font-family: "Ionicons";
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            font-variant: normal;
+            text-transform: none;
+            text-rendering: auto;
+            line-height: 50px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            width: 50px;
+            height: 50px; 
+          }
+        }
+
+        &.mejs-playpause-button {
+          margin-left: -25px;         
+
+          &.mejs-pause button:before {
+            color: $active-color;
+            content: "\f210";
+          }
+
+          &.mejs-play button:before {
+            color: $active-color;
+            content: "\f215";
+          }
+
+        }
+
+        &.mejs-prev-button {
+          margin-left: -125px;
+          
+
+          button:before {
+            font-size: 28px;
+            content: "\f4ab";
+          }
+        }
+
+        &.mejs-next-button {
+          margin-left: 75px;
+
+          button:before {
+            font-size: 28px;
+            content: "\f4ad";
+          }
+        }
+      }
+
+      .mejs-time-rail {
+        .mejs-time-total {
+          height: 12px;
+          @include border-radius(6px);
+          background: $music-track-background-color;
+        }
+        
+        .mejs-time-current-pointer {
+          right: 0;
+          margin-right: -13px;
+          margin-top: -7px;
+          width: 26px;
+          height: 26px;
+          background-color: $active-color;
+          border: 3px solid $text-active-color;
+          @include border-radius(26px);
+        } 
+
+        .mejs-time-current {
+          height: 12px;
+          @include border-radius(6px);
+          background: $active-color;
+        }
+
+        .mejs-time-loaded {
+          height: 12px;
+          @include border-radius(6px);
+          background: $music-playbar-background-color;
+        }
+      }
+
+      .clear {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.miniplayer-content {
+  min-height: $item-padding;
+}
+
+.music-song-item {
+  background-color: $sub-background-color;
+
+  .link {
+    display: none;
+  }
+}
+
+.music-song-item.current {
+  background-color: $active-color;
+  color: $text-active-color;
+}
+
+.item-thumbnail-left > .item-thumbnail { 
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  display: block;
+  background-size: cover;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 4px;
+
+  .item-music-play {
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    background: $text-active-color;
+    color: $active-color;
+    width: 30px;
+    height: 30px;
+    @include border-radius(15px);
+    line-height: 30px;    
+    font-size: 25px;
+    padding-left: 4px;
+    text-align: center;
+  }
+}
+
+.yn-music-action-button {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-top: -50px;
+
+  .button.button-clear {
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    color: $base-color;
+
+    .ion-ios-fastforward {
+      padding-left: 4px;
+    }
+  }
+
+  .button:first-child { margin-right: 30px; }
+  .button:last-child { margin-left: 30px; }
+
+  .button.yn-music-play-button {
+    color: $active-color;
+
+    i:before { 
+      font-size: 2.5em; 
+      line-height: 50px;
+    }
+
+    .ion-ios-play {
+      padding-left: 4px;
+    }
+  }
+}
+
+.platform-ios6 .yn-music-range { display: none; }
+.yn-music-range {
+  padding-left: $item-padding;
+  padding-right: $item-padding;
+
+  i { font-size: $font-sub-size; }
+
+  #audio_current_time {
+    color: $active-color;
+  }
+
+  input[type="range"] {
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 2px;
+    padding-left: 1px;
+    width: auto;
+    height: $range-slider-height + 15;
+    outline: none;
+    background: transparent;
+    background-size: 100%;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-runnable-track,
+    &:focus::-webkit-slider-runnable-track {
+      height: $range-track-height;
+      background: $music-playbar-background-color;
+      border: none;
+    }   
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      width: $range-slider-width;
+      height: $range-slider-height;
+      border-radius: $range-slider-border-radius;
+      background-color: $active-color;
+      @include box-shadow(none);
+      cursor: pointer;
+      -webkit-appearance: none;
+      top: - ceil($range-track-height / 2);
+    }
+
+    &::-webkit-slider-thumb:before {
+      position: absolute;
+      top: ceil($range-track-height / 2);;
+      height: $range-track-height;
+      background: $active-color;
+      content: ' ';
+    }
+  }
+}
+
+.page-music-landing {
+  .music-info {
+    color: $infomartion-color;
+    font-size: $font-default-size;
+    line-height: 1.4em;
+    overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+    & > a {
+      color: $base-color;
+    }
+  }
+
+  .music-info-properties {
+    margin-top: 3px;
+    color: $infomartion-color;    
+  }
+}
+
+.page-music-detail {
+
+  .music-detail-info {
+
+  .item-stats {
+    font-size:14px;
+    i {
+    font-size:12px;
+    }
+  }
+  .item-avatar-small {
+    font-size:13px;
+  }
+  }
+
+  .yncontent-title {
+    font-size: $font-title-size;
+  }
+
+  .music-detail-info {
+    color: $infomartion-color;
+
+    a { color: $base-color; }   
+  }
+
+  .item-description {
+    text-align: center;
+    color: $description-color;
+  }
+}
+
+.item-music {
+  padding: 12px 10px 8px 90px;
+  min-height: 90px;
+
+  .item-thumbnail {
+    width: 68px;
+    height: 68px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+}

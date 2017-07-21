@@ -1,0 +1,15 @@
+<ion-modal-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <h1 class="title" translate>Blog Preview</h1>
+    <button class="button button-clear" ng-click="closePreview()">
+      <span translate>Close</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="has-header"">
+    <div class="list">
+      <div class="item item-body no-border-bottom no-padding-bottom">
+        <div class="padding-bottom" ng-html-compile="previewItem.getTextParsed()"></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

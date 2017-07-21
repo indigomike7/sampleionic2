@@ -1,0 +1,23 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">{{'Account' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list" ng-if="dataReady">
+      <label class="item item-input item-select">
+        <div class="input-label">{{'Preferred Currency' | translate}}</div>
+        <select ng-model="formData.default_currency" ng-options="option.id as option.title|translate for option in form.currency_options">
+        </select>
+      </label>
+      <div class="padding">
+        {{'Show prices and make purchases in this currency.' | translate}}
+      </div>
+    </div>
+    <ion-infinite-scroll ng-if="isLoading"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

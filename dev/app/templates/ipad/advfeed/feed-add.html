@@ -1,0 +1,45 @@
+<ion-view>
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear" back-dir translate>
+			Cancel
+		</button>
+		<div class="h1 title" translate>
+			Update Status
+		</div>
+		<button class="button button-clear" ng-click="onSave()">
+			<ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+			<span ng-hide="isProcessing" translate>Post</span>
+		</button>
+	</ion-header-bar>
+	<ion-content class="has-header has-footer">
+		<div class="list">
+			<feed-add-privacy-dir ng-if="!isInOtherProfile && isAdvFeed"></feed-add-privacy-dir>
+			<div class="ng-hide" id="id_status_quick_tag_wrapper">
+				<div type="" id="id_status_quick_tag"></div>
+				<ul class="_uiFlyLayer _uiAcList" id="_uiAcList"></ul>
+			</div>
+			<div class="item item-input">
+				<div class="_uiPostComposer">
+					<div class="_uiMentionTypeAheadContainer" id="user_status_area">
+						<div class="_uiMentionHighlighterArea _uiCommentHighlighterArea">
+							<div class="innerWrap">
+								<span class="_uiMentionHighlighter" style="width: 498px;"></span>
+							</div>
+						</div>
+						<div class="_uiTypeaheaMentiondArea">
+							<div class="innerWrap">
+								<textarea id="composer_textarea" placeholder="{{text_what_s_on_your_mind_}}" class="textarea_post_composer textarea_post_user_status _uiMentionTypeahead textareaNoResize" ng-trim="false"></textarea>
+							</div>
+						</div>
+						<input type="hidden" id="input_hidden_user_status" name="val[user_status]" class="_uiMentionHidden" />
+					</div>
+					<tag-friends-location-dir ng-if="isAdvFeed"></tag-friends-location-dir>
+					<i ng-if="enabledEmoticon" class="icon ion-happy-outline feed-smiley-icon gray" ng-click="switchEmoticonPanel()"></i>
+				</div>
+			</div>
+			<emoticon-panel-dir ng-if="isShowEmoticonPanel"></emoticon-panel-dir>
+			<attachment-add-preview-dir></attachment-add-preview-dir>
+		</div>
+	</ion-content>
+	<attachment-add-bar-dir></attachment-add-bar-dir>
+</ion-view>

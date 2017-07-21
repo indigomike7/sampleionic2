@@ -1,0 +1,9 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">{{'Video Channel' | translate}}</h1>
+    <a ng-if="item.bCanShareVideochannel" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/videochannel/add/{{item.getType()}}/{{item.getId()}}"></a>
+</ion-header-bar>
+<videochannel-search-dir></videochannel-search-dir>
+<ion-content class="has-header has-footer">
+    <videochannel-list-dir></videochannel-list-dir>
+</ion-content>

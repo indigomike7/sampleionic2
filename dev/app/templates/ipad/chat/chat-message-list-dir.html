@@ -1,0 +1,21 @@
+<ion-list class="chat-message-list">
+  <div class="padding text-center" ng-if="items.length == 0">
+    <span>{{'No messages.' | translate}}</span>
+  </div>
+  <div class="item item-text-wrap" ng-repeat="item in items" ng-controller="ChatItemMessageCtrl" ng-class="{'item-avatar item-icon-right': !item.isViewer(), 'text-right item-icon-left': item.isViewer()}" on-hold="onItemSetting()">
+    <img ng-src="{{chatObj.getImageSrc()}}" height="50" href-dir url="{{item.getSenderUrl()}}" ng-if="!item.isViewer()"/>
+    <div class="item-chat">
+      <div class="item-chat-group">
+        <div class="" ng-class="{'item-stable': !item.isViewer()}">
+          <p ng-html-compile="item.getMessage()" class="chat-message-body"></p>
+          <div ng-if="item.hasAttachment()" class="item item-avatar" href-dir external-url="{{item.attachment_id.link}}">
+            <img ng-if="item.attachment_id.default_image != ''" ng-src="{{item.attachment_id.default_image}}">
+            <h2 ng-html-compile="item.attachment_id.title"></h2>
+            <span ng-html-compile="item.attachment_id.description" class="chat-attach-desc" style="color: black;"></span>
+          </div>
+          <p class="item-note">{{item.fromNow()}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-list>

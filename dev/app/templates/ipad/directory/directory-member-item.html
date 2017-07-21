@@ -1,0 +1,8 @@
+<a class="item item-avatar" ng-href="{{item.getUrl()}}">
+  <img ng-src="{{item.getImageSrc()}}" />
+  <h2 ng-bind-html="item.getTitle()"></h2>
+  <p>
+    <span class="gray">{{'Role' | translate}}</span>
+    <span ng-bind-html="item.sRole"></span>
+  </p>
+</a>

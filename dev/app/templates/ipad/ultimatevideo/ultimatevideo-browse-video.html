@@ -1,0 +1,15 @@
+<ion-view>
+<ion-header-bar align-title="center" class="bar-positive">
+  <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+  <h1 class="title has-notification">
+    {{'Browse Videos' | translate}}
+    <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+  </h1>
+  <a ng-if="canCreateVideo" class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/ultimatevideo/add/video"></a>
+</ion-header-bar>
+  <ultimatevideo-search-video-dir>Loading...</ultimatevideo-search-video-dir>
+  <ion-content class="has-header has-footer">
+   <ultimatevideo-list-video-dir></ultimatevideo-list-video-dir>
+  </ion-content>
+</ion-view>
+

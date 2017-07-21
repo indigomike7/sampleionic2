@@ -1,0 +1,14 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-clear icon ion-navicon" toggle-left-dir></button>
+    <h1 class="title has-notification">
+      {{'Marketplace' | translate}}
+      <span class="header-notification"><header-stat-dir></header-stat-dir></span>
+    </h1>
+    <a class="button button-clear icon ion-ios-plus-empty" ng-href="#/app/listings/add" ng-show="canAddListing"></a>
+  </ion-header-bar>
+  <listing-search-dir></listing-search-dir>
+  <ion-content class="has-header has-footer">
+    <listing-list-dir></listing-list-dir>
+  </ion-content>
+</ion-view>

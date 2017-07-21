@@ -1,0 +1,31 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button icon-left ion-ios-arrow-left button-clear" back-dir ng-bind-html="getPrevPageTitle()"></button>
+    <h1 class="title">{{'Privacy' | translate}}</h1>
+    <button class="button button-clear" ng-click="onSave()">
+      <ion-spinner class="spinner-light" ng-show="isProcessing"></ion-spinner>
+      <span ng-hide="isProcessing" translate>Save</span>
+    </button>
+  </ion-header-bar>
+  <ion-content class="content-dark has-header">
+    <div class="list" ng-if="dataReady">
+      <div class="item item-divider">
+        {{'Profile' | translate}}
+      </div>
+      <div class="padding">
+        {{'Customize how other users interact with your profile.' | translate}}
+      </div>
+      <label class="item item-input item-select" ng-repeat="setting in form.privacy">
+        <div class="input-label" ng-bind-html="setting.phrase"></div>
+        <select ng-model="formData.privacy[setting.key]" ng-options="option.id as option.title|translate for option in setting.options">
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">{{'Date of Birth' | translate}}</div>
+        <select ng-model="formData.special.dob_setting" ng-options="option.id as option.title|translate for option in form.special.dob_options">
+        </select>
+      </label>
+    </div>
+    <ion-infinite-scroll ng-if="isLoading"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
